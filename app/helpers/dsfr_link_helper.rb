@@ -13,6 +13,12 @@ module DsfrLinkHelper
     warning:   "fr-btn--warning",
   }.freeze
 
+  EXTERNAL_LINK_ATTRIBUTES = {
+    target: '_blank',
+    rel: 'noopener',
+  }
+
+
   def dsfr_link_classes(*styles, default_class: 'fr-link')
     if (invalid_styles = (styles - LINK_STYLES.keys)) && invalid_styles.any?
       fail(ArgumentError, "invalid styles #{invalid_styles.to_sentence}. Valid styles are #{LINK_STYLES.keys.to_sentence}")
@@ -32,6 +38,28 @@ module DsfrLinkHelper
   def dsfr_link_to(name = nil, options = nil, extra_options = {}, &block)
     extra_options = options if block_given?
     html_options = build_html_options(extra_options)
+
+    if block_given?
+      link_to(name, html_options, &block)
+    else
+      link_to(name, options, html_options)
+    end
+  end
+
+  # FIXME: this does exactly the same thing as `dsfr_link_to` but
+  # because our external links are identified with the `target` and
+  # `rel` we can't rely on the whole CSS-class machinery here that
+  # works really well for other types of link:
+  #
+  # dsfr_link_to('An inverse hyperlink', '#', inverse: true)
+  #
+  # whereas this doesn't work:
+  #
+  # dsfr_link_to('Some website', '#', external: true)
+
+  def dsfr_external_link_to(name = nil, options = nil, extra_options = {}, &block)
+    extra_options = options if block_given?
+    html_options = build_html_options(extra_options, style: :external_link).merge(EXTERNAL_LINK_ATTRIBUTES)
 
     if block_given?
       link_to(name, html_options, &block)
@@ -89,8 +117,9 @@ private
 
   def build_html_options(provided_options, style: :link)
     styles = case style
-             when :link       then LINK_STYLES
-             when :button     then BUTTON_STYLES
+             when :link          then LINK_STYLES
+             when :button        then BUTTON_STYLES
+             when :external_link then {}
              else {}
              end
 
@@ -106,6 +135,7 @@ private
 
     case style
     when :link then dsfr_link_classes(*keys)
+    when :external_link then dsfr_link_classes(*keys, default_class: nil)
     when :button then dsfr_button_classes(*keys)
     when :breadcrumb then %w(govuk-breadcrumbs__link)
     end

@@ -9,14 +9,17 @@ markdown:
 == render('/partials/example.*',
   caption: "Regular link",
   code: dsfr_link_to_normal) do
-
-  p.govuk-body
-
   markdown:
     Regular links are just plain [anchor elements][0]
     with the `fr-link` class.
 
     [0]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a
+
+== render('/partials/example.*',
+  caption: "External link",
+  code: dsfr_link_to_external) do
+  markdown:
+    Use external links to point to other websites.
 
 == render('/partials/example.*',
   caption: "Inverse hyperlink",

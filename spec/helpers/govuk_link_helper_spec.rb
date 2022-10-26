@@ -107,6 +107,43 @@ RSpec.describe(DsfrLinkHelper, type: 'helper') do
     end
   end
 
+  describe "#dsfr_external_link_to" do
+    let(:external_attributes) { { target: '_blank', rel: 'noopener' } }
+    let(:link_text) { 'Visit this website' }
+    let(:link_url) { 'https://some-external-link.com' }
+
+    before do
+      allow(self).to receive(:url_for).with(link_params).and_return(link_url)
+    end
+
+    context "when provided with link text and url params" do
+      let(:link_params) { { controller: :some_controller, action: :some_action } }
+
+      subject { dsfr_external_link_to link_text, link_params }
+
+      it { is_expected.to have_tag('a', text: link_text, with: { href: link_url, **external_attributes }) }
+      it { is_expected.not_to have_tag('a', with: { class: 'fr-link' }) }
+    end
+
+    context "when provided with url params and the block" do
+      let(:link_html) { tag.span(link_text) }
+      let(:link_params) { { controller: :some_controller, action: :some_action } }
+
+      subject { dsfr_external_link_to(link_params) { link_html } }
+
+      it { is_expected.to have_tag('a', with: { href: link_url }) { with_tag(:span, text: link_text, **external_attributes) } }
+    end
+
+    context "adding custom classes" do
+      let(:link_params) { { controller: :some_controller, action: :some_action } }
+      let(:custom_class) { { class: "green" } }
+
+      subject { dsfr_external_link_to(link_text, link_params, { class: "green", no_underline: true }) }
+
+      it { is_expected.to have_tag('a', with: { href: link_url, class: %w(green), **external_attributes }, text: link_text) }
+    end
+  end
+
   describe "#dsfr_mail_to" do
     let(:link_text) { 'Send a message' }
     let(:link_html) { tag.span(link_text) }
