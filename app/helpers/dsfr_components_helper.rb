@@ -1,5 +1,6 @@
 module DsfrComponentsHelper
   {
+    dsfr_alert: 'DsfrComponent::AlertComponent',
     dsfr_accordion: 'DsfrComponent::AccordionComponent',
     dsfr_back_link: 'DsfrComponent::BackLinkComponent',
     dsfr_breadcrumbs: 'DsfrComponent::BreadcrumbsComponent',

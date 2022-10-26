@@ -8,8 +8,8 @@ module Helpers
   module LinkHelpers
     def component_links
       {
-        # "Alerte" => "/components/alert",
-        "Accordion" => "/components/accordion",
+        "Alerte" => "/components/alert",
+        # "Accordion" => "/components/accordion",
         # "Back link" => "/components/back-link",
         # "Breadcrumbs" => "/components/breadcrumbs",
         # "Cookie banner" => "/components/cookie-banner",

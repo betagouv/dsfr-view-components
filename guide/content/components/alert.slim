@@ -1,0 +1,29 @@
+---
+title: Alerte
+---
+
+p Les alertes permettent d’attirer l’attention de l’utilisateur sur une information sans interrompre sa tâche en cours.
+
+== render('/partials/example.*',
+  caption: "Alerte de succès avec du contenu",
+  code: alert_success_with_content) do
+
+  markdown:
+    Une alerte a un `type` obligatoire parmi `:error`, `:success`, `:info`, `:warning`.
+
+    Le titre `title` est aussi obligatoire
+
+== render('/partials/example.*',
+  caption: "Alerte d'erreur taille SM sans contenu",
+  code: alert_error_sm_without_content) do
+
+  markdown:
+    La taille `size` peut être `:sm` ou `:md` (le défaut).
+
+    En taille SM le contenu n'est pas obligatoire
+
+== render('/partials/example.*',
+  caption: "Alerte avec un bouton pour fermer",
+  code: alert_with_close_button)
+
+== render('/partials/related-info.*', links: alert_info)
