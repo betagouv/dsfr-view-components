@@ -33,6 +33,15 @@ so it will always be up to date.
 
 -->
 
+## Liste de tâches à faire pour la V1
+
+- [ ] implémenter les composants avec leurs specs
+- [ ] mettre en place la CI pour les tests
+- [ ] implémenter la documentation
+- [ ] déployer la documentation
+- [ ] packager et déployer la gem
+- [ ] déployer le site de documentation
+
 ## Composants disponibles
 
 Cette gem a pour but de supporter tous les composants proposés par le Design Système de l'État hormis ceux concernant les formulaires. Ceux-ci seront fournis dans une gem indépendante dans le futur.
