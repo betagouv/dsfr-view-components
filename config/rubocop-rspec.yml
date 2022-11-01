@@ -1,3 +1,5 @@
+# from https://github.com/alphagov/rubocop-govuk/blob/main/config/rspec.yml
+
 # Analog of: 736b3d295f88b9ba6676fc168b823535582388c2
 #
 # We should avoid cops that are based on heuristics, since

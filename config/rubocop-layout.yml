@@ -1,3 +1,5 @@
+# from https://github.com/alphagov/rubocop-govuk/blob/main/config/layout.yml
+
 # https://github.com/alphagov/govuk-lint/pull/7
 # "There are occasions where following this rule forces you to make the
 # code less readable. This is particularly the case for tests where method

@@ -1,3 +1,5 @@
+# from https://github.com/alphagov/rubocop-govuk/blob/main/config/rails.yml
+
 ##################### Rails ##################################
 
 # By default Rails is switched off so this can be used by non-Rails apps,

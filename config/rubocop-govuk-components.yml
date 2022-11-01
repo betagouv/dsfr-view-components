@@ -1,3 +1,5 @@
+# from https://github.com/DFE-Digital/govuk-components/blob/main/.rubocop.yml
+
 AllCops:
   TargetRubyVersion: 2.7
   Exclude:

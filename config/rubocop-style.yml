@@ -1,3 +1,5 @@
+# from https://github.com/alphagov/rubocop-govuk/blob/main/config/style.yml
+
 # https://github.com/alphagov/govuk-lint/pull/36
 # "When we have sequence of if/unless statements,
 # some with multiple lines within the if statement
