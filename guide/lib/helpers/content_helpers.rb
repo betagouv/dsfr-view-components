@@ -1,5 +1,13 @@
 module Helpers
   module ContentHelpers
+    def repository_name
+      "DSFR-View-Components"
+    end
+
+    def site_title
+      "Composants Rails ViewComponent pour le Système de Design de lʼÉtat"
+    end
+
     def component_helper_mapping_table
       head = ["Component class name", "Helper method"]
       rows = component_helper_mapping.to_a.map { |v| v.map { |c| "<code>#{c}</code>".html_safe } }

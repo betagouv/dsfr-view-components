@@ -3,14 +3,9 @@ title: Configuration
 ---
 
 markdown:
-  The components gem defaults follow the guidance specified in the GOV.UK
-  Design System documentation, but every project has different needs. These can
-  be configured globally, avoiding the need to repeatedly set them each time we
-  use a component.
+  Cette gem essaie de suivre les recommendations de DSFR au plus proche. Vous pouvez cependant configurer de manière globale certains paramètres pour mieux coller aux besoins de votre site.
 
-  We can override the defaults using an initialiser. Create a file
-  in your project called `config/initializers/dsfr_components.rb` and
-  use the standard Rails configuration syntax:
+  Les paramètres globaux sont modifiables via un initializer. Créez un fichier `config/initializers/dsfr_components.rb` et remplissez-le de la manière suivante :
 
 pre
   code.highlight.language-ruby
@@ -23,5 +18,10 @@ pre
       end
 
 markdown:
+<<<<<<< HEAD
   You can see a full list of the configurable options in
   [engine.rb](https://github.com/betagouv/dsfr-view-components/blob/main/lib/dsfr/components/engine.rb).
+=======
+  Vous trouverez la liste complète des options dans le fichier
+  [engine.rb](https://github.com/betagouv/dsfr-components/blob/main/lib/dsfr/components/engine.rb).
+>>>>>>> 514c7c3 (traduction et adaptation du guide)
