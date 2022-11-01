@@ -1,0 +1,623 @@
+<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8" /><title>Table - DSFR Components </title><meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport" /><meta content="#0b0c0c" name="theme-color" /><meta content="IE=edge" http-equiv="X-UA-Compatible" /><link href="/assets/images/favicon.ico" rel="shortcut icon" sizes="16x16 32x32 48x48" type="image/x-icon" /><link color="#0b0c0c" href="/assets/images/govuk-mask-icon.svg" rel="mask-icon" /><link href="/assets/images/govuk-apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" /><link href="/assets/images/govuk-apple-touch-icon-167x167.png" rel="apple-touch-icon" sizes="167x167" /><link href="/assets/images/govuk-apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" /><link href="/assets/images/govuk-apple-touch-icon.png" rel="apple-touch-icon" /><link href="/stylesheets/application.css" rel="stylesheet" /><meta content="/assets/images/govuk-opengraph-image.png" property="og:image" /><meta content="Nc0CCJKdX42kjJwxiGujPZZRePaj1FEsyTaIzd9J_Xc" name="google-site-verification" /></head><body><script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script><div class="fr-skiplinks"><nav aria-label="Accès rapide" class="fr-container" role="navigation"><ul class="fr-skiplinks__list"><li><a class="fr-link" href="#content">Contenu</a></li></ul></nav></div><header class="fr-header" role="banner"><div class="fr-header__body"><div class="fr-container"><div class="fr-header__body-row"><div class="fr-header__brand fr-enlarge-link"><div class="fr-header__brand-top"><div class="fr-header__logo"><p class="fr-logo">République<br />Française</p></div></div><div class="fr-header__service"><a href="/" title="Composants du DSFR - Accueil"><p class="fr-header__service-title">Composants du DSFR</p></a></div></div></div></div></div></header><div class="fr-container"><nav aria-label="Vous êtes ici :" class="fr-breadcrumb" role="navigation"><button aria-controls="breadcrumb-1" aria-expanded="false" class="fr-breadcrumb__button">Voir le fil d’Ariane</button><div class="fr-collapse" id="breadcrumb-1"><ol class="fr-breadcrumb__list"><li><a class="fr-breadcrumb__link" href="/">Home</a></li><li><a class="fr-breadcrumb__link" aria-current="page" href="">Table</a></li></ol></div></nav><main class="fr-grid-row" id="content"><article class="app-prose"><h1>Table</h1><p>Use the table component to make information easier to compare and scan for
+users.</p><h3 class="govuk-heading-m govuk-!-font-size-27 govuk-!-margin-top-8" id="building-a-table-row-by-row"><a class="header-anchor" href="#building-a-table-row-by-row">Building a table row by row</a></h3><p>Complex tables can be built as in HTML, by declaring the caption,
+head, body, rows and cells.</p>
+
+<p>Tables can have one caption which should be used to describe the contents
+of the table.</p>
+
+<p>The head and body are created using the <code>head</code> and <code>body</code> slots and can
+each contain one or more <code>row</code> elements. Each row can contain multiple
+<code>cell</code> elements.</p>
+
+<p>By default <code>cell</code> will create a <code>&lt;td&gt;</code> element. When <code>header: true</code> is
+passed in it will create a <code>&lt;th&gt;</code>. Cells values can be set using the
+<code>text:</code> argument or by passing in a block of HTML.</p>
+<figure class="app-example"><h4>Input</h4>
+<div class="fr-tabs">
+<ul class="fr-tabs__list" role="tablist">
+<li role="presentation"><button aria-controls="input-slim-building-a-table-row-by-row" aria-current="page" aria-selected="true" class="fr-tabs__tab" id="input-slim-building-a-table-row-by-row" role="tab" tabindex="0">Slim</button></li>
+<li role="presentation"><button aria-controls="input-erb-building-a-table-row-by-row" aria-selected="false" class="fr-tabs__tab" href="#input-erb-building-a-table-row-by-row" role="tab">ERB</button></li>
+</ul>
+<div aria-labelledby="input-slim-building-a-table-row-by-row" class="fr-tabs__panel fr-tabs__panel--selected" id="input-slim-building-a-table-row-by-row" role="tabpanel" tabindex="0"><pre><code class="highlight language-slim"><span class="p">=</span> <span class="n">dsfr_table</span> <span class="k">do</span> <span class="o">|</span><span class="n">table</span><span class="o">|</span>
+  <span class="p">-</span> <span class="n">table</span><span class="p">.</span><span class="nf">caption</span><span class="p">(</span><span class="ss">size: </span><span class="s1">'m'</span><span class="p">,</span> <span class="ss">text: </span><span class="s1">'List of Pokémon'</span><span class="p">)</span>
+
+  <span class="p">-</span> <span class="n">table</span><span class="p">.</span><span class="nf">head</span> <span class="k">do</span> <span class="o">|</span><span class="n">head</span><span class="o">|</span>
+    <span class="p">-</span> <span class="n">head</span><span class="p">.</span><span class="nf">row</span> <span class="k">do</span> <span class="o">|</span><span class="n">row</span><span class="o">|</span>
+      <span class="p">-</span> <span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">header: </span><span class="kp">true</span><span class="p">,</span> <span class="ss">text: </span><span class="s1">'Name'</span><span class="p">)</span>
+      <span class="p">-</span> <span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">header: </span><span class="kp">true</span><span class="p">,</span> <span class="ss">text: </span><span class="s1">'Types'</span><span class="p">)</span>
+      <span class="p">-</span> <span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">header: </span><span class="kp">true</span><span class="p">,</span> <span class="ss">text: </span><span class="s1">'Pokédex number'</span><span class="p">,</span> <span class="ss">numeric: </span><span class="kp">true</span><span class="p">)</span>
+
+  <span class="p">-</span> <span class="n">table</span><span class="p">.</span><span class="nf">body</span> <span class="k">do</span> <span class="o">|</span><span class="n">body</span><span class="o">|</span>
+    <span class="p">-</span> <span class="n">body</span><span class="p">.</span><span class="nf">row</span> <span class="k">do</span> <span class="o">|</span><span class="n">row</span><span class="o">|</span>
+      <span class="p">-</span> <span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">text: </span><span class="s1">'Bulbasaur'</span><span class="p">)</span>
+      <span class="p">-</span> <span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">text: </span><span class="s1">'Grass, Poison'</span><span class="p">)</span>
+      <span class="p">-</span> <span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">text: </span><span class="s1">'1'</span><span class="p">,</span> <span class="ss">numeric: </span><span class="kp">true</span><span class="p">)</span>
+
+    <span class="p">-</span> <span class="n">body</span><span class="p">.</span><span class="nf">row</span> <span class="k">do</span> <span class="o">|</span><span class="n">row</span><span class="o">|</span>
+      <span class="p">-</span> <span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">text: </span><span class="s1">'Charmander'</span><span class="p">)</span>
+      <span class="p">-</span> <span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">text: </span><span class="s1">'Fire'</span><span class="p">)</span>
+      <span class="p">-</span> <span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">text: </span><span class="s1">'4'</span><span class="p">,</span> <span class="ss">numeric: </span><span class="kp">true</span><span class="p">)</span>
+
+    <span class="p">-</span> <span class="n">body</span><span class="p">.</span><span class="nf">row</span> <span class="k">do</span> <span class="o">|</span><span class="n">row</span><span class="o">|</span>
+      <span class="p">-</span> <span class="n">row</span><span class="p">.</span><span class="nf">cell</span> <span class="p">{</span> <span class="s1">'Squirtle'</span> <span class="p">}</span>
+      <span class="p">-</span> <span class="n">row</span><span class="p">.</span><span class="nf">cell</span> <span class="p">{</span> <span class="s1">'Water'</span> <span class="p">}</span>
+      <span class="p">-</span> <span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">numeric: </span><span class="kp">true</span><span class="p">)</span> <span class="p">{</span> <span class="s1">'7'</span> <span class="p">}</span></code></pre></div>
+<div class="fr-tabs__panel fr-tabs__panel--hidden" id="input-erb-building-a-table-row-by-row"><pre><code class="highlight language-erb wrap"><span class="cp">&lt;%=</span> <span class="n">dsfr_table</span> <span class="k">do</span> <span class="o">|</span><span class="n">table</span><span class="o">|</span>
+<span class="n">table</span><span class="p">.</span><span class="nf">caption</span><span class="p">(</span><span class="ss">size: </span><span class="s1">'m'</span><span class="p">,</span> <span class="ss">text: </span><span class="s1">'List of Pokémon'</span><span class="p">)</span>
+
+<span class="n">table</span><span class="p">.</span><span class="nf">head</span> <span class="k">do</span> <span class="o">|</span><span class="n">head</span><span class="o">|</span>
+<span class="n">head</span><span class="p">.</span><span class="nf">row</span> <span class="k">do</span> <span class="o">|</span><span class="n">row</span><span class="o">|</span>
+<span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">header: </span><span class="kp">true</span><span class="p">,</span> <span class="ss">text: </span><span class="s1">'Name'</span><span class="p">)</span>
+<span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">header: </span><span class="kp">true</span><span class="p">,</span> <span class="ss">text: </span><span class="s1">'Types'</span><span class="p">)</span>
+<span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">header: </span><span class="kp">true</span><span class="p">,</span> <span class="ss">text: </span><span class="s1">'Pokédex number'</span><span class="p">,</span> <span class="ss">numeric: </span><span class="kp">true</span><span class="p">)</span>
+
+<span class="k">end</span><span class="p">;</span> <span class="k">end</span><span class="p">;</span> <span class="n">table</span><span class="p">.</span><span class="nf">body</span> <span class="k">do</span> <span class="o">|</span><span class="n">body</span><span class="o">|</span>
+<span class="n">body</span><span class="p">.</span><span class="nf">row</span> <span class="k">do</span> <span class="o">|</span><span class="n">row</span><span class="o">|</span>
+<span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">text: </span><span class="s1">'Bulbasaur'</span><span class="p">)</span>
+<span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">text: </span><span class="s1">'Grass, Poison'</span><span class="p">)</span>
+<span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">text: </span><span class="s1">'1'</span><span class="p">,</span> <span class="ss">numeric: </span><span class="kp">true</span><span class="p">)</span>
+
+<span class="k">end</span><span class="p">;</span> <span class="n">body</span><span class="p">.</span><span class="nf">row</span> <span class="k">do</span> <span class="o">|</span><span class="n">row</span><span class="o">|</span>
+<span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">text: </span><span class="s1">'Charmander'</span><span class="p">)</span>
+<span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">text: </span><span class="s1">'Fire'</span><span class="p">)</span>
+<span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">text: </span><span class="s1">'4'</span><span class="p">,</span> <span class="ss">numeric: </span><span class="kp">true</span><span class="p">)</span>
+
+<span class="k">end</span><span class="p">;</span> <span class="n">body</span><span class="p">.</span><span class="nf">row</span> <span class="k">do</span> <span class="o">|</span><span class="n">row</span><span class="o">|</span>
+<span class="n">row</span><span class="p">.</span><span class="nf">cell</span> <span class="p">{</span> <span class="s1">'Squirtle'</span> <span class="p">}</span>
+<span class="n">row</span><span class="p">.</span><span class="nf">cell</span> <span class="p">{</span> <span class="s1">'Water'</span> <span class="p">}</span>
+<span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">numeric: </span><span class="kp">true</span><span class="p">)</span> <span class="p">{</span> <span class="s1">'7'</span> <span class="p">}</span>
+<span class="k">end</span><span class="p">;</span> <span class="k">end</span><span class="p">;</span> <span class="k">end</span> <span class="cp">%&gt;</span></code></pre></div>
+</div>
+<h4 class="govuk-heading-s govuk-tabs--title">Output</h4>
+<div class="fr-tabs">
+<ul class="fr-tabs__list" role="tablist">
+<li role="presentation"><button aria-controls="output-rendered-building-a-table-row-by-row" aria-selected="true" class="fr-tabs__tab" id="output-rendered-building-a-table-row-by-row" role="tab" tabindex="0">Rendered</button></li>
+<li role="presentation"><button aria-controls="output-html-building-a-table-row-by-row" aria-selected="false" class="fr-tabs__tab" id="output-html-building-a-table-row-by-row" role="tab" tabindex="0">HTML</button></li>
+</ul>
+<div aria-labelledby="output-rendered-building-a-table-row-by-row" class="fr-tabs__panel fr-tabs__panel--selected" id="output-rendered-building-a-table-row-by-row" role="tabpanel"><table class="govuk-table">
+  <caption class="govuk-table__caption govuk-table__caption--m">
+    List of Pokémon
+  </caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header">
+        Name
+      </th>
+      <th class="govuk-table__header">
+        Types
+      </th>
+      <th class="govuk-table__header govuk-table__header--numeric">
+        Pokédex number
+      </th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        Bulbasaur
+      </td>
+      <td class="govuk-table__cell">
+        Grass, Poison
+      </td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">
+        1
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        Charmander
+      </td>
+      <td class="govuk-table__cell">
+        Fire
+      </td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">
+        4
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        Squirtle
+      </td>
+      <td class="govuk-table__cell">
+        Water
+      </td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">
+        7
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+<div aria-labelledby="output-html-building-a-table-row-by-row" class="fr-tabs__panel" id="output-html-building-a-table-row-by-row" role="tabpanel"><pre><code class="highlight language-html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"govuk-table"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;caption</span> <span class="na">class=</span><span class="s">"govuk-table__caption govuk-table__caption--m"</span><span class="nt">&gt;</span>
+    List of Pokémon
+  <span class="nt">&lt;/caption&gt;</span>
+  <span class="nt">&lt;thead</span> <span class="na">class=</span><span class="s">"govuk-table__head"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"govuk-table__row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">"govuk-table__header"</span><span class="nt">&gt;</span>
+        Name
+      <span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">"govuk-table__header"</span><span class="nt">&gt;</span>
+        Types
+      <span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">"govuk-table__header govuk-table__header--numeric"</span><span class="nt">&gt;</span>
+        Pokédex number
+      <span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/thead&gt;</span>
+  <span class="nt">&lt;tbody</span> <span class="na">class=</span><span class="s">"govuk-table__body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"govuk-table__row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"govuk-table__cell"</span><span class="nt">&gt;</span>
+        Bulbasaur
+      <span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"govuk-table__cell"</span><span class="nt">&gt;</span>
+        Grass, Poison
+      <span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"govuk-table__cell govuk-table__cell--numeric"</span><span class="nt">&gt;</span>
+        1
+      <span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"govuk-table__row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"govuk-table__cell"</span><span class="nt">&gt;</span>
+        Charmander
+      <span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"govuk-table__cell"</span><span class="nt">&gt;</span>
+        Fire
+      <span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"govuk-table__cell govuk-table__cell--numeric"</span><span class="nt">&gt;</span>
+        4
+      <span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"govuk-table__row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"govuk-table__cell"</span><span class="nt">&gt;</span>
+        Squirtle
+      <span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"govuk-table__cell"</span><span class="nt">&gt;</span>
+        Water
+      <span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"govuk-table__cell govuk-table__cell--numeric"</span><span class="nt">&gt;</span>
+        7
+      <span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/tbody&gt;</span>
+<span class="nt">&lt;/table&gt;</span></code></pre></div>
+</div></figure><h3 class="govuk-heading-m govuk-!-font-size-27 govuk-!-margin-top-8" id="tables-with-header-columns"><a class="header-anchor" href="#tables-with-header-columns">Tables with header columns</a></h3><p>To make a column of headers, pass <code>header: true</code> to the first cell on each
+row in the <code>body</code>.</p>
+<figure class="app-example"><h4>Input</h4>
+<div class="fr-tabs">
+<ul class="fr-tabs__list" role="tablist">
+<li role="presentation"><button aria-controls="input-slim-tables-with-header-columns" aria-current="page" aria-selected="true" class="fr-tabs__tab" id="input-slim-tables-with-header-columns" role="tab" tabindex="0">Slim</button></li>
+<li role="presentation"><button aria-controls="input-erb-tables-with-header-columns" aria-selected="false" class="fr-tabs__tab" href="#input-erb-tables-with-header-columns" role="tab">ERB</button></li>
+</ul>
+<div aria-labelledby="input-slim-tables-with-header-columns" class="fr-tabs__panel fr-tabs__panel--selected" id="input-slim-tables-with-header-columns" role="tabpanel" tabindex="0"><pre><code class="highlight language-slim"><span class="p">=</span> <span class="n">dsfr_table</span> <span class="k">do</span> <span class="o">|</span><span class="n">table</span><span class="o">|</span>
+  <span class="p">-</span> <span class="n">table</span><span class="p">.</span><span class="nf">caption</span><span class="p">(</span><span class="ss">size: </span><span class="s1">'m'</span><span class="p">,</span> <span class="ss">text: </span><span class="s1">'List of Pokémon generations'</span><span class="p">)</span>
+
+  <span class="p">-</span> <span class="n">table</span><span class="p">.</span><span class="nf">head</span> <span class="k">do</span> <span class="o">|</span><span class="n">head</span><span class="o">|</span>
+    <span class="p">-</span> <span class="n">head</span><span class="p">.</span><span class="nf">row</span> <span class="k">do</span> <span class="o">|</span><span class="n">row</span><span class="o">|</span>
+      <span class="p">-</span> <span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">header: </span><span class="kp">true</span><span class="p">,</span> <span class="ss">text: </span><span class="s1">'Generation'</span><span class="p">)</span>
+      <span class="p">-</span> <span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">header: </span><span class="kp">true</span><span class="p">,</span> <span class="ss">text: </span><span class="s1">'Years'</span><span class="p">)</span>
+
+  <span class="p">-</span> <span class="n">table</span><span class="p">.</span><span class="nf">body</span> <span class="k">do</span> <span class="o">|</span><span class="n">body</span><span class="o">|</span>
+    <span class="p">-</span> <span class="n">body</span><span class="p">.</span><span class="nf">row</span> <span class="k">do</span> <span class="o">|</span><span class="n">row</span><span class="o">|</span>
+      <span class="p">-</span> <span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">header: </span><span class="kp">true</span><span class="p">,</span> <span class="ss">text: </span><span class="s1">'Generation 1'</span><span class="p">)</span>
+      <span class="p">-</span> <span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">text: </span><span class="s1">'1996-1999'</span><span class="p">)</span>
+
+    <span class="p">-</span> <span class="n">body</span><span class="p">.</span><span class="nf">row</span> <span class="k">do</span> <span class="o">|</span><span class="n">row</span><span class="o">|</span>
+      <span class="p">-</span> <span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">header: </span><span class="kp">true</span><span class="p">,</span> <span class="ss">text: </span><span class="s1">'Generation 2'</span><span class="p">)</span>
+      <span class="p">-</span> <span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">text: </span><span class="s1">'1999-2002'</span><span class="p">)</span>
+
+    <span class="p">-</span> <span class="n">body</span><span class="p">.</span><span class="nf">row</span> <span class="k">do</span> <span class="o">|</span><span class="n">row</span><span class="o">|</span>
+      <span class="p">-</span> <span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">header: </span><span class="kp">true</span><span class="p">,</span> <span class="ss">text: </span><span class="s1">'Generation 3'</span><span class="p">)</span>
+      <span class="p">-</span> <span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">text: </span><span class="s1">'2002-2006'</span><span class="p">)</span>
+
+    <span class="p">-</span> <span class="n">body</span><span class="p">.</span><span class="nf">row</span> <span class="k">do</span> <span class="o">|</span><span class="n">row</span><span class="o">|</span>
+      <span class="p">-</span> <span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">header: </span><span class="kp">true</span><span class="p">,</span> <span class="ss">text: </span><span class="s1">'Generation 4'</span><span class="p">)</span>
+      <span class="p">-</span> <span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">text: </span><span class="s1">'2006-2010'</span><span class="p">)</span></code></pre></div>
+<div class="fr-tabs__panel fr-tabs__panel--hidden" id="input-erb-tables-with-header-columns"><pre><code class="highlight language-erb wrap"><span class="cp">&lt;%=</span> <span class="n">dsfr_table</span> <span class="k">do</span> <span class="o">|</span><span class="n">table</span><span class="o">|</span>
+<span class="n">table</span><span class="p">.</span><span class="nf">caption</span><span class="p">(</span><span class="ss">size: </span><span class="s1">'m'</span><span class="p">,</span> <span class="ss">text: </span><span class="s1">'List of Pokémon generations'</span><span class="p">)</span>
+
+<span class="n">table</span><span class="p">.</span><span class="nf">head</span> <span class="k">do</span> <span class="o">|</span><span class="n">head</span><span class="o">|</span>
+<span class="n">head</span><span class="p">.</span><span class="nf">row</span> <span class="k">do</span> <span class="o">|</span><span class="n">row</span><span class="o">|</span>
+<span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">header: </span><span class="kp">true</span><span class="p">,</span> <span class="ss">text: </span><span class="s1">'Generation'</span><span class="p">)</span>
+<span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">header: </span><span class="kp">true</span><span class="p">,</span> <span class="ss">text: </span><span class="s1">'Years'</span><span class="p">)</span>
+
+<span class="k">end</span><span class="p">;</span> <span class="k">end</span><span class="p">;</span> <span class="n">table</span><span class="p">.</span><span class="nf">body</span> <span class="k">do</span> <span class="o">|</span><span class="n">body</span><span class="o">|</span>
+<span class="n">body</span><span class="p">.</span><span class="nf">row</span> <span class="k">do</span> <span class="o">|</span><span class="n">row</span><span class="o">|</span>
+<span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">header: </span><span class="kp">true</span><span class="p">,</span> <span class="ss">text: </span><span class="s1">'Generation 1'</span><span class="p">)</span>
+<span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">text: </span><span class="s1">'1996-1999'</span><span class="p">)</span>
+
+<span class="k">end</span><span class="p">;</span> <span class="n">body</span><span class="p">.</span><span class="nf">row</span> <span class="k">do</span> <span class="o">|</span><span class="n">row</span><span class="o">|</span>
+<span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">header: </span><span class="kp">true</span><span class="p">,</span> <span class="ss">text: </span><span class="s1">'Generation 2'</span><span class="p">)</span>
+<span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">text: </span><span class="s1">'1999-2002'</span><span class="p">)</span>
+
+<span class="k">end</span><span class="p">;</span> <span class="n">body</span><span class="p">.</span><span class="nf">row</span> <span class="k">do</span> <span class="o">|</span><span class="n">row</span><span class="o">|</span>
+<span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">header: </span><span class="kp">true</span><span class="p">,</span> <span class="ss">text: </span><span class="s1">'Generation 3'</span><span class="p">)</span>
+<span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">text: </span><span class="s1">'2002-2006'</span><span class="p">)</span>
+
+<span class="k">end</span><span class="p">;</span> <span class="n">body</span><span class="p">.</span><span class="nf">row</span> <span class="k">do</span> <span class="o">|</span><span class="n">row</span><span class="o">|</span>
+<span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">header: </span><span class="kp">true</span><span class="p">,</span> <span class="ss">text: </span><span class="s1">'Generation 4'</span><span class="p">)</span>
+<span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">text: </span><span class="s1">'2006-2010'</span><span class="p">)</span>
+<span class="k">end</span><span class="p">;</span> <span class="k">end</span><span class="p">;</span> <span class="k">end</span> <span class="cp">%&gt;</span></code></pre></div>
+</div>
+<h4 class="govuk-heading-s govuk-tabs--title">Output</h4>
+<div class="fr-tabs">
+<ul class="fr-tabs__list" role="tablist">
+<li role="presentation"><button aria-controls="output-rendered-tables-with-header-columns" aria-selected="true" class="fr-tabs__tab" id="output-rendered-tables-with-header-columns" role="tab" tabindex="0">Rendered</button></li>
+<li role="presentation"><button aria-controls="output-html-tables-with-header-columns" aria-selected="false" class="fr-tabs__tab" id="output-html-tables-with-header-columns" role="tab" tabindex="0">HTML</button></li>
+</ul>
+<div aria-labelledby="output-rendered-tables-with-header-columns" class="fr-tabs__panel fr-tabs__panel--selected" id="output-rendered-tables-with-header-columns" role="tabpanel"><table class="govuk-table">
+  <caption class="govuk-table__caption govuk-table__caption--m">
+    List of Pokémon generations
+  </caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header">
+        Generation
+      </th>
+      <th class="govuk-table__header">
+        Years
+      </th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header">
+        Generation 1
+      </th>
+      <td class="govuk-table__cell">
+        1996-1999
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header">
+        Generation 2
+      </th>
+      <td class="govuk-table__cell">
+        1999-2002
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header">
+        Generation 3
+      </th>
+      <td class="govuk-table__cell">
+        2002-2006
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header">
+        Generation 4
+      </th>
+      <td class="govuk-table__cell">
+        2006-2010
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+<div aria-labelledby="output-html-tables-with-header-columns" class="fr-tabs__panel" id="output-html-tables-with-header-columns" role="tabpanel"><pre><code class="highlight language-html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"govuk-table"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;caption</span> <span class="na">class=</span><span class="s">"govuk-table__caption govuk-table__caption--m"</span><span class="nt">&gt;</span>
+    List of Pokémon generations
+  <span class="nt">&lt;/caption&gt;</span>
+  <span class="nt">&lt;thead</span> <span class="na">class=</span><span class="s">"govuk-table__head"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"govuk-table__row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">"govuk-table__header"</span><span class="nt">&gt;</span>
+        Generation
+      <span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">"govuk-table__header"</span><span class="nt">&gt;</span>
+        Years
+      <span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/thead&gt;</span>
+  <span class="nt">&lt;tbody</span> <span class="na">class=</span><span class="s">"govuk-table__body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"govuk-table__row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">"govuk-table__header"</span><span class="nt">&gt;</span>
+        Generation 1
+      <span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"govuk-table__cell"</span><span class="nt">&gt;</span>
+        1996-1999
+      <span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"govuk-table__row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">"govuk-table__header"</span><span class="nt">&gt;</span>
+        Generation 2
+      <span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"govuk-table__cell"</span><span class="nt">&gt;</span>
+        1999-2002
+      <span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"govuk-table__row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">"govuk-table__header"</span><span class="nt">&gt;</span>
+        Generation 3
+      <span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"govuk-table__cell"</span><span class="nt">&gt;</span>
+        2002-2006
+      <span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"govuk-table__row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">"govuk-table__header"</span><span class="nt">&gt;</span>
+        Generation 4
+      <span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"govuk-table__cell"</span><span class="nt">&gt;</span>
+        2006-2010
+      <span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/tbody&gt;</span>
+<span class="nt">&lt;/table&gt;</span></code></pre></div>
+</div></figure><h3 class="govuk-heading-m govuk-!-font-size-27 govuk-!-margin-top-8" id="building-a-table-from-arrays"><a class="header-anchor" href="#building-a-table-from-arrays">Building a table from arrays</a></h3><p>If you want to build a table without advanced options, you can pass in an
+array of arrays via the <code>rows</code> argument. Each element in the outer array
+represents a <code>row</code> and each element in the inner array represents a
+<code>cell</code>.</p>
+
+<p>You can set the header columns explicitly by passing an array of headers
+using the <code>head</code> argument. If nothing is set, the first row will be used for
+headers.</p>
+<figure class="app-example"><h4>Input</h4>
+<div class="fr-tabs">
+<ul class="fr-tabs__list" role="tablist">
+<li role="presentation"><button aria-controls="input-slim-building-a-table-from-arrays" aria-current="page" aria-selected="true" class="fr-tabs__tab" id="input-slim-building-a-table-from-arrays" role="tab" tabindex="0">Slim</button></li>
+<li role="presentation"><button aria-controls="input-erb-building-a-table-from-arrays" aria-selected="false" class="fr-tabs__tab" href="#input-erb-building-a-table-from-arrays" role="tab">ERB</button></li>
+<li role="presentation"><a class="fr-tabs__tab" href="#input-data-building-a-table-from-arrays">Data</a></li>
+</ul>
+<div aria-labelledby="input-slim-building-a-table-from-arrays" class="fr-tabs__panel fr-tabs__panel--selected" id="input-slim-building-a-table-from-arrays" role="tabpanel" tabindex="0"><pre><code class="highlight language-slim"><span class="p">=</span> <span class="n">dsfr_table</span><span class="p">(</span><span class="ss">rows: </span><span class="n">data</span><span class="p">,</span> <span class="ss">caption: </span><span class="s2">"Pokémon species and types"</span><span class="p">)</span></code></pre></div>
+<div class="fr-tabs__panel fr-tabs__panel--hidden" id="input-erb-building-a-table-from-arrays"><pre><code class="highlight language-erb wrap"><span class="cp">&lt;%=</span> <span class="n">dsfr_table</span><span class="p">(</span><span class="ss">rows: </span><span class="n">data</span><span class="p">,</span> <span class="ss">caption: </span><span class="s2">"Pokémon species and types"</span><span class="p">)</span> <span class="cp">%&gt;</span></code></pre></div>
+</div>
+<div class="fr-tabs__panel fr-tabs__panel--hidden" id="input-data-building-a-table-from-arrays"><pre><code class="highlight language-ruby wrap"><span class="p">{</span>
+  <span class="ss">data: </span><span class="p">[</span>
+    <span class="p">[</span><span class="s2">"Name"</span><span class="p">,</span> <span class="s2">"Primary type"</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">"Weedle"</span><span class="p">,</span> <span class="s2">"Bug"</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">"Rattata"</span><span class="p">,</span> <span class="s2">"Normal"</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">"Raichu"</span><span class="p">,</span> <span class="s2">"Electric"</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">"Golduck"</span><span class="p">,</span> <span class="s2">"Water"</span><span class="p">]</span>
+  <span class="p">]</span>
+<span class="p">}</span></code></pre></div>
+<h4 class="govuk-heading-s govuk-tabs--title">Output</h4>
+<div class="fr-tabs">
+<ul class="fr-tabs__list" role="tablist">
+<li role="presentation"><button aria-controls="output-rendered-building-a-table-from-arrays" aria-selected="true" class="fr-tabs__tab" id="output-rendered-building-a-table-from-arrays" role="tab" tabindex="0">Rendered</button></li>
+<li role="presentation"><button aria-controls="output-html-building-a-table-from-arrays" aria-selected="false" class="fr-tabs__tab" id="output-html-building-a-table-from-arrays" role="tab" tabindex="0">HTML</button></li>
+</ul>
+<div aria-labelledby="output-rendered-building-a-table-from-arrays" class="fr-tabs__panel fr-tabs__panel--selected" id="output-rendered-building-a-table-from-arrays" role="tabpanel"><table class="govuk-table">
+  <caption class="govuk-table__caption govuk-table__caption--m">
+    Pokémon species and types
+  </caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header">
+        Name
+      </th>
+      <th class="govuk-table__header">
+        Primary type
+      </th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        Weedle
+      </td>
+      <td class="govuk-table__cell">
+        Bug
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        Rattata
+      </td>
+      <td class="govuk-table__cell">
+        Normal
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        Raichu
+      </td>
+      <td class="govuk-table__cell">
+        Electric
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        Golduck
+      </td>
+      <td class="govuk-table__cell">
+        Water
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+<div aria-labelledby="output-html-building-a-table-from-arrays" class="fr-tabs__panel" id="output-html-building-a-table-from-arrays" role="tabpanel"><pre><code class="highlight language-html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"govuk-table"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;caption</span> <span class="na">class=</span><span class="s">"govuk-table__caption govuk-table__caption--m"</span><span class="nt">&gt;</span>
+    Pokémon species and types
+  <span class="nt">&lt;/caption&gt;</span>
+  <span class="nt">&lt;thead</span> <span class="na">class=</span><span class="s">"govuk-table__head"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"govuk-table__row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">"govuk-table__header"</span><span class="nt">&gt;</span>
+        Name
+      <span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">"govuk-table__header"</span><span class="nt">&gt;</span>
+        Primary type
+      <span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/thead&gt;</span>
+  <span class="nt">&lt;tbody</span> <span class="na">class=</span><span class="s">"govuk-table__body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"govuk-table__row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"govuk-table__cell"</span><span class="nt">&gt;</span>
+        Weedle
+      <span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"govuk-table__cell"</span><span class="nt">&gt;</span>
+        Bug
+      <span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"govuk-table__row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"govuk-table__cell"</span><span class="nt">&gt;</span>
+        Rattata
+      <span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"govuk-table__cell"</span><span class="nt">&gt;</span>
+        Normal
+      <span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"govuk-table__row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"govuk-table__cell"</span><span class="nt">&gt;</span>
+        Raichu
+      <span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"govuk-table__cell"</span><span class="nt">&gt;</span>
+        Electric
+      <span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"govuk-table__row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"govuk-table__cell"</span><span class="nt">&gt;</span>
+        Golduck
+      <span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"govuk-table__cell"</span><span class="nt">&gt;</span>
+        Water
+      <span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/tbody&gt;</span>
+<span class="nt">&lt;/table&gt;</span></code></pre></div>
+</div></figure><h3 class="govuk-heading-m govuk-!-font-size-27 govuk-!-margin-top-8" id="table-with-resized-columns"><a class="header-anchor" href="#table-with-resized-columns">Table with resized columns</a></h3><p>By default the table will automatically size the columns to avoid wrapping.
+This can make tables with lots of data feel cramped.</p>
+
+<p>We can avoid this by setting the width of cells. We only need to set it
+once per column and usually this is set in the <code>head</code> section.</p>
+
+<p>The options available are <code>one-quarter</code>, <code>one-third</code>, <code>one-half</code>,
+<code>two-thirds</code>, <code>three-quarters</code> and <code>full</code>.</p>
+<figure class="app-example"><h4>Input</h4>
+<div class="fr-tabs">
+<ul class="fr-tabs__list" role="tablist">
+<li role="presentation"><button aria-controls="input-slim-table-with-resized-columns" aria-current="page" aria-selected="true" class="fr-tabs__tab" id="input-slim-table-with-resized-columns" role="tab" tabindex="0">Slim</button></li>
+<li role="presentation"><button aria-controls="input-erb-table-with-resized-columns" aria-selected="false" class="fr-tabs__tab" href="#input-erb-table-with-resized-columns" role="tab">ERB</button></li>
+</ul>
+<div aria-labelledby="input-slim-table-with-resized-columns" class="fr-tabs__panel fr-tabs__panel--selected" id="input-slim-table-with-resized-columns" role="tabpanel" tabindex="0"><pre><code class="highlight language-slim"><span class="p">=</span> <span class="n">dsfr_table</span> <span class="k">do</span> <span class="o">|</span><span class="n">table</span><span class="o">|</span>
+  <span class="p">-</span> <span class="n">table</span><span class="p">.</span><span class="nf">caption</span><span class="p">(</span><span class="ss">size: </span><span class="s1">'m'</span><span class="p">,</span> <span class="ss">text: </span><span class="s1">'List of Pokémon with descriptions'</span><span class="p">)</span>
+
+  <span class="p">-</span> <span class="n">table</span><span class="p">.</span><span class="nf">head</span> <span class="k">do</span> <span class="o">|</span><span class="n">head</span><span class="o">|</span>
+    <span class="p">-</span> <span class="n">head</span><span class="p">.</span><span class="nf">row</span> <span class="k">do</span> <span class="o">|</span><span class="n">row</span><span class="o">|</span>
+      <span class="p">-</span> <span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">header: </span><span class="kp">true</span><span class="p">,</span> <span class="ss">text: </span><span class="s1">'Name'</span><span class="p">,</span> <span class="ss">width: </span><span class="s1">'one-third'</span><span class="p">)</span>
+      <span class="p">-</span> <span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">header: </span><span class="kp">true</span><span class="p">,</span> <span class="ss">text: </span><span class="s1">'Description'</span><span class="p">)</span>
+
+  <span class="p">-</span> <span class="n">table</span><span class="p">.</span><span class="nf">body</span> <span class="k">do</span> <span class="o">|</span><span class="n">body</span><span class="o">|</span>
+    <span class="p">-</span> <span class="n">body</span><span class="p">.</span><span class="nf">row</span> <span class="k">do</span> <span class="o">|</span><span class="n">row</span><span class="o">|</span>
+      <span class="p">-</span> <span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">text: </span><span class="s1">'Blastoise'</span><span class="p">)</span>
+      <span class="p">-</span> <span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">text: </span><span class="s1">'Blastoise is a portmanteau of "blast" and "tortoise". It is the mascot of Pokémon Blue.'</span><span class="p">)</span>
+
+    <span class="p">-</span> <span class="n">body</span><span class="p">.</span><span class="nf">row</span> <span class="k">do</span> <span class="o">|</span><span class="n">row</span><span class="o">|</span>
+      <span class="p">-</span> <span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">text: </span><span class="s1">'Spearow'</span><span class="p">)</span>
+      <span class="p">-</span> <span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">text: </span><span class="s1">'Spearows eat bugs in grassy areas and have to flap their short wings at high-speed to stay airborne.'</span><span class="p">)</span>
+
+    <span class="p">-</span> <span class="n">body</span><span class="p">.</span><span class="nf">row</span> <span class="k">do</span> <span class="o">|</span><span class="n">row</span><span class="o">|</span>
+      <span class="p">-</span> <span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">text: </span><span class="s1">'Tangela'</span><span class="p">)</span>
+      <span class="p">-</span> <span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">text: </span><span class="sx">%(Blue plant vines cloak the Pokémon's identity in a tangled mass.)</span><span class="p">)</span></code></pre></div>
+<div class="fr-tabs__panel fr-tabs__panel--hidden" id="input-erb-table-with-resized-columns"><pre><code class="highlight language-erb wrap"><span class="cp">&lt;%=</span> <span class="n">dsfr_table</span> <span class="k">do</span> <span class="o">|</span><span class="n">table</span><span class="o">|</span>
+<span class="n">table</span><span class="p">.</span><span class="nf">caption</span><span class="p">(</span><span class="ss">size: </span><span class="s1">'m'</span><span class="p">,</span> <span class="ss">text: </span><span class="s1">'List of Pokémon with descriptions'</span><span class="p">)</span>
+
+<span class="n">table</span><span class="p">.</span><span class="nf">head</span> <span class="k">do</span> <span class="o">|</span><span class="n">head</span><span class="o">|</span>
+<span class="n">head</span><span class="p">.</span><span class="nf">row</span> <span class="k">do</span> <span class="o">|</span><span class="n">row</span><span class="o">|</span>
+<span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">header: </span><span class="kp">true</span><span class="p">,</span> <span class="ss">text: </span><span class="s1">'Name'</span><span class="p">,</span> <span class="ss">width: </span><span class="s1">'one-third'</span><span class="p">)</span>
+<span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">header: </span><span class="kp">true</span><span class="p">,</span> <span class="ss">text: </span><span class="s1">'Description'</span><span class="p">)</span>
+
+<span class="k">end</span><span class="p">;</span> <span class="k">end</span><span class="p">;</span> <span class="n">table</span><span class="p">.</span><span class="nf">body</span> <span class="k">do</span> <span class="o">|</span><span class="n">body</span><span class="o">|</span>
+<span class="n">body</span><span class="p">.</span><span class="nf">row</span> <span class="k">do</span> <span class="o">|</span><span class="n">row</span><span class="o">|</span>
+<span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">text: </span><span class="s1">'Blastoise'</span><span class="p">)</span>
+<span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">text: </span><span class="s1">'Blastoise is a portmanteau of "blast" and "tortoise". It is the mascot of Pokémon Blue.'</span><span class="p">)</span>
+
+<span class="k">end</span><span class="p">;</span> <span class="n">body</span><span class="p">.</span><span class="nf">row</span> <span class="k">do</span> <span class="o">|</span><span class="n">row</span><span class="o">|</span>
+<span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">text: </span><span class="s1">'Spearow'</span><span class="p">)</span>
+<span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">text: </span><span class="s1">'Spearows eat bugs in grassy areas and have to flap their short wings at high-speed to stay airborne.'</span><span class="p">)</span>
+
+<span class="k">end</span><span class="p">;</span> <span class="n">body</span><span class="p">.</span><span class="nf">row</span> <span class="k">do</span> <span class="o">|</span><span class="n">row</span><span class="o">|</span>
+<span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">text: </span><span class="s1">'Tangela'</span><span class="p">)</span>
+<span class="n">row</span><span class="p">.</span><span class="nf">cell</span><span class="p">(</span><span class="ss">text: </span><span class="sx">%(Blue plant vines cloak the Pokémon's identity in a tangled mass.)</span><span class="p">)</span>
+<span class="k">end</span><span class="p">;</span> <span class="k">end</span><span class="p">;</span> <span class="k">end</span> <span class="cp">%&gt;</span></code></pre></div>
+</div>
+<h4 class="govuk-heading-s govuk-tabs--title">Output</h4>
+<div class="fr-tabs">
+<ul class="fr-tabs__list" role="tablist">
+<li role="presentation"><button aria-controls="output-rendered-table-with-resized-columns" aria-selected="true" class="fr-tabs__tab" id="output-rendered-table-with-resized-columns" role="tab" tabindex="0">Rendered</button></li>
+<li role="presentation"><button aria-controls="output-html-table-with-resized-columns" aria-selected="false" class="fr-tabs__tab" id="output-html-table-with-resized-columns" role="tab" tabindex="0">HTML</button></li>
+</ul>
+<div aria-labelledby="output-rendered-table-with-resized-columns" class="fr-tabs__panel fr-tabs__panel--selected" id="output-rendered-table-with-resized-columns" role="tabpanel"><table class="govuk-table">
+  <caption class="govuk-table__caption govuk-table__caption--m">
+    List of Pokémon with descriptions
+  </caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header govuk-!-width-one-third">
+        Name
+      </th>
+      <th class="govuk-table__header">
+        Description
+      </th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        Blastoise
+      </td>
+      <td class="govuk-table__cell">
+        Blastoise is a portmanteau of &#8220;blast&#8221; and &#8220;tortoise&#8221;. It is the mascot of Pokémon Blue.
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        Spearow
+      </td>
+      <td class="govuk-table__cell">
+        Spearows eat bugs in grassy areas and have to flap their short wings at high-speed to stay airborne.
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        Tangela
+      </td>
+      <td class="govuk-table__cell">
+        Blue plant vines cloak the Pokémon&#8217;s identity in a tangled mass.
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+<div aria-labelledby="output-html-table-with-resized-columns" class="fr-tabs__panel" id="output-html-table-with-resized-columns" role="tabpanel"><pre><code class="highlight language-html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"govuk-table"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;caption</span> <span class="na">class=</span><span class="s">"govuk-table__caption govuk-table__caption--m"</span><span class="nt">&gt;</span>
+    List of Pokémon with descriptions
+  <span class="nt">&lt;/caption&gt;</span>
+  <span class="nt">&lt;thead</span> <span class="na">class=</span><span class="s">"govuk-table__head"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"govuk-table__row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">"govuk-table__header govuk-!-width-one-third"</span><span class="nt">&gt;</span>
+        Name
+      <span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">"govuk-table__header"</span><span class="nt">&gt;</span>
+        Description
+      <span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/thead&gt;</span>
+  <span class="nt">&lt;tbody</span> <span class="na">class=</span><span class="s">"govuk-table__body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"govuk-table__row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"govuk-table__cell"</span><span class="nt">&gt;</span>
+        Blastoise
+      <span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"govuk-table__cell"</span><span class="nt">&gt;</span>
+        Blastoise is a portmanteau of "blast" and "tortoise". It is the mascot of Pokémon Blue.
+      <span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"govuk-table__row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"govuk-table__cell"</span><span class="nt">&gt;</span>
+        Spearow
+      <span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"govuk-table__cell"</span><span class="nt">&gt;</span>
+        Spearows eat bugs in grassy areas and have to flap their short wings at high-speed to stay airborne.
+      <span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"govuk-table__row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"govuk-table__cell"</span><span class="nt">&gt;</span>
+        Tangela
+      <span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"govuk-table__cell"</span><span class="nt">&gt;</span>
+        Blue plant vines cloak the Pokémon's identity in a tangled mass.
+      <span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/tbody&gt;</span>
+<span class="nt">&lt;/table&gt;</span></code></pre></div>
+</div></figure><h2 class="govuk-heading-m govuk-!-font-size-27 govuk-!-margin-top-8">Related information</h2><ul class="govuk-list"><li><a href="https://design-system.service.gov.uk/components/table/">GOV.UK Design System table documentation</a></li></ul></article></main></div><footer class="govuk-footer" role="contentinfo"><div class="govuk-width-container"><div class="govuk-footer__meta"><div class="govuk-footer__meta-item govuk-footer__meta-item--grow"><h2 class="govuk-visually-hidden">Support links</h2><ul class="govuk-footer__inline-list"><li class="govuk-footer__inline-list-item"><a class="govuk-footer__link" href="https://github.com/DFE-Digital/govuk-components">GitHub</a></li><li class="govuk-footer__inline-list-item"><a class="govuk-footer__link" href="https://rubygems.org/gems/govuk-components">RubyGems</a></li><li class="govuk-footer__inline-list-item"><a class="govuk-footer__link" href="https://www.rubydoc.info/gems/govuk-components/">RubyDoc Documentation</a></li><li class="govuk-footer__inline-list-item"><a class="govuk-footer__link" href="https://codeclimate.com/github/DFE-Digital/govuk-components">Code Climate report</a></li></ul><svg class="govuk-footer__licence-logo" focusable="false" height="17" role="presentation" viewbox="0 0 483.2 195.7" width="41" xmlns="http://www.w3.org/2000/svg"><path d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145" fill="currentColor"></path></svg><span class="govuk-footer__licence-description">All content is available under the <a class="govuk-footer__link" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0</a> except where otherwise stated</span></div></div></div></footer><script>window.dsfr = {
+  verbose: true,
+  mode: 'manual'
+};</script><script src="/javascripts/dsfr.module.min.js" type="module"></script><script nomodule="true" src="/javascripts/dsfr.nomodule.min.js" type="text/javascript"></script></body></html>

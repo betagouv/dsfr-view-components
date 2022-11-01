@@ -1,0 +1,84 @@
+<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8" /><title>Panel - DSFR Components </title><meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport" /><meta content="#0b0c0c" name="theme-color" /><meta content="IE=edge" http-equiv="X-UA-Compatible" /><link href="/assets/images/favicon.ico" rel="shortcut icon" sizes="16x16 32x32 48x48" type="image/x-icon" /><link color="#0b0c0c" href="/assets/images/govuk-mask-icon.svg" rel="mask-icon" /><link href="/assets/images/govuk-apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" /><link href="/assets/images/govuk-apple-touch-icon-167x167.png" rel="apple-touch-icon" sizes="167x167" /><link href="/assets/images/govuk-apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" /><link href="/assets/images/govuk-apple-touch-icon.png" rel="apple-touch-icon" /><link href="/stylesheets/application.css" rel="stylesheet" /><meta content="/assets/images/govuk-opengraph-image.png" property="og:image" /><meta content="Nc0CCJKdX42kjJwxiGujPZZRePaj1FEsyTaIzd9J_Xc" name="google-site-verification" /></head><body><script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script><div class="fr-skiplinks"><nav aria-label="Accès rapide" class="fr-container" role="navigation"><ul class="fr-skiplinks__list"><li><a class="fr-link" href="#content">Contenu</a></li></ul></nav></div><header class="fr-header" role="banner"><div class="fr-header__body"><div class="fr-container"><div class="fr-header__body-row"><div class="fr-header__brand fr-enlarge-link"><div class="fr-header__brand-top"><div class="fr-header__logo"><p class="fr-logo">République<br />Française</p></div></div><div class="fr-header__service"><a href="/" title="Composants du DSFR - Accueil"><p class="fr-header__service-title">Composants du DSFR</p></a></div></div></div></div></div></header><div class="fr-container"><nav aria-label="Vous êtes ici :" class="fr-breadcrumb" role="navigation"><button aria-controls="breadcrumb-1" aria-expanded="false" class="fr-breadcrumb__button">Voir le fil d’Ariane</button><div class="fr-collapse" id="breadcrumb-1"><ol class="fr-breadcrumb__list"><li><a class="fr-breadcrumb__link" href="/">Home</a></li><li><a class="fr-breadcrumb__link" aria-current="page" href="">Panel</a></li></ol></div></nav><main class="fr-grid-row" id="content"><article class="app-prose"><h1>Panel</h1><p>The panel component is a visible container used on confirmation or results
+pages to highlight important content.</p><h3 class="govuk-heading-m govuk-!-font-size-27 govuk-!-margin-top-8" id="panel-with-a-title-and-one-line-of-text"><a class="header-anchor" href="#panel-with-a-title-and-one-line-of-text">Panel with a title and one line of text</a></h3><figure class="app-example"><h4>Input</h4>
+<div class="fr-tabs">
+<ul class="fr-tabs__list" role="tablist">
+<li role="presentation"><button aria-controls="input-slim-panel-with-a-title-and-one-line-of-text" aria-current="page" aria-selected="true" class="fr-tabs__tab" id="input-slim-panel-with-a-title-and-one-line-of-text" role="tab" tabindex="0">Slim</button></li>
+<li role="presentation"><button aria-controls="input-erb-panel-with-a-title-and-one-line-of-text" aria-selected="false" class="fr-tabs__tab" href="#input-erb-panel-with-a-title-and-one-line-of-text" role="tab">ERB</button></li>
+</ul>
+<div aria-labelledby="input-slim-panel-with-a-title-and-one-line-of-text" class="fr-tabs__panel fr-tabs__panel--selected" id="input-slim-panel-with-a-title-and-one-line-of-text" role="tabpanel" tabindex="0"><pre><code class="highlight language-slim"><span class="p">=</span> <span class="n">dsfr_panel</span><span class="p">(</span><span class="ss">title_text: </span><span class="s2">"Application complete"</span><span class="p">,</span>
+              <span class="ss">text: </span><span class="s2">"You will soon receive an email confirmation."</span><span class="p">)</span></code></pre></div>
+<div class="fr-tabs__panel fr-tabs__panel--hidden" id="input-erb-panel-with-a-title-and-one-line-of-text"><pre><code class="highlight language-erb wrap"><span class="cp">&lt;%=</span> <span class="n">dsfr_panel</span><span class="p">(</span><span class="ss">title_text: </span><span class="s2">"Application complete"</span><span class="p">,</span> <span class="ss">text: </span><span class="s2">"You will soon receive an email confirmation."</span><span class="p">)</span> <span class="cp">%&gt;</span></code></pre></div>
+</div>
+<h4 class="govuk-heading-s govuk-tabs--title">Output</h4>
+<div class="fr-tabs">
+<ul class="fr-tabs__list" role="tablist">
+<li role="presentation"><button aria-controls="output-rendered-panel-with-a-title-and-one-line-of-text" aria-selected="true" class="fr-tabs__tab" id="output-rendered-panel-with-a-title-and-one-line-of-text" role="tab" tabindex="0">Rendered</button></li>
+<li role="presentation"><button aria-controls="output-html-panel-with-a-title-and-one-line-of-text" aria-selected="false" class="fr-tabs__tab" id="output-html-panel-with-a-title-and-one-line-of-text" role="tab" tabindex="0">HTML</button></li>
+</ul>
+<div aria-labelledby="output-rendered-panel-with-a-title-and-one-line-of-text" class="fr-tabs__panel fr-tabs__panel--selected" id="output-rendered-panel-with-a-title-and-one-line-of-text" role="tabpanel"><div class="govuk-panel govuk-panel--confirmation">
+  <h1 class="govuk-panel__title">
+    Application complete
+  </h1>
+  <div class="govuk-panel__body">
+    You will soon receive an email confirmation.
+  </div>
+</div></div>
+<div aria-labelledby="output-html-panel-with-a-title-and-one-line-of-text" class="fr-tabs__panel" id="output-html-panel-with-a-title-and-one-line-of-text" role="tabpanel"><pre><code class="highlight language-html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"govuk-panel govuk-panel--confirmation"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"govuk-panel__title"</span><span class="nt">&gt;</span>
+    Application complete
+  <span class="nt">&lt;/h1&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"govuk-panel__body"</span><span class="nt">&gt;</span>
+    You will soon receive an email confirmation.
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+</div></figure><h3 class="govuk-heading-m govuk-!-font-size-27 govuk-!-margin-top-8" id="panel-with-multiple-lines-of-text"><a class="header-anchor" href="#panel-with-multiple-lines-of-text">Panel with multiple lines of text</a></h3><p>Any content passed in via the block will be rendered beneath the title.</p>
+<figure class="app-example"><h4>Input</h4>
+<div class="fr-tabs">
+<ul class="fr-tabs__list" role="tablist">
+<li role="presentation"><button aria-controls="input-slim-panel-with-multiple-lines-of-text" aria-current="page" aria-selected="true" class="fr-tabs__tab" id="input-slim-panel-with-multiple-lines-of-text" role="tab" tabindex="0">Slim</button></li>
+<li role="presentation"><button aria-controls="input-erb-panel-with-multiple-lines-of-text" aria-selected="false" class="fr-tabs__tab" href="#input-erb-panel-with-multiple-lines-of-text" role="tab">ERB</button></li>
+</ul>
+<div aria-labelledby="input-slim-panel-with-multiple-lines-of-text" class="fr-tabs__panel fr-tabs__panel--selected" id="input-slim-panel-with-multiple-lines-of-text" role="tabpanel" tabindex="0"><pre><code class="highlight language-slim"><span class="p">=</span> <span class="n">dsfr_panel</span><span class="p">(</span><span class="ss">title_text: </span><span class="s2">"Application complete"</span><span class="p">)</span> <span class="k">do</span>
+
+  <span class="p">|</span> Your reference number is
+
+  <span class="nt">br</span>
+
+  <span class="nt">strong</span><span class="w"> </span>ABC123</code></pre></div>
+<div class="fr-tabs__panel fr-tabs__panel--hidden" id="input-erb-panel-with-multiple-lines-of-text"><pre><code class="highlight language-erb wrap"><span class="cp">&lt;%=</span> <span class="n">dsfr_panel</span><span class="p">(</span><span class="ss">title_text: </span><span class="s2">"Application complete"</span><span class="p">)</span> <span class="k">do</span> <span class="cp">%&gt;</span>Your reference number is
+  <span class="nt">&lt;br</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;strong&gt;</span>ABC123<span class="nt">&lt;/strong&gt;</span>
+<span class="cp">&lt;%</span> <span class="k">end</span> <span class="cp">%&gt;</span></code></pre></div>
+</div>
+<h4 class="govuk-heading-s govuk-tabs--title">Output</h4>
+<div class="fr-tabs">
+<ul class="fr-tabs__list" role="tablist">
+<li role="presentation"><button aria-controls="output-rendered-panel-with-multiple-lines-of-text" aria-selected="true" class="fr-tabs__tab" id="output-rendered-panel-with-multiple-lines-of-text" role="tab" tabindex="0">Rendered</button></li>
+<li role="presentation"><button aria-controls="output-html-panel-with-multiple-lines-of-text" aria-selected="false" class="fr-tabs__tab" id="output-html-panel-with-multiple-lines-of-text" role="tab" tabindex="0">HTML</button></li>
+</ul>
+<div aria-labelledby="output-rendered-panel-with-multiple-lines-of-text" class="fr-tabs__panel fr-tabs__panel--selected" id="output-rendered-panel-with-multiple-lines-of-text" role="tabpanel"><div class="govuk-panel govuk-panel--confirmation">
+  <h1 class="govuk-panel__title">
+    Application complete
+  </h1>
+  <div class="govuk-panel__body">
+    Your reference number is<br>
+    <strong>
+      ABC123
+    </strong>
+  </div>
+</div></div>
+<div aria-labelledby="output-html-panel-with-multiple-lines-of-text" class="fr-tabs__panel" id="output-html-panel-with-multiple-lines-of-text" role="tabpanel"><pre><code class="highlight language-html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"govuk-panel govuk-panel--confirmation"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"govuk-panel__title"</span><span class="nt">&gt;</span>
+    Application complete
+  <span class="nt">&lt;/h1&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"govuk-panel__body"</span><span class="nt">&gt;</span>
+    Your reference number is<span class="nt">&lt;br&gt;</span>
+    <span class="nt">&lt;strong&gt;</span>
+      ABC123
+    <span class="nt">&lt;/strong&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+</div></figure><h2 class="govuk-heading-m govuk-!-font-size-27 govuk-!-margin-top-8">Related information</h2><ul class="govuk-list"><li><a href="https://design-system.service.gov.uk/components/panel/">GOV.UK Design System panel documentation</a></li></ul></article></main></div><footer class="govuk-footer" role="contentinfo"><div class="govuk-width-container"><div class="govuk-footer__meta"><div class="govuk-footer__meta-item govuk-footer__meta-item--grow"><h2 class="govuk-visually-hidden">Support links</h2><ul class="govuk-footer__inline-list"><li class="govuk-footer__inline-list-item"><a class="govuk-footer__link" href="https://github.com/DFE-Digital/govuk-components">GitHub</a></li><li class="govuk-footer__inline-list-item"><a class="govuk-footer__link" href="https://rubygems.org/gems/govuk-components">RubyGems</a></li><li class="govuk-footer__inline-list-item"><a class="govuk-footer__link" href="https://www.rubydoc.info/gems/govuk-components/">RubyDoc Documentation</a></li><li class="govuk-footer__inline-list-item"><a class="govuk-footer__link" href="https://codeclimate.com/github/DFE-Digital/govuk-components">Code Climate report</a></li></ul><svg class="govuk-footer__licence-logo" focusable="false" height="17" role="presentation" viewbox="0 0 483.2 195.7" width="41" xmlns="http://www.w3.org/2000/svg"><path d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145" fill="currentColor"></path></svg><span class="govuk-footer__licence-description">All content is available under the <a class="govuk-footer__link" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0</a> except where otherwise stated</span></div></div></div></footer><script>window.dsfr = {
+  verbose: true,
+  mode: 'manual'
+};</script><script src="/javascripts/dsfr.module.min.js" type="module"></script><script nomodule="true" src="/javascripts/dsfr.nomodule.min.js" type="text/javascript"></script></body></html>
