@@ -191,6 +191,12 @@ bundle install
 bundle exec rspec spec
 ```
 
+Lancer le guide de documentation : 
+
+```sh
+make watch-guide
+```
+
 Lancer la dummy app pour itérer sur les composants :
 
 ```sh
