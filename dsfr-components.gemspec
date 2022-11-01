@@ -16,7 +16,7 @@ Gem::Specification.new do |spec|
   spec.version     = Dsfr::Components::VERSION
   spec.authors     = ["BetaGouv developers"]
   spec.email       = ["stephane.maniaci@beta.gouv.fr"]
-  spec.homepage    = "https://github.com/betagouv/dsfr-components"
+  spec.homepage    = "https://github.com/betagouv/dsfr-view-components"
   spec.summary     = "Lightweight set of reusable DSFR components"
   spec.description = "A collection of components intended to ease the building of web applications with the Design Système de l'État (DSFR)"
   spec.license     = "MIT"
