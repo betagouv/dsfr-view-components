@@ -8,9 +8,10 @@ check: ruby-lint haml-lint rspec nanoc-check
 nanoc-check: nanoc-check-all
 
 ruby-lint:
-	${prefix} rubocop lib spec guide/lib util
+	${prefix} rubocop lib spec guide/lib
 haml-lint:
 	${prefix} haml-lint guide
+
 rspec:
 	${prefix} rspec --format progress
 npm-install:

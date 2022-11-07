@@ -1,7 +1,6 @@
 $LOAD_PATH.push File.expand_path("lib", __dir__)
 
 require "dsfr/components/version"
-require_relative "util/version_formatter"
 
 METADATA = {
   "bug_tracker_uri" => "https://github.com/betagouv/dsfr-view-components/issues",
@@ -29,10 +28,6 @@ Gem::Specification.new do |spec|
 
   exact_rails_version = ENV.key?("RAILS_VERSION")
   rails_version = ENV.fetch("RAILS_VERSION") { "6.1.5" }
-
-  %w(actionpack activemodel railties).each do |lib|
-    spec.add_dependency(*VersionFormatter.new(lib, rails_version, exact_rails_version).to_a)
-  end
 
   spec.add_dependency "html-attributes-utils", "~> 1"
   spec.add_dependency "pagy", "~> 6"

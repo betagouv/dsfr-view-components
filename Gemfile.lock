@@ -41,11 +41,8 @@ PATH
   remote: .
   specs:
     dsfr-view-components (0.3.0)
-      actionpack (>= 6.1)
-      activemodel (>= 6.1)
       html-attributes-utils (~> 1)
       pagy (~> 6)
-      railties (>= 6.1)
       view_component (~> 2)
 
 GEM
@@ -64,8 +61,6 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.1, >= 1.2.0)
-    activemodel (7.0.4)
-      activesupport (= 7.0.4)
     activesupport (7.0.4)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 1.6, < 2)
@@ -337,4 +332,4 @@ DEPENDENCIES
   yard
 
 BUNDLED WITH
-   2.4.3
+   2.3.7
