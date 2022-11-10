@@ -1,3 +1,0 @@
-[build]
-  command = "make build-guide"
-  publish = "guide/output"

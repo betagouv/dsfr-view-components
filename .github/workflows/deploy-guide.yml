@@ -1,0 +1,30 @@
+name: Deploy Guide to GitHub Pages
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+jobs:
+  rspec:
+    runs-on: ubuntu-latest
+    name: Deploy Guide
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install Ruby & gems
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+          ruby-version: 3.1.2
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - run: make build-guide
+
+      - name: Deploy to GH Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          publish_dir: ./guide/output
+          github_token: ${{ secrets.GITHUB_TOKEN }}

@@ -6,7 +6,3 @@ html.govuk-template lang="en"
       | document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
   main#main-content
     == yield
-
-  / script src="/javascripts/govuk-frontend.js"
-  / script
-    | window.GOVUKFrontend.initAll() ;

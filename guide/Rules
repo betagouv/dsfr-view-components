@@ -1,6 +1,7 @@
 compile '/index.slim' do
   filter :slim
   layout '/splash.*'
+  filter :relativize_paths, type: :html5
   write '/index.html'
 end
 
@@ -9,6 +10,7 @@ compile '/components/*/*.slim' do
   filter :colorize_syntax, default_colorizer: :rouge
   filter :rubypants
   layout '/example.*'
+  filter :relativize_paths, type: :html5
   write item.identifier.without_ext + '/index.html'
 end
 
@@ -17,14 +19,17 @@ compile '/**/*.slim' do
   filter :colorize_syntax, default_colorizer: :rouge
   filter :rubypants
   layout '/default.*'
+  filter :relativize_paths, type: :html5
   write item.identifier.without_ext + '/index.html'
 end
 
 ignore '/**/_*.scss'
 compile '/**/*.scss' do
-  filter :dart_sass,
+  filter(
+    :dart_sass,
     targets: %w(content/stylesheets/application.scss),
     load_paths: "node_modules/@gouvfr/"
+  )
   write item.identifier.without_ext + '.css'
 end
 
