@@ -1,0 +1,49 @@
+---
+title: Utilisation
+---
+
+markdown:
+  Vous pouvez utiliser les composants dans vos templates Rails en :
+
+  * appelant <code>render</code> avec un objet ViewComponent ;
+  * utilisant les helpers fournis
+
+  Le résultat est le même peu importe la méthode utilisée.
+
+  ## Capture du contenu
+
+  Cette librairie utilise les fonctionnalités par défaut de Rails pour capturer du contenu.
+  Cela doit marcher avec les chaînes de caractères mais [ne rien afficher]((https://github.com/rails/rails/issues/17661)) quand d'autres objets sont passés en arguments.
+  Par exemple si on capture un nombre décimal et une chaîne de caractères dans un bloc `tag#span`, seule la chaîne de caractères est affichée :
+
+.code-sample
+  pre
+    code.highlight.language-slim
+      |
+        = tag.span { 1.0 }
+        = tag.span { "2.0" }
+
+  pre
+    code.highlight.language-html
+        = "<span></span>\n"
+        = "<span>2.0</span>"
+
+markdown:
+  ## Utilisation directe des objets ViewComponent
+
+.code-sample
+  pre
+    code.highlight.language-slim
+      | = render(DsfrComponent::InsetTextComponent.new(text: "Important message"))
+
+markdown:
+  ## Utilisation des helpers
+
+  Les helpers sont plus simples à utiliser et fournissent une expérience harmonisée avec les [helpers de liens](/helpers/link).
+
+.code-sample
+  pre
+    code.highlight.language-slim
+      | = dsfr_inset_text(text: "Important message")
+
+== ActionController::Base.render(component_helper_mapping_table)
