@@ -110,27 +110,23 @@
     <priority>1</priority>
   </url>
   <url>
-    <loc>https://govuk-components.netlify.app/introduction/about-viewcomponent/</loc>
-    <lastmod>2022-11-10</lastmod>
-  </url>
-  <url>
-    <loc>https://govuk-components.netlify.app/introduction/common-options/</loc>
-    <lastmod>2022-11-10</lastmod>
-  </url>
-  <url>
     <loc>https://govuk-components.netlify.app/introduction/configuration/</loc>
     <lastmod>2022-11-10</lastmod>
   </url>
   <url>
-    <loc>https://govuk-components.netlify.app/introduction/get-started/</loc>
+    <loc>https://govuk-components.netlify.app/introduction/installation/</loc>
     <lastmod>2022-11-10</lastmod>
   </url>
   <url>
-    <loc>https://govuk-components.netlify.app/introduction/supported-versions/</loc>
+    <loc>https://govuk-components.netlify.app/introduction/options/</loc>
     <lastmod>2022-11-10</lastmod>
   </url>
   <url>
-    <loc>https://govuk-components.netlify.app/introduction/using-components/</loc>
+    <loc>https://govuk-components.netlify.app/introduction/utilisation/</loc>
+    <lastmod>2022-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://govuk-components.netlify.app/introduction/versions-supportees/</loc>
     <lastmod>2022-11-10</lastmod>
   </url>
 </urlset>
