@@ -24,3 +24,4 @@ guide/content/assets/images
 guide/content/javascripts/*
 guide/content/stylesheets/fonts/*
 guide/content/stylesheets/icons/*
+.yardoc
