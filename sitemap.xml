@@ -2,132 +2,132 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://govuk-components.netlify.app/components/accordion/</loc>
-    <lastmod>2022-11-10</lastmod>
+    <lastmod>2022-11-17</lastmod>
   </url>
   <url>
     <loc>https://govuk-components.netlify.app/components/back-link/</loc>
-    <lastmod>2022-11-10</lastmod>
+    <lastmod>2022-11-17</lastmod>
   </url>
   <url>
     <loc>https://govuk-components.netlify.app/components/breadcrumbs/</loc>
-    <lastmod>2022-11-10</lastmod>
+    <lastmod>2022-11-17</lastmod>
   </url>
   <url>
     <loc>https://govuk-components.netlify.app/components/cookie-banner/</loc>
-    <lastmod>2022-11-10</lastmod>
+    <lastmod>2022-11-17</lastmod>
   </url>
   <url>
     <loc>https://govuk-components.netlify.app/components/details/</loc>
-    <lastmod>2022-11-10</lastmod>
+    <lastmod>2022-11-17</lastmod>
   </url>
   <url>
     <loc>https://govuk-components.netlify.app/components/footer/</loc>
-    <lastmod>2022-11-10</lastmod>
+    <lastmod>2022-11-17</lastmod>
   </url>
   <url>
     <loc>https://govuk-components.netlify.app/components/header/</loc>
-    <lastmod>2022-11-10</lastmod>
+    <lastmod>2022-11-17</lastmod>
   </url>
   <url>
     <loc>https://govuk-components.netlify.app/components/header/header_with_navigation_items/</loc>
-    <lastmod>2022-11-10</lastmod>
+    <lastmod>2022-11-17</lastmod>
   </url>
   <url>
     <loc>https://govuk-components.netlify.app/components/inset-text/</loc>
-    <lastmod>2022-11-10</lastmod>
+    <lastmod>2022-11-17</lastmod>
   </url>
   <url>
     <loc>https://govuk-components.netlify.app/components/notification-banner/</loc>
-    <lastmod>2022-11-10</lastmod>
+    <lastmod>2022-11-17</lastmod>
   </url>
   <url>
     <loc>https://govuk-components.netlify.app/components/notification_banner/notification_banner_success/</loc>
-    <lastmod>2022-11-10</lastmod>
+    <lastmod>2022-11-17</lastmod>
   </url>
   <url>
     <loc>https://govuk-components.netlify.app/components/notification_banner/notification_banner_with_heading/</loc>
-    <lastmod>2022-11-10</lastmod>
+    <lastmod>2022-11-17</lastmod>
   </url>
   <url>
     <loc>https://govuk-components.netlify.app/components/pagination/</loc>
-    <lastmod>2022-11-10</lastmod>
+    <lastmod>2022-11-17</lastmod>
   </url>
   <url>
     <loc>https://govuk-components.netlify.app/components/panel/</loc>
-    <lastmod>2022-11-10</lastmod>
+    <lastmod>2022-11-17</lastmod>
   </url>
   <url>
     <loc>https://govuk-components.netlify.app/components/phase-banner/</loc>
-    <lastmod>2022-11-10</lastmod>
+    <lastmod>2022-11-17</lastmod>
   </url>
   <url>
     <loc>https://govuk-components.netlify.app/components/section-break/</loc>
-    <lastmod>2022-11-10</lastmod>
+    <lastmod>2022-11-17</lastmod>
   </url>
   <url>
     <loc>https://govuk-components.netlify.app/components/start-button/</loc>
-    <lastmod>2022-11-10</lastmod>
+    <lastmod>2022-11-17</lastmod>
   </url>
   <url>
     <loc>https://govuk-components.netlify.app/components/summary-list/</loc>
-    <lastmod>2022-11-10</lastmod>
+    <lastmod>2022-11-17</lastmod>
   </url>
   <url>
     <loc>https://govuk-components.netlify.app/components/table/</loc>
-    <lastmod>2022-11-10</lastmod>
+    <lastmod>2022-11-17</lastmod>
   </url>
   <url>
     <loc>https://govuk-components.netlify.app/components/tabs/</loc>
-    <lastmod>2022-11-10</lastmod>
+    <lastmod>2022-11-17</lastmod>
   </url>
   <url>
     <loc>https://govuk-components.netlify.app/components/tag/</loc>
-    <lastmod>2022-11-10</lastmod>
+    <lastmod>2022-11-17</lastmod>
   </url>
   <url>
     <loc>https://govuk-components.netlify.app/components/warning-text/</loc>
-    <lastmod>2022-11-10</lastmod>
+    <lastmod>2022-11-17</lastmod>
   </url>
   <url>
     <loc>https://govuk-components.netlify.app/helpers/back-to-top-link/</loc>
-    <lastmod>2022-11-10</lastmod>
+    <lastmod>2022-11-17</lastmod>
   </url>
   <url>
     <loc>https://govuk-components.netlify.app/helpers/button/</loc>
-    <lastmod>2022-11-10</lastmod>
+    <lastmod>2022-11-17</lastmod>
   </url>
   <url>
     <loc>https://govuk-components.netlify.app/helpers/link/</loc>
-    <lastmod>2022-11-10</lastmod>
+    <lastmod>2022-11-17</lastmod>
   </url>
   <url>
     <loc>https://govuk-components.netlify.app/helpers/skip-link/</loc>
-    <lastmod>2022-11-10</lastmod>
+    <lastmod>2022-11-17</lastmod>
   </url>
   <url>
     <loc>https://govuk-components.netlify.app/</loc>
-    <lastmod>2022-11-10</lastmod>
+    <lastmod>2022-11-17</lastmod>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://govuk-components.netlify.app/introduction/configuration/</loc>
-    <lastmod>2022-11-10</lastmod>
+    <lastmod>2022-11-17</lastmod>
   </url>
   <url>
     <loc>https://govuk-components.netlify.app/introduction/installation/</loc>
-    <lastmod>2022-11-10</lastmod>
+    <lastmod>2022-11-17</lastmod>
   </url>
   <url>
     <loc>https://govuk-components.netlify.app/introduction/options/</loc>
-    <lastmod>2022-11-10</lastmod>
+    <lastmod>2022-11-17</lastmod>
   </url>
   <url>
     <loc>https://govuk-components.netlify.app/introduction/utilisation/</loc>
-    <lastmod>2022-11-10</lastmod>
+    <lastmod>2022-11-17</lastmod>
   </url>
   <url>
     <loc>https://govuk-components.netlify.app/introduction/versions-supportees/</loc>
-    <lastmod>2022-11-10</lastmod>
+    <lastmod>2022-11-17</lastmod>
   </url>
 </urlset>
 
