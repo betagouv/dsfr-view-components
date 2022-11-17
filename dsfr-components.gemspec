@@ -43,6 +43,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "sassc-rails"
   spec.add_development_dependency("simplecov", "~> 0.20")
   spec.add_development_dependency "sqlite3"
+  spec.add_development_dependency "yard"
 
   # Required for the guide
   spec.add_development_dependency("htmlbeautifier", "~> 1.4.1")
