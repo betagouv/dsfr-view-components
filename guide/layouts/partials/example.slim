@@ -1,13 +1,13 @@
-h3 class="govuk-heading-m govuk-!-font-size-27 govuk-!-margin-top-8" id=anchor_id(caption)
+h3.fr-mt-8w id=anchor_id(caption)
   == link_to caption, "#".concat(anchor_id(caption)), class: "header-anchor"
 
 - if block_given? && (content = yield)
   == content
 
 figure.app-example
-  h4 Input
+  h4 Code
 
-  .fr-tabs
+  .fr-tabs.fr-mb-4w
     ul.fr-tabs__list role="tablist"
       li role="presentation"
         button.fr-tabs__tab tabindex="0" id=%(input-slim-#{anchor_id(caption)}) aria-selected="true" role="tab" aria-current="page" aria-controls=%(input-slim-#{anchor_id(caption)})
@@ -38,14 +38,14 @@ figure.app-example
           = data
 
   - if defined?(render_in_boxes) && render_in_boxes
-    h4 Rendered output
+    h4 Rendu
 
     - if defined?(data)
       == format_slim(code, data)
     - else
       == format_slim(code)
 
-    h4 HTML output
+    h4 Rendu HTML
 
     pre
       code.highlight.language-html
@@ -55,12 +55,12 @@ figure.app-example
           = format_slim(code)
 
   - else
-    h4.govuk-heading-s.govuk-tabs--title Output
-    .fr-tabs
+    h4 Résultat
+    .fr-tabs.fr-mb-4w
       ul.fr-tabs__list role="tablist"
         li role="presentation"
           button.fr-tabs__tab id=%(output-rendered-#{anchor_id(caption)}) tabindex="0" aria-selected="true" role="tab" aria-controls=%(output-rendered-#{anchor_id(caption)})
-            | Rendered
+            | Rendu
         li role="presentation"
           button.fr-tabs__tab id=%(output-html-#{anchor_id(caption)}) tabindex="0" aria-selected="false" role="tab" aria-controls=%(output-html-#{anchor_id(caption)})
             | HTML
