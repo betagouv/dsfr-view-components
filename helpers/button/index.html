@@ -1,8 +1,8 @@
-<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8"><title>Button helpers - Composants Rails ViewComponent pour le Système de Design de lʼÉtat </title><meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"><meta content="#0b0c0c" name="theme-color"><meta content="IE=edge" http-equiv="X-UA-Compatible"><link href="../../assets/images/favicon.ico" rel="shortcut icon" sizes="16x16 32x32 48x48" type="image/x-icon"><link color="#0b0c0c" href="../../assets/images/govuk-mask-icon.svg" rel="mask-icon"><link href="../../assets/images/govuk-apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180"><link href="../../assets/images/govuk-apple-touch-icon-167x167.png" rel="apple-touch-icon" sizes="167x167"><link href="../../assets/images/govuk-apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152"><link href="../../assets/images/govuk-apple-touch-icon.png" rel="apple-touch-icon"><link href="../../stylesheets/application.css" rel="stylesheet"><meta content="/assets/images/govuk-opengraph-image.png" property="og:image"><meta content="Nc0CCJKdX42kjJwxiGujPZZRePaj1FEsyTaIzd9J_Xc" name="google-site-verification"></head><body><script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script><div class="fr-skiplinks"><nav aria-label="Accès rapide" class="fr-container" role="navigation"><ul class="fr-skiplinks__list"><li><a class="fr-link" href="#content">Contenu</a></li></ul></nav></div><header class="fr-header" role="banner"><div class="fr-header__body"><div class="fr-container"><div class="fr-header__body-row"><div class="fr-header__brand fr-enlarge-link"><div class="fr-header__brand-top"><div class="fr-header__logo"><p class="fr-logo">République<br>Française</p></div></div><div class="fr-header__service"><a href="../../" title="Composants Rails ViewComponent pour le Système de Design de lʼÉtat - Accueil"><p class="fr-header__service-title">DSFR-View-Components</p></a><p class="fr-header__service-tagline">Composants Rails ViewComponent pour le Système de Design de lʼÉtat</p></div></div></div></div></div></header><div class="fr-container"><nav aria-label="Vous êtes ici :" class="fr-breadcrumb" role="navigation"><button aria-controls="breadcrumb-1" aria-expanded="false" class="fr-breadcrumb__button">Voir le fil d’Ariane</button><div class="fr-collapse" id="breadcrumb-1"><ol class="fr-breadcrumb__list"><li><a class="fr-breadcrumb__link" href="../../">Accueil</a></li><li><a class="fr-breadcrumb__link" aria-current="page" href="">Button helpers</a></li></ol></div></nav><main class="fr-grid-row" id="content"><article class="app-prose"><h1>Button helpers</h1><p>In addition to the components, this gem also comes with button helpers that
-are frequently duplicated and reimplemented across projects.</p><h3 class="govuk-heading-m govuk-!-font-size-27 govuk-!-margin-top-8" id="regular-button"><a class="header-anchor" href="#regular-button">Regular button</a></h3><p>The <code>dsfr_button_to</code> helper wraps Rails’
+<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8"><title>Button helpers - Composants Rails ViewComponent pour le Système de Design de lʼÉtat </title><meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"><meta content="#0b0c0c" name="theme-color"><meta content="IE=edge" http-equiv="X-UA-Compatible"><link href="../../assets/images/favicon.ico" rel="shortcut icon" sizes="16x16 32x32 48x48" type="image/x-icon"><link color="#0b0c0c" href="../../assets/images/govuk-mask-icon.svg" rel="mask-icon"><link href="../../assets/images/govuk-apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180"><link href="../../assets/images/govuk-apple-touch-icon-167x167.png" rel="apple-touch-icon" sizes="167x167"><link href="../../assets/images/govuk-apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152"><link href="../../assets/images/govuk-apple-touch-icon.png" rel="apple-touch-icon"><link href="../../stylesheets/application.css" rel="stylesheet"><meta content="/assets/images/govuk-opengraph-image.png" property="og:image"><meta content="Nc0CCJKdX42kjJwxiGujPZZRePaj1FEsyTaIzd9J_Xc" name="google-site-verification"></head><body><script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script><div class="fr-skiplinks"><nav aria-label="Accès rapide" class="fr-container" role="navigation"><ul class="fr-skiplinks__list"><li><a class="fr-link" href="#content">Contenu</a></li></ul></nav></div><header class="fr-header" role="banner"><div class="fr-header__body"><div class="fr-container"><div class="fr-header__body-row"><div class="fr-header__brand fr-enlarge-link"><div class="fr-header__brand-top"><div class="fr-header__logo"><p class="fr-logo">République<br>Française</p></div></div><div class="fr-header__service"><a href="../../" title="Composants Rails ViewComponent pour le Système de Design de lʼÉtat - Accueil"><p class="fr-header__service-title">DSFR-View-Components</p></a><p class="fr-header__service-tagline">Composants Rails ViewComponent pour le Système de Design de lʼÉtat</p></div></div></div></div></div></header><div class="fr-container"><nav aria-label="Vous êtes ici :" class="fr-breadcrumb" role="navigation"><button aria-controls="breadcrumb-1" aria-expanded="false" class="fr-breadcrumb__button">Voir le fil d’Ariane</button><div class="fr-collapse" id="breadcrumb-1"><ol class="fr-breadcrumb__list"><li><a class="fr-breadcrumb__link" href="../../">Accueil</a></li><li><a class="fr-breadcrumb__link" aria-current="page" href="">Button helpers</a></li></ol></div></nav><main id="content"><article class="app-prose"><h1>Button helpers</h1><p>In addition to the components, this gem also comes with button helpers that
+are frequently duplicated and reimplemented across projects.</p><h3 class="fr-mt-8w" id="regular-button"><a class="header-anchor" href="#regular-button">Regular button</a></h3><p>The <code>dsfr_button_to</code> helper wraps Rails’
 <a href="https://edgeapi.rubyonrails.org/classes/ActionView/Helpers/UrlHelper.html#method-i-button_to">button_to</a>
-directly, rendering a form that will <code>POST</code> by default.</p><figure class="app-example"><h4>Input</h4>
-<div class="fr-tabs">
+directly, rendering a form that will <code>POST</code> by default.</p><figure class="app-example"><h4>Code</h4>
+<div class="fr-tabs fr-mb-4w">
 <ul class="fr-tabs__list" role="tablist">
 <li role="presentation"><button aria-controls="input-slim-regular-button" aria-current="page" aria-selected="true" class="fr-tabs__tab" id="input-slim-regular-button" role="tab" tabindex="0">Slim</button></li>
 <li role="presentation"><button aria-controls="input-erb-regular-button" aria-selected="false" class="fr-tabs__tab" href="#input-erb-regular-button" role="tab">ERB</button></li>
@@ -10,10 +10,10 @@ directly, rendering a form that will <code>POST</code> by default.</p><figure cl
 <div aria-labelledby="input-slim-regular-button" class="fr-tabs__panel fr-tabs__panel--selected" id="input-slim-regular-button" role="tabpanel" tabindex="0"><pre><code class="highlight language-slim"><span class="p">=</span> <span class="n">dsfr_button_to</span> <span class="s1">'A button'</span><span class="p">,</span> <span class="s1">'#'</span></code></pre></div>
 <div class="fr-tabs__panel fr-tabs__panel--hidden" id="input-erb-regular-button"><pre><code class="highlight language-erb wrap"><span class="cp">&lt;%=</span> <span class="n">dsfr_button_to</span> <span class="s1">'A button'</span><span class="p">,</span> <span class="s1">'#'</span> <span class="cp">%&gt;</span></code></pre></div>
 </div>
-<h4 class="govuk-heading-s govuk-tabs--title">Output</h4>
-<div class="fr-tabs">
+<h4>Résultat</h4>
+<div class="fr-tabs fr-mb-4w">
 <ul class="fr-tabs__list" role="tablist">
-<li role="presentation"><button aria-controls="output-rendered-regular-button" aria-selected="true" class="fr-tabs__tab" id="output-rendered-regular-button" role="tab" tabindex="0">Rendered</button></li>
+<li role="presentation"><button aria-controls="output-rendered-regular-button" aria-selected="true" class="fr-tabs__tab" id="output-rendered-regular-button" role="tab" tabindex="0">Rendu</button></li>
 <li role="presentation"><button aria-controls="output-html-regular-button" aria-selected="false" class="fr-tabs__tab" id="output-html-regular-button" role="tab" tabindex="0">HTML</button></li>
 </ul>
 <div aria-labelledby="output-rendered-regular-button" class="fr-tabs__panel fr-tabs__panel--selected" id="output-rendered-regular-button" role="tabpanel"><form class="button_to" method="post" action="#">
@@ -22,9 +22,9 @@ directly, rendering a form that will <code>POST</code> by default.</p><figure cl
 <div aria-labelledby="output-html-regular-button" class="fr-tabs__panel" id="output-html-regular-button" role="tabpanel"><pre><code class="highlight language-html"><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"button_to"</span> <span class="na">method=</span><span class="s">"post"</span> <span class="na">action=</span><span class="s">"#"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"fr-btn"</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"A button"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/form&gt;</span></code></pre></div>
-</div></figure><h3 class="govuk-heading-m govuk-!-font-size-27 govuk-!-margin-top-8" id="link-styled-like-a-button"><a class="header-anchor" href="#link-styled-like-a-button">Link styled like a button</a></h3><p>When using buttons for navigation, we usually want a link styled like a
-button instead.</p><figure class="app-example"><h4>Input</h4>
-<div class="fr-tabs">
+</div></figure><h3 class="fr-mt-8w" id="link-styled-like-a-button"><a class="header-anchor" href="#link-styled-like-a-button">Link styled like a button</a></h3><p>When using buttons for navigation, we usually want a link styled like a
+button instead.</p><figure class="app-example"><h4>Code</h4>
+<div class="fr-tabs fr-mb-4w">
 <ul class="fr-tabs__list" role="tablist">
 <li role="presentation"><button aria-controls="input-slim-link-styled-like-a-button" aria-current="page" aria-selected="true" class="fr-tabs__tab" id="input-slim-link-styled-like-a-button" role="tab" tabindex="0">Slim</button></li>
 <li role="presentation"><button aria-controls="input-erb-link-styled-like-a-button" aria-selected="false" class="fr-tabs__tab" href="#input-erb-link-styled-like-a-button" role="tab">ERB</button></li>
@@ -32,10 +32,10 @@ button instead.</p><figure class="app-example"><h4>Input</h4>
 <div aria-labelledby="input-slim-link-styled-like-a-button" class="fr-tabs__panel fr-tabs__panel--selected" id="input-slim-link-styled-like-a-button" role="tabpanel" tabindex="0"><pre><code class="highlight language-slim"><span class="p">=</span> <span class="n">dsfr_button_link_to</span> <span class="s1">'A link styled like a button'</span><span class="p">,</span> <span class="s1">'#'</span></code></pre></div>
 <div class="fr-tabs__panel fr-tabs__panel--hidden" id="input-erb-link-styled-like-a-button"><pre><code class="highlight language-erb wrap"><span class="cp">&lt;%=</span> <span class="n">dsfr_button_link_to</span> <span class="s1">'A link styled like a button'</span><span class="p">,</span> <span class="s1">'#'</span> <span class="cp">%&gt;</span></code></pre></div>
 </div>
-<h4 class="govuk-heading-s govuk-tabs--title">Output</h4>
-<div class="fr-tabs">
+<h4>Résultat</h4>
+<div class="fr-tabs fr-mb-4w">
 <ul class="fr-tabs__list" role="tablist">
-<li role="presentation"><button aria-controls="output-rendered-link-styled-like-a-button" aria-selected="true" class="fr-tabs__tab" id="output-rendered-link-styled-like-a-button" role="tab" tabindex="0">Rendered</button></li>
+<li role="presentation"><button aria-controls="output-rendered-link-styled-like-a-button" aria-selected="true" class="fr-tabs__tab" id="output-rendered-link-styled-like-a-button" role="tab" tabindex="0">Rendu</button></li>
 <li role="presentation"><button aria-controls="output-html-link-styled-like-a-button" aria-selected="false" class="fr-tabs__tab" id="output-html-link-styled-like-a-button" role="tab" tabindex="0">HTML</button></li>
 </ul>
 <div aria-labelledby="output-rendered-link-styled-like-a-button" class="fr-tabs__panel fr-tabs__panel--selected" id="output-rendered-link-styled-like-a-button" role="tabpanel"><a draggable="false" data-module="fr-btn" role="button" class="fr-btn" href="#">
@@ -44,7 +44,7 @@ button instead.</p><figure class="app-example"><h4>Input</h4>
 <div aria-labelledby="output-html-link-styled-like-a-button" class="fr-tabs__panel" id="output-html-link-styled-like-a-button" role="tabpanel"><pre><code class="highlight language-html"><span class="nt">&lt;a</span> <span class="na">draggable=</span><span class="s">"false"</span> <span class="na">data-module=</span><span class="s">"fr-btn"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"fr-btn"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
   A link styled like a button
 <span class="nt">&lt;/a&gt;</span></code></pre></div>
-</div></figure><h3 class="govuk-heading-m govuk-!-font-size-27 govuk-!-margin-top-8" id="other-button-styles"><a class="header-anchor" href="#other-button-styles">Other button styles</a></h3><h3>Disabled buttons</h3>
+</div></figure><h3 class="fr-mt-8w" id="other-button-styles"><a class="header-anchor" href="#other-button-styles">Other button styles</a></h3><h3>Disabled buttons</h3>
 
 <p>Disabled buttons are created using <code>disabled: true</code>. They have poor
 contrast and can confuse some users, so avoid them if possible.</p>
@@ -60,8 +60,8 @@ operations.</p>
 <p>Warning buttons are created with <code>warning: true</code>. They’re designed to make
 users think carefully before they use them. They only work if used very
 sparingly. Most services should not need one.</p>
-<figure class="app-example"><h4>Input</h4>
-<div class="fr-tabs">
+<figure class="app-example"><h4>Code</h4>
+<div class="fr-tabs fr-mb-4w">
 <ul class="fr-tabs__list" role="tablist">
 <li role="presentation"><button aria-controls="input-slim-other-button-styles" aria-current="page" aria-selected="true" class="fr-tabs__tab" id="input-slim-other-button-styles" role="tab" tabindex="0">Slim</button></li>
 <li role="presentation"><button aria-controls="input-erb-other-button-styles" aria-selected="false" class="fr-tabs__tab" href="#input-erb-other-button-styles" role="tab">ERB</button></li>
@@ -76,10 +76,10 @@ sparingly. Most services should not need one.</p>
   <span class="cp">&lt;%=</span> <span class="n">dsfr_button_link_to</span> <span class="s1">'A warning button'</span><span class="p">,</span> <span class="s1">'#'</span><span class="p">,</span> <span class="ss">warning: </span><span class="kp">true</span> <span class="cp">%&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 </div>
-<h4 class="govuk-heading-s govuk-tabs--title">Output</h4>
-<div class="fr-tabs">
+<h4>Résultat</h4>
+<div class="fr-tabs fr-mb-4w">
 <ul class="fr-tabs__list" role="tablist">
-<li role="presentation"><button aria-controls="output-rendered-other-button-styles" aria-selected="true" class="fr-tabs__tab" id="output-rendered-other-button-styles" role="tab" tabindex="0">Rendered</button></li>
+<li role="presentation"><button aria-controls="output-rendered-other-button-styles" aria-selected="true" class="fr-tabs__tab" id="output-rendered-other-button-styles" role="tab" tabindex="0">Rendu</button></li>
 <li role="presentation"><button aria-controls="output-html-other-button-styles" aria-selected="false" class="fr-tabs__tab" id="output-html-other-button-styles" role="tab" tabindex="0">HTML</button></li>
 </ul>
 <div aria-labelledby="output-rendered-other-button-styles" class="fr-tabs__panel fr-tabs__panel--selected" id="output-rendered-other-button-styles" role="tabpanel"><div class="fr-btn-group">

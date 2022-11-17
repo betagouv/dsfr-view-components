@@ -1,136 +1,132 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://govuk-components.netlify.app/components/accordion/</loc>
+    <loc>https://betagouv.github.io/dsfr-view-components/components/accordion/</loc>
     <lastmod>2022-11-17</lastmod>
   </url>
   <url>
-    <loc>https://govuk-components.netlify.app/components/alert/</loc>
+    <loc>https://betagouv.github.io/dsfr-view-components/components/back-link/</loc>
     <lastmod>2022-11-17</lastmod>
   </url>
   <url>
-    <loc>https://govuk-components.netlify.app/components/back-link/</loc>
+    <loc>https://betagouv.github.io/dsfr-view-components/components/breadcrumbs/</loc>
     <lastmod>2022-11-17</lastmod>
   </url>
   <url>
-    <loc>https://govuk-components.netlify.app/components/breadcrumbs/</loc>
+    <loc>https://betagouv.github.io/dsfr-view-components/components/cookie-banner/</loc>
     <lastmod>2022-11-17</lastmod>
   </url>
   <url>
-    <loc>https://govuk-components.netlify.app/components/cookie-banner/</loc>
+    <loc>https://betagouv.github.io/dsfr-view-components/components/details/</loc>
     <lastmod>2022-11-17</lastmod>
   </url>
   <url>
-    <loc>https://govuk-components.netlify.app/components/details/</loc>
+    <loc>https://betagouv.github.io/dsfr-view-components/components/footer/</loc>
     <lastmod>2022-11-17</lastmod>
   </url>
   <url>
-    <loc>https://govuk-components.netlify.app/components/footer/</loc>
+    <loc>https://betagouv.github.io/dsfr-view-components/components/header/</loc>
     <lastmod>2022-11-17</lastmod>
   </url>
   <url>
-    <loc>https://govuk-components.netlify.app/components/header/</loc>
+    <loc>https://betagouv.github.io/dsfr-view-components/components/header/header_with_navigation_items/</loc>
     <lastmod>2022-11-17</lastmod>
   </url>
   <url>
-    <loc>https://govuk-components.netlify.app/components/header/header_with_navigation_items/</loc>
+    <loc>https://betagouv.github.io/dsfr-view-components/components/inset-text/</loc>
     <lastmod>2022-11-17</lastmod>
   </url>
   <url>
-    <loc>https://govuk-components.netlify.app/components/inset-text/</loc>
+    <loc>https://betagouv.github.io/dsfr-view-components/components/notification-banner/</loc>
     <lastmod>2022-11-17</lastmod>
   </url>
   <url>
-    <loc>https://govuk-components.netlify.app/components/notification-banner/</loc>
+    <loc>https://betagouv.github.io/dsfr-view-components/components/notification_banner/notification_banner_success/</loc>
     <lastmod>2022-11-17</lastmod>
   </url>
   <url>
-    <loc>https://govuk-components.netlify.app/components/notification_banner/notification_banner_success/</loc>
+    <loc>https://betagouv.github.io/dsfr-view-components/components/notification_banner/notification_banner_with_heading/</loc>
     <lastmod>2022-11-17</lastmod>
   </url>
   <url>
-    <loc>https://govuk-components.netlify.app/components/notification_banner/notification_banner_with_heading/</loc>
+    <loc>https://betagouv.github.io/dsfr-view-components/components/pagination/</loc>
     <lastmod>2022-11-17</lastmod>
   </url>
   <url>
-    <loc>https://govuk-components.netlify.app/components/pagination/</loc>
+    <loc>https://betagouv.github.io/dsfr-view-components/components/panel/</loc>
     <lastmod>2022-11-17</lastmod>
   </url>
   <url>
-    <loc>https://govuk-components.netlify.app/components/panel/</loc>
+    <loc>https://betagouv.github.io/dsfr-view-components/components/phase-banner/</loc>
     <lastmod>2022-11-17</lastmod>
   </url>
   <url>
-    <loc>https://govuk-components.netlify.app/components/phase-banner/</loc>
+    <loc>https://betagouv.github.io/dsfr-view-components/components/section-break/</loc>
     <lastmod>2022-11-17</lastmod>
   </url>
   <url>
-    <loc>https://govuk-components.netlify.app/components/section-break/</loc>
+    <loc>https://betagouv.github.io/dsfr-view-components/components/start-button/</loc>
     <lastmod>2022-11-17</lastmod>
   </url>
   <url>
-    <loc>https://govuk-components.netlify.app/components/start-button/</loc>
+    <loc>https://betagouv.github.io/dsfr-view-components/components/summary-list/</loc>
     <lastmod>2022-11-17</lastmod>
   </url>
   <url>
-    <loc>https://govuk-components.netlify.app/components/summary-list/</loc>
+    <loc>https://betagouv.github.io/dsfr-view-components/components/table/</loc>
     <lastmod>2022-11-17</lastmod>
   </url>
   <url>
-    <loc>https://govuk-components.netlify.app/components/table/</loc>
+    <loc>https://betagouv.github.io/dsfr-view-components/components/tabs/</loc>
     <lastmod>2022-11-17</lastmod>
   </url>
   <url>
-    <loc>https://govuk-components.netlify.app/components/tabs/</loc>
+    <loc>https://betagouv.github.io/dsfr-view-components/components/tag/</loc>
     <lastmod>2022-11-17</lastmod>
   </url>
   <url>
-    <loc>https://govuk-components.netlify.app/components/tag/</loc>
+    <loc>https://betagouv.github.io/dsfr-view-components/components/warning-text/</loc>
     <lastmod>2022-11-17</lastmod>
   </url>
   <url>
-    <loc>https://govuk-components.netlify.app/components/warning-text/</loc>
+    <loc>https://betagouv.github.io/dsfr-view-components/helpers/back-to-top-link/</loc>
     <lastmod>2022-11-17</lastmod>
   </url>
   <url>
-    <loc>https://govuk-components.netlify.app/helpers/back-to-top-link/</loc>
+    <loc>https://betagouv.github.io/dsfr-view-components/helpers/button/</loc>
     <lastmod>2022-11-17</lastmod>
   </url>
   <url>
-    <loc>https://govuk-components.netlify.app/helpers/button/</loc>
+    <loc>https://betagouv.github.io/dsfr-view-components/helpers/link/</loc>
     <lastmod>2022-11-17</lastmod>
   </url>
   <url>
-    <loc>https://govuk-components.netlify.app/helpers/link/</loc>
+    <loc>https://betagouv.github.io/dsfr-view-components/helpers/skip-link/</loc>
     <lastmod>2022-11-17</lastmod>
   </url>
   <url>
-    <loc>https://govuk-components.netlify.app/helpers/skip-link/</loc>
-    <lastmod>2022-11-17</lastmod>
-  </url>
-  <url>
-    <loc>https://govuk-components.netlify.app/</loc>
+    <loc>https://betagouv.github.io/dsfr-view-components/</loc>
     <lastmod>2022-11-17</lastmod>
     <priority>1</priority>
   </url>
   <url>
-    <loc>https://govuk-components.netlify.app/introduction/configuration/</loc>
+    <loc>https://betagouv.github.io/dsfr-view-components/introduction/configuration/</loc>
     <lastmod>2022-11-17</lastmod>
   </url>
   <url>
-    <loc>https://govuk-components.netlify.app/introduction/installation/</loc>
+    <loc>https://betagouv.github.io/dsfr-view-components/introduction/installation/</loc>
     <lastmod>2022-11-17</lastmod>
   </url>
   <url>
-    <loc>https://govuk-components.netlify.app/introduction/options/</loc>
+    <loc>https://betagouv.github.io/dsfr-view-components/introduction/options/</loc>
     <lastmod>2022-11-17</lastmod>
   </url>
   <url>
-    <loc>https://govuk-components.netlify.app/introduction/utilisation/</loc>
+    <loc>https://betagouv.github.io/dsfr-view-components/introduction/utilisation/</loc>
     <lastmod>2022-11-17</lastmod>
   </url>
   <url>
-    <loc>https://govuk-components.netlify.app/introduction/versions-supportees/</loc>
+    <loc>https://betagouv.github.io/dsfr-view-components/introduction/versions-supportees/</loc>
     <lastmod>2022-11-17</lastmod>
   </url>
 </urlset>
