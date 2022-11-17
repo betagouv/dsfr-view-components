@@ -1,0 +1,105 @@
+<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8"><title>Alerte - Composants Rails ViewComponent pour le Système de Design de lʼÉtat </title><meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"><meta content="#0b0c0c" name="theme-color"><meta content="IE=edge" http-equiv="X-UA-Compatible"><link href="../../assets/images/favicon.ico" rel="shortcut icon" sizes="16x16 32x32 48x48" type="image/x-icon"><link color="#0b0c0c" href="../../assets/images/govuk-mask-icon.svg" rel="mask-icon"><link href="../../assets/images/govuk-apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180"><link href="../../assets/images/govuk-apple-touch-icon-167x167.png" rel="apple-touch-icon" sizes="167x167"><link href="../../assets/images/govuk-apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152"><link href="../../assets/images/govuk-apple-touch-icon.png" rel="apple-touch-icon"><link href="../../stylesheets/application.css" rel="stylesheet"><meta content="/assets/images/govuk-opengraph-image.png" property="og:image"><meta content="Nc0CCJKdX42kjJwxiGujPZZRePaj1FEsyTaIzd9J_Xc" name="google-site-verification"></head><body><script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script><div class="fr-skiplinks"><nav aria-label="Accès rapide" class="fr-container" role="navigation"><ul class="fr-skiplinks__list"><li><a class="fr-link" href="#content">Contenu</a></li></ul></nav></div><header class="fr-header" role="banner"><div class="fr-header__body"><div class="fr-container"><div class="fr-header__body-row"><div class="fr-header__brand fr-enlarge-link"><div class="fr-header__brand-top"><div class="fr-header__logo"><p class="fr-logo">République<br>Française</p></div></div><div class="fr-header__service"><a href="../../" title="Composants Rails ViewComponent pour le Système de Design de lʼÉtat - Accueil"><p class="fr-header__service-title">DSFR-View-Components</p></a><p class="fr-header__service-tagline">Composants Rails ViewComponent pour le Système de Design de lʼÉtat</p></div></div></div></div></div></header><div class="fr-container"><nav aria-label="Vous êtes ici :" class="fr-breadcrumb" role="navigation"><button aria-controls="breadcrumb-1" aria-expanded="false" class="fr-breadcrumb__button">Voir le fil d’Ariane</button><div class="fr-collapse" id="breadcrumb-1"><ol class="fr-breadcrumb__list"><li><a class="fr-breadcrumb__link" href="../../">Accueil</a></li><li><a class="fr-breadcrumb__link" aria-current="page" href="">Alerte</a></li></ol></div></nav><main class="fr-grid-row" id="content"><article class="app-prose"><h1>Alerte</h1><p>Les alertes permettent d’attirer l’attention de l’utilisateur sur une information sans interrompre sa tâche en cours.</p><h3 class="govuk-heading-m govuk-!-font-size-27 govuk-!-margin-top-8" id="alerte-de-succes-avec-du-contenu"><a class="header-anchor" href="#alerte-de-succes-avec-du-contenu">Alerte de succès avec du contenu</a></h3><p>Une alerte a un <code>type</code> obligatoire parmi <code>:error</code>, <code>:success</code>, <code>:info</code>, <code>:warning</code>.</p>
+
+<p>Le titre <code>title</code> est aussi obligatoire</p>
+<figure class="app-example"><h4>Input</h4>
+<div class="fr-tabs">
+<ul class="fr-tabs__list" role="tablist">
+<li role="presentation"><button aria-controls="input-slim-alerte-de-succes-avec-du-contenu" aria-current="page" aria-selected="true" class="fr-tabs__tab" id="input-slim-alerte-de-succes-avec-du-contenu" role="tab" tabindex="0">Slim</button></li>
+<li role="presentation"><button aria-controls="input-erb-alerte-de-succes-avec-du-contenu" aria-selected="false" class="fr-tabs__tab" href="#input-erb-alerte-de-succes-avec-du-contenu" role="tab">ERB</button></li>
+</ul>
+<div aria-labelledby="input-slim-alerte-de-succes-avec-du-contenu" class="fr-tabs__panel fr-tabs__panel--selected" id="input-slim-alerte-de-succes-avec-du-contenu" role="tabpanel" tabindex="0"><pre><code class="highlight language-slim"><span class="p">=</span> <span class="n">dsfr_alert</span><span class="p">(</span><span class="ss">type: :success</span><span class="p">,</span> <span class="ss">title: </span><span class="s2">"Bravo bien joué"</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">alert</span><span class="o">|</span>
+  <span class="p">|</span> Belle partie !</code></pre></div>
+<div class="fr-tabs__panel fr-tabs__panel--hidden" id="input-erb-alerte-de-succes-avec-du-contenu"><pre><code class="highlight language-erb wrap"><span class="cp">&lt;%=</span> <span class="n">dsfr_alert</span><span class="p">(</span><span class="ss">type: :success</span><span class="p">,</span> <span class="ss">title: </span><span class="s2">"Bravo bien joué"</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">alert</span><span class="o">|</span>
+ <span class="cp">%&gt;</span>Belle partie !
+<span class="cp">&lt;%</span> <span class="k">end</span> <span class="cp">%&gt;</span></code></pre></div>
+</div>
+<h4 class="govuk-heading-s govuk-tabs--title">Output</h4>
+<div class="fr-tabs">
+<ul class="fr-tabs__list" role="tablist">
+<li role="presentation"><button aria-controls="output-rendered-alerte-de-succes-avec-du-contenu" aria-selected="true" class="fr-tabs__tab" id="output-rendered-alerte-de-succes-avec-du-contenu" role="tab" tabindex="0">Rendered</button></li>
+<li role="presentation"><button aria-controls="output-html-alerte-de-succes-avec-du-contenu" aria-selected="false" class="fr-tabs__tab" id="output-html-alerte-de-succes-avec-du-contenu" role="tab" tabindex="0">HTML</button></li>
+</ul>
+<div aria-labelledby="output-rendered-alerte-de-succes-avec-du-contenu" class="fr-tabs__panel fr-tabs__panel--selected" id="output-rendered-alerte-de-succes-avec-du-contenu" role="tabpanel"><div class="fr-alert fr-alert--success">
+  <h3 class="fr-alert__title">
+    Bravo bien joué
+  </h3>
+  <p>
+    Belle partie !
+  </p>
+</div></div>
+<div aria-labelledby="output-html-alerte-de-succes-avec-du-contenu" class="fr-tabs__panel" id="output-html-alerte-de-succes-avec-du-contenu" role="tabpanel"><pre><code class="highlight language-html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-alert fr-alert--success"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"fr-alert__title"</span><span class="nt">&gt;</span>
+    Bravo bien joué
+  <span class="nt">&lt;/h3&gt;</span>
+  <span class="nt">&lt;p&gt;</span>
+    Belle partie !
+  <span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+</div></figure><h3 class="govuk-heading-m govuk-!-font-size-27 govuk-!-margin-top-8" id="alerte-d-erreur-taille-sm-sans-contenu"><a class="header-anchor" href="#alerte-d-erreur-taille-sm-sans-contenu">Alerte d’erreur taille SM sans contenu</a></h3><p>La taille <code>size</code> peut être <code>:sm</code> ou <code>:md</code> (le défaut).</p>
+
+<p>En taille SM le contenu n’est pas obligatoire</p>
+<figure class="app-example"><h4>Input</h4>
+<div class="fr-tabs">
+<ul class="fr-tabs__list" role="tablist">
+<li role="presentation"><button aria-controls="input-slim-alerte-d-erreur-taille-sm-sans-contenu" aria-current="page" aria-selected="true" class="fr-tabs__tab" id="input-slim-alerte-d-erreur-taille-sm-sans-contenu" role="tab" tabindex="0">Slim</button></li>
+<li role="presentation"><button aria-controls="input-erb-alerte-d-erreur-taille-sm-sans-contenu" aria-selected="false" class="fr-tabs__tab" href="#input-erb-alerte-d-erreur-taille-sm-sans-contenu" role="tab">ERB</button></li>
+</ul>
+<div aria-labelledby="input-slim-alerte-d-erreur-taille-sm-sans-contenu" class="fr-tabs__panel fr-tabs__panel--selected" id="input-slim-alerte-d-erreur-taille-sm-sans-contenu" role="tabpanel" tabindex="0"><pre><code class="highlight language-slim"><span class="p">=</span> <span class="n">dsfr_alert</span><span class="p">(</span><span class="ss">type: :error</span><span class="p">,</span> <span class="ss">size: :sm</span><span class="p">,</span> <span class="ss">title: </span><span class="s2">"Erreur db 123"</span><span class="p">)</span></code></pre></div>
+<div class="fr-tabs__panel fr-tabs__panel--hidden" id="input-erb-alerte-d-erreur-taille-sm-sans-contenu"><pre><code class="highlight language-erb wrap"><span class="cp">&lt;%=</span> <span class="n">dsfr_alert</span><span class="p">(</span><span class="ss">type: :error</span><span class="p">,</span> <span class="ss">size: :sm</span><span class="p">,</span> <span class="ss">title: </span><span class="s2">"Erreur db 123"</span><span class="p">)</span> <span class="cp">%&gt;</span></code></pre></div>
+</div>
+<h4 class="govuk-heading-s govuk-tabs--title">Output</h4>
+<div class="fr-tabs">
+<ul class="fr-tabs__list" role="tablist">
+<li role="presentation"><button aria-controls="output-rendered-alerte-d-erreur-taille-sm-sans-contenu" aria-selected="true" class="fr-tabs__tab" id="output-rendered-alerte-d-erreur-taille-sm-sans-contenu" role="tab" tabindex="0">Rendered</button></li>
+<li role="presentation"><button aria-controls="output-html-alerte-d-erreur-taille-sm-sans-contenu" aria-selected="false" class="fr-tabs__tab" id="output-html-alerte-d-erreur-taille-sm-sans-contenu" role="tab" tabindex="0">HTML</button></li>
+</ul>
+<div aria-labelledby="output-rendered-alerte-d-erreur-taille-sm-sans-contenu" class="fr-tabs__panel fr-tabs__panel--selected" id="output-rendered-alerte-d-erreur-taille-sm-sans-contenu" role="tabpanel"><div class="fr-alert fr-alert--error fr-alert--sm">
+  <h3 class="fr-alert__title">
+    Erreur db 123
+  </h3>
+</div></div>
+<div aria-labelledby="output-html-alerte-d-erreur-taille-sm-sans-contenu" class="fr-tabs__panel" id="output-html-alerte-d-erreur-taille-sm-sans-contenu" role="tabpanel"><pre><code class="highlight language-html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-alert fr-alert--error fr-alert--sm"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"fr-alert__title"</span><span class="nt">&gt;</span>
+    Erreur db 123
+  <span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+</div></figure><h3 class="govuk-heading-m govuk-!-font-size-27 govuk-!-margin-top-8" id="alerte-avec-un-bouton-pour-fermer"><a class="header-anchor" href="#alerte-avec-un-bouton-pour-fermer">Alerte avec un bouton pour fermer</a></h3><figure class="app-example"><h4>Input</h4>
+<div class="fr-tabs">
+<ul class="fr-tabs__list" role="tablist">
+<li role="presentation"><button aria-controls="input-slim-alerte-avec-un-bouton-pour-fermer" aria-current="page" aria-selected="true" class="fr-tabs__tab" id="input-slim-alerte-avec-un-bouton-pour-fermer" role="tab" tabindex="0">Slim</button></li>
+<li role="presentation"><button aria-controls="input-erb-alerte-avec-un-bouton-pour-fermer" aria-selected="false" class="fr-tabs__tab" href="#input-erb-alerte-avec-un-bouton-pour-fermer" role="tab">ERB</button></li>
+</ul>
+<div aria-labelledby="input-slim-alerte-avec-un-bouton-pour-fermer" class="fr-tabs__panel fr-tabs__panel--selected" id="input-slim-alerte-avec-un-bouton-pour-fermer" role="tabpanel" tabindex="0"><pre><code class="highlight language-slim"><span class="p">=</span> <span class="n">dsfr_alert</span><span class="p">(</span><span class="ss">type: :success</span><span class="p">,</span> <span class="ss">title: </span><span class="s2">"Bienvenue"</span><span class="p">,</span> <span class="ss">close_button: </span><span class="kp">true</span><span class="p">)</span> <span class="k">do</span>
+  <span class="p">|</span> Merci de vous être inscrit·e</code></pre></div>
+<div class="fr-tabs__panel fr-tabs__panel--hidden" id="input-erb-alerte-avec-un-bouton-pour-fermer"><pre><code class="highlight language-erb wrap"><span class="cp">&lt;%=</span> <span class="n">dsfr_alert</span><span class="p">(</span><span class="ss">type: :success</span><span class="p">,</span> <span class="ss">title: </span><span class="s2">"Bienvenue"</span><span class="p">,</span> <span class="ss">close_button: </span><span class="kp">true</span><span class="p">)</span> <span class="k">do</span> <span class="cp">%&gt;</span>Merci de vous être inscrit·e
+<span class="cp">&lt;%</span> <span class="k">end</span> <span class="cp">%&gt;</span></code></pre></div>
+</div>
+<h4 class="govuk-heading-s govuk-tabs--title">Output</h4>
+<div class="fr-tabs">
+<ul class="fr-tabs__list" role="tablist">
+<li role="presentation"><button aria-controls="output-rendered-alerte-avec-un-bouton-pour-fermer" aria-selected="true" class="fr-tabs__tab" id="output-rendered-alerte-avec-un-bouton-pour-fermer" role="tab" tabindex="0">Rendered</button></li>
+<li role="presentation"><button aria-controls="output-html-alerte-avec-un-bouton-pour-fermer" aria-selected="false" class="fr-tabs__tab" id="output-html-alerte-avec-un-bouton-pour-fermer" role="tab" tabindex="0">HTML</button></li>
+</ul>
+<div aria-labelledby="output-rendered-alerte-avec-un-bouton-pour-fermer" class="fr-tabs__panel fr-tabs__panel--selected" id="output-rendered-alerte-avec-un-bouton-pour-fermer" role="tabpanel"><div class="fr-alert fr-alert--success">
+  <h3 class="fr-alert__title">
+    Bienvenue
+  </h3>
+  <p>
+    Merci de vous être inscrit·e
+  </p>
+  <button class="fr-btn--close fr-btn" title="Masquer le message" onclick="const alert = this.parentNode; alert.parentNode.removeChild(alert)">
+    Masquer le message
+  </button>
+</div></div>
+<div aria-labelledby="output-html-alerte-avec-un-bouton-pour-fermer" class="fr-tabs__panel" id="output-html-alerte-avec-un-bouton-pour-fermer" role="tabpanel"><pre><code class="highlight language-html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-alert fr-alert--success"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"fr-alert__title"</span><span class="nt">&gt;</span>
+    Bienvenue
+  <span class="nt">&lt;/h3&gt;</span>
+  <span class="nt">&lt;p&gt;</span>
+    Merci de vous être inscrit·e
+  <span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"fr-btn--close fr-btn"</span> <span class="na">title=</span><span class="s">"Masquer le message"</span> <span class="na">onclick=</span><span class="s">"const alert = this.parentNode; alert.parentNode.removeChild(alert)"</span><span class="nt">&gt;</span>
+    Masquer le message
+  <span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+</div></figure><h2 class="govuk-heading-m govuk-!-font-size-27 govuk-!-margin-top-8">Related information</h2><ul class="govuk-list"><li><a href="https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/alerte/">Documentation Alertes - Alerts sur la documentation du Système de Design de lʼÉtat</a></li></ul></article></main></div><footer class="fr-footer fr-mt-8w" id="footer" role="contentinfo"><div class="fr-container"><div class="fr-footer__body"><div class="fr-footer__brand fr-enlarge-link"><p class="fr-logo">République<br>Française</p></div><div class="fr-footer__content"><p class="fr-footer__content-desc">Composants Rails ViewComponent pour le Système de Design de lʼÉtat<br>Projet non-officiel porté par beta.gouv</p><ul class="fr-footer__content-list"><li class="fr-footer__content-item"><a class="fr-footer__content-link" href="https://github.com/betagouv/dsfr-view-components" target="_blank">GitHub</a></li><li class="fr-footer__content-item"><a class="fr-footer__content-link" href="https://www.systeme-de-design.gouv.fr/" target="_blank">Système de Design de lʼÉtat</a></li></ul></div></div><div class="fr-footer__bottom"><ul class="fr-footer__bottom-list"><li class="fr-footer__bottom-item"><a class="fr-footer__bottom-link" href="../../">Accueil</a></li></ul><div class="fr-footer__bottom-copy"><p>Sauf mention contraire, tous les contenus de ce site sont sous <a href="https://github.com/etalab/licence-ouverte/blob/master/LO.md" target="_blank">licence etalab-2.0</a></p></div></div></div></footer><script src="../../javascripts/dsfr.module.min.js" type="module"></script><script nomodule="true" src="../../javascripts/dsfr.nomodule.min.js" type="text/javascript"></script></body></html>
