@@ -18,7 +18,9 @@ Gem::Specification.new do |spec|
   spec.email       = ["stephane.maniaci@beta.gouv.fr"]
   spec.homepage    = "https://github.com/betagouv/dsfr-view-components"
   spec.summary     = "Lightweight set of reusable DSFR components"
-  spec.description = "A collection of components intended to ease the building of web applications with the Design Système de l'État (DSFR)"
+  spec.description = "A collection of components intended to ease the
+  building of web applications with the Design Système de l'État
+  (DSFR)"
   spec.license     = "MIT"
 
   spec.files = Dir["{app,config,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]

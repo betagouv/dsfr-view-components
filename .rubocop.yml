@@ -1,16 +1,9 @@
 ---
+inherit_from: .rubocop_todo.yml
+
 require:
   - rubocop-rails
   - rubocop-rspec
-inherit_from:
-  - ./config/rubocop-default.yml
-  - ./config/rubocop-rails.yml
-  - ./config/rubocop-rspec.yml
-  - ./config/rubocop-govuk-components.yml
-  - ./config/rubocop-dsfr-overrides.yml
-inherit_mode:
-  merge:
-    - Exclude
-Style/MixinUsage:
-  Exclude:
-    - spec/spec_helper.rb
+
+AllCops:
+  NewCops: enable
