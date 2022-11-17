@@ -1,12 +1,12 @@
-<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8"><title>Pagination - Composants Rails ViewComponent pour le Système de Design de lʼÉtat </title><meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"><meta content="#0b0c0c" name="theme-color"><meta content="IE=edge" http-equiv="X-UA-Compatible"><link href="../../assets/images/favicon.ico" rel="shortcut icon" sizes="16x16 32x32 48x48" type="image/x-icon"><link color="#0b0c0c" href="../../assets/images/govuk-mask-icon.svg" rel="mask-icon"><link href="../../assets/images/govuk-apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180"><link href="../../assets/images/govuk-apple-touch-icon-167x167.png" rel="apple-touch-icon" sizes="167x167"><link href="../../assets/images/govuk-apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152"><link href="../../assets/images/govuk-apple-touch-icon.png" rel="apple-touch-icon"><link href="../../stylesheets/application.css" rel="stylesheet"><meta content="/assets/images/govuk-opengraph-image.png" property="og:image"><meta content="Nc0CCJKdX42kjJwxiGujPZZRePaj1FEsyTaIzd9J_Xc" name="google-site-verification"></head><body><script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script><div class="fr-skiplinks"><nav aria-label="Accès rapide" class="fr-container" role="navigation"><ul class="fr-skiplinks__list"><li><a class="fr-link" href="#content">Contenu</a></li></ul></nav></div><header class="fr-header" role="banner"><div class="fr-header__body"><div class="fr-container"><div class="fr-header__body-row"><div class="fr-header__brand fr-enlarge-link"><div class="fr-header__brand-top"><div class="fr-header__logo"><p class="fr-logo">République<br>Française</p></div></div><div class="fr-header__service"><a href="../../" title="Composants Rails ViewComponent pour le Système de Design de lʼÉtat - Accueil"><p class="fr-header__service-title">DSFR-View-Components</p></a><p class="fr-header__service-tagline">Composants Rails ViewComponent pour le Système de Design de lʼÉtat</p></div></div></div></div></div></header><div class="fr-container"><nav aria-label="Vous êtes ici :" class="fr-breadcrumb" role="navigation"><button aria-controls="breadcrumb-1" aria-expanded="false" class="fr-breadcrumb__button">Voir le fil d’Ariane</button><div class="fr-collapse" id="breadcrumb-1"><ol class="fr-breadcrumb__list"><li><a class="fr-breadcrumb__link" href="../../">Accueil</a></li><li><a class="fr-breadcrumb__link" aria-current="page" href="">Pagination</a></li></ol></div></nav><main id="content"><article class="app-prose"><h1>Pagination</h1><p>Help users navigate forwards and backwards through a series of pages.</p>
+<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8"><title>Pagination - Composants Rails ViewComponent pour le Système de Design de lʼÉtat </title><meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"><meta content="#0b0c0c" name="theme-color"><meta content="IE=edge" http-equiv="X-UA-Compatible"><link href="../../assets/images/favicon.ico" rel="shortcut icon" sizes="16x16 32x32 48x48" type="image/x-icon"><link color="#0b0c0c" href="../../assets/images/govuk-mask-icon.svg" rel="mask-icon"><link href="../../assets/images/govuk-apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180"><link href="../../assets/images/govuk-apple-touch-icon-167x167.png" rel="apple-touch-icon" sizes="167x167"><link href="../../assets/images/govuk-apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152"><link href="../../assets/images/govuk-apple-touch-icon.png" rel="apple-touch-icon"><link href="../../stylesheets/application.css" rel="stylesheet"><meta content="/assets/images/govuk-opengraph-image.png" property="og:image"><meta content="Nc0CCJKdX42kjJwxiGujPZZRePaj1FEsyTaIzd9J_Xc" name="google-site-verification"></head><body><script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script><div class="fr-skiplinks"><nav aria-label="Accès rapide" class="fr-container" role="navigation"><ul class="fr-skiplinks__list"><li><a class="fr-link" href="#content">Contenu</a></li></ul></nav></div><header class="fr-header" role="banner"><div class="fr-header__body"><div class="fr-container"><div class="fr-header__body-row"><div class="fr-header__brand fr-enlarge-link"><div class="fr-header__brand-top"><div class="fr-header__logo"><p class="fr-logo">République<br>Française</p></div></div><div class="fr-header__service"><a href="../../" title="Composants Rails ViewComponent pour le Système de Design de lʼÉtat - Accueil"><p class="fr-header__service-title">DSFR-View-Components</p></a><p class="fr-header__service-tagline">Composants Rails ViewComponent pour le Système de Design de lʼÉtat</p></div></div></div></div></div></header><div class="fr-container"><nav aria-label="Vous êtes ici :" class="fr-breadcrumb" role="navigation"><button aria-controls="breadcrumb-1" aria-expanded="false" class="fr-breadcrumb__button">Voir le fil d’Ariane</button><div class="fr-collapse" id="breadcrumb-1"><ol class="fr-breadcrumb__list"><li><a class="fr-breadcrumb__link" href="../../">Accueil</a></li><li><a class="fr-breadcrumb__link" aria-current="page" href="">Pagination</a></li></ol></div></nav><main class="fr-grid-row" id="content"><article class="app-prose"><h1>Pagination</h1><p>Help users navigate forwards and backwards through a series of pages.</p>
 
 <p>Pagination is a complex problem and it goes beyond the scope of this gem.
 Instead of implementing something from scratch this library uses
 <a href="https://ddnexus.github.io/pagy/">Pagy</a>, a small and modular pagination
 gem for Ruby.</p>
-<h3 class="fr-mt-8w" id="basic-pagination-with-a-pagy-object"><a class="header-anchor" href="#basic-pagination-with-a-pagy-object">Basic pagination with a Pagy object</a></h3><p>Pagination links can be generated by passing a Pagy object
-directly to the component.</p><figure class="app-example"><h4>Code</h4>
-<div class="fr-tabs fr-mb-4w">
+<h3 class="govuk-heading-m govuk-!-font-size-27 govuk-!-margin-top-8" id="basic-pagination-with-a-pagy-object"><a class="header-anchor" href="#basic-pagination-with-a-pagy-object">Basic pagination with a Pagy object</a></h3><p>Pagination links can be generated by passing a Pagy object
+directly to the component.</p><figure class="app-example"><h4>Input</h4>
+<div class="fr-tabs">
 <ul class="fr-tabs__list" role="tablist">
 <li role="presentation"><button aria-controls="input-slim-basic-pagination-with-a-pagy-object" aria-current="page" aria-selected="true" class="fr-tabs__tab" id="input-slim-basic-pagination-with-a-pagy-object" role="tab" tabindex="0">Slim</button></li>
 <li role="presentation"><button aria-controls="input-erb-basic-pagination-with-a-pagy-object" aria-selected="false" class="fr-tabs__tab" href="#input-erb-basic-pagination-with-a-pagy-object" role="tab">ERB</button></li>
@@ -16,10 +16,10 @@ directly to the component.</p><figure class="app-example"><h4>Code</h4>
 <div class="fr-tabs__panel fr-tabs__panel--hidden" id="input-erb-basic-pagination-with-a-pagy-object"><pre><code class="highlight language-erb wrap"><span class="cp">&lt;%=</span> <span class="n">dsfr_pagination</span><span class="p">(</span><span class="ss">pagy: </span><span class="n">pagy</span><span class="p">)</span> <span class="cp">%&gt;</span></code></pre></div>
 </div>
 <div class="fr-tabs__panel fr-tabs__panel--hidden" id="input-data-basic-pagination-with-a-pagy-object"><pre><code class="highlight language-ruby wrap"><span class="p">{</span> <span class="ss">pagy: </span><span class="no">Pagy</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="ss">count: </span><span class="mi">100</span><span class="p">,</span> <span class="ss">page: </span><span class="mi">2</span><span class="p">)</span> <span class="p">}</span></code></pre></div>
-<h4>Résultat</h4>
-<div class="fr-tabs fr-mb-4w">
+<h4 class="govuk-heading-s govuk-tabs--title">Output</h4>
+<div class="fr-tabs">
 <ul class="fr-tabs__list" role="tablist">
-<li role="presentation"><button aria-controls="output-rendered-basic-pagination-with-a-pagy-object" aria-selected="true" class="fr-tabs__tab" id="output-rendered-basic-pagination-with-a-pagy-object" role="tab" tabindex="0">Rendu</button></li>
+<li role="presentation"><button aria-controls="output-rendered-basic-pagination-with-a-pagy-object" aria-selected="true" class="fr-tabs__tab" id="output-rendered-basic-pagination-with-a-pagy-object" role="tab" tabindex="0">Rendered</button></li>
 <li role="presentation"><button aria-controls="output-html-basic-pagination-with-a-pagy-object" aria-selected="false" class="fr-tabs__tab" id="output-html-basic-pagination-with-a-pagy-object" role="tab" tabindex="0">HTML</button></li>
 </ul>
 <div aria-labelledby="output-rendered-basic-pagination-with-a-pagy-object" class="fr-tabs__panel fr-tabs__panel--selected" id="output-rendered-basic-pagination-with-a-pagy-object" role="tabpanel"><nav role="navigation" aria-label="results" class="govuk-pagination">
@@ -128,7 +128,7 @@ directly to the component.</p><figure class="app-example"><h4>Code</h4>
     <span class="nt">&lt;/a&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/nav&gt;</span></code></pre></div>
-</div></figure><h3 class="fr-mt-8w" id="when-there-are-lots-of-pages"><a class="header-anchor" href="#when-there-are-lots-of-pages">When there are lots of pages</a></h3><p>Pagy <a href="https://ddnexus.github.io/pagy/api/pagy#variables">is very configurable</a>
+</div></figure><h3 class="govuk-heading-m govuk-!-font-size-27 govuk-!-margin-top-8" id="when-there-are-lots-of-pages"><a class="header-anchor" href="#when-there-are-lots-of-pages">When there are lots of pages</a></h3><p>Pagy <a href="https://ddnexus.github.io/pagy/api/pagy#variables">is very configurable</a>
 and projects might want to tweak the defaults to suit their needs.</p>
 
 <p>To match the guidance in the
@@ -144,8 +144,8 @@ should be set to <code>[1, 1, 1, 1]</code>.</p>
 <li>1 page is shown after the current page</li>
 <li>1 page is shown at the end</li>
 </ul>
-<figure class="app-example"><h4>Code</h4>
-<div class="fr-tabs fr-mb-4w">
+<figure class="app-example"><h4>Input</h4>
+<div class="fr-tabs">
 <ul class="fr-tabs__list" role="tablist">
 <li role="presentation"><button aria-controls="input-slim-when-there-are-lots-of-pages" aria-current="page" aria-selected="true" class="fr-tabs__tab" id="input-slim-when-there-are-lots-of-pages" role="tab" tabindex="0">Slim</button></li>
 <li role="presentation"><button aria-controls="input-erb-when-there-are-lots-of-pages" aria-selected="false" class="fr-tabs__tab" href="#input-erb-when-there-are-lots-of-pages" role="tab">ERB</button></li>
@@ -155,10 +155,10 @@ should be set to <code>[1, 1, 1, 1]</code>.</p>
 <div class="fr-tabs__panel fr-tabs__panel--hidden" id="input-erb-when-there-are-lots-of-pages"><pre><code class="highlight language-erb wrap"><span class="cp">&lt;%=</span> <span class="n">dsfr_pagination</span><span class="p">(</span><span class="ss">pagy: </span><span class="n">pagy</span><span class="p">)</span> <span class="cp">%&gt;</span></code></pre></div>
 </div>
 <div class="fr-tabs__panel fr-tabs__panel--hidden" id="input-data-when-there-are-lots-of-pages"><pre><code class="highlight language-ruby wrap"><span class="p">{</span> <span class="ss">pagy: </span><span class="no">Pagy</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="ss">count: </span><span class="mi">100</span><span class="p">,</span> <span class="ss">page: </span><span class="mi">9</span><span class="p">,</span> <span class="ss">size: </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="ss">items: </span><span class="mi">5</span><span class="p">)</span> <span class="p">}</span></code></pre></div>
-<h4>Résultat</h4>
-<div class="fr-tabs fr-mb-4w">
+<h4 class="govuk-heading-s govuk-tabs--title">Output</h4>
+<div class="fr-tabs">
 <ul class="fr-tabs__list" role="tablist">
-<li role="presentation"><button aria-controls="output-rendered-when-there-are-lots-of-pages" aria-selected="true" class="fr-tabs__tab" id="output-rendered-when-there-are-lots-of-pages" role="tab" tabindex="0">Rendu</button></li>
+<li role="presentation"><button aria-controls="output-rendered-when-there-are-lots-of-pages" aria-selected="true" class="fr-tabs__tab" id="output-rendered-when-there-are-lots-of-pages" role="tab" tabindex="0">Rendered</button></li>
 <li role="presentation"><button aria-controls="output-html-when-there-are-lots-of-pages" aria-selected="false" class="fr-tabs__tab" id="output-html-when-there-are-lots-of-pages" role="tab" tabindex="0">HTML</button></li>
 </ul>
 <div aria-labelledby="output-rendered-when-there-are-lots-of-pages" class="fr-tabs__panel fr-tabs__panel--selected" id="output-rendered-when-there-are-lots-of-pages" role="tabpanel"><nav role="navigation" aria-label="results" class="govuk-pagination">
@@ -279,11 +279,11 @@ should be set to <code>[1, 1, 1, 1]</code>.</p>
     <span class="nt">&lt;/a&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/nav&gt;</span></code></pre></div>
-</div></figure><h3 class="fr-mt-8w" id="for-smaller-numbers-of-pages"><a class="header-anchor" href="#for-smaller-numbers-of-pages">For smaller numbers of pages</a></h3><p>Use ‘Previous’ and ‘Next’ links to let users navigate through a small
+</div></figure><h3 class="govuk-heading-m govuk-!-font-size-27 govuk-!-margin-top-8" id="for-smaller-numbers-of-pages"><a class="header-anchor" href="#for-smaller-numbers-of-pages">For smaller numbers of pages</a></h3><p>Use ‘Previous’ and ‘Next’ links to let users navigate through a small
 number of pages. Stack the links vertically with <code>block_mode: true</code> so
 they’re more obvious to screen magnifier users when they’re zoomed in.</p>
-<figure class="app-example"><h4>Code</h4>
-<div class="fr-tabs fr-mb-4w">
+<figure class="app-example"><h4>Input</h4>
+<div class="fr-tabs">
 <ul class="fr-tabs__list" role="tablist">
 <li role="presentation"><button aria-controls="input-slim-for-smaller-numbers-of-pages" aria-current="page" aria-selected="true" class="fr-tabs__tab" id="input-slim-for-smaller-numbers-of-pages" role="tab" tabindex="0">Slim</button></li>
 <li role="presentation"><button aria-controls="input-erb-for-smaller-numbers-of-pages" aria-selected="false" class="fr-tabs__tab" href="#input-erb-for-smaller-numbers-of-pages" role="tab">ERB</button></li>
@@ -296,10 +296,10 @@ they’re more obvious to screen magnifier users when they’re zoomed in.</p>
 <span class="nb">p</span><span class="p">.</span><span class="nf">next_page</span><span class="p">(</span><span class="ss">text: </span><span class="s2">"Chapter 5"</span><span class="p">,</span> <span class="ss">label_text: </span><span class="s2">"Back on This Side of the Door"</span><span class="p">,</span> <span class="ss">href: </span><span class="s2">"#"</span><span class="p">)</span>
 <span class="k">end</span> <span class="cp">%&gt;</span></code></pre></div>
 </div>
-<h4>Résultat</h4>
-<div class="fr-tabs fr-mb-4w">
+<h4 class="govuk-heading-s govuk-tabs--title">Output</h4>
+<div class="fr-tabs">
 <ul class="fr-tabs__list" role="tablist">
-<li role="presentation"><button aria-controls="output-rendered-for-smaller-numbers-of-pages" aria-selected="true" class="fr-tabs__tab" id="output-rendered-for-smaller-numbers-of-pages" role="tab" tabindex="0">Rendu</button></li>
+<li role="presentation"><button aria-controls="output-rendered-for-smaller-numbers-of-pages" aria-selected="true" class="fr-tabs__tab" id="output-rendered-for-smaller-numbers-of-pages" role="tab" tabindex="0">Rendered</button></li>
 <li role="presentation"><button aria-controls="output-html-for-smaller-numbers-of-pages" aria-selected="false" class="fr-tabs__tab" id="output-html-for-smaller-numbers-of-pages" role="tab" tabindex="0">HTML</button></li>
 </ul>
 <div aria-labelledby="output-rendered-for-smaller-numbers-of-pages" class="fr-tabs__panel fr-tabs__panel--selected" id="output-rendered-for-smaller-numbers-of-pages" role="tabpanel"><nav role="navigation" aria-label="results" class="govuk-pagination govuk-pagination--block">
@@ -374,14 +374,14 @@ they’re more obvious to screen magnifier users when they’re zoomed in.</p>
     <span class="nt">&lt;/a&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/nav&gt;</span></code></pre></div>
-</div></figure><h3 class="fr-mt-8w" id="full-manual-control"><a class="header-anchor" href="#full-manual-control">Full manual control</a></h3><p>If you have specific requirements that aren’t met by Pagy you can take
+</div></figure><h3 class="govuk-heading-m govuk-!-font-size-27 govuk-!-margin-top-8" id="full-manual-control"><a class="header-anchor" href="#full-manual-control">Full manual control</a></h3><p>If you have specific requirements that aren’t met by Pagy you can take
 full control of the pagination component’s contents by calling the slots
 individually.</p>
 
 <p>You can use this approach to add custom HTML attributes to the next,
 previous and item slots or to add a custom ellipsis layout.</p>
-<figure class="app-example"><h4>Code</h4>
-<div class="fr-tabs fr-mb-4w">
+<figure class="app-example"><h4>Input</h4>
+<div class="fr-tabs">
 <ul class="fr-tabs__list" role="tablist">
 <li role="presentation"><button aria-controls="input-slim-full-manual-control" aria-current="page" aria-selected="true" class="fr-tabs__tab" id="input-slim-full-manual-control" role="tab" tabindex="0">Slim</button></li>
 <li role="presentation"><button aria-controls="input-erb-full-manual-control" aria-selected="false" class="fr-tabs__tab" href="#input-erb-full-manual-control" role="tab">ERB</button></li>
@@ -409,10 +409,10 @@ previous and item slots or to add a custom ellipsis layout.</p>
       <span class="p">{</span> <span class="ss">href: </span><span class="s2">"#"</span><span class="p">,</span> <span class="ss">number: </span><span class="mi">40</span><span class="p">,</span> <span class="ss">html_attributes: </span><span class="p">{</span> <span class="ss">id: </span><span class="s1">'page-40'</span> <span class="p">}</span> <span class="p">},</span>
     <span class="p">]</span>
 <span class="p">}</span></code></pre></div>
-<h4>Résultat</h4>
-<div class="fr-tabs fr-mb-4w">
+<h4 class="govuk-heading-s govuk-tabs--title">Output</h4>
+<div class="fr-tabs">
 <ul class="fr-tabs__list" role="tablist">
-<li role="presentation"><button aria-controls="output-rendered-full-manual-control" aria-selected="true" class="fr-tabs__tab" id="output-rendered-full-manual-control" role="tab" tabindex="0">Rendu</button></li>
+<li role="presentation"><button aria-controls="output-rendered-full-manual-control" aria-selected="true" class="fr-tabs__tab" id="output-rendered-full-manual-control" role="tab" tabindex="0">Rendered</button></li>
 <li role="presentation"><button aria-controls="output-html-full-manual-control" aria-selected="false" class="fr-tabs__tab" id="output-html-full-manual-control" role="tab" tabindex="0">HTML</button></li>
 </ul>
 <div aria-labelledby="output-rendered-full-manual-control" class="fr-tabs__panel fr-tabs__panel--selected" id="output-rendered-full-manual-control" role="tabpanel"><nav role="navigation" aria-label="results" class="govuk-pagination">
