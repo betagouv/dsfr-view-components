@@ -13,7 +13,7 @@ class DsfrComponent::AlertComponent < DsfrComponent::Base
     @size = size
     @close_button = close_button
 
-    super(classes:, html_attributes:)
+    super(classes: classes, html_attributes: html_attributes)
   end
 
   def call
