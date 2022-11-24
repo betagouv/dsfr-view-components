@@ -2,13 +2,17 @@ class DsfrComponent::AlertComponent < DsfrComponent::Base
   TYPES = %i[error success info warning].freeze
   SIZES = %i[sm md].freeze
 
+  # @param type [Symbol] alert type (and matching color) `:success`, `:info ou `:error`
+  # @param title [String] alert title
+  # @param size [Symbol] alert size : `:md` (default) or `:sm`
+  # @param close_button [Boolean] display a close button to remove the alert
   def initialize(type:, title: nil, size: :md, close_button: false, classes: [], html_attributes: {})
     @title = title
     @type = type
     @size = size
     @close_button = close_button
 
-    super(classes: classes, html_attributes: html_attributes)
+    super(classes:, html_attributes:)
   end
 
   def call
@@ -54,7 +58,7 @@ private
   end
 
   def valid_type?
-    type.present? && type.in?(TYPES)
+    type.in?(TYPES)
   end
 
   def type_error_message
