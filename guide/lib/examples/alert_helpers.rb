@@ -9,11 +9,8 @@ module Examples
 
     def alert_error_sm_without_content
       <<~ALERT
-        = dsfr_alert( \
-          type: :error, \
-          size: :sm, \
-          title: "Une erreur est survenue pendant votre inscription, veuillez contacter votre administrateur." \
-        )
+        = dsfr_alert(type: :error, size: :sm) do
+          | Une erreur est survenue pendant votre inscription, veuillez contacter votre administrateur
       ALERT
     end
 
