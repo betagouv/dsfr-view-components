@@ -29,16 +29,32 @@ RSpec.describe(DsfrComponent::AlertComponent, type: :component) do
     end
   end
 
-  context "when type success without content with size sm" do
+  context "when size SM" do
     subject! do
-      render_inline(described_class.new(type: :success, title: "Erreur numéro 123", size: :sm))
+      render_inline(described_class.new(type: :success, size: :sm).with_content("Inscription réussie !"))
     end
 
-    it "renders both title and content" do
+    it "renders only the content" do
       expect(rendered_content).to have_tag('div', with: { class: "fr-alert fr-alert--success fr-alert--sm" }) do
-        with_tag("h3", with: { class: "fr-alert__title" }, text: "Erreur numéro 123")
-        without_tag("p")
+        without_tag("h3")
+        with_tag("p", text: "Inscription réussie !")
       end
+    end
+  end
+
+  context "when size sm with a title but no content" do
+    it "raises ArgumentError" do
+      expect do
+        render_inline(described_class.new(type: :success, title: "Erreur numéro 123", size: :sm))
+      end.to raise_error(ArgumentError)
+    end
+  end
+
+  context "when size md with content but no title" do
+    it "raises ArgumentError" do
+      expect do
+        render_inline(described_class.new(type: :success, size: :md)) { "L'heure est grave" }
+      end.to raise_error(ArgumentError)
     end
   end
 
