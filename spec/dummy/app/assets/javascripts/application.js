@@ -15,4 +15,5 @@
 //= require prismjs/components/prism-markup-templating
 //= require prismjs/components/prism-ruby
 //= require prismjs/components/prism-erb
+//= require @gouvfr/dsfr/dist/dsfr.module
 //= require_tree .
