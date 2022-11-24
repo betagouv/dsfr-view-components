@@ -17,8 +17,8 @@ Gem::Specification.new do |spec|
   spec.authors     = ["BetaGouv developers"]
   spec.email       = ["stephane.maniaci@beta.gouv.fr", "adrien.di_pasquale@beta.gouv.fr"]
   spec.homepage    = "https://github.com/betagouv/dsfr-view-components"
-  spec.summary     = "Lightweight set of reusable DSFR components"
-  spec.description = "A collection of components intended to ease the
+  spec.summary     = "View Components for the Système de Design de l'État (DSFR)"
+  spec.description = "A collection of components based on ViewComponent intended to ease the
   building of web applications with the Système de Design de l'État
   (DSFR)"
   spec.license = "MIT"
