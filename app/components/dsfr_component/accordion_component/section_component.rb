@@ -1,12 +1,12 @@
 class DsfrComponent::AccordionComponent::SectionComponent < DsfrComponent::Base
   attr_reader :title, :expanded
 
-  # renders_one :heading_html
-  # renders_one :summary_html
-
   alias_method :expanded?, :expanded
 
-  def initialize(title:, expanded:, id: nil, classes: [], html_attributes: {})
+  # @param title [String] section title
+  # @param expanded [Boolean] toggles section folding
+  # @param id [String] the HTML id, optional if you want to reuse the anchor
+  def initialize(title:, expanded: false, id: nil, classes: [], html_attributes: {})
     @title = title
     @expanded = expanded
     @id = id

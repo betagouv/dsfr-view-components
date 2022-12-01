@@ -22,6 +22,13 @@ RSpec.describe(DsfrComponentsHelper, type: 'helper') do
       klass: DsfrComponent::AccordionComponent,
       args: [],
       kwargs: {},
+      css_matcher: %(.fr-accordions-group)
+    },
+    {
+      helper_method: :dsfr_accordion_section,
+      klass: DsfrComponent::AccordionComponent::SectionComponent,
+      args: [],
+      kwargs: {},
       css_matcher: %(.fr-accordion)
     },
     {
