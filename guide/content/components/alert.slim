@@ -1,0 +1,35 @@
+---
+title: Alerte
+---
+
+p Les alertes permettent d’attirer l’attention de l’utilisateur sur une information sans interrompre sa tâche en cours.
+p Il existe deux tailles d'alertes : MD (par défaut) et SM. En taille MD l'alerte doit avoir un titre et peut avoir un contenu. En taille SM l'alerte ne peut pas avoir de titre et doit avoir un contenu.
+
+== render('/partials/example.*',
+  caption: "Alerte MD de succès avec du contenu",
+  code: alert_md_success_with_content) do
+
+  markdown:
+    Une alerte a un `type` obligatoire parmi `:error`, `:success`, `:info` ou `:warning`.
+
+== render('/partials/example.*',
+  caption: "Alerte MD de succès sans contenu",
+  code: alert_md_success_with_content) do
+
+  markdown:
+    En taille MD, le titre `title` est obligatoire pour les alertes mais le contenu est optionnel
+
+== render('/partials/example.*',
+  caption: "Alerte d'erreur taille SM sans contenu",
+  code: alert_sm_error) do
+
+  markdown:
+    La taille `size` peut être `:sm` ou `:md` (par défaut).
+
+    A l'inverse, en taille SM il ne peut pas y avoir de titre mais le contenu est obligatoire
+
+== render('/partials/example.*',
+  caption: "Alerte avec un bouton pour fermer",
+  code: alert_md_with_close_button)
+
+== render('/partials/related-info.*', links: alert_info)

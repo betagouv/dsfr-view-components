@@ -26,6 +26,7 @@ require 'components/dsfr_component'
 require 'components/dsfr_component/traits'
 require 'components/dsfr_component/traits/custom_html_attributes'
 require 'components/dsfr_component/base'
+require 'components/dsfr_component/alert_component'
 require 'components/dsfr_component/accordion_component'
 require 'components/dsfr_component/accordion_component/section_component'
 require 'components/dsfr_component/back_link_component'
@@ -66,6 +67,7 @@ require 'helpers/dsfr_link_helper'
 use_helper DsfrLinkHelper
 use_helper DsfrComponentsHelper
 use_helper Examples::LinkHelpers
+use_helper Examples::AlertHelpers
 use_helper Examples::AccordionHelpers
 use_helper Examples::BreadcrumbsHelpers
 use_helper Examples::BackLinkHelpers

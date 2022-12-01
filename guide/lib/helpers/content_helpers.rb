@@ -19,6 +19,12 @@ module Helpers
       )
     end
 
+    def alert_info
+      {
+        "Documentation Alertes - Alerts sur la documentation du Système de Design de lʼÉtat" => "https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/alerte/"
+      }
+    end
+
     def accordion_info
       {
         "GOV.UK Design System accordion documentation" => "https://design-system.service.gov.uk/components/accordion/"
@@ -119,24 +125,7 @@ module Helpers
 
     def component_helper_mapping
       {
-        "DsfrComponent::AccordionComponent" => "dsfr_accordion",
-        "DsfrComponent::BackLinkComponent" => "dsfr_back_link",
-        "DsfrComponent::BreadcrumbsComponent" => "dsfr_breadcrumbs",
-        "DsfrComponent::CookieBannerComponent" => "dsfr_cookie_banner",
-        "DsfrComponent::DetailsComponent" => "dsfr_details",
-        "DsfrComponent::FooterComponent" => "dsfr_footer",
-        "DsfrComponent::HeaderComponent" => "dsfr_header",
-        "DsfrComponent::InsetTextComponent" => "dsfr_inset_text",
-        "DsfrComponent::NotificationBannerComponent" => "dsfr_notification_banner",
-        "DsfrComponent::PaginationComponent" => "dsfr_pagination",
-        "DsfrComponent::PanelComponent" => "dsfr_panel",
-        "DsfrComponent::PhaseBannerComponent" => "dsfr_phase_banner",
-        "DsfrComponent::StartButtonComponent" => "dsfr_start_button",
-        "DsfrComponent::SummaryListComponent" => "dsfr_summary_list",
-        "DsfrComponent::TableComponent" => "dsfr_table",
-        "DsfrComponent::TabComponent" => "dsfr_tabs",
-        "DsfrComponent::TagComponent" => "dsfr_tag",
-        "DsfrComponent::WarningTextComponent" => "dsfr_warning_text",
+        "DsfrComponent::AlertComponent" => "dsfr_alert",
       }
     end
   end

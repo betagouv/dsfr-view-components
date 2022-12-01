@@ -1,8 +1,21 @@
 <%= example_heading('Alertes - Alert') %>
 
-<%= render "shared/example", title: "Alert", example: <<~ALERT
-  render DsfrComponent::AlertComponent.new(title: 'Erreur : titre du message') do
+<%= render "shared/example", title: "Alerte succès", example: <<~ALERT
+  render DsfrComponent::AlertComponent.new(title: 'Bravo ! merci', type: :success)
+  ALERT
+%>
+
+<%= render "shared/example", title: "Alerte erreur avec une description", example: <<~ALERT
+  render DsfrComponent::AlertComponent.new(title: 'Erreur : titre du message', type: :error) do
     "Ceci est une alerte d'erreur"
+  end
+  ALERT
+%>
+
+
+<%= render "shared/example", title: "Alerte succès avec bouton pour fermer", example: <<~ALERT
+  render DsfrComponent::AlertComponent.new(title: 'Erreur : titre du message', type: :error, close_button: true) do
+    "cliquez sur la croix pour fermer"
   end
   ALERT
 %>
