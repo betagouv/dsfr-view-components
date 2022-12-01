@@ -34,7 +34,7 @@ Les composants disponibles sont :
 
 - [ ] Accordéon - Accordion
 - [ ] Ajout de fichier - File upload
-- [ ] Alertes - Alert
+- [x] Alertes - Alert
 - [ ] Badge
 - [ ] Bandeau d'information importante
 - [ ] Barre de recherche - Search bar
