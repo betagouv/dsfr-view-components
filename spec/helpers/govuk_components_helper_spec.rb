@@ -22,7 +22,7 @@ RSpec.describe(DsfrComponentsHelper, type: 'helper') do
       klass: DsfrComponent::AccordionComponent,
       args: [],
       kwargs: {},
-      css_matcher: %(.govuk-accordion)
+      css_matcher: %(.fr-accordion)
     },
     {
       helper_method: :dsfr_back_link,

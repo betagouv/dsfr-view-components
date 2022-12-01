@@ -1,11 +1,17 @@
-<%= tag.div(id: id(suffix: 'section'), **html_attributes) do %>
-  <div class="govuk-accordion__section-header">
-    <%= content_tag(heading_level, class: "govuk-accordion__section-heading") do %>
-      <%= tag.span(heading_content, id: id, class: "govuk-accordion__section-button", aria: { expanded: expanded?, controls: id(suffix: 'content') }) %>
-    <% end %>
-    <% if summary_content.present? %>
-      <%= tag.div(summary_content, id: id(suffix: 'summary'), class: %w(govuk-accordion__section-summary govuk-body)) %>
-    <% end %>
+<%= tag.section(**html_attributes) do %>
+  <h3 class="fr-accordion__title">
+    <button
+      class="fr-accordion__btn"
+      aria-expanded="<%= expanded? ? "true" : "false" %>"
+      aria-controls="<%= id %>"
+    >
+      <%= title %>
+    </button>
+  </h3>
+  <div
+    id="<%= id %>"
+    class="fr-collapse <%= "fr-collapse--expanded" if expanded? %>"
+  >
+    <%= content %>
   </div>
-  <%= tag.div(content, id: id(suffix: 'content'), class: %w(govuk-accordion__section-content), aria: { labelledby: id }) %>
 <% end %>

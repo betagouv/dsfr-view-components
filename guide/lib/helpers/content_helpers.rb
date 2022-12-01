@@ -21,13 +21,13 @@ module Helpers
 
     def alert_info
       {
-        "Documentation Alertes - Alerts sur la documentation du Système de Design de lʼÉtat" => "https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/alerte/"
+        "Alertes - Alerts sur la documentation du Système de Design de lʼÉtat" => "https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/alerte/"
       }
     end
 
     def accordion_info
       {
-        "GOV.UK Design System accordion documentation" => "https://design-system.service.gov.uk/components/accordion/"
+        "Accordéons sur la documentation du Système de Design de lʼÉtat" => "https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/accordeon/"
       }
     end
 
