@@ -7,31 +7,24 @@ C'est un fork de [govuk-components](https://github.com/DFE-Digital/govuk-compone
 ⚠️ Cette gem est en cours de développement et n'est pas adaptée à un usage en production. N'hésitez pas à contribuer pour nous aider à avancer !
 
 [![Tests](https://github.com/betagouv/dsfr-view-components/workflows/Tests/badge.svg)](https://github.com/betagouv/dsfr-view-components/actions?query=workflow%3ATests)
-
-<!--
-[![Maintainability](https://api.codeclimate.com/v1/badges/cbcbc140f300b920d833/maintainability)](https://codeclimate.com/github/DFE-Digital/govuk-components/maintainability)
-[![Gem Version](https://badge.fury.io/rb/govuk-components.svg)](https://badge.fury.io/rb/govuk-components)
-[![Gem](https://img.shields.io/gem/dt/govuk-components?logo=rubygems)](https://rubygems.org/gems/govuk-components)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/cbcbc140f300b920d833/test_coverage)](https://codeclimate.com/github/DFE-Digital/govuk-components/test_coverage)
-[![GitHub license](https://img.shields.io/github/license/DFE-Digital/govuk-components)](https://github.com/DFE-Digital/govuk-components/blob/main/LICENSE)
-[![GOV.UK Design System Version](https://img.shields.io/badge/GOV.UK%20Design%20System-4.3.0-brightgreen)](https://design-system.service.gov.uk)
+[![Gem Version](https://badge.fury.io/rb/dsfr-view-components.svg)](https://badge.fury.io/rb/dsfr-view-components)
+[![Gem](https://img.shields.io/gem/dt/dsfr-view-components?logo=rubygems)](https://rubygems.org/gems/dsfr-view-components)
+[![GitHub license](https://img.shields.io/github/license/betagouv/dsfr-view-components)](https://github.com/betagouv/dsfr-view-components/blob/main/LICENSE)
 [![Rails](https://img.shields.io/badge/Rails-6.1.5%20%E2%95%B1%207.0.3-E16D6D)](https://weblog.rubyonrails.org/releases/)
 [![Ruby](https://img.shields.io/badge/Ruby-2.7.6%20%20%E2%95%B1%203.0.3%20%20%E2%95%B1%203.1.2-E16D6D)](https://www.ruby-lang.org/en/downloads/)
 
-This gem provides a suite of reusable components for the [GOV.UK Design System](https://design-system.service.gov.uk/). It is intended to provide a lightweight alternative to the [GOV.UK Publishing Components](https://github.com/alphagov/dsfr_publishing_components) library and is built with GitHub’s [ViewComponent](https://github.com/github/view_component) framework.
+[![Design Système de lʼÉtat](https://img.shields.io/badge/Design%20Système%20de%20lʼÉtat-1.8.4-brightgreen)](https://www.systeme-de-design.gouv.fr/)
 
-It aims to implement the functionality from the original Nunjucks macros in a way that will feel more familiar to Rails developers. Blocks are preferred over strings of HTML, beneath the surface each component is just a Ruby object, everything is inheritable and overrideable.
+<!--
+[![Maintainability](https://api.codeclimate.com/v1/badges/cbcbc140f300b920d833/maintainability)](https://codeclimate.com/github/DFE-Digital/govuk-components/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/cbcbc140f300b920d833/test_coverage)](https://codeclimate.com/github/DFE-Digital/govuk-components/test_coverage)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d40a5a0a-b086-4c35-b046-97fbcbf9f219/deploy-status)](https://app.netlify.com/sites/govuk-components/deploys)
+-->
 
 ## Documentation
 
-The gem comes with [a full guide](https://govuk-components.netlify.app/) that
-covers most aspects of day-to-day use, along with code and output examples. The
-examples in the guide (and the guide itself) are built using the components,
-so it will always be up to date.
+Un [guide complet est disponible](https://betagouv.github.io/dsfr-view-components/). Il contient des instructions pour l'installation et l'usage de cette gem. Les exemples présents éxecutent le code et seront donc toujours à jour.
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/d40a5a0a-b086-4c35-b046-97fbcbf9f219/deploy-status)](https://app.netlify.com/sites/govuk-components/deploys)
-
--->
 
 ## Composants disponibles
 
