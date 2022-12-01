@@ -1,17 +1,12 @@
 doctype html
-html lang="fr"
+html lang="fr" data-fr-scheme=""
   == render '/partials/head.*'
   body
     == render '/partials/header.*'
-
-    .fr-container
-      == render '/partials/breadcrumbs.*'
-
-      main#content
-        article.app-prose
-          h1
-            | #{item[:title]}
-
-          == yield
-
+    main#contenu role="main"
+      .fr-container
+        == render '/partials/breadcrumbs.*'
+        - if item
+          h1= item[:title]
+        == yield
     == render '/partials/footer.*'
