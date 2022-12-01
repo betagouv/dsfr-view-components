@@ -35,3 +35,5 @@ code-climate:
 	codeclimate analyze {lib,spec,guide/lib}
 clean:
 	rm -rf guide/output/**/*
+deploy_gem:
+	bundle exec ruby scripts/deploy_gem.rb $$VERSION

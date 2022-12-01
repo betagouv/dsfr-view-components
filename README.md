@@ -191,7 +191,7 @@ bundle install
 bundle exec rspec spec
 ```
 
-Lancer le guide de documentation : 
+Lancer le guide de documentation :
 
 ```sh
 make watch-guide
@@ -207,7 +207,10 @@ bundle exec rails server
 
 Déployer une nouvelle version de la gem :
 
-TODO
+```sh
+VERSION=1.3.2 make deploy_gem
+```
+
 
 ## Licence
 
