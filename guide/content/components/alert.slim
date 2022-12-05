@@ -14,10 +14,10 @@ p Il existe deux tailles d'alertes : MD (par défaut) et SM. En taille MD l'aler
 
 == render('/partials/example.*',
   caption: "Alerte MD de succès sans contenu",
-  code: alert_md_success_with_content) do
+  code: alert_md_success_without_content) do
 
   markdown:
-    En taille MD, le titre `title` est obligatoire pour les alertes mais le contenu est optionnel
+    En taille MD, le titre `title` est obligatoire pour les alertes mais le contenu est optionnel.
 
 == render('/partials/example.*',
   caption: "Alerte d'erreur taille SM sans contenu",
@@ -26,7 +26,7 @@ p Il existe deux tailles d'alertes : MD (par défaut) et SM. En taille MD l'aler
   markdown:
     La taille `size` peut être `:sm` ou `:md` (par défaut).
 
-    A l'inverse, en taille SM il ne peut pas y avoir de titre mais le contenu est obligatoire
+    A l'inverse, en taille SM il ne peut pas y avoir de titre mais le contenu est obligatoire.
 
 == render('/partials/example.*',
   caption: "Alerte avec un bouton pour fermer",
