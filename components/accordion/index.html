@@ -1,219 +1,169 @@
-<!DOCTYPE html><html data-fr-scheme="" lang="fr"><head><meta charset="utf-8"><title>Accordion - Composants Rails ViewComponent pour le Système de Design de lʼÉtat </title><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"><meta content="#000091" name="theme-color"><meta content="IE=edge" http-equiv="X-UA-Compatible"><link href="../../favicon/apple-touch-icon.png" rel="apple-touch-icon"><link href="../../favicon/favicon.svg" rel="icon" type="image/svg+xml"><link href="../../favicon/favicon.ico" rel="shortcut icon" type="image/x-icon"><link crossorigin="use-credentials" href="../../favicon/manifest.webmanifest" rel="manifest"><link href="../../stylesheets/application.css" rel="stylesheet"></head><body><script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script><div class="fr-skiplinks"><nav aria-label="Accès rapide" class="fr-container" role="navigation"><ul class="fr-skiplinks__list"><li><a class="fr-link" href="#content">Contenu</a></li></ul></nav></div><header class="fr-header" role="banner"><div class="fr-header__body"><div class="fr-container"><div class="fr-header__body-row"><div class="fr-header__brand fr-enlarge-link"><div class="fr-header__brand-top"><div class="fr-header__logo"><p class="fr-logo">République<br>Française</p></div></div><div class="fr-header__service"><a href="../../" title="Composants Rails ViewComponent pour le Système de Design de lʼÉtat - Accueil"><p class="fr-header__service-title">DSFR-View-Components</p></a><p class="fr-header__service-tagline">Composants Rails ViewComponent pour le Système de Design de lʼÉtat</p></div></div></div></div></div></header><main id="contenu" role="main"><div class="fr-container"><nav aria-label="Vous êtes ici :" class="fr-breadcrumb" role="navigation"><button aria-controls="breadcrumb-1" aria-expanded="false" class="fr-breadcrumb__button">Voir le fil d’Ariane</button><div class="fr-collapse" id="breadcrumb-1"><ol class="fr-breadcrumb__list"><li><a class="fr-breadcrumb__link" href="../../">Accueil</a></li><li><a class="fr-breadcrumb__link" aria-current="page" href="">Accordion</a></li></ol></div></nav><h1>Accordion</h1><p>The accordion component lets users show and hide sections of related content on a page.</p><h3 class="fr-mt-8w" id="creating-a-simple-accordion"><a class="header-anchor" href="#creating-a-simple-accordion">Creating a simple accordion</a></h3><p>Each accordion section requires <code>heading_text</code> to be set. The content is
-built from any markup that is passed in via the block.</p>
-
-<p>Sections can be automatically expanded by setting <code>expanded: true</code>.</p>
+<!DOCTYPE html><html data-fr-scheme="" lang="fr"><head><meta charset="utf-8"><title>Accordéon - Composants Rails ViewComponent pour le Système de Design de lʼÉtat </title><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"><meta content="#000091" name="theme-color"><meta content="IE=edge" http-equiv="X-UA-Compatible"><link href="../../favicon/apple-touch-icon.png" rel="apple-touch-icon"><link href="../../favicon/favicon.svg" rel="icon" type="image/svg+xml"><link href="../../favicon/favicon.ico" rel="shortcut icon" type="image/x-icon"><link crossorigin="use-credentials" href="../../favicon/manifest.webmanifest" rel="manifest"><link href="../../stylesheets/application.css" rel="stylesheet"></head><body><script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script><div class="fr-skiplinks"><nav aria-label="Accès rapide" class="fr-container" role="navigation"><ul class="fr-skiplinks__list"><li><a class="fr-link" href="#content">Contenu</a></li></ul></nav></div><header class="fr-header" role="banner"><div class="fr-header__body"><div class="fr-container"><div class="fr-header__body-row"><div class="fr-header__brand fr-enlarge-link"><div class="fr-header__brand-top"><div class="fr-header__logo"><p class="fr-logo">République<br>Française</p></div></div><div class="fr-header__service"><a href="../../" title="Composants Rails ViewComponent pour le Système de Design de lʼÉtat - Accueil"><p class="fr-header__service-title">DSFR-View-Components</p></a><p class="fr-header__service-tagline">Composants Rails ViewComponent pour le Système de Design de lʼÉtat</p></div></div></div></div></div></header><main id="contenu" role="main"><div class="fr-container"><nav aria-label="Vous êtes ici :" class="fr-breadcrumb" role="navigation"><button aria-controls="breadcrumb-1" aria-expanded="false" class="fr-breadcrumb__button">Voir le fil d’Ariane</button><div class="fr-collapse" id="breadcrumb-1"><ol class="fr-breadcrumb__list"><li><a class="fr-breadcrumb__link" href="../../">Accueil</a></li><li><a class="fr-breadcrumb__link" aria-current="page" href="">Accordéon</a></li></ol></div></nav><h1>Accordéon</h1><p>Les accordéons permettent aux utilisateurs d’afficher et de masquer des sections de contenu présentés dans une page.</p><h3 class="fr-mt-8w" id="accordeon-section-unique"><a class="header-anchor" href="#accordeon-section-unique">Accordéon section unique</a></h3><p>Vous pouvez aussi utiliser le helper <code>dsfr_accordion</code> avec une unique section. La section sera alors wrappée par une div <code>fr-accordions-group</code> invisible.</p>
 <figure class="app-example"><h4>Code</h4>
 <div class="fr-tabs fr-mb-4w">
 <ul class="fr-tabs__list" role="tablist">
-<li role="presentation"><button aria-controls="input-slim-creating-a-simple-accordion" aria-current="page" aria-selected="true" class="fr-tabs__tab" id="input-slim-creating-a-simple-accordion" role="tab" tabindex="0">Slim</button></li>
-<li role="presentation"><button aria-controls="input-erb-creating-a-simple-accordion" aria-selected="false" class="fr-tabs__tab" href="#input-erb-creating-a-simple-accordion" role="tab">ERB</button></li>
+<li role="presentation"><button aria-controls="input-slim-accordeon-section-unique" aria-current="page" aria-selected="true" class="fr-tabs__tab" id="input-slim-accordeon-section-unique" role="tab" tabindex="0">Slim</button></li>
+<li role="presentation"><button aria-controls="input-erb-accordeon-section-unique" aria-selected="false" class="fr-tabs__tab" href="#input-erb-accordeon-section-unique" role="tab">ERB</button></li>
 </ul>
-<div aria-labelledby="input-slim-creating-a-simple-accordion" class="fr-tabs__panel fr-tabs__panel--selected" id="input-slim-creating-a-simple-accordion" role="tabpanel" tabindex="0"><pre><code class="highlight language-slim"><span class="p">=</span> <span class="n">dsfr_accordion</span> <span class="k">do</span> <span class="o">|</span><span class="n">accordion</span><span class="o">|</span>
-  <span class="p">-</span> <span class="n">accordion</span><span class="p">.</span><span class="nf">section</span><span class="p">(</span><span class="ss">heading_text: </span><span class="s2">"One"</span><span class="p">)</span> <span class="p">{</span> <span class="n">tag</span><span class="p">.</span><span class="nf">p</span><span class="p">(</span><span class="s2">"One content"</span><span class="p">)</span> <span class="p">}</span>
-
-  <span class="p">-</span> <span class="n">accordion</span><span class="p">.</span><span class="nf">section</span><span class="p">(</span><span class="ss">heading_text: </span><span class="s2">"Two"</span><span class="p">)</span> <span class="p">{</span> <span class="n">tag</span><span class="p">.</span><span class="nf">p</span><span class="p">(</span><span class="s2">"Two content"</span><span class="p">)</span> <span class="p">}</span>
-
-  <span class="p">-</span> <span class="n">accordion</span><span class="p">.</span><span class="nf">section</span><span class="p">(</span><span class="ss">heading_text: </span><span class="s2">"Three"</span><span class="p">,</span> <span class="ss">expanded: </span><span class="kp">true</span><span class="p">)</span> <span class="p">{</span> <span class="n">tag</span><span class="p">.</span><span class="nf">p</span><span class="p">(</span><span class="s2">"Three content"</span><span class="p">)</span> <span class="p">}</span></code></pre></div>
-<div class="fr-tabs__panel fr-tabs__panel--hidden" id="input-erb-creating-a-simple-accordion"><pre><code class="highlight language-erb wrap"><span class="cp">&lt;%=</span> <span class="n">dsfr_accordion</span> <span class="k">do</span> <span class="o">|</span><span class="n">accordion</span><span class="o">|</span>
-<span class="n">accordion</span><span class="p">.</span><span class="nf">section</span><span class="p">(</span><span class="ss">heading_text: </span><span class="s2">"One"</span><span class="p">)</span> <span class="p">{</span> <span class="n">tag</span><span class="p">.</span><span class="nf">p</span><span class="p">(</span><span class="s2">"One content"</span><span class="p">)</span> <span class="p">}</span>
-
-<span class="n">accordion</span><span class="p">.</span><span class="nf">section</span><span class="p">(</span><span class="ss">heading_text: </span><span class="s2">"Two"</span><span class="p">)</span> <span class="p">{</span> <span class="n">tag</span><span class="p">.</span><span class="nf">p</span><span class="p">(</span><span class="s2">"Two content"</span><span class="p">)</span> <span class="p">}</span>
-
-<span class="n">accordion</span><span class="p">.</span><span class="nf">section</span><span class="p">(</span><span class="ss">heading_text: </span><span class="s2">"Three"</span><span class="p">,</span> <span class="ss">expanded: </span><span class="kp">true</span><span class="p">)</span> <span class="p">{</span> <span class="n">tag</span><span class="p">.</span><span class="nf">p</span><span class="p">(</span><span class="s2">"Three content"</span><span class="p">)</span> <span class="p">}</span>
+<div aria-labelledby="input-slim-accordeon-section-unique" class="fr-tabs__panel fr-tabs__panel--selected" id="input-slim-accordeon-section-unique" role="tabpanel" tabindex="0"><pre><code class="highlight language-slim"><span class="p">=</span> <span class="n">dsfr_accordion_section</span><span class="p">(</span><span class="ss">title: </span><span class="s2">"Un"</span><span class="p">)</span> <span class="p">{</span> <span class="n">tag</span><span class="p">.</span><span class="nf">p</span><span class="p">(</span><span class="s2">"Premier contenu"</span><span class="p">)</span> <span class="p">}</span></code></pre></div>
+<div class="fr-tabs__panel fr-tabs__panel--hidden" id="input-erb-accordeon-section-unique"><pre><code class="highlight language-erb wrap"><span class="cp">&lt;%=</span> <span class="n">dsfr_accordion_section</span><span class="p">(</span><span class="ss">title: </span><span class="s2">"Un"</span><span class="p">)</span> <span class="p">{</span> <span class="n">tag</span><span class="p">.</span><span class="nf">p</span><span class="p">(</span><span class="s2">"Premier contenu"</span><span class="p">)</span> <span class="p">}</span> <span class="cp">%&gt;</span></code></pre></div>
+</div>
+<h4>Résultat</h4>
+<div class="fr-tabs fr-mb-4w">
+<ul class="fr-tabs__list" role="tablist">
+<li role="presentation"><button aria-controls="output-rendered-accordeon-section-unique" aria-selected="true" class="fr-tabs__tab" id="output-rendered-accordeon-section-unique" role="tab" tabindex="0">Rendu</button></li>
+<li role="presentation"><button aria-controls="output-html-accordeon-section-unique" aria-selected="false" class="fr-tabs__tab" id="output-html-accordeon-section-unique" role="tab" tabindex="0">HTML</button></li>
+</ul>
+<div aria-labelledby="output-rendered-accordeon-section-unique" class="fr-tabs__panel fr-tabs__panel--selected" id="output-rendered-accordeon-section-unique" role="tabpanel"><section class="fr-accordion">
+  <h3 class="fr-accordion__title">
+    <button class="fr-accordion__btn" aria-expanded="false" aria-controls="accordion-section-2b27c550">
+      Un
+    </button>
+  </h3>
+  <div id="accordion-section-2b27c550" class="fr-collapse ">
+    <p>
+      Premier contenu
+    </p>
+  </div>
+</section></div>
+<div aria-labelledby="output-html-accordeon-section-unique" class="fr-tabs__panel" id="output-html-accordeon-section-unique" role="tabpanel"><pre><code class="highlight language-html"><span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"fr-accordion"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"fr-accordion__title"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span>
+      <span class="na">class=</span><span class="s">"fr-accordion__btn"</span>
+      <span class="na">aria-expanded=</span><span class="s">"false"</span>
+      <span class="na">aria-controls=</span><span class="s">"accordion-section-a594884e"</span>
+    <span class="nt">&gt;</span>
+      Un
+    <span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;/h3&gt;</span>
+  <span class="nt">&lt;div</span>
+    <span class="na">id=</span><span class="s">"accordion-section-a594884e"</span>
+    <span class="na">class=</span><span class="s">"fr-collapse "</span>
+  <span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>
+      Premier contenu
+    <span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/section&gt;</span></code></pre></div>
+</div></figure><h3 class="fr-mt-8w" id="accordeon-avec-trois-sections"><a class="header-anchor" href="#accordeon-avec-trois-sections">Accordéon avec trois sections</a></h3><p>Les titres <code>title</code> et les contenus sont obligatoires pour les sections.
+L’attribut <code>id</code> est optionnel et permet de définir une ancre HTML réutilisable. S’il n’est pas passé un <code>id</code> aléatoire sera généré.</p>
+<figure class="app-example"><h4>Code</h4>
+<div class="fr-tabs fr-mb-4w">
+<ul class="fr-tabs__list" role="tablist">
+<li role="presentation"><button aria-controls="input-slim-accordeon-avec-trois-sections" aria-current="page" aria-selected="true" class="fr-tabs__tab" id="input-slim-accordeon-avec-trois-sections" role="tab" tabindex="0">Slim</button></li>
+<li role="presentation"><button aria-controls="input-erb-accordeon-avec-trois-sections" aria-selected="false" class="fr-tabs__tab" href="#input-erb-accordeon-avec-trois-sections" role="tab">ERB</button></li>
+</ul>
+<div aria-labelledby="input-slim-accordeon-avec-trois-sections" class="fr-tabs__panel fr-tabs__panel--selected" id="input-slim-accordeon-avec-trois-sections" role="tabpanel" tabindex="0"><pre><code class="highlight language-slim"><span class="p">=</span> <span class="n">dsfr_accordion</span> <span class="k">do</span> <span class="o">|</span><span class="n">accordion</span><span class="o">|</span>
+  <span class="p">-</span> <span class="n">accordion</span><span class="p">.</span><span class="nf">section</span><span class="p">(</span><span class="ss">title: </span><span class="s2">"Un"</span><span class="p">)</span> <span class="p">{</span> <span class="n">tag</span><span class="p">.</span><span class="nf">p</span><span class="p">(</span><span class="s2">"Premier contenu"</span><span class="p">)</span> <span class="p">}</span>
+  <span class="p">-</span> <span class="n">accordion</span><span class="p">.</span><span class="nf">section</span><span class="p">(</span><span class="ss">title: </span><span class="s2">"Deux"</span><span class="p">,</span> <span class="ss">id: </span><span class="s2">"section-deux"</span><span class="p">)</span> <span class="p">{</span> <span class="n">tag</span><span class="p">.</span><span class="nf">p</span><span class="p">(</span><span class="s2">"Deuxième contenu"</span><span class="p">)</span> <span class="p">}</span>
+  <span class="p">-</span> <span class="n">accordion</span><span class="p">.</span><span class="nf">section</span><span class="p">(</span><span class="ss">title: </span><span class="s2">"Trois"</span><span class="p">,</span> <span class="ss">expanded: </span><span class="kp">true</span><span class="p">)</span> <span class="p">{</span> <span class="n">tag</span><span class="p">.</span><span class="nf">p</span><span class="p">(</span><span class="s2">"Troisième contenu déplié"</span><span class="p">)</span> <span class="p">}</span></code></pre></div>
+<div class="fr-tabs__panel fr-tabs__panel--hidden" id="input-erb-accordeon-avec-trois-sections"><pre><code class="highlight language-erb wrap"><span class="cp">&lt;%=</span> <span class="n">dsfr_accordion</span> <span class="k">do</span> <span class="o">|</span><span class="n">accordion</span><span class="o">|</span>
+<span class="n">accordion</span><span class="p">.</span><span class="nf">section</span><span class="p">(</span><span class="ss">title: </span><span class="s2">"Un"</span><span class="p">)</span> <span class="p">{</span> <span class="n">tag</span><span class="p">.</span><span class="nf">p</span><span class="p">(</span><span class="s2">"Premier contenu"</span><span class="p">)</span> <span class="p">}</span>
+<span class="n">accordion</span><span class="p">.</span><span class="nf">section</span><span class="p">(</span><span class="ss">title: </span><span class="s2">"Deux"</span><span class="p">,</span> <span class="ss">id: </span><span class="s2">"section-deux"</span><span class="p">)</span> <span class="p">{</span> <span class="n">tag</span><span class="p">.</span><span class="nf">p</span><span class="p">(</span><span class="s2">"Deuxième contenu"</span><span class="p">)</span> <span class="p">}</span>
+<span class="n">accordion</span><span class="p">.</span><span class="nf">section</span><span class="p">(</span><span class="ss">title: </span><span class="s2">"Trois"</span><span class="p">,</span> <span class="ss">expanded: </span><span class="kp">true</span><span class="p">)</span> <span class="p">{</span> <span class="n">tag</span><span class="p">.</span><span class="nf">p</span><span class="p">(</span><span class="s2">"Troisième contenu déplié"</span><span class="p">)</span> <span class="p">}</span>
 <span class="k">end</span> <span class="cp">%&gt;</span></code></pre></div>
 </div>
 <h4>Résultat</h4>
 <div class="fr-tabs fr-mb-4w">
 <ul class="fr-tabs__list" role="tablist">
-<li role="presentation"><button aria-controls="output-rendered-creating-a-simple-accordion" aria-selected="true" class="fr-tabs__tab" id="output-rendered-creating-a-simple-accordion" role="tab" tabindex="0">Rendu</button></li>
-<li role="presentation"><button aria-controls="output-html-creating-a-simple-accordion" aria-selected="false" class="fr-tabs__tab" id="output-html-creating-a-simple-accordion" role="tab" tabindex="0">HTML</button></li>
+<li role="presentation"><button aria-controls="output-rendered-accordeon-avec-trois-sections" aria-selected="true" class="fr-tabs__tab" id="output-rendered-accordeon-avec-trois-sections" role="tab" tabindex="0">Rendu</button></li>
+<li role="presentation"><button aria-controls="output-html-accordeon-avec-trois-sections" aria-selected="false" class="fr-tabs__tab" id="output-html-accordeon-avec-trois-sections" role="tab" tabindex="0">HTML</button></li>
 </ul>
-<div aria-labelledby="output-rendered-creating-a-simple-accordion" class="fr-tabs__panel fr-tabs__panel--selected" id="output-rendered-creating-a-simple-accordion" role="tabpanel"><div class="govuk-accordion" data-module="govuk-accordion">
-  <div id="one-section" class="govuk-accordion__section">
-    <div class="govuk-accordion__section-header">
-      <h2 class="govuk-accordion__section-heading">
-        <span id="one" class="govuk-accordion__section-button" aria-expanded="false" aria-controls="one-content">
-          One
-        </span>
-      </h2>
-    </div>
-    <div id="one-content" class="govuk-accordion__section-content" aria-labelledby="one">
+<div aria-labelledby="output-rendered-accordeon-avec-trois-sections" class="fr-tabs__panel fr-tabs__panel--selected" id="output-rendered-accordeon-avec-trois-sections" role="tabpanel"><div class="fr-accordions-group">
+  <section class="fr-accordion">
+    <h3 class="fr-accordion__title">
+      <button class="fr-accordion__btn" aria-expanded="false" aria-controls="accordion-section-1c5664cc">
+        Un
+      </button>
+    </h3>
+    <div id="accordion-section-1c5664cc" class="fr-collapse ">
       <p>
-        One content
+        Premier contenu
       </p>
     </div>
-  </div>
-  <div id="two-section" class="govuk-accordion__section">
-    <div class="govuk-accordion__section-header">
-      <h2 class="govuk-accordion__section-heading">
-        <span id="two" class="govuk-accordion__section-button" aria-expanded="false" aria-controls="two-content">
-          Two
-        </span>
-      </h2>
-    </div>
-    <div id="two-content" class="govuk-accordion__section-content" aria-labelledby="two">
+  </section>
+  <section class="fr-accordion">
+    <h3 class="fr-accordion__title">
+      <button class="fr-accordion__btn" aria-expanded="false" aria-controls="section-deux">
+        Deux
+      </button>
+    </h3>
+    <div id="section-deux" class="fr-collapse ">
       <p>
-        Two content
+        Deuxième contenu
       </p>
     </div>
-  </div>
-  <div id="three-section" class="govuk-accordion__section govuk-accordion__section--expanded">
-    <div class="govuk-accordion__section-header">
-      <h2 class="govuk-accordion__section-heading">
-        <span id="three" class="govuk-accordion__section-button" aria-expanded="true" aria-controls="three-content">
-          Three
-        </span>
-      </h2>
-    </div>
-    <div id="three-content" class="govuk-accordion__section-content" aria-labelledby="three">
+  </section>
+  <section class="fr-accordion">
+    <h3 class="fr-accordion__title">
+      <button class="fr-accordion__btn" aria-expanded="true" aria-controls="accordion-section-cd1bff98">
+        Trois
+      </button>
+    </h3>
+    <div id="accordion-section-cd1bff98" class="fr-collapse fr-collapse--expanded">
       <p>
-        Three content
+        Troisième contenu déplié
       </p>
     </div>
-  </div>
+  </section>
 </div></div>
-<div aria-labelledby="output-html-creating-a-simple-accordion" class="fr-tabs__panel" id="output-html-creating-a-simple-accordion" role="tabpanel"><pre><code class="highlight language-html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"govuk-accordion"</span> <span class="na">data-module=</span><span class="s">"govuk-accordion"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"one-section"</span> <span class="na">class=</span><span class="s">"govuk-accordion__section"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"govuk-accordion__section-header"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"govuk-accordion__section-heading"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;span</span> <span class="na">id=</span><span class="s">"one"</span> <span class="na">class=</span><span class="s">"govuk-accordion__section-button"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"one-content"</span><span class="nt">&gt;</span>
-          One
-        <span class="nt">&lt;/span&gt;</span>
-      <span class="nt">&lt;/h2&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"one-content"</span> <span class="na">class=</span><span class="s">"govuk-accordion__section-content"</span> <span class="na">aria-labelledby=</span><span class="s">"one"</span><span class="nt">&gt;</span>
+<div aria-labelledby="output-html-accordeon-avec-trois-sections" class="fr-tabs__panel" id="output-html-accordeon-avec-trois-sections" role="tabpanel"><pre><code class="highlight language-html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-accordions-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"fr-accordion"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"fr-accordion__title"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;button</span>
+      <span class="na">class=</span><span class="s">"fr-accordion__btn"</span>
+      <span class="na">aria-expanded=</span><span class="s">"false"</span>
+      <span class="na">aria-controls=</span><span class="s">"accordion-section-c0927743"</span>
+    <span class="nt">&gt;</span>
+        Un
+      <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;/h3&gt;</span>
+    <span class="nt">&lt;div</span>
+    <span class="na">id=</span><span class="s">"accordion-section-c0927743"</span>
+    <span class="na">class=</span><span class="s">"fr-collapse "</span>
+  <span class="nt">&gt;</span>
       <span class="nt">&lt;p&gt;</span>
-        One content
+        Premier contenu
       <span class="nt">&lt;/p&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"two-section"</span> <span class="na">class=</span><span class="s">"govuk-accordion__section"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"govuk-accordion__section-header"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"govuk-accordion__section-heading"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;span</span> <span class="na">id=</span><span class="s">"two"</span> <span class="na">class=</span><span class="s">"govuk-accordion__section-button"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"two-content"</span><span class="nt">&gt;</span>
-          Two
-        <span class="nt">&lt;/span&gt;</span>
-      <span class="nt">&lt;/h2&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"two-content"</span> <span class="na">class=</span><span class="s">"govuk-accordion__section-content"</span> <span class="na">aria-labelledby=</span><span class="s">"two"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/section&gt;</span>
+  <span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"fr-accordion"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"fr-accordion__title"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;button</span>
+      <span class="na">class=</span><span class="s">"fr-accordion__btn"</span>
+      <span class="na">aria-expanded=</span><span class="s">"false"</span>
+      <span class="na">aria-controls=</span><span class="s">"section-deux"</span>
+    <span class="nt">&gt;</span>
+        Deux
+      <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;/h3&gt;</span>
+    <span class="nt">&lt;div</span>
+    <span class="na">id=</span><span class="s">"section-deux"</span>
+    <span class="na">class=</span><span class="s">"fr-collapse "</span>
+  <span class="nt">&gt;</span>
       <span class="nt">&lt;p&gt;</span>
-        Two content
+        Deuxième contenu
       <span class="nt">&lt;/p&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"three-section"</span> <span class="na">class=</span><span class="s">"govuk-accordion__section govuk-accordion__section--expanded"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"govuk-accordion__section-header"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"govuk-accordion__section-heading"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;span</span> <span class="na">id=</span><span class="s">"three"</span> <span class="na">class=</span><span class="s">"govuk-accordion__section-button"</span> <span class="na">aria-expanded=</span><span class="s">"true"</span> <span class="na">aria-controls=</span><span class="s">"three-content"</span><span class="nt">&gt;</span>
-          Three
-        <span class="nt">&lt;/span&gt;</span>
-      <span class="nt">&lt;/h2&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"three-content"</span> <span class="na">class=</span><span class="s">"govuk-accordion__section-content"</span> <span class="na">aria-labelledby=</span><span class="s">"three"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/section&gt;</span>
+  <span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"fr-accordion"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"fr-accordion__title"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;button</span>
+      <span class="na">class=</span><span class="s">"fr-accordion__btn"</span>
+      <span class="na">aria-expanded=</span><span class="s">"true"</span>
+      <span class="na">aria-controls=</span><span class="s">"accordion-section-9f7557ce"</span>
+    <span class="nt">&gt;</span>
+        Trois
+      <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;/h3&gt;</span>
+    <span class="nt">&lt;div</span>
+    <span class="na">id=</span><span class="s">"accordion-section-9f7557ce"</span>
+    <span class="na">class=</span><span class="s">"fr-collapse fr-collapse--expanded"</span>
+  <span class="nt">&gt;</span>
       <span class="nt">&lt;p&gt;</span>
-        Three content
+        Troisième contenu déplié
       <span class="nt">&lt;/p&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/section&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
-</div></figure><h3 class="fr-mt-8w" id="creating-an-accordion-with-section-summaries"><a class="header-anchor" href="#creating-an-accordion-with-section-summaries">Creating an accordion with section summaries</a></h3><p>If the section needs more of an explanation, you can optionally add a
-summary line using the <code>summary_text</code> keyword.</p>
-
-<p>Keep summary lines as short as possible.</p>
-<figure class="app-example"><h4>Code</h4>
-<div class="fr-tabs fr-mb-4w">
-<ul class="fr-tabs__list" role="tablist">
-<li role="presentation"><button aria-controls="input-slim-creating-an-accordion-with-section-summaries" aria-current="page" aria-selected="true" class="fr-tabs__tab" id="input-slim-creating-an-accordion-with-section-summaries" role="tab" tabindex="0">Slim</button></li>
-<li role="presentation"><button aria-controls="input-erb-creating-an-accordion-with-section-summaries" aria-selected="false" class="fr-tabs__tab" href="#input-erb-creating-an-accordion-with-section-summaries" role="tab">ERB</button></li>
-</ul>
-<div aria-labelledby="input-slim-creating-an-accordion-with-section-summaries" class="fr-tabs__panel fr-tabs__panel--selected" id="input-slim-creating-an-accordion-with-section-summaries" role="tabpanel" tabindex="0"><pre><code class="highlight language-slim"><span class="p">=</span> <span class="n">dsfr_accordion</span> <span class="k">do</span> <span class="o">|</span><span class="n">accordion</span><span class="o">|</span>
-  <span class="p">-</span> <span class="n">accordion</span><span class="p">.</span><span class="nf">section</span><span class="p">(</span><span class="ss">heading_text: </span><span class="s2">"First"</span><span class="p">,</span>
-                      <span class="ss">summary_text: </span><span class="s2">"First summary"</span><span class="p">)</span> <span class="p">{</span> <span class="n">tag</span><span class="p">.</span><span class="nf">p</span><span class="p">(</span><span class="s2">"First content"</span><span class="p">)</span> <span class="p">}</span>
-
-  <span class="p">-</span> <span class="n">accordion</span><span class="p">.</span><span class="nf">section</span><span class="p">(</span><span class="ss">heading_text: </span><span class="s2">"Second"</span><span class="p">,</span>
-                      <span class="ss">summary_text: </span><span class="s2">"Second summary"</span><span class="p">)</span> <span class="p">{</span> <span class="n">tag</span><span class="p">.</span><span class="nf">p</span><span class="p">(</span><span class="s2">"Second content"</span><span class="p">)</span> <span class="p">}</span></code></pre></div>
-<div class="fr-tabs__panel fr-tabs__panel--hidden" id="input-erb-creating-an-accordion-with-section-summaries"><pre><code class="highlight language-erb wrap"><span class="cp">&lt;%=</span> <span class="n">dsfr_accordion</span> <span class="k">do</span> <span class="o">|</span><span class="n">accordion</span><span class="o">|</span>
-<span class="n">accordion</span><span class="p">.</span><span class="nf">section</span><span class="p">(</span><span class="ss">heading_text: </span><span class="s2">"First"</span><span class="p">,</span> <span class="ss">summary_text: </span><span class="s2">"First summary"</span><span class="p">)</span> <span class="p">{</span> <span class="n">tag</span><span class="p">.</span><span class="nf">p</span><span class="p">(</span><span class="s2">"First content"</span><span class="p">)</span> <span class="p">}</span>
-
-<span class="n">accordion</span><span class="p">.</span><span class="nf">section</span><span class="p">(</span><span class="ss">heading_text: </span><span class="s2">"Second"</span><span class="p">,</span> <span class="ss">summary_text: </span><span class="s2">"Second summary"</span><span class="p">)</span> <span class="p">{</span> <span class="n">tag</span><span class="p">.</span><span class="nf">p</span><span class="p">(</span><span class="s2">"Second content"</span><span class="p">)</span> <span class="p">}</span>
-<span class="k">end</span> <span class="cp">%&gt;</span></code></pre></div>
-</div>
-<h4>Résultat</h4>
-<div class="fr-tabs fr-mb-4w">
-<ul class="fr-tabs__list" role="tablist">
-<li role="presentation"><button aria-controls="output-rendered-creating-an-accordion-with-section-summaries" aria-selected="true" class="fr-tabs__tab" id="output-rendered-creating-an-accordion-with-section-summaries" role="tab" tabindex="0">Rendu</button></li>
-<li role="presentation"><button aria-controls="output-html-creating-an-accordion-with-section-summaries" aria-selected="false" class="fr-tabs__tab" id="output-html-creating-an-accordion-with-section-summaries" role="tab" tabindex="0">HTML</button></li>
-</ul>
-<div aria-labelledby="output-rendered-creating-an-accordion-with-section-summaries" class="fr-tabs__panel fr-tabs__panel--selected" id="output-rendered-creating-an-accordion-with-section-summaries" role="tabpanel"><div class="govuk-accordion" data-module="govuk-accordion">
-  <div id="first-section" class="govuk-accordion__section">
-    <div class="govuk-accordion__section-header">
-      <h2 class="govuk-accordion__section-heading">
-        <span id="first" class="govuk-accordion__section-button" aria-expanded="false" aria-controls="first-content">
-          First
-        </span>
-      </h2>
-      <div id="first-summary" class="govuk-accordion__section-summary govuk-body">
-        First summary
-      </div>
-    </div>
-    <div id="first-content" class="govuk-accordion__section-content" aria-labelledby="first">
-      <p>
-        First content
-      </p>
-    </div>
-  </div>
-  <div id="second-section" class="govuk-accordion__section">
-    <div class="govuk-accordion__section-header">
-      <h2 class="govuk-accordion__section-heading">
-        <span id="second" class="govuk-accordion__section-button" aria-expanded="false" aria-controls="second-content">
-          Second
-        </span>
-      </h2>
-      <div id="second-summary" class="govuk-accordion__section-summary govuk-body">
-        Second summary
-      </div>
-    </div>
-    <div id="second-content" class="govuk-accordion__section-content" aria-labelledby="second">
-      <p>
-        Second content
-      </p>
-    </div>
-  </div>
-</div></div>
-<div aria-labelledby="output-html-creating-an-accordion-with-section-summaries" class="fr-tabs__panel" id="output-html-creating-an-accordion-with-section-summaries" role="tabpanel"><pre><code class="highlight language-html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"govuk-accordion"</span> <span class="na">data-module=</span><span class="s">"govuk-accordion"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"first-section"</span> <span class="na">class=</span><span class="s">"govuk-accordion__section"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"govuk-accordion__section-header"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"govuk-accordion__section-heading"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;span</span> <span class="na">id=</span><span class="s">"first"</span> <span class="na">class=</span><span class="s">"govuk-accordion__section-button"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"first-content"</span><span class="nt">&gt;</span>
-          First
-        <span class="nt">&lt;/span&gt;</span>
-      <span class="nt">&lt;/h2&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"first-summary"</span> <span class="na">class=</span><span class="s">"govuk-accordion__section-summary govuk-body"</span><span class="nt">&gt;</span>
-        First summary
-      <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"first-content"</span> <span class="na">class=</span><span class="s">"govuk-accordion__section-content"</span> <span class="na">aria-labelledby=</span><span class="s">"first"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;p&gt;</span>
-        First content
-      <span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"second-section"</span> <span class="na">class=</span><span class="s">"govuk-accordion__section"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"govuk-accordion__section-header"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"govuk-accordion__section-heading"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;span</span> <span class="na">id=</span><span class="s">"second"</span> <span class="na">class=</span><span class="s">"govuk-accordion__section-button"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"second-content"</span><span class="nt">&gt;</span>
-          Second
-        <span class="nt">&lt;/span&gt;</span>
-      <span class="nt">&lt;/h2&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"second-summary"</span> <span class="na">class=</span><span class="s">"govuk-accordion__section-summary govuk-body"</span><span class="nt">&gt;</span>
-        Second summary
-      <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"second-content"</span> <span class="na">class=</span><span class="s">"govuk-accordion__section-content"</span> <span class="na">aria-labelledby=</span><span class="s">"second"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;p&gt;</span>
-        Second content
-      <span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
-</div></figure><h2>Plus d’informations</h2><ul><li><a href="https://design-system.service.gov.uk/components/accordion/">GOV.UK Design System accordion documentation</a></li></ul></div></main><footer class="fr-footer fr-mt-8w" id="footer" role="contentinfo"><div class="fr-container"><div class="fr-footer__body"><div class="fr-footer__brand fr-enlarge-link"><p class="fr-logo">République<br>Française</p></div><div class="fr-footer__content"><p class="fr-footer__content-desc">Composants Rails ViewComponent pour le Système de Design de lʼÉtat<br>Projet non-officiel porté par beta.gouv</p><ul class="fr-footer__content-list"><li class="fr-footer__content-item"><a class="fr-footer__content-link" href="https://github.com/betagouv/dsfr-view-components" target="_blank">GitHub</a></li><li class="fr-footer__content-item"><a class="fr-footer__content-link" href="https://www.systeme-de-design.gouv.fr/" target="_blank">Système de Design de lʼÉtat</a></li></ul></div></div><div class="fr-footer__bottom"><ul class="fr-footer__bottom-list"><li class="fr-footer__bottom-item"><a class="fr-footer__bottom-link" href="../../">Accueil</a></li><li class="fr-footer__bottom-item"><button aria-controls="fr-theme-modal" class="fr-footer__bottom-link" data-fr-opened="false">Paramètres d'affichage</button></li></ul><div class="fr-footer__bottom-copy"><p>Sauf mention contraire, tous les contenus de ce site sont sous <a href="https://github.com/etalab/licence-ouverte/blob/master/LO.md" target="_blank">licence etalab-2.0</a></p></div></div></div></footer>&lt;%# copied from https://template.incubateur.net/ %&gt;<dialog id="fr-theme-modal" class="fr-modal" role="dialog" aria-labelledby="fr-theme-modal-title"><div class="fr-container fr-container--fluid fr-container-md"><div class="fr-grid-row fr-grid-row--center"><div class="fr-col-12 fr-col-md-6 fr-col-lg-4"><div class="fr-modal__body"><div class="fr-modal__header"><button class="fr-link--close fr-link" aria-controls="fr-theme-modal">Fermer</button></div><div class="fr-modal__content"><h1 id="fr-theme-modal-title" class="fr-modal__title"><paramètres>d’affichage</paramètres></h1><div id="fr-display" class="fr-form-group fr-display"><div class="fr-form-group"><fieldset class="fr-fieldset"><legend class="fr-fieldset__legend fr-text--regular" id="-legend"><choisissez>un thème pour personnaliser l’apparence du site.</choisissez></legend><div class="fr-fieldset__content"><div class="fr-radio-group fr-radio-rich"><input value="light" type="radio" id="fr-radios-theme-light" name="fr-radios-theme"><label class="fr-label" for="fr-radios-theme-light">Thème clair</label><div class="fr-radio-rich__img" data-fr-inject-svg=""><img src="../../artwork/light.svg" alt=""><!-- L’alternative de l’image (attribut alt) doit rester vide car l’image est illustrative et ne doit pas être restituée aux technologies d’assistance --></div></div><div class="fr-radio-group fr-radio-rich"><input value="dark" type="radio" id="fr-radios-theme-dark" name="fr-radios-theme"><label class="fr-label" for="fr-radios-theme-dark">Thème sombre</label><div class="fr-radio-rich__img" data-fr-inject-svg=""><img src="../../artwork/dark.svg" alt=""><!-- L’alternative de l’image (attribut alt) doit rester vide car l’image est illustrative et ne doit pas être restituée aux technologies d’assistance --></div></div><div class="fr-radio-group fr-radio-rich"><input value="system" type="radio" id="fr-radios-theme-system" name="fr-radios-theme"><label class="fr-label" for="fr-radios-theme-system">Système<span class="fr-hint-text">Utilise les paramètres système.</span></label><div class="fr-radio-rich__img" data-fr-inject-svg=""><img src="../../artwork/system.svg" alt=""><!-- L’alternative de l’image (attribut alt) doit rester vide car l’image est illustrative et ne doit pas être restituée aux technologies d’assistance --></div></div></div></fieldset></div></div></div></div></div></div></div><script src="../../javascripts/dsfr.module.min.js" type="module"></script><script nomodule="true" src="../../javascripts/dsfr.nomodule.min.js" type="text/javascript"></script></dialog></body></html>
+</div></figure><h2>Plus d’informations</h2><ul><li><a href="https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/accordeon/">Accordéons sur la documentation du Système de Design de lʼÉtat</a></li></ul></div></main><footer class="fr-footer fr-mt-8w" id="footer" role="contentinfo"><div class="fr-container"><div class="fr-footer__body"><div class="fr-footer__brand fr-enlarge-link"><p class="fr-logo">République<br>Française</p></div><div class="fr-footer__content"><p class="fr-footer__content-desc">Composants Rails ViewComponent pour le Système de Design de lʼÉtat<br>Projet non-officiel porté par beta.gouv</p><ul class="fr-footer__content-list"><li class="fr-footer__content-item"><a class="fr-footer__content-link" href="https://github.com/betagouv/dsfr-view-components" target="_blank">GitHub</a></li><li class="fr-footer__content-item"><a class="fr-footer__content-link" href="https://www.systeme-de-design.gouv.fr/" target="_blank">Système de Design de lʼÉtat</a></li></ul></div></div><div class="fr-footer__bottom"><ul class="fr-footer__bottom-list"><li class="fr-footer__bottom-item"><a class="fr-footer__bottom-link" href="../../">Accueil</a></li><li class="fr-footer__bottom-item"><button aria-controls="fr-theme-modal" class="fr-footer__bottom-link" data-fr-opened="false">Paramètres d'affichage</button></li></ul><div class="fr-footer__bottom-copy"><p>Sauf mention contraire, tous les contenus de ce site sont sous <a href="https://github.com/etalab/licence-ouverte/blob/master/LO.md" target="_blank">licence etalab-2.0</a></p></div></div></div></footer>&lt;%# copied from https://template.incubateur.net/ %&gt;<dialog id="fr-theme-modal" class="fr-modal" role="dialog" aria-labelledby="fr-theme-modal-title"><div class="fr-container fr-container--fluid fr-container-md"><div class="fr-grid-row fr-grid-row--center"><div class="fr-col-12 fr-col-md-6 fr-col-lg-4"><div class="fr-modal__body"><div class="fr-modal__header"><button class="fr-link--close fr-link" aria-controls="fr-theme-modal">Fermer</button></div><div class="fr-modal__content"><h1 id="fr-theme-modal-title" class="fr-modal__title"><paramètres>d’affichage</paramètres></h1><div id="fr-display" class="fr-form-group fr-display"><div class="fr-form-group"><fieldset class="fr-fieldset"><legend class="fr-fieldset__legend fr-text--regular" id="-legend"><choisissez>un thème pour personnaliser l’apparence du site.</choisissez></legend><div class="fr-fieldset__content"><div class="fr-radio-group fr-radio-rich"><input value="light" type="radio" id="fr-radios-theme-light" name="fr-radios-theme"><label class="fr-label" for="fr-radios-theme-light">Thème clair</label><div class="fr-radio-rich__img" data-fr-inject-svg=""><img src="../../artwork/light.svg" alt=""><!-- L’alternative de l’image (attribut alt) doit rester vide car l’image est illustrative et ne doit pas être restituée aux technologies d’assistance --></div></div><div class="fr-radio-group fr-radio-rich"><input value="dark" type="radio" id="fr-radios-theme-dark" name="fr-radios-theme"><label class="fr-label" for="fr-radios-theme-dark">Thème sombre</label><div class="fr-radio-rich__img" data-fr-inject-svg=""><img src="../../artwork/dark.svg" alt=""><!-- L’alternative de l’image (attribut alt) doit rester vide car l’image est illustrative et ne doit pas être restituée aux technologies d’assistance --></div></div><div class="fr-radio-group fr-radio-rich"><input value="system" type="radio" id="fr-radios-theme-system" name="fr-radios-theme"><label class="fr-label" for="fr-radios-theme-system">Système<span class="fr-hint-text">Utilise les paramètres système.</span></label><div class="fr-radio-rich__img" data-fr-inject-svg=""><img src="../../artwork/system.svg" alt=""><!-- L’alternative de l’image (attribut alt) doit rester vide car l’image est illustrative et ne doit pas être restituée aux technologies d’assistance --></div></div></div></fieldset></div></div></div></div></div></div></div><script src="../../javascripts/dsfr.module.min.js" type="module"></script><script nomodule="true" src="../../javascripts/dsfr.nomodule.min.js" type="text/javascript"></script></dialog></body></html>
