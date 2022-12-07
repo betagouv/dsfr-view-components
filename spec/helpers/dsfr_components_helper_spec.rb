@@ -28,7 +28,7 @@ RSpec.describe(DsfrComponentsHelper, type: 'helper') do
       helper_method: :dsfr_accordion_section,
       klass: DsfrComponent::AccordionComponent::SectionComponent,
       args: [],
-      kwargs: {},
+      kwargs: { title: "Section Un" },
       css_matcher: %(.fr-accordion)
     },
     {
@@ -86,7 +86,7 @@ RSpec.describe(DsfrComponentsHelper, type: 'helper') do
       args: [],
       kwargs: { title_text: 'Notification banner' },
       css_matcher: %(.govuk-notification-banner),
-      block: Proc.new { |nb| nb.heading(text: "heading 1", link_text: "link 1", link_href: "/link-1") },
+      block: proc { |nb| nb.heading(text: "heading 1", link_text: "link 1", link_href: "/link-1") }
     },
     {
       helper_method: :dsfr_panel,
@@ -150,17 +150,17 @@ RSpec.describe(DsfrComponentsHelper, type: 'helper') do
       args: [],
       kwargs: { text: 'Warning' },
       css_matcher: %(.govuk-warning-text)
-    },
+    }
   ]
     .map { |h| HelperComponentMapping.new(**h) }
     .each do |hcm|
       describe hcm.helper_method do
-        subject do
+        subject(:component) do
           helper.send(hcm.helper_method, *hcm.args, **hcm.kwargs, &hcm.block)
         end
 
         specify %(should render the component #{hcm.klass}) do
-          expect(subject).to have_tag(hcm.css_matcher)
+          expect(component).to have_tag(hcm.css_matcher)
         end
       end
     end
