@@ -31,9 +31,14 @@ footer.fr-footer.fr-mt-8w#footer role="contentinfo"
       ul.fr-footer__bottom-list
         li.fr-footer__bottom-item
           a.fr-footer__bottom-link href="/" Accueil
+        li.fr-footer__bottom-item
+          button class="fr-footer__bottom-link" aria-controls="fr-theme-modal" data-fr-opened="false"
+            | Paramètres d'affichage
       .fr-footer__bottom-copy
         p
           | Sauf mention contraire, tous les contenus de ce site sont sous <a href="https://github.com/etalab/licence-ouverte/blob/master/LO.md" target="_blank">licence etalab-2.0</a>
+
+== render "/partials/theme-modal.*"
 
 script type="module" src="/javascripts/dsfr.module.min.js"
 script type="text/javascript" nomodule="true" src="/javascripts/dsfr.nomodule.min.js"

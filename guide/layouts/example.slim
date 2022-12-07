@@ -1,8 +1,0 @@
-doctype html
-html.govuk-template lang="en"
-  == render '/partials/head.*'
-  body.govuk-template__body.app-iframe
-    script
-      | document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
-  main#main-content
-    == yield

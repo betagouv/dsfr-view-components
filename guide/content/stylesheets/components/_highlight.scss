@@ -1,7 +1,3 @@
-// GOV.UK colours used as a starting point, some darkened
-// for additional contrast
-//
-// https://design-system.service.gov.uk/styles/colour/
 $orange: darken(#f47738, 20%);
 $blue: #1d70b8;
 $dark-blue: #003078;
@@ -13,19 +9,32 @@ $light-pink: lighten(#f499be, 20%);
 $red: #d4351c;
 $dark-green: #365e07;
 
-pre > code {
+pre>code {
   &.highlight {
     color: $text;
 
-    .s,.s1,.s2,.vi,.sx {
+    .s,
+    .s1,
+    .s2,
+    .vi,
+    .sx {
       color: $pink;
     }
 
-    .nt,.nf,.nc {
+    .nt,
+    .nf,
+    .nc {
       color: $orange;
-      }
+    }
 
-    .n,.p,.k,.mi,.n,.o,.na,.ss {
+    .n,
+    .p,
+    .k,
+    .mi,
+    .n,
+    .o,
+    .na,
+    .ss {
       color: $dark-blue;
     }
 
@@ -46,6 +55,54 @@ pre > code {
     .c1 {
       color: $dark-green;
       font-style: italic;
+    }
+  }
+}
+
+
+html[data-fr-theme=dark] {
+  pre>code {
+    &.highlight {
+      color: invert($text);
+
+      .s,
+      .s1,
+      .s2,
+      .vi,
+      .sx {
+        color: invert($pink);
+      }
+
+      .nt,
+      .nf,
+      .nc {
+        color: invert($orange);
+      }
+
+      .n,
+      .p,
+      .k,
+      .mi,
+      .n,
+      .o,
+      .na,
+      .ss {
+        color: invert($dark-blue);
+      }
+
+      .no {
+        color: invert(#0e5e5e);
+      }
+
+      .kp {
+        color: invert($green);
+      }
+
+      // comments
+      .c,
+      .c1 {
+        color: invert($dark-green);
+      }
     }
   }
 }
