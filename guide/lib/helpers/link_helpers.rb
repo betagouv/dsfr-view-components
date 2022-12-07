@@ -9,7 +9,7 @@ module Helpers
     def component_links
       {
         "Alerte" => "/components/alert",
-        # "Accordion" => "/components/accordion",
+        "Accordéon" => "/components/accordion",
         # "Back link" => "/components/back-link",
         # "Breadcrumbs" => "/components/breadcrumbs",
         # "Cookie banner" => "/components/cookie-banner",
