@@ -21248,13 +21248,26 @@ textarea.fr-input {
 pre > code.highlight {
   color: #0b0c0c;
 }
-pre > code.highlight .s, pre > code.highlight .s1, pre > code.highlight .s2, pre > code.highlight .vi, pre > code.highlight .sx {
+pre > code.highlight .s,
+pre > code.highlight .s1,
+pre > code.highlight .s2,
+pre > code.highlight .vi,
+pre > code.highlight .sx {
   color: #b42667;
 }
-pre > code.highlight .nt, pre > code.highlight .nf, pre > code.highlight .nc {
+pre > code.highlight .nt,
+pre > code.highlight .nf,
+pre > code.highlight .nc {
   color: #bc460a;
 }
-pre > code.highlight .n, pre > code.highlight .p, pre > code.highlight .k, pre > code.highlight .mi, pre > code.highlight .n, pre > code.highlight .o, pre > code.highlight .na, pre > code.highlight .ss {
+pre > code.highlight .n,
+pre > code.highlight .p,
+pre > code.highlight .k,
+pre > code.highlight .mi,
+pre > code.highlight .n,
+pre > code.highlight .o,
+pre > code.highlight .na,
+pre > code.highlight .ss {
   color: #003078;
 }
 pre > code.highlight .k {
@@ -21270,6 +21283,42 @@ pre > code.highlight .c,
 pre > code.highlight .c1 {
   color: #365e07;
   font-style: italic;
+}
+
+html[data-fr-theme=dark] pre > code.highlight {
+  color: #f4f3f3;
+}
+html[data-fr-theme=dark] pre > code.highlight .s,
+html[data-fr-theme=dark] pre > code.highlight .s1,
+html[data-fr-theme=dark] pre > code.highlight .s2,
+html[data-fr-theme=dark] pre > code.highlight .vi,
+html[data-fr-theme=dark] pre > code.highlight .sx {
+  color: #4bd998;
+}
+html[data-fr-theme=dark] pre > code.highlight .nt,
+html[data-fr-theme=dark] pre > code.highlight .nf,
+html[data-fr-theme=dark] pre > code.highlight .nc {
+  color: #43b9f5;
+}
+html[data-fr-theme=dark] pre > code.highlight .n,
+html[data-fr-theme=dark] pre > code.highlight .p,
+html[data-fr-theme=dark] pre > code.highlight .k,
+html[data-fr-theme=dark] pre > code.highlight .mi,
+html[data-fr-theme=dark] pre > code.highlight .n,
+html[data-fr-theme=dark] pre > code.highlight .o,
+html[data-fr-theme=dark] pre > code.highlight .na,
+html[data-fr-theme=dark] pre > code.highlight .ss {
+  color: #ffcf87;
+}
+html[data-fr-theme=dark] pre > code.highlight .no {
+  color: #f1a1a1;
+}
+html[data-fr-theme=dark] pre > code.highlight .kp {
+  color: #ff8fc3;
+}
+html[data-fr-theme=dark] pre > code.highlight .c,
+html[data-fr-theme=dark] pre > code.highlight .c1 {
+  color: #c9a1f8;
 }
 
 figure {
