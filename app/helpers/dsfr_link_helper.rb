@@ -64,8 +64,7 @@ module DsfrLinkHelper
 
   def dsfr_button_link_to(name = nil, options = nil, extra_options = {}, &block)
     extra_options = options if block_given?
-    html_options = DsfrComponent::StartButtonComponent::LINK_ATTRIBUTES
-      .merge build_html_options(extra_options, style: :button)
+    html_options = build_html_options(extra_options, style: :button)
 
     if block_given?
       link_to(name, html_options, &block)

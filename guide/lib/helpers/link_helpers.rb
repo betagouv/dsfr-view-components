@@ -9,24 +9,7 @@ module Helpers
     def component_links
       {
         "Alerte" => "/components/alert",
-        "Accordéon" => "/components/accordion",
-        # "Back link" => "/components/back-link",
-        # "Breadcrumbs" => "/components/breadcrumbs",
-        # "Cookie banner" => "/components/cookie-banner",
-        # "Details" => "/components/details",
-        # "Footer" => "/components/footer",
-        # "Header" => "/components/header",
-        # "Inset text" => "/components/inset-text",
-        # "Notification banner" => "/components/notification-banner",
-        # "Pagination" => "/components/pagination",
-        # "Panel" => "/components/panel",
-        # "Phase banner" => "/components/phase-banner",
-        # "Start button" => "/components/start-button",
-        # "Summary list" => "/components/summary-list",
-        # "Table" => "/components/table",
-        # "Tabs" => "/components/tabs",
-        # "Tag" => "/components/tag",
-        # "Warning text" => "/components/warning-text",
+        "Accordéon" => "/components/accordion"
       }
     end
 

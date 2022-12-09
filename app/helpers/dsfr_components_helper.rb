@@ -2,25 +2,7 @@ module DsfrComponentsHelper
   {
     dsfr_alert: 'DsfrComponent::AlertComponent',
     dsfr_accordion: 'DsfrComponent::AccordionComponent',
-    dsfr_accordion_section: 'DsfrComponent::AccordionComponent::SectionComponent',
-    dsfr_back_link: 'DsfrComponent::BackLinkComponent',
-    dsfr_breadcrumbs: 'DsfrComponent::BreadcrumbsComponent',
-    dsfr_cookie_banner: 'DsfrComponent::CookieBannerComponent',
-    dsfr_details: 'DsfrComponent::DetailsComponent',
-    dsfr_footer: 'DsfrComponent::FooterComponent',
-    dsfr_header: 'DsfrComponent::HeaderComponent',
-    dsfr_inset_text: 'DsfrComponent::InsetTextComponent',
-    dsfr_notification_banner: 'DsfrComponent::NotificationBannerComponent',
-    dsfr_pagination: 'DsfrComponent::PaginationComponent',
-    dsfr_panel: 'DsfrComponent::PanelComponent',
-    dsfr_phase_banner: 'DsfrComponent::PhaseBannerComponent',
-    dsfr_section_break: 'DsfrComponent::SectionBreakComponent',
-    dsfr_start_button: 'DsfrComponent::StartButtonComponent',
-    dsfr_summary_list: 'DsfrComponent::SummaryListComponent',
-    dsfr_table: 'DsfrComponent::TableComponent',
-    dsfr_tabs: 'DsfrComponent::TabComponent',
-    dsfr_tag: 'DsfrComponent::TagComponent',
-    dsfr_warning_text: 'DsfrComponent::WarningTextComponent',
+    dsfr_accordion_section: 'DsfrComponent::AccordionComponent::SectionComponent'
   }.each do |name, klass|
     define_method(name) do |*args, **kwargs, &block|
       capture do
