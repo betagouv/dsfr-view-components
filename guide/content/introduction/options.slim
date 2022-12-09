@@ -11,8 +11,8 @@ markdown:
   Ces paramètres fonctionnent de la même manière pour tous les composants et slots.
 
 == render('/partials/example.*',
-  caption: "Inset text avec des classes CSS spécifiques",
-  code: inset_text_with_classes) do
+  caption: "Alert avec des classes CSS spécifiques",
+  code: alert_with_classes) do
 
   markdown:
     Tous les composants, slots et helpers ont des classes CSS par défaut permettant de les faire fonctionner avec le DSFR. Il est possible d'ajouter des classes CSS supplémentaires en utilisant le keyword argument `classes`. Les classes CSS par défaut seront combinées aux classes passées en paramètre.
@@ -22,7 +22,7 @@ markdown:
 markdown:
 == render('/partials/example.*',
   caption: "Inset text avec des attributs HTML spécifiques",
-  code: inset_text_with_html_attributes) do
+  code: alert_with_html_attributes) do
 
   markdown:
     Le fonctionnement est similaire avec le paramètre `html_attributes` à la différence que cet argument doit être passé sous forme d'un Hash.

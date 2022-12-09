@@ -34,16 +34,29 @@ markdown:
 .code-sample
   pre
     code.highlight.language-slim
-      | = render(DsfrComponent::InsetTextComponent.new(text: "Important message"))
+      | = render(DsfrComponent::AlertComponent.new(title: "Message important"))
 
 markdown:
   ## Utilisation des helpers
 
-  Les helpers sont plus simples à utiliser et fournissent une expérience harmonisée avec les [helpers de liens](/helpers/link).
+  Les helpers sont plus simples à utiliser et fournissent une expérience harmonisée avec les helpers de liens.
 
 .code-sample
   pre
     code.highlight.language-slim
-      | = dsfr_inset_text(text: "Important message")
+      | = dsfr_alert(title: "Message important", size: :sm)
 
-== ActionController::Base.render(component_helper_mapping_table)
+h2 Correspondance entre les noms de composants et les helpers
+.fr-table
+  table
+    thead
+      tr
+        th Composant
+        th Helper
+    tbody
+      - component_helper_mapping.each do |class_name, helper_method|
+        tr
+          td
+            code #{class_name}
+          td
+            code #{helper_method}
