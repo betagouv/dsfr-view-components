@@ -184,6 +184,11 @@ bundle install
 bundle exec rspec spec
 ```
 
+Pour développer avec les tests en continu :
+```sh
+bundle exec guard
+```
+
 Lancer le guide de documentation :
 
 ```sh
