@@ -1,108 +1,56 @@
-$orange: darken(#f47738, 20%);
-$blue: #1d70b8;
-$dark-blue: #003078;
-$pink: darken(#d53880, 10%);
-$text: #0b0c0c;
-$green: #00703c;
-$light-grey: #f3f2f1;
-$light-pink: lighten(#f499be, 20%);
-$red: #d4351c;
-$dark-green: #365e07;
+$functions-color: var(--text-active-blue-france);
+$names-color: var(--text-label-blue-cumulus);
+$strings-color: var(--text-label-red-marianne);
+$text-color: var(--text-active-grey);
+$pseudo-keywords-color: var(--text-label-green-emeraude);
+$comments-color: var(--text-default-grey);
+$constants-color: var(--text-action-high-green-menthe);
 
-pre>code {
-  &.highlight {
-    color: $text;
+pre.highlight {
+  background: var(--background-default-grey);
+  color: $text-color;
 
-    .s,
-    .s1,
-    .s2,
-    .vi,
-    .sx {
-      color: $pink;
-    }
-
-    .nt,
-    .nf,
-    .nc {
-      color: $orange;
-    }
-
-    .n,
-    .p,
-    .k,
-    .mi,
-    .n,
-    .o,
-    .na,
-    .ss {
-      color: $dark-blue;
-    }
-
-    .k {
-      font-weight: 600;
-    }
-
-    .no {
-      color: #0e5e5e;
-    }
-
-    .kp {
-      color: $green;
-    }
-
-    // comments
-    .c,
-    .c1 {
-      color: $dark-green;
-      font-style: italic;
-    }
+  .s,
+  .s1,
+  .s2,
+  .vi,
+  .sx {
+    color: $strings-color;
   }
-}
 
+  .nt,
+  .nf,
+  .nc {
+    color: $functions-color;
+  }
 
-html[data-fr-theme=dark] {
-  pre>code {
-    &.highlight {
-      color: invert($text);
+  .n,
+  .p,
+  .k,
+  .mi,
+  .n,
+  .o,
+  .na,
+  .ss {
+    color: $names-color;
+  }
 
-      .s,
-      .s1,
-      .s2,
-      .vi,
-      .sx {
-        color: invert($pink);
-      }
+  .k {
+    font-weight: 600;
+  }
 
-      .nt,
-      .nf,
-      .nc {
-        color: invert($orange);
-      }
+  .no {
+    color: $constants-color;
+  }
 
-      .n,
-      .p,
-      .k,
-      .mi,
-      .n,
-      .o,
-      .na,
-      .ss {
-        color: invert($dark-blue);
-      }
+  .kp {
+    color: $pseudo-keywords-color;
+  }
 
-      .no {
-        color: invert(#0e5e5e);
-      }
-
-      .kp {
-        color: invert($green);
-      }
-
-      // comments
-      .c,
-      .c1 {
-        color: invert($dark-green);
-      }
-    }
+  // comments
+  .c,
+  .c1 {
+    color: $comments-color;
+    font-style: italic;
   }
 }
