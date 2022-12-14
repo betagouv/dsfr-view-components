@@ -22,18 +22,18 @@ figure.app-example
             | Data
 
     .fr-tabs__panel.fr-tabs__panel--selected tabindex="0" id=%(input-slim-#{anchor_id(caption)}) role="tabpanel" aria-labelledby=%(input-slim-#{anchor_id(caption)})
-      pre
+      pre.highlight
         code.highlight.language-slim
           | #{code}
 
     .fr-tabs__panel.fr-tabs__panel--hidden id=%(input-erb-#{anchor_id(caption)})
-      pre
+      pre.highlight
         code.highlight.language-erb.wrap
           = format_erb(code)
 
   - if defined?(data)
     .fr-tabs__panel.fr-tabs__panel--hidden id=%(input-data-#{anchor_id(caption)})
-      pre
+      pre.highlight
         code.highlight.language-ruby.wrap
           = data
 
@@ -47,7 +47,7 @@ figure.app-example
 
     h4 Rendu HTML
 
-    pre
+    pre.highlight
       code.highlight.language-html
         - if defined?(data)
           = format_slim(code, data)
@@ -76,7 +76,7 @@ figure.app-example
               == format_slim(code)
 
         .fr-tabs__panel role="tabpanel" aria-labelledby=%(output-html-#{anchor_id(caption)}) id=%(output-html-#{anchor_id(caption)})
-          pre
+          pre.highlight
             code.highlight.language-html
               - if defined?(data)
                 = format_slim(code, data)
