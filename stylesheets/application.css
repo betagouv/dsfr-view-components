@@ -21245,80 +21245,45 @@ textarea.fr-input {
     position: static;
   }
 }
-pre > code.highlight {
-  color: #0b0c0c;
+pre.highlight {
+  background: var(--background-default-grey);
+  color: var(--text-active-grey);
 }
-pre > code.highlight .s,
-pre > code.highlight .s1,
-pre > code.highlight .s2,
-pre > code.highlight .vi,
-pre > code.highlight .sx {
-  color: #b42667;
+pre.highlight .s,
+pre.highlight .s1,
+pre.highlight .s2,
+pre.highlight .vi,
+pre.highlight .sx {
+  color: var(--text-label-red-marianne);
 }
-pre > code.highlight .nt,
-pre > code.highlight .nf,
-pre > code.highlight .nc {
-  color: #bc460a;
+pre.highlight .nt,
+pre.highlight .nf,
+pre.highlight .nc {
+  color: var(--text-active-blue-france);
 }
-pre > code.highlight .n,
-pre > code.highlight .p,
-pre > code.highlight .k,
-pre > code.highlight .mi,
-pre > code.highlight .n,
-pre > code.highlight .o,
-pre > code.highlight .na,
-pre > code.highlight .ss {
-  color: #003078;
+pre.highlight .n,
+pre.highlight .p,
+pre.highlight .k,
+pre.highlight .mi,
+pre.highlight .n,
+pre.highlight .o,
+pre.highlight .na,
+pre.highlight .ss {
+  color: var(--text-label-blue-cumulus);
 }
-pre > code.highlight .k {
+pre.highlight .k {
   font-weight: 600;
 }
-pre > code.highlight .no {
-  color: #0e5e5e;
+pre.highlight .no {
+  color: var(--text-action-high-green-menthe);
 }
-pre > code.highlight .kp {
-  color: #00703c;
+pre.highlight .kp {
+  color: var(--text-label-green-emeraude);
 }
-pre > code.highlight .c,
-pre > code.highlight .c1 {
-  color: #365e07;
+pre.highlight .c,
+pre.highlight .c1 {
+  color: var(--text-default-grey);
   font-style: italic;
-}
-
-html[data-fr-theme=dark] pre > code.highlight {
-  color: #f4f3f3;
-}
-html[data-fr-theme=dark] pre > code.highlight .s,
-html[data-fr-theme=dark] pre > code.highlight .s1,
-html[data-fr-theme=dark] pre > code.highlight .s2,
-html[data-fr-theme=dark] pre > code.highlight .vi,
-html[data-fr-theme=dark] pre > code.highlight .sx {
-  color: #4bd998;
-}
-html[data-fr-theme=dark] pre > code.highlight .nt,
-html[data-fr-theme=dark] pre > code.highlight .nf,
-html[data-fr-theme=dark] pre > code.highlight .nc {
-  color: #43b9f5;
-}
-html[data-fr-theme=dark] pre > code.highlight .n,
-html[data-fr-theme=dark] pre > code.highlight .p,
-html[data-fr-theme=dark] pre > code.highlight .k,
-html[data-fr-theme=dark] pre > code.highlight .mi,
-html[data-fr-theme=dark] pre > code.highlight .n,
-html[data-fr-theme=dark] pre > code.highlight .o,
-html[data-fr-theme=dark] pre > code.highlight .na,
-html[data-fr-theme=dark] pre > code.highlight .ss {
-  color: #ffcf87;
-}
-html[data-fr-theme=dark] pre > code.highlight .no {
-  color: #f1a1a1;
-}
-html[data-fr-theme=dark] pre > code.highlight .kp {
-  color: #ff8fc3;
-}
-html[data-fr-theme=dark] pre > code.highlight .c,
-html[data-fr-theme=dark] pre > code.highlight .c1 {
-  color: #c9a1f8;
 }
 
 figure {
