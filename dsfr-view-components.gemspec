@@ -37,13 +37,13 @@ Gem::Specification.new do |spec|
   spec.add_dependency "view_component", "~> 2.74.1"
 
   spec.add_development_dependency "deep_merge"
+  spec.add_development_dependency "guard"
+  spec.add_development_dependency "guard-rspec"
   spec.add_development_dependency "pry-byebug"
   spec.add_development_dependency "rspec-html-matchers", "~> 0.9"
   spec.add_development_dependency "rspec-rails"
   spec.add_development_dependency "rubocop"
   spec.add_development_dependency "rubocop-rails"
-  spec.add_development_dependency "guard-rspec"
-  spec.add_development_dependency "guard"
   spec.add_development_dependency "sassc-rails"
   spec.add_development_dependency("simplecov", "~> 0.20")
   spec.add_development_dependency "sqlite3"
@@ -51,8 +51,8 @@ Gem::Specification.new do |spec|
 
   # Required for the guide
   spec.add_development_dependency("htmlbeautifier", "~> 1.4.1")
+  spec.add_development_dependency("kramdown", "~> 2.4.0")
   spec.add_development_dependency("nanoc", "~> 4.11")
-  spec.add_development_dependency("redcarpet", "~> 3.5.1")
   spec.add_development_dependency("rouge", "~> 4.0.0")
   spec.add_development_dependency("rubypants", "~> 0.7.0")
   spec.add_development_dependency("sass")
