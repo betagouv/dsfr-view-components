@@ -1,113 +1,60 @@
 module DsfrLinkHelper
-  LINK_STYLES = {
-    inverse:          "fr-link--inverse",
-    muted:            "fr-link--muted",
-    no_underline:     "fr-link--no-underline",
-    no_visited_state: "fr-link--no-visited-state",
-    text_colour:      "fr-link--text-colour",
-  }.freeze
+  ICON_POSITIONS = %w(left right).freeze
+  SIZES = %w(sm md lg).freeze
 
-  BUTTON_STYLES = {
-    disabled:  "fr-btn--disabled",
-    secondary: "fr-btn--secondary",
-    warning:   "fr-btn--warning",
-  }.freeze
-
-  def dsfr_link_classes(*styles, default_class: 'fr-link')
-    if (invalid_styles = (styles - LINK_STYLES.keys)) && invalid_styles.any?
-      fail(ArgumentError, "invalid styles #{invalid_styles.to_sentence}. Valid styles are #{LINK_STYLES.keys.to_sentence}")
-    end
-
-    [default_class] + LINK_STYLES.values_at(*styles).compact
-  end
-
-  def dsfr_button_classes(*styles, default_class: 'fr-btn')
-    if (invalid_styles = (styles - BUTTON_STYLES.keys)) && invalid_styles.any?
-      fail(ArgumentError, "invalid styles #{invalid_styles.to_sentence}. Valid styles are #{BUTTON_STYLES.keys.to_sentence}")
-    end
-
-    [default_class] + BUTTON_STYLES.values_at(*styles).compact
-  end
-
-  def dsfr_link_to(name = nil, options = nil, extra_options = {}, &block)
+  # Allows generating a link via plain parameters or the block-style form, just like {Rails's link_to}[https://edgeapi.rubyonrails.org/classes/ActionView/Helpers/UrlHelper.html].
+  # In addition, it accepts some custom options in
+  # <tt>extra_options</tt> (or options if using block-style) specific
+  # to the DSFR :
+  # * <tt>icon_left</tt> [String]: name of an icon to put on the left side
+  # * <tt>icon_right</tt> [String]: name of an icon to put on the right side
+  # * <tt>size</tt> [String]: one of the size available in <tt>SIZES</tt>.
+  # @param name [String] name of the link, same as link_to
+  # @param options [Hash] hash of options, same as link_to
+  # @param extra_options [Hash] hash of HTML options, same as link_to
+  def dsfr_link_to(name = nil, options = nil, extra_options = nil, &block)
     extra_options = options if block_given?
-    html_options = build_html_options(extra_options)
+
+    extra_options = extra_options
+                    .then { |opts| add_default_class(opts) }
+                    .then { |opts| add_icons(opts) }
+                    .then { |opts| add_size(opts) }
 
     if block_given?
-      link_to(name, html_options, &block)
+      link_to(name, extra_options, &block)
     else
-      link_to(name, options, html_options)
-    end
-  end
-
-  def dsfr_mail_to(email_address, name = nil, extra_options = {}, &block)
-    extra_options = name if block_given?
-    html_options = build_html_options(extra_options)
-
-    if block_given?
-      mail_to(email_address, html_options, &block)
-    else
-      mail_to(email_address, name, html_options)
-    end
-  end
-
-  def dsfr_button_to(name = nil, options = nil, extra_options = {}, &block)
-    extra_options = options if block_given?
-    html_options = build_html_options(extra_options, style: :button)
-
-    if block_given?
-      button_to(options, html_options, &block)
-    else
-      button_to(name, options, html_options)
-    end
-  end
-
-  def dsfr_button_link_to(name = nil, options = nil, extra_options = {}, &block)
-    extra_options = options if block_given?
-    html_options = build_html_options(extra_options, style: :button)
-
-    if block_given?
-      link_to(name, html_options, &block)
-    else
-      link_to(name, options, html_options)
-    end
-  end
-
-  def dsfr_breadcrumb_link_to(name = nil, options = nil, extra_options = {}, &block)
-    extra_options = options if block_given?
-    html_options = build_html_options(extra_options, style: :breadcrumb)
-
-    if block_given?
-      link_to(name, html_options, &block)
-    else
-      link_to(name, options, html_options)
+      link_to(name, options, extra_options)
     end
   end
 
 private
 
-  def build_html_options(provided_options, style: :link)
-    styles = case style
-             when :link       then LINK_STYLES
-             when :button     then BUTTON_STYLES
-             else {}
-             end
-
-    remaining_options = provided_options&.slice!(*styles.keys)
-
-    return {} unless (style_classes = build_style_classes(style, provided_options))
-
-    inject_class(remaining_options, class_name: style_classes)
+  def add_default_class(opts)
+    inject_class(opts, class_name: 'fr-link')
   end
 
-  def build_style_classes(style, provided_options)
-    keys = *provided_options&.keys
+  def add_icons(opts)
+    ICON_POSITIONS.each do |position|
+      key = "icon_#{position}"
+      icon = opts[key]
 
-    case style
-    when :link then dsfr_link_classes(*keys)
-    when :button then dsfr_button_classes(*keys)
-    when :breadcrumb then %w(govuk-breadcrumbs__link)
+      next if icon.blank?
+
+      opts = remove_attribute_and_add_class(opts, key, class_name: ["fr-link--icon-#{position}", "fr-icon-#{icon}"])
     end
+
+    opts
+  end
+
+  def add_size(opts)
+    size = opts['size']
+
+    if size.present? && size.in?(SIZES)
+      opts = inject_class(opts, class_name: "fr-link--#{size}")
+      opts.delete(:size)
+    end
+
+    opts
   end
 
   def inject_class(attributes, class_name:)

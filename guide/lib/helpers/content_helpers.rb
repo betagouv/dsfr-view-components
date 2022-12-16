@@ -23,7 +23,7 @@ module Helpers
     def component_helper_mapping
       {
         "DsfrComponent::AlertComponent" => "dsfr_alert",
-        "DsfrComponent::AccordionComponent" => "dsfr_accordion",
+        "DsfrComponent::AccordionComponent" => "dsfr_accordion"
       }
     end
   end

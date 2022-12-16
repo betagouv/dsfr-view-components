@@ -37,3 +37,4 @@ use_helper DsfrComponentsHelper
 use_helper Examples::CommonOptionsHelpers
 use_helper Examples::AlertHelpers
 use_helper Examples::AccordionHelpers
+use_helper Examples::LinkHelpers
