@@ -1,8 +1,9 @@
 h3.fr-mt-8w id=anchor_id(caption)
   == link_to caption, "#".concat(anchor_id(caption)), class: "header-anchor"
 
-- if block_given? && (content = yield)
-  == content
+.fr-text-wrap
+  - if block_given? && (content = yield)
+    == content
 
 figure.app-example
   h4 Code
