@@ -29,6 +29,11 @@ module DsfrLinkHelper
 
 private
 
+  def remove_attribute_and_add_class(opts, attr, class_name:)
+    inject_class(opts, class_name: class_name)
+      .tap { |o| o.delete(attr) }
+  end
+
   def add_default_class(opts)
     inject_class(opts, class_name: 'fr-link')
   end
