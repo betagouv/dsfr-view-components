@@ -1,24 +1,13 @@
 <!DOCTYPE html><html data-fr-scheme="system" lang="fr"><head><meta charset="utf-8"><title>Utilisation - Composants Rails ViewComponent pour le Système de Design de lʼÉtat </title><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"><meta content="#000091" name="theme-color"><meta content="IE=edge" http-equiv="X-UA-Compatible"><link href="../../favicon/apple-touch-icon.png" rel="apple-touch-icon"><link href="../../favicon/favicon.svg" rel="icon" type="image/svg+xml"><link href="../../favicon/favicon.ico" rel="shortcut icon" type="image/x-icon"><link crossorigin="use-credentials" href="../../favicon/manifest.webmanifest" rel="manifest"><link href="../../stylesheets/application.css" rel="stylesheet"></head><body><script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script><div class="fr-skiplinks"><nav aria-label="Accès rapide" class="fr-container" role="navigation"><ul class="fr-skiplinks__list"><li><a class="fr-link" href="#content">Contenu</a></li></ul></nav></div><header class="fr-header" role="banner"><div class="fr-header__body"><div class="fr-container"><div class="fr-header__body-row"><div class="fr-header__brand fr-enlarge-link"><div class="fr-header__brand-top"><div class="fr-header__logo"><p class="fr-logo">République<br>Française</p></div></div><div class="fr-header__service"><a href="../../" title="Composants Rails ViewComponent pour le Système de Design de lʼÉtat - Accueil"><p class="fr-header__service-title">DSFR-View-Components</p></a><p class="fr-header__service-tagline">Composants Rails ViewComponent pour le Système de Design de lʼÉtat</p></div></div></div></div></div></header><main id="contenu" role="main"><div class="fr-container"><nav aria-label="Vous êtes ici :" class="fr-breadcrumb" role="navigation"><button aria-controls="breadcrumb-1" aria-expanded="false" class="fr-breadcrumb__button">Voir le fil d’Ariane</button><div class="fr-collapse" id="breadcrumb-1"><ol class="fr-breadcrumb__list"><li><a class="fr-breadcrumb__link" href="../../">Accueil</a></li><li><a class="fr-breadcrumb__link" aria-current="page" href="">Utilisation</a></li></ol></div></nav><h1>Utilisation</h1><p>Vous pouvez utiliser les composants dans vos templates Rails en :</p>
 
 <ul>
-<li>appelant <code>render</code> avec un objet ViewComponent ;</li>
-<li>utilisant les helpers fournis</li>
+  <li>appelant <code>render</code> avec un objet ViewComponent ;</li>
+  <li>utilisant les helpers fournis</li>
 </ul>
 
 <p>Le résultat est le même peu importe la méthode utilisée.</p>
-
-<h2>Capture du contenu</h2>
-
-<p>Cette librairie utilise les fonctionnalités par défaut de Rails pour capturer du contenu.
-Cela doit marcher avec les chaînes de caractères mais <a href="(https://github.com/rails/rails/issues/17661)">ne rien afficher</a> quand d’autres objets sont passés en arguments.
-Par exemple si on capture un nombre décimal et une chaîne de caractères dans un bloc <code>tag#span</code>, seule la chaîne de caractères est affichée :</p>
-<div class="code-sample">
-<pre><code class="highlight language-slim"><span class="p">=</span> <span class="n">tag</span><span class="p">.</span><span class="nf">span</span> <span class="p">{</span> <span class="mf">1.0</span> <span class="p">}</span>
-<span class="p">=</span> <span class="n">tag</span><span class="p">.</span><span class="nf">span</span> <span class="p">{</span> <span class="s2">"2.0"</span> <span class="p">}</span></code></pre>
-<pre><code class="highlight language-html"><span class="nt">&lt;span&gt;&lt;/span&gt;</span>
-<span class="nt">&lt;span&gt;</span>2.0<span class="nt">&lt;/span&gt;</span></code></pre>
-</div><h2>Utilisation directe des objets ViewComponent</h2>
-<div class="code-sample"><pre><code class="highlight language-slim"><span class="p">=</span> <span class="n">render</span><span class="p">(</span><span class="no">DsfrComponent</span><span class="o">::</span><span class="no">AlertComponent</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="ss">title: </span><span class="s2">"Message important"</span><span class="p">))</span></code></pre></div><h2>Utilisation des helpers</h2>
+<h2 id="utilisation-directe-des-objets-viewcomponent">Utilisation directe des objets ViewComponent</h2>
+<div class="code-sample"><pre><code class="highlight language-slim"><span class="p">=</span> <span class="n">render</span><span class="p">(</span><span class="no">DsfrComponent</span><span class="o">::</span><span class="no">AlertComponent</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="ss">title: </span><span class="s2">"Message important"</span><span class="p">))</span></code></pre></div><h2 id="utilisation-des-helpers">Utilisation des helpers</h2>
 
 <p>Les helpers sont plus simples à utiliser et fournissent une expérience harmonisée avec les helpers de liens.</p>
 <div class="code-sample"><pre><code class="highlight language-slim"><span class="p">=</span> <span class="n">dsfr_alert</span><span class="p">(</span><span class="ss">title: </span><span class="s2">"Message important"</span><span class="p">,</span> <span class="ss">size: :sm</span><span class="p">)</span></code></pre></div><h2>Correspondance entre les noms de composants et les helpers</h2><div class="fr-table"><table>

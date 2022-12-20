@@ -1,16 +1,17 @@
 <!DOCTYPE html><html data-fr-scheme="system" lang="fr"><head><meta charset="utf-8"><title>Options communes - Composants Rails ViewComponent pour le Système de Design de lʼÉtat </title><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"><meta content="#000091" name="theme-color"><meta content="IE=edge" http-equiv="X-UA-Compatible"><link href="../../favicon/apple-touch-icon.png" rel="apple-touch-icon"><link href="../../favicon/favicon.svg" rel="icon" type="image/svg+xml"><link href="../../favicon/favicon.ico" rel="shortcut icon" type="image/x-icon"><link crossorigin="use-credentials" href="../../favicon/manifest.webmanifest" rel="manifest"><link href="../../stylesheets/application.css" rel="stylesheet"></head><body><script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script><div class="fr-skiplinks"><nav aria-label="Accès rapide" class="fr-container" role="navigation"><ul class="fr-skiplinks__list"><li><a class="fr-link" href="#content">Contenu</a></li></ul></nav></div><header class="fr-header" role="banner"><div class="fr-header__body"><div class="fr-container"><div class="fr-header__body-row"><div class="fr-header__brand fr-enlarge-link"><div class="fr-header__brand-top"><div class="fr-header__logo"><p class="fr-logo">République<br>Française</p></div></div><div class="fr-header__service"><a href="../../" title="Composants Rails ViewComponent pour le Système de Design de lʼÉtat - Accueil"><p class="fr-header__service-title">DSFR-View-Components</p></a><p class="fr-header__service-tagline">Composants Rails ViewComponent pour le Système de Design de lʼÉtat</p></div></div></div></div></div></header><main id="contenu" role="main"><div class="fr-container"><nav aria-label="Vous êtes ici :" class="fr-breadcrumb" role="navigation"><button aria-controls="breadcrumb-1" aria-expanded="false" class="fr-breadcrumb__button">Voir le fil d’Ariane</button><div class="fr-collapse" id="breadcrumb-1"><ol class="fr-breadcrumb__list"><li><a class="fr-breadcrumb__link" href="../../">Accueil</a></li><li><a class="fr-breadcrumb__link" aria-current="page" href="">Options communes</a></li></ol></div></nav><h1>Options communes</h1><p>Les composants partagent deux options communes :</p>
 
 <ul>
-<li><code>classes</code></li>
-<li>et <code>html_attributes</code>
+  <li><code>classes</code></li>
+  <li>et <code>html_attributes</code>
 </li>
 </ul>
 
 <p>Ces paramètres fonctionnent de la même manière pour tous les composants et slots.</p>
-<h3 class="fr-mt-8w" id="alert-avec-des-classes-css-specifiques"><a class="header-anchor" href="#alert-avec-des-classes-css-specifiques">Alert avec des classes CSS spécifiques</a></h3><p>Tous les composants, slots et helpers ont des classes CSS par défaut permettant de les faire fonctionner avec le DSFR. Il est possible d’ajouter des classes CSS supplémentaires en utilisant le keyword argument <code>classes</code>. Les classes CSS par défaut seront combinées aux classes passées en paramètre.</p>
+<h3 class="fr-mt-8w" id="alert-avec-des-classes-css-specifiques"><a class="header-anchor" href="#alert-avec-des-classes-css-specifiques">Alert avec des classes CSS spécifiques</a></h3><div class="fr-text-wrap">
+<p>Tous les composants, slots et helpers ont des classes CSS par défaut permettant de les faire fonctionner avec le DSFR. Il est possible d’ajouter des classes CSS supplémentaires en utilisant le keyword argument <code>classes</code>. Les classes CSS par défaut seront combinées aux classes passées en paramètre.</p>
 
 <p>Les classes CSS peuvent être passées sous forme de tableau ou en chaîne de caractères séparée par des espaces.</p>
-<figure class="app-example"><h4>Code</h4>
+</div><figure class="app-example"><h4>Code</h4>
 <div class="fr-tabs fr-mb-4w">
 <ul class="fr-tabs__list" role="tablist">
 <li role="presentation"><button aria-controls="input-slim-alert-avec-des-classes-css-specifiques" aria-current="page" aria-selected="true" class="fr-tabs__tab" id="input-slim-alert-avec-des-classes-css-specifiques" role="tab" tabindex="0">Slim</button></li>
@@ -37,11 +38,13 @@
     Texte alertant avec des classes
   <span class="nt">&lt;/p&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
-</div></figure><h3 class="fr-mt-8w" id="inset-text-avec-des-attributs-html-specifiques"><a class="header-anchor" href="#inset-text-avec-des-attributs-html-specifiques">Inset text avec des attributs HTML spécifiques</a></h3><p>Le fonctionnement est similaire avec le paramètre <code>html_attributes</code> à la différence que cet argument doit être passé sous forme d’un Hash.</p>
+</div></figure>
+<h3 class="fr-mt-8w" id="inset-text-avec-des-attributs-html-specifiques"><a class="header-anchor" href="#inset-text-avec-des-attributs-html-specifiques">Inset text avec des attributs HTML spécifiques</a></h3><div class="fr-text-wrap">
+<p>Le fonctionnement est similaire avec le paramètre <code>html_attributes</code> à la différence que cet argument doit être passé sous forme d’un Hash.</p>
 
 <p>Vous pouvez utiliser la <a href="https://api.rubyonrails.org/classes/ActionView/Helpers/TagHelper.html#method-i-tag">convention Rails</a>
 d’imbriquer les attributs <code>aria</code> et <code>data</code>.</p>
-<figure class="app-example"><h4>Code</h4>
+</div><figure class="app-example"><h4>Code</h4>
 <div class="fr-tabs fr-mb-4w">
 <ul class="fr-tabs__list" role="tablist">
 <li role="presentation"><button aria-controls="input-slim-inset-text-avec-des-attributs-html-specifiques" aria-current="page" aria-selected="true" class="fr-tabs__tab" id="input-slim-inset-text-avec-des-attributs-html-specifiques" role="tab" tabindex="0">Slim</button></li>
