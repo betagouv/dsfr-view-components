@@ -30651,7 +30651,9 @@ textarea.fr-input {
   }
 }
 pre.highlight {
-  background: var(--background-default-grey);
+  background: var(--background-alt-grey);
+  padding: 1rem;
+  font-size: 0.9rem;
   color: var(--text-active-grey);
 }
 pre.highlight .s,
@@ -30701,9 +30703,6 @@ figure {
 }
 
 code {
-  background: var(--background-default-grey-active);
-}
-
-pre > code {
-  background: initial;
+  background: var(--background-alt-grey);
+  font-size: 0.9rem;
 }
