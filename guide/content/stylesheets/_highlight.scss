@@ -7,7 +7,9 @@ $comments-color: var(--text-default-grey);
 $constants-color: var(--text-action-high-green-menthe);
 
 pre.highlight {
-  background: var(--background-default-grey);
+  background: var(--background-alt-grey);
+  padding: 1rem;
+  font-size: 0.9rem;
   color: $text-color;
 
   .s,

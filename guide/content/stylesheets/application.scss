@@ -2,8 +2,8 @@
 @import "dsfr/dist/dsfr.min";
 @import "dsfr/dist/utility/utility.min";
 
-// Applicaton components
-@import "components/highlight";
+// code CSS
+@import "highlight";
 
 figure {
   padding: 0;
@@ -14,12 +14,7 @@ figure {
   max-width: 42rem;
 }
 
-// we want a background for inline code samples (within text)
 code {
-  background: var(--background-default-grey-active);
-}
-
-// but not the actual code snippets
-pre > code {
-  background: initial;
+  background: var(--background-alt-grey);
+  font-size: 0.9rem;
 }

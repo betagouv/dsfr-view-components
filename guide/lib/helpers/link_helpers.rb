@@ -33,16 +33,16 @@ module Helpers
       # 'https://codeclimate.com/github/DFE-Digital/govuk-components'
     end
 
-    def dfe_rails_boilerplate_link
-      # 'https://github.com/DFE-Digital/govuk-rails-boilerplate'
-    end
-
     def viewcomponent_link
       'https://viewcomponent.org/'
     end
 
     def rails_docs_url_helper
       'https://edgeapi.rubyonrails.org/classes/ActionView/Helpers/UrlHelper.html'
+    end
+
+    def dsfr_icon_list_link
+      'https://www.systeme-de-design.gouv.fr/elements-d-interface/fondamentaux-techniques/icones/'
     end
 
     def rails_docs_button_to

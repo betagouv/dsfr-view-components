@@ -1,0 +1,58 @@
+%h3.fr-mt-8w{id: anchor_id(caption)}
+  = link_to caption, "#".concat(anchor_id(caption)), class: "header-anchor"
+
+.fr-text-wrap
+  - if block_given? && (content = yield)
+    = content
+
+%figure.app-example
+  %h4 Code
+
+  %pre.highlight
+    %code.language-haml
+      &= code
+
+  %h4 Résultat
+  .fr-tabs
+    %ul.fr-tabs__list{role: "tablist"}
+      %li{role: "presentation"}
+        %button.fr-tabs__tab{
+          id: "output-rendered-#{anchor_id(caption)}",
+          tabindex: "0",
+          aria: {
+            selected: "true",
+            controls: "output-rendered-#{anchor_id(caption)}"
+          },
+          role: "tab"
+        }
+          Rendu
+      %li{role: "presentation"}
+        %button.fr-tabs__tab{
+          id: "output-html-#{anchor_id(caption)}",
+          tabindex: "0",
+          aria: {
+            selected: "false",
+            controls: "output-html-#{anchor_id(caption)}"
+          },
+          role: "tab"
+        }
+          HTML
+
+    .fr-tabs__panel.fr-tabs__panel--selected{
+      role: "tabpanel",
+      "aria-labelledby" => "output-rendered-#{anchor_id(caption)}",
+      id: "output-rendered-#{anchor_id(caption)}"
+    }
+      = format_haml(code)
+
+    .fr-tabs__panel{
+      role: "tabpanel",
+      "aria-labelledby" => "output-html-#{anchor_id(caption)}",
+      id: "output-html-#{anchor_id(caption)}"
+    }
+      %pre.highlight
+        %code.language-html
+          - if defined?(data)
+            Some HTML
+          - else
+            &= format_haml(code)

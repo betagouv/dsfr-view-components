@@ -22,6 +22,22 @@ module Helpers
       block.call
     end
 
+    # NOTE: this is copied over from the format_slim method below
+    def format_haml(raw, data = nil)
+      # FIXME: not sure why when we're several
+      #        blocks deep we need to unescape more
+      #        than once
+      locals = if data
+                 eval(data)
+               else
+                 {}
+               end
+
+      template = Haml::Engine.new(raw).render(FakeView.new, **locals)
+
+      CGI.unescapeHTML(template)
+    end
+
     def format_slim(raw, data = nil)
       # FIXME: not sure why when we're several
       #        blocks deep we need to unescape more
