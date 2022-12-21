@@ -1,0 +1,7 @@
+skip_frontmatter: true
+
+linters:
+  LineLength:
+    max: 100
+  SpaceInsideHashAttributes:
+    style: no_space

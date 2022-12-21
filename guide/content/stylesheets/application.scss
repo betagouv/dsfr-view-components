@@ -16,10 +16,6 @@ figure {
 
 // we want a background for inline code samples (within text)
 code {
-  background: var(--background-default-grey-active);
-}
-
-// but not the actual code snippets
-pre > code {
-  background: initial;
+  background: var(--background-alt-grey);
+  font-size: 0.9rem;
 }

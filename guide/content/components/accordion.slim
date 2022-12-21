@@ -4,13 +4,13 @@ title: Accordéon
 
 p Les accordéons permettent aux utilisateurs d'afficher et de masquer des sections de contenu présentés dans une page.
 
-== render('/partials/example.*',
+== render('/partials/example.slim',
   caption: "Accordéon section unique",
   code: accordion_single) do
   markdown:
     Vous pouvez aussi utiliser le helper `dsfr_accordion` avec une unique section. La section sera alors wrappée par une div `fr-accordions-group` invisible.
 
-== render('/partials/example.*',
+== render('/partials/example.slim',
   caption: "Accordéon avec trois sections",
   code: accordion_normal) do
   markdown:

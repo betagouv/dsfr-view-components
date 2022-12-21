@@ -3,7 +3,7 @@ title: Liens
 ---
 
 .fr-text-wrap
-  markdown:
+  :markdown
     Le DSFR distingue plusieurs types de liens selon leur cible ou le
     contexte où ils se trouvent :
 
@@ -17,24 +17,19 @@ title: Liens
     de passer par les helpers fournis par notre librairie. Voir le
     premier exemple ci-dessous.
 
-p
-  ' Les helpers fournis pour les liens suivent la signature du
-  == link_to('link_to de Rails',
-  'https://api.rubyonrails.org/classes/ActionView/Helpers/UrlHelper.html#method-i-link_to',
-  { target: '_blank', rel: 'noopener' })
-  | .
+%p
+  Les helpers fournis pour les liens suivent la signature du
+  = link_to('link_to de Rails', rails_docs_url_helper, { target: '_blank', rel: 'noopener' })
+  \.
 
-== render('/partials/example.*',
-  caption: "Vue d'ensemble",
-  code: all_links) do
-  markdown:
+= render('/partials/example.haml', caption: "Vue d'ensemble", code: all_links) do
+  :markdown
     Quelques combinaisons (au fil du texte/interne,
     hors-texte/externe, etc.) sont exposées ici.
 
-== render('/partials/example.*',
-  caption: "Lien au fil du texte",
-  code: link_embed) do
-  markdown:
+
+= render('/partials/example.*', caption: "Lien au fil du texte", code: link_embed) do
+  :markdown
     Liens sans attributs particuliers, au fil du texte. Ils n'ont pas
     besoin d'une classe CSS particulière et sont automatiquement récupérés
     par le DSFR, ce qui explique pourquoi on emploie simplement le
@@ -42,10 +37,8 @@ p
 
     Ils peuvent être internes ou externes.
 
-== render('/partials/example.*',
-  caption: "Lien hors-texte",
-  code: link_simple) do
-  markdown:
+= render('/partials/example.*', caption: "Lien hors-texte", code: link_simple) do
+  :markdown
     Liens hors-texte, indépendants, aussi appellés liens simples par
     le DSFR. Ils sont identifiés par la classe `.fr-link` et on
     préférera donc `dsfr_link_to` dans ce cas-là.
@@ -57,13 +50,14 @@ p
     liens internes ; les liens externes sont déjà marqués par une
     icône donc il est fortement décommandé d'en faire usage sur eux.
 
-  p
-    ' Vous pouvez consulter
-    == link_to('la liste des icônes sur le site du DSFR', 'https://www.systeme-de-design.gouv.fr/elements-d-interface/fondamentaux-techniques/icones/', target: '_blank', rel: 'noopener')
-    | .
+  %p
+    Vous pouvez consulter la
+    = link_to('liste des icônes sur le site du DSFR',
+              dsfr_icon_list_link,
+              target: '_blank',
+              rel: 'noopener')
+    \.
 
-  markdown:
+  :markdown
     Enfin vous pouvez aussi jouer de trois tailles différentes pour
     vos liens : `sm`, `md` (par défaut) et `lg`.
-
-== render('/partials/related-info.*', links: link_info)
