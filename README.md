@@ -32,7 +32,7 @@ Cette gem a pour but de supporter tous les composants proposés par le Design Sy
 
 Les composants disponibles sont :
 
-- [ ] Accordéon - Accordion
+- [x] Accordéon - Accordion
 - [ ] Ajout de fichier - File upload
 - [x] Alertes - Alert
 - [ ] Badge
@@ -55,7 +55,7 @@ Les composants disponibles sont :
 - [ ] Indicateur d'étape
 - [ ] Interrupteur - Toggle switch
 - [ ] Lettre d'information et réseaux sociaux - Newsletter &amp; Follow us
-- [ ] Liens - Links
+- [x] Liens - Links
 - [ ] Liens d'évitement - Skiplinks
 - [ ] Liste déroulante - Select
 - [ ] Menu latéral - Side menu
