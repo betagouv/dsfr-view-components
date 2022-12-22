@@ -6,11 +6,14 @@ module Helpers
   end
 
   module LinkHelpers
+    COMPONENTS_RE = %r{(?<url>/components/.*)\..*}.freeze
+
     def component_links
-      {
-        "Alerte" => "/components/alert",
-        "Accordéon" => "/components/accordion"
-      }
+      @items.map do |item|
+        data = item.attributes[:filename].match(COMPONENTS_RE)
+
+        [item[:title], data[:url]] if data.present?
+      end.compact
     end
 
     def design_system_link

@@ -1,0 +1,32 @@
+class DsfrComponent::<%= @name %>Component < DsfrComponent::Base
+<% if options[:params].empty? %>
+  def initialize(classes: [], html_attributes: {})
+    super(classes: classes, html_attributes: html_attributes)
+  end
+<% else %>
+<%- options[:params].each do |param, type| -%>
+  # @param <%= param %> [<%= type %>] FIXME: document
+<%- end -%>
+  def initialize(<%= options[:params].keys.map { |p| "#{p}:" }.join(", ") %>, classes: [], html_attributes: {})
+  <%- options[:params].keys.each do |param| -%>
+    <%= "@#{param} = #{param}" %>
+  <%- end -%>
+
+    super(classes: classes, html_attributes: html_attributes)
+   end
+<% end  %>
+
+  def call
+    tag.div(**html_attributes) do
+      content
+    end
+  end
+
+private
+<% unless options[:params].empty? %>
+  attr_reader <%= options[:params].keys.map { |p| ":#{p}" }.join(", ") %>
+<% end %>
+  def default_attributes
+    { class: '' }
+  end
+end

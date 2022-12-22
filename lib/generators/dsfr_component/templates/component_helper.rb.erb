@@ -1,0 +1,10 @@
+module Examples
+  module <%= name %>Helpers
+    def <%= @file_name %>_default
+      <<~RAW
+        = dsfr_<%= @file_name %>(<%= options[:params].keys.map { |p| "#{p}: nil" }.join(", ") %>) do |component|
+          %p Le futur contenu de <%= name %>Component
+        RAW
+    end
+  end
+end

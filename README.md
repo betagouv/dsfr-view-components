@@ -1,11 +1,5 @@
 # Composants du DSFR
 
-Cette gem fournit des composants pour le Design Système de l'État (DSFR) en s'appuyant sur le [framework ViewComponent](https://github.com/ViewComponent/view_component).
-
-C'est un fork de [govuk-components](https://github.com/DFE-Digital/govuk-components) qui propose l'équivalent pour le GOV.UK Design System.
-
-⚠️ Cette gem est en cours de développement et n'est pas adaptée à un usage en production. N'hésitez pas à contribuer pour nous aider à avancer !
-
 [![Tests](https://github.com/betagouv/dsfr-view-components/workflows/Tests/badge.svg)](https://github.com/betagouv/dsfr-view-components/actions?query=workflow%3ATests)
 [![Gem Version](https://badge.fury.io/rb/dsfr-view-components.svg)](https://badge.fury.io/rb/dsfr-view-components)
 [![Gem](https://img.shields.io/gem/dt/dsfr-view-components?logo=rubygems)](https://rubygems.org/gems/dsfr-view-components)
@@ -15,11 +9,22 @@ C'est un fork de [govuk-components](https://github.com/DFE-Digital/govuk-compone
 
 [![Design Système de lʼÉtat](https://img.shields.io/badge/Design%20Système%20de%20lʼÉtat-1.8.4-brightgreen)](https://www.systeme-de-design.gouv.fr/)
 
-<!--
-[![Maintainability](https://api.codeclimate.com/v1/badges/cbcbc140f300b920d833/maintainability)](https://codeclimate.com/github/DFE-Digital/govuk-components/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/cbcbc140f300b920d833/test_coverage)](https://codeclimate.com/github/DFE-Digital/govuk-components/test_coverage)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/d40a5a0a-b086-4c35-b046-97fbcbf9f219/deploy-status)](https://app.netlify.com/sites/govuk-components/deploys)
--->
+Cette gem fournit des composants pour le Design Système de l'État (DSFR) en s'appuyant sur le [framework ViewComponent](https://github.com/ViewComponent/view_component).
+
+C'est un fork de [govuk-components](https://github.com/DFE-Digital/govuk-components) qui propose l'équivalent pour le GOV.UK Design System.
+
+
+## Développement en cours ⚠️
+
+Cette gem est en cours de développement et n'est pas encore
+recommandée pour un usage en production.
+
+N'hésitez pas à contribuer pour nous aider à avancer, un générateur de
+composant est même fourni pour vous faciliter la tâche :
+
+```sh
+bin/rails g dsfr_component FancyButton --params title:String count:Integer
+```
 
 ## Documentation
 

@@ -1,0 +1,28 @@
+Description:
+
+    Generates the required structure to implement a new component for
+    the DSFR.
+
+    It creates the structure for a root component, in opposition to
+    nested components like AccordionSection for Accordion – which
+    require their own folder and things this generator doesn't handle
+    yet.
+
+    The NAME needs to be specified as the first parameter, without the
+    component part, so in the example thereafer, Fancy rather than
+    FancyComponent.
+
+    Additional parameters for the compoment can be specified with the
+    --params switch and should be a list of ARG_NAME:TYPE pairs. The
+    ARG_NAME is used as a keyword parameter for the component's
+    initialize method, and the TYPE should be a Ruby class/type
+    because it will be used to fill in the RDoc comments.
+
+Example:
+    bin/rails generate dsfr_component Fancy --params title:String size:Symbol
+
+    This will create:
+      app/components/dsfr_component/fancy_component.rb
+      guide/content/components/fancy_component.haml
+      guide/lib/examples/fancy_component_helpers.rb
+      spec/components/dsfr_component/fancy_component_spec.rb
