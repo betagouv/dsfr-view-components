@@ -33,9 +33,9 @@ module Helpers
                  {}
                end
 
-      template = Haml::Engine.new(raw).render(FakeView.new, **locals)
+      template = Tilt::HamlTemplate.new { raw }.render(FakeView.new, **locals)
 
-      CGI.unescapeHTML(template)
+      beautify(CGI.unescapeHTML(CGI.unescapeHTML(template)))
     end
 
     def format_slim(raw, data = nil)
