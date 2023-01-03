@@ -20,10 +20,12 @@ contexte où ils se trouvent :</p>
 dire sans classe CSS spécifique) il n’est pas toujours nécessaire
 de passer par les helpers fournis par notre librairie. Voir le
 premier exemple ci-dessous.</p>
+
+
 </div>
 <p>
 Les helpers fournis pour les liens suivent la signature du
-<a target="_blank" rel="noopener" href="https://edgeapi.rubyonrails.org/classes/ActionView/Helpers/UrlHelper.html">link_to de Rails</a>
+&lt;a target=”_blank” rel=”noopener” href=”https://edgeapi.rubyonrails.org/classes/ActionView/Helpers/UrlHelper.html”&gt;link_to de Rails&lt;/a&gt;
 .
 </p>
 <h3 class="fr-mt-8w" id="vue-d-ensemble">
@@ -32,6 +34,8 @@ Les helpers fournis pour les liens suivent la signature du
 <div class="fr-text-wrap">
 <p>Quelques combinaisons (au fil du texte/interne,
 hors-texte/externe, etc.) sont exposées ici.</p>
+
+
 
 </div>
 <figure class="app-example">
@@ -60,26 +64,49 @@ HTML
 </ul>
 <div aria-labelledby="output-rendered-vue-d-ensemble" class="fr-tabs__panel fr-tabs__panel--selected" id="output-rendered-vue-d-ensemble" role="tabpanel">
 <p>
-Ceci est un
-<a href="#">lien au fil du texte</a>
-. Ceci est un
-<a target="_blank" rel="noopener" href="#">lien externe au fil du texte</a>
-.
+  Ceci est un
+  <a href="#">
+    lien au fil du texte
+  </a>
+  . Ceci est un
+  <a target="_blank" rel="noopener" href="#">
+    lien externe au fil du texte
+  </a>
+  .
 </p>
-<p><a class="fr-link" href="#">Ceci est un lien hors-texte.</a></p>
-<p><a target="_blank" rel="noopener" class="fr-link" href="#">Ceci est un lien externe, hors-texte.</a></p>
-
+<p>
+  <a class="fr-link" href="#">
+    Ceci est un lien hors-texte.
+  </a>
+</p>
+<p>
+  <a target="_blank" rel="noopener" class="fr-link" href="#">
+    Ceci est un lien externe, hors-texte.
+  </a>
+</p>
 </div>
 <div aria-labelledby="output-html-vue-d-ensemble" class="fr-tabs__panel" id="output-html-vue-d-ensemble" role="tabpanel">
 <pre class="highlight"><code class="language-html"><span class="nt">&lt;p&gt;</span>
-Ceci est un
-<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>lien au fil du texte<span class="nt">&lt;/a&gt;</span>
-. Ceci est un
-<span class="nt">&lt;a</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">rel=</span><span class="s">"noopener"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>lien externe au fil du texte<span class="nt">&lt;/a&gt;</span>
-.
+  Ceci est un
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+    lien au fil du texte
+  <span class="nt">&lt;/a&gt;</span>
+  . Ceci est un
+  <span class="nt">&lt;a</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">rel=</span><span class="s">"noopener"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+    lien externe au fil du texte
+  <span class="nt">&lt;/a&gt;</span>
+  .
 <span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;p&gt;&lt;a</span> <span class="na">class=</span><span class="s">"fr-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Ceci est un lien hors-texte.<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>
-<span class="nt">&lt;p&gt;&lt;a</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">rel=</span><span class="s">"noopener"</span> <span class="na">class=</span><span class="s">"fr-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Ceci est un lien externe, hors-texte.<span class="nt">&lt;/a&gt;&lt;/p&gt;</span></code></pre>
+<span class="nt">&lt;p&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"fr-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+    Ceci est un lien hors-texte.
+  <span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">rel=</span><span class="s">"noopener"</span> <span class="na">class=</span><span class="s">"fr-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+    Ceci est un lien externe, hors-texte.
+  <span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/p&gt;</span></code></pre>
 </div>
 </div>
 </figure>
@@ -93,6 +120,8 @@ par le DSFR, ce qui explique pourquoi on emploie simplement le
 <code>link_to</code> de Rails dans l’exemple ci dessous.</p>
 
 <p>Ils peuvent être internes ou externes.</p>
+
+
 
 </div>
 <figure class="app-example">
@@ -122,27 +151,34 @@ HTML
 </ul>
 <div aria-labelledby="output-rendered-lien-au-fil-du-texte" class="fr-tabs__panel fr-tabs__panel--selected" id="output-rendered-lien-au-fil-du-texte" role="tabpanel">
 <p>
-Rendez-vous sur
-<a href="#">cette page</a>
-pour en apprendre plus.
+  Rendez-vous sur
+  <a href="#">
+    cette page
+  </a>
+  pour en apprendre plus.
 </p>
 <p>
-Rendez-vous sur
-<a target="_blank" rel="noopener" href="#">cet autre site web</a>
-pour en apprendre toujours plus.
+  Rendez-vous sur
+  <a target="_blank" rel="noopener" href="#">
+    cet autre site web
+  </a>
+  pour en apprendre toujours plus.
 </p>
-
 </div>
 <div aria-labelledby="output-html-lien-au-fil-du-texte" class="fr-tabs__panel" id="output-html-lien-au-fil-du-texte" role="tabpanel">
 <pre class="highlight"><code class="language-html"><span class="nt">&lt;p&gt;</span>
-Rendez-vous sur
-<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>cette page<span class="nt">&lt;/a&gt;</span>
-pour en apprendre plus.
+  Rendez-vous sur
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+    cette page
+  <span class="nt">&lt;/a&gt;</span>
+  pour en apprendre plus.
 <span class="nt">&lt;/p&gt;</span>
 <span class="nt">&lt;p&gt;</span>
-Rendez-vous sur
-<span class="nt">&lt;a</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">rel=</span><span class="s">"noopener"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>cet autre site web<span class="nt">&lt;/a&gt;</span>
-pour en apprendre toujours plus.
+  Rendez-vous sur
+  <span class="nt">&lt;a</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">rel=</span><span class="s">"noopener"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+    cet autre site web
+  <span class="nt">&lt;/a&gt;</span>
+  pour en apprendre toujours plus.
 <span class="nt">&lt;/p&gt;</span></code></pre>
 </div>
 </div>
@@ -161,13 +197,16 @@ préférera donc <code>dsfr_link_to</code> dans ce cas-là.</p>
 passant <code>icon_left: "nom de l'icône"</code> dans les attributs pour les
 liens internes ; les liens externes sont déjà marqués par une
 icône donc il est fortement décommandé d’en faire usage sur eux.</p>
+
+
 <p>
 Vous pouvez consulter la
-<a target="_blank" rel="noopener" href="https://www.systeme-de-design.gouv.fr/elements-d-interface/fondamentaux-techniques/icones/">liste des icônes sur le site du DSFR</a>
+&lt;a target=”_blank” rel=”noopener” href=”https://www.systeme-de-design.gouv.fr/elements-d-interface/fondamentaux-techniques/icones/”&gt;liste des icônes sur le site du DSFR&lt;/a&gt;
 .
 </p>
 <p>Enfin vous pouvez aussi jouer de trois tailles différentes pour
 vos liens : <code>sm</code>, <code>md</code> (par défaut) et <code>lg</code>.</p>
+
 
 </div>
 <figure class="app-example">
@@ -192,19 +231,58 @@ HTML
 </li>
 </ul>
 <div aria-labelledby="output-rendered-lien-hors-texte" class="fr-tabs__panel fr-tabs__panel--selected" id="output-rendered-lien-hors-texte" role="tabpanel">
-<p><a class="fr-link" href="#">Lien simple</a></p>
-<p><a target="_blank" rel="noopener" class="fr-link" href="#">Lien simple externe</a></p>
-<p><a class="fr-link--icon-right fr-icon-account-fill fr-link" href="#">Lien simple avec icône à droite</a></p>
-<p><a class="fr-link--sm fr-link" href="#">Lien taille petite</a></p>
-<p><a class="fr-link--lg fr-link" href="#">Lien taille large</a></p>
-
+<p>
+  <a class="fr-link" href="#">
+    Lien simple
+  </a>
+</p>
+<p>
+  <a target="_blank" rel="noopener" class="fr-link" href="#">
+    Lien simple externe
+  </a>
+</p>
+<p>
+  <a class="fr-link--icon-right fr-icon-account-fill fr-link" href="#">
+    Lien simple avec icône à droite
+  </a>
+</p>
+<p>
+  <a class="fr-link--sm fr-link" href="#">
+    Lien taille petite
+  </a>
+</p>
+<p>
+  <a class="fr-link--lg fr-link" href="#">
+    Lien taille large
+  </a>
+</p>
 </div>
 <div aria-labelledby="output-html-lien-hors-texte" class="fr-tabs__panel" id="output-html-lien-hors-texte" role="tabpanel">
-<pre class="highlight"><code class="language-html"><span class="nt">&lt;p&gt;&lt;a</span> <span class="na">class=</span><span class="s">"fr-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Lien simple<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>
-<span class="nt">&lt;p&gt;&lt;a</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">rel=</span><span class="s">"noopener"</span> <span class="na">class=</span><span class="s">"fr-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Lien simple externe<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>
-<span class="nt">&lt;p&gt;&lt;a</span> <span class="na">class=</span><span class="s">"fr-link--icon-right fr-icon-account-fill fr-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Lien simple avec icône à droite<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>
-<span class="nt">&lt;p&gt;&lt;a</span> <span class="na">class=</span><span class="s">"fr-link--sm fr-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Lien taille petite<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>
-<span class="nt">&lt;p&gt;&lt;a</span> <span class="na">class=</span><span class="s">"fr-link--lg fr-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Lien taille large<span class="nt">&lt;/a&gt;&lt;/p&gt;</span></code></pre>
+<pre class="highlight"><code class="language-html"><span class="nt">&lt;p&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"fr-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+    Lien simple
+  <span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">rel=</span><span class="s">"noopener"</span> <span class="na">class=</span><span class="s">"fr-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+    Lien simple externe
+  <span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"fr-link--icon-right fr-icon-account-fill fr-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+    Lien simple avec icône à droite
+  <span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"fr-link--sm fr-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+    Lien taille petite
+  <span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"fr-link--lg fr-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+    Lien taille large
+  <span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/p&gt;</span></code></pre>
 </div>
 </div>
 </figure>
