@@ -26,9 +26,8 @@ require 'components/dsfr_component'
 require 'components/dsfr_component/traits'
 require 'components/dsfr_component/traits/custom_html_attributes'
 require 'components/dsfr_component/base'
-require 'components/dsfr_component/alert_component'
-require 'components/dsfr_component/accordion_component'
-require 'components/dsfr_component/accordion_component/section_component'
+
+Dir.glob('../app/components/dsfr_component/**/*.rb').sort.each { |f| require f }
 
 require 'helpers/dsfr_link_helper'
 
