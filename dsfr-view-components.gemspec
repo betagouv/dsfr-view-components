@@ -32,9 +32,9 @@ Gem::Specification.new do |spec|
     spec.add_dependency(*VersionFormatter.new(lib, rails_version, exact_rails_version).to_a)
   end
 
-  spec.add_dependency("html-attributes-utils", "~> 0.9", ">= 0.9.2")
-  spec.add_dependency("pagy", "~> 5.10.1")
-  spec.add_dependency "view_component", "~> 2.74.1"
+  spec.add_dependency "html-attributes-utils", "~> 1"
+  spec.add_dependency "pagy", "~> 6"
+  spec.add_dependency "view_component", "~> 2"
 
   spec.add_development_dependency "deep_merge"
   spec.add_development_dependency "guard"
@@ -50,6 +50,8 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "yard"
 
   # Required for the guide
+  spec.add_development_dependency("haml", "~> 6.1.1")
+  spec.add_development_dependency("haml_lint")
   spec.add_development_dependency("htmlbeautifier", "~> 1.4.1")
   spec.add_development_dependency("kramdown", "~> 2.4.0")
   spec.add_development_dependency("nanoc", "~> 4.11")
@@ -59,8 +61,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency("sassc", "~> 2.4.0")
   spec.add_development_dependency("slim", "~> 4.1.0")
   spec.add_development_dependency("slim_lint", "~> 0.22.0")
-  spec.add_development_dependency("haml", "~> 6.1.1")
-  spec.add_development_dependency("haml_lint")
   spec.add_development_dependency("webrick", "~> 1.7.0")
   spec.metadata['rubygems_mfa_required'] = 'true'
 end
