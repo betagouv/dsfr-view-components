@@ -7,6 +7,7 @@ require:
 
 AllCops:
   NewCops: enable
+  TargetRubyVersion: 2.7.6
 
 Style/HashSyntax:
   EnforcedShorthandSyntax: never # for ruby 3.0 support
