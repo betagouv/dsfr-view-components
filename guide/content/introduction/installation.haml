@@ -4,35 +4,29 @@ title: Installation
 
 .fr-grid-row
   .fr-col-md-8
-    %p
+    :markdown
       Ces composants sont utilisables avec n'importe quel application Rails utilisant le
-      %a{href: design_system_link, target: "_blank", rel: "noopeneer"}
-        Système de Design de lʼÉtat (DSFR)
+      [Système de Design de lʼÉtat (DSFR)](https://www.systeme-de-design.gouv.fr/){:target="_blank" rel="noopener"}
       \.
 
       Ils sont construits sur le framework
-      %a{href: "https://viewcomponent.org/", target: "_blank", rel: "noopeneer"}
-        ViewComponent de GitHub
-      pour être facilement réutilisables
+      [ViewComponent de GitHub](https://viewcomponent.org/){:target="_blank" rel="noopener"}
+      pour être facilement réutilisables.
 
-    %h2 Installation
+      ## Installation
 
-    Ajoutez cette ligne à votre Gemfile et lancez `bundle install`.
+      Ajoutez cette ligne à votre Gemfile et lancez `bundle install`.
 
-    .code-sample
-      %pre.highlight
-        %code.language-ruby
-          gem 'dsfr-view-components'
+      ~~~ruby
+        gem 'dsfr-view-components'
+      ~~~
 
-    %p
       Au redémarrage vous devriez avoir accès à tous les composants du DSFR.
       Vous pouvez le vérifier en testant dans une console avec `rails console`:
 
-    .code-sample
-      %pre.highlight
-        %code.language-ruby
-          DsfrComponent::PanelComponent.new(title_text: "Hello", text: "world!")
+      ~~~ruby
+        DsfrComponent::PanelComponent.new(title_text: "Hello", text: "world!")
+      ~~~
 
-    %p
       Si vous ne voyez pas de message d'erreur, tout fonctionne. Vous pouvez passer à
-      = link_to "l'utilisation de composants dans vos templates", "/introduction/utilisation"
+      [l'utilisation de composants dans vos templates](/introduction/utilisation)
