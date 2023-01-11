@@ -1,12 +1,12 @@
 !!! 5
 %html{lang: "fr", "data-fr-scheme": "system"}
-  != render '/partials/head.slim'
+  = render '/partials/head.haml'
   %body
-    != render '/partials/header.slim'
+    = render '/partials/header.haml'
     %main#contenu{role: "main"}
       .fr-container
-        != render '/partials/breadcrumbs.slim'
+        = render '/partials/breadcrumbs.haml'
         - if item
           %h1= item[:title]
-        != yield
-    != render '/partials/footer.slim'
+        = yield
+    = render '/partials/footer.haml'

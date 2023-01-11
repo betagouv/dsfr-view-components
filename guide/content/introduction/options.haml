@@ -1,0 +1,37 @@
+---
+title: Options communes
+---
+
+:markdown
+  Les composants partagent deux options communes :
+
+  - `classes`
+  - et `html_attributes`
+
+  Ces paramètres fonctionnent de la même manière pour tous les composants et slots.
+
+= render('/partials/example.haml',
+  caption: "Alerte avec des classes CSS spécifiques",
+  code: alert_with_classes) do
+
+  :markdown
+    Tous les composants, slots et helpers ont des classes CSS par défaut permettant de les faire
+    fonctionner avec le DSFR.
+    Il est possible d'ajouter des classes CSS supplémentaires en utilisant le keyword
+    argument `classes`.
+    Les classes CSS par défaut seront combinées aux classes passées en paramètre.
+
+    Les classes CSS peuvent être passées sous forme de tableau ou en chaîne de caractères séparée
+    par des espaces.
+
+= render('/partials/example.haml',
+  caption: "Alerte avec des attributs HTML spécifiques",
+  code: alert_with_html_attributes) do
+
+  :markdown
+    Le fonctionnement est similaire avec le paramètre `html_attributes` à la différence que cet
+    argument doit être passé sous forme d'un Hash.
+
+    Vous pouvez utiliser la [convention Rails](https://api.rubyonrails.org/classes/ActionView/Helpers/TagHelper.html#method-i-tag){:target="_blank" rel="noopener"}
+    d'imbriquer les attributs `aria` et `data`.
+

@@ -1,9 +1,9 @@
 %h3.fr-mt-8w{id: anchor_id(caption)}
-  != link_to caption, "#".concat(anchor_id(caption)), class: "header-anchor"
+  = link_to caption, "#".concat(anchor_id(caption)), class: "header-anchor"
 
 .fr-text-wrap
   - if block_given? && (content = yield)
-    != content
+    = content
 
 %figure.app-example
   %h4 Code
@@ -43,7 +43,7 @@
       "aria-labelledby" => "output-rendered-#{anchor_id(caption)}",
       id: "output-rendered-#{anchor_id(caption)}"
     }
-      != format_haml(code)
+      = format_haml(code)
 
     .fr-tabs__panel{
       role: "tabpanel",
