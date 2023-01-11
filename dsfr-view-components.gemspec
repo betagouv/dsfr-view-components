@@ -6,7 +6,7 @@ require_relative "util/version_formatter"
 METADATA = {
   "bug_tracker_uri" => "https://github.com/betagouv/dsfr-view-components/issues",
   "changelog_uri" => "https://github.com/betagouv/dsfr-view-components/releases",
-  "documentation_uri" => "https://www.rubydoc.info/gems/govuk-components/",
+  "documentation_uri" => "https://www.rubydoc.info/gems/dsfr-view-components/",
   "homepage_uri" => "https://github.com/betagouv/dsfr-view-components",
   "source_code_uri" => "https://github.com/betagouv/dsfr-view-components"
 }.freeze
