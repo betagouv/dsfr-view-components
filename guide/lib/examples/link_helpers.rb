@@ -30,10 +30,10 @@ module Examples
           Ceci est un
           = link_to "lien au fil du texte", "#"
           \\. Ceci est un
-          = link_to "lien externe au fil du texte", "#", { target: "_blank", rel: "noopener" }
+          = link_to "lien externe au fil du texte", "#", target: "_blank", rel: "noopener"
           \\.
         %p= dsfr_link_to "Ceci est un lien hors-texte.", "#"
-        %p= dsfr_link_to "Ceci est un lien externe, hors-texte.", "#", { target: "_blank", rel: "noopener" }
+        %p= dsfr_link_to "Ceci est un lien externe, hors-texte.", "#", target: "_blank", rel: "noopener"
       LINK
     end
   end

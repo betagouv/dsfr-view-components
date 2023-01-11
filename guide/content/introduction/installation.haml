@@ -1,0 +1,32 @@
+---
+title: Installation
+---
+
+.fr-grid-row
+  .fr-col-md-8
+    :markdown
+      Ces composants sont utilisables avec n'importe quel application Rails utilisant le
+      [Système de Design de lʼÉtat (DSFR)](https://www.systeme-de-design.gouv.fr/){:target="_blank" rel="noopener"}
+      \.
+
+      Ils sont construits sur le framework
+      [ViewComponent de GitHub](https://viewcomponent.org/){:target="_blank" rel="noopener"}
+      pour être facilement réutilisables.
+
+      ## Installation
+
+      Ajoutez cette ligne à votre Gemfile et lancez `bundle install`.
+
+      ~~~ruby
+        gem 'dsfr-view-components'
+      ~~~
+
+      Au redémarrage vous devriez avoir accès à tous les composants du DSFR.
+      Vous pouvez le vérifier en testant dans une console avec `rails console`:
+
+      ~~~ruby
+        DsfrComponent::PanelComponent.new(title_text: "Hello", text: "world!")
+      ~~~
+
+      Si vous ne voyez pas de message d'erreur, tout fonctionne. Vous pouvez passer à
+      [l'utilisation de composants dans vos templates](/introduction/utilisation)

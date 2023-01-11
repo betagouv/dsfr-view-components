@@ -1,0 +1,43 @@
+---
+title: Utilisation
+---
+
+:markdown
+  Vous pouvez utiliser les composants dans vos templates Rails en :
+
+  * appelant `render` avec un objet ViewComponent ;
+  * utilisant les helpers fournis
+
+  Le résultat est le même peu importe la méthode utilisée.
+
+  ## Utilisation directe des objets ViewComponent
+
+  ~~~erb
+    <%= render(DsfrComponent::AlertComponent.new(title: "Message important")) %>
+  ~~~
+
+  ## Utilisation des helpers
+
+  Les helpers sont plus simples à utiliser et fournissent une expérience harmonisée avec les
+  helpers de liens.
+
+  ~~~erb
+    <%= dsfr_alert(title: "Message important", size: :sm) %>
+  ~~~
+
+  ## Correspondance entre les noms de composants et les helpers
+
+
+.fr-table
+  %table
+    %thead
+      %tr
+        %th Composant
+        %th Helper
+    %tbody
+      - component_helper_mapping.each do |class_name, helper_method|
+        %tr
+          %td
+            %code= class_name
+          %td
+            %code= helper_method

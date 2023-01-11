@@ -74,8 +74,8 @@ jobs:
           GIT_COMMIT_SHA: ${{ github.sha }}
         run: ./cc-test-reporter after-build -t simplecov
 
-      - name: Run Nanoc Check
+      - name: Run Guide Nanoc Check
         run: make nanoc-check-all
 
-      - name: Run Guide Check
-        run: make slim-lint
+      - name: Run Guide Haml Lint
+        run: make haml-lint

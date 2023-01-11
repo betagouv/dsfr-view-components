@@ -14,3 +14,7 @@ Style/HashSyntax:
 
 Metrics/ParameterLists:
   Enabled: False
+
+Naming/FileName:
+  Exclude:
+    - guide/Rules

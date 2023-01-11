@@ -1,36 +1,27 @@
-compile '/index.slim' do
-  filter :slim
-  layout '/default.*'
+compile '/index.haml' do
+  filter :haml, escape_html: false
+  layout '/default.haml'
   filter :relativize_paths, type: :html5
   write '/index.html'
 end
 
-compile '/**/*.slim' do
-  filter :slim, format: :html
-  filter :colorize_syntax, default_colorizer: :rouge
-  filter :rubypants
-  layout '/default.slim'
-  filter :relativize_paths, type: :html5
-  write item.identifier.without_ext + '/index.html'
-end
-
 compile '/**/*.haml' do
-  filter :haml
+  filter :haml, escape_html: false
   filter :colorize_syntax, default_colorizer: :rouge
   filter :rubypants
   layout '/default.haml'
   filter :relativize_paths, type: :html5
-  write item.identifier.without_ext + '/index.html'
+  write "#{item.identifier.without_ext}/index.html"
 end
 
 ignore '/**/_*.scss'
 compile '/**/*.scss' do
   filter(
     :dart_sass,
-    targets: %w(content/stylesheets/application.scss),
+    targets: %w[content/stylesheets/application.scss],
     load_paths: "node_modules/@gouvfr/"
   )
-  write item.identifier.without_ext + '.css'
+  write "#{item.identifier.without_ext}.css"
 end
 
 compile '/sitemap.xml' do
@@ -42,5 +33,4 @@ compile '/**/*' do
   write item.identifier.to_s
 end
 
-layout '/**/*.haml', :haml
-layout '/**/*', :slim
+layout '/**/*.haml', :haml, escape_html: false

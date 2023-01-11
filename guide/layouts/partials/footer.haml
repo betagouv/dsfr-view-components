@@ -1,0 +1,47 @@
+%footer.fr-footer.fr-mt-8w#footer{role: "contentinfo"}
+  .fr-container
+    .fr-footer__body
+      .fr-footer__brand.fr-enlarge-link
+        %p.fr-logo
+          République
+          %br
+          Française
+      .fr-footer__content
+        %p.fr-footer__content-desc
+          = site_title
+          %br
+          Projet non-officiel porté par beta.gouv
+        %ul.fr-footer__content-list
+          %li.fr-footer__content-item
+            %a.fr-footer__content-link{target: "_blank", href: github_link}
+              GitHub
+          %li.fr-footer__content-item
+            %a.fr-footer__content-link{target: "_blank", href: design_system_link}
+              Système de Design de lʼÉtat
+          / li.fr-footer__content-item
+          /   a.fr-footer__content-link target="_blank" href=rubygems_link
+          /     RubyGems
+          / li.fr-footer__content-item
+          /   a.fr-footer__content-link target="_blank" href=documentation_link
+          /     RubyDoc Documentation
+          / li.fr-footer__content-item
+          /   a.fr-footer__content-link target="_blank" href=code_climate_report_link
+          /     Code Climate report
+    .fr-footer__bottom
+      %ul.fr-footer__bottom-list
+        %li.fr-footer__bottom-item
+          %a.fr-footer__bottom-link href="/" Accueil
+        %li.fr-footer__bottom-item
+          %button.fr-footer__bottom-link{"aria-controls": "fr-theme-modal",
+            "data-fr-opened": "false"}
+            Paramètres d'affichage
+      .fr-footer__bottom-copy
+        %p
+          Sauf mention contraire, tous les contenus de ce site sont sous
+          = link_to "licence etalab-2.0", "https://github.com/etalab/licence-ouverte/blob/master/LO.md",
+            target: "_blank", rel: "noopener"
+
+= render "/partials/theme-modal.haml"
+
+%script{type: "module", src: "/javascripts/dsfr.module.min.js"}
+%script{type: "text/javascript", nomodule: "true", src: "/javascripts/dsfr.nomodule.min.js"}

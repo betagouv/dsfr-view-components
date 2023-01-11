@@ -1,0 +1,36 @@
+%dialog.fr-modal#fr-theme-modal{"aria-labelledby": "fr-theme-modal-title", role: "dialog"}
+  .fr-container.fr-container--fluid.fr-container-md
+    .fr-grid-row.fr-grid-row--center
+      .fr-col-12.fr-col-md-6.fr-col-lg-4
+        .fr-modal__body
+          .fr-modal__header
+            %button.fr-link--close.fr-link{"aria-controls": "fr-theme-modal"}
+              Fermer
+          .fr-modal__content
+            %h1.fr-modal__title#fr-theme-modal-title
+              Paramètres d’affichage
+            .fr-form-group.fr-display#fr-display
+              .fr-form-group
+                %fieldset.fr-fieldset
+                  %legend.fr-fieldset__legend.fr-text--regular#-legend
+                    Choisissez un thème pour personnaliser l’apparence du site.
+                  .fr-fieldset__content
+                    .fr-radio-group.fr-radio-rich
+                      %input#fr-radios-theme-light{name: "fr-radios-theme", type: "radio", value: "light"}
+                      %label.fr-label{for: "fr-radios-theme-light"}
+                        Thème clair
+                      .fr-radio-rich__img{"data-fr-inject-svg": ""}
+                        %img{alt: "", src: "/artwork/light.svg"}
+                    .fr-radio-group.fr-radio-rich
+                      %input#fr-radios-theme-dark{name: "fr-radios-theme", type: "radio", value: "dark"}
+                      %label.fr-label{for: "fr-radios-theme-dark"}
+                        Thème sombre
+                      .fr-radio-rich__img{"data-fr-inject-svg": ""}
+                        %img{alt: "", src: "/artwork/dark.svg"}
+                    .fr-radio-group.fr-radio-rich
+                      %input#fr-radios-theme-system{name: "fr-radios-theme", type: "radio", value: "system"}
+                      %label.fr-label{for: "fr-radios-theme-system"}
+                        Système
+                        %span.fr-hint-text Utilise les paramètres système.
+                      .fr-radio-rich__img{"data-fr-inject-svg": ""}
+                        %img{alt: "", src: "/artwork/system.svg"}
