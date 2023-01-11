@@ -1,0 +1,24 @@
+.fr-skiplinks
+  %nav.fr-container{"aria-label": 'Accès rapide', role: 'navigation'}
+    %ul.fr-skiplinks__list
+      %li
+        %a.fr-link{href: "#content"}
+          Contenu
+
+%header.fr-header{role: 'banner'}
+  .fr-header__body
+    .fr-container
+      .fr-header__body-row
+        .fr-header__brand.fr-enlarge-link
+          .fr-header__brand-top
+            .fr-header__logo
+              %p.fr-logo
+                République
+                %br
+                Française
+          .fr-header__service
+            %a{href: "/", title: "#{site_title} - Accueil"}
+              %p.fr-header__service-title
+                = repository_name
+            %p.fr-header__service-tagline
+              = site_title

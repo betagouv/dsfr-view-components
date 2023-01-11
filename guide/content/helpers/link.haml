@@ -19,7 +19,7 @@ title: Liens
 
 %p
   Les helpers fournis pour les liens suivent la signature du
-  = link_to('link_to de Rails', rails_docs_url_helper, { target: '_blank', rel: 'noopener' })
+  = link_to 'link_to de Rails', rails_docs_url_helper, target: '_blank', rel: 'noopener'
   \.
 
 = render('/partials/example.haml', caption: "Vue d'ensemble", code: all_links) do
@@ -52,10 +52,7 @@ title: Liens
 
   %p
     Vous pouvez consulter la
-    = link_to('liste des icônes sur le site du DSFR',
-              dsfr_icon_list_link,
-              target: '_blank',
-              rel: 'noopener')
+    = link_to 'liste des icônes sur le site du DSFR', dsfr_icon_list_link, target: '_blank', rel: 'noopener'
     \.
 
   :markdown
