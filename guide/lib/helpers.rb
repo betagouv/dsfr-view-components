@@ -22,6 +22,11 @@ $LOAD_PATH.unshift(File.expand_path("../../lib", "lib"))
 
 require 'dsfr/components'
 
+# FIXME
+# cf https://github.com/DFE-Digital/govuk-components/commit/a77dd4d55fb7a4afc7d2911174e62dbe4da08545
+# cf https://github.com/ViewComponent/view_component/issues/1565
+ViewComponent::Base.config.view_component_path = "app/components"
+
 require 'components/dsfr_component'
 require 'components/dsfr_component/traits'
 require 'components/dsfr_component/traits/custom_html_attributes'
