@@ -26,6 +26,12 @@ module Helpers
       }
     end
 
+    def tile_info
+      {
+        "Tuiles sur la documentation du Système de Design de lʼÉtat" => "https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/tuile/"
+      }
+    end
+
     def component_helper_mapping
       {
         "DsfrComponent::AlertComponent" => "dsfr_alert",

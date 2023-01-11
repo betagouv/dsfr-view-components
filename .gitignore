@@ -19,7 +19,6 @@ guide/tmp
 guide/output
 guide/*.log
 guide/node_modules
-guide/content/assets/images
 guide/content/javascripts/*
 guide/content/stylesheets/fonts/*
 guide/content/stylesheets/icons/*
