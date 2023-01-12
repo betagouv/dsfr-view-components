@@ -1,0 +1,530 @@
+<!DOCTYPE html><html data-fr-scheme="system" lang="fr"><head>
+<meta charset="utf-8">
+<title>
+Tuile (Tile) - Composants Rails ViewComponent pour le Système de Design de lʼÉtat
+</title>
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+<meta content="#000091" name="theme-color">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<link href="../../favicon/apple-touch-icon.png" rel="apple-touch-icon">
+<link href="../../favicon/favicon.svg" rel="icon" type="image/svg+xml">
+<link href="../../favicon/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<link crossorigin="use-credentials" href="../../favicon/manifest.webmanifest" rel="manifest">
+<link href="../../stylesheets/application.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="fr-skiplinks">
+<nav aria-label="Accès rapide" class="fr-container" role="navigation">
+<ul class="fr-skiplinks__list">
+<li>
+<a class="fr-link" href="#content">
+Contenu
+</a>
+</li>
+</ul>
+</nav>
+</div>
+<header class="fr-header" role="banner">
+<div class="fr-header__body">
+<div class="fr-container">
+<div class="fr-header__body-row">
+<div class="fr-header__brand fr-enlarge-link">
+<div class="fr-header__brand-top">
+<div class="fr-header__logo">
+<p class="fr-logo">
+République
+<br>
+Française
+</p>
+</div>
+</div>
+<div class="fr-header__service">
+<a href="../../" title="Composants Rails ViewComponent pour le Système de Design de lʼÉtat - Accueil">
+<p class="fr-header__service-title">
+DSFR-View-Components
+</p>
+</a>
+<p class="fr-header__service-tagline">
+Composants Rails ViewComponent pour le Système de Design de lʼÉtat
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+
+<main id="contenu" role="main">
+<div class="fr-container">
+<nav aria-label="Vous êtes ici :" class="fr-breadcrumb" role="navigation">
+<button aria-controls="breadcrumb-1" aria-expanded="false" class="fr-breadcrumb__button">
+Voir le fil d’Ariane
+</button>
+<div class="fr-collapse" id="breadcrumb-1">
+<ol class="fr-breadcrumb__list">
+<li>
+<a class="fr-breadcrumb__link" href="../../">Accueil</a>
+</li>
+<li>
+<a class="fr-breadcrumb__link" aria-current="page" href="">Tuile (Tile)</a>
+</li>
+</ol>
+</div>
+</nav>
+
+<h1>Tuile (Tile)</h1>
+<div class="fr-text-wrap">
+<p>La tuile est un raccourci ou point d’entrée qui redirige les utilisateurs vers des pages de contenu. Elle fait généralement partie d’une collection ou liste de tuiles similaires. La tuile n’est jamais présentée de manière isolée.</p>
+
+<p>La tuile est un composant modulaire. L’ensemble de la tuile est cliquable.</p>
+
+
+</div>
+<h3 class="fr-mt-8w" id="tuile-classique">
+<a class="header-anchor" href="#tuile-classique">Tuile classique</a>
+</h3>
+<div class="fr-text-wrap">
+Tuile verticale avec image, titre et description
+
+</div>
+<figure class="app-example">
+<h4>Code</h4>
+<pre class="highlight"><code class="language-haml"><span class="p">=</span> <span class="n">dsfr_tile</span><span class="p">(</span><span class="ss">title: </span><span class="s2">"Orgue de Fontainebleau"</span><span class="p">,</span>
+            <span class="ss">url: </span><span class="s2">"#"</span><span class="p">,</span>
+            <span class="ss">image_src: </span><span class="s2">"/assets/images/orgue.jpg"</span><span class="p">,</span>
+            <span class="ss">description: </span><span class="s2">"Magistral instrument de musique"</span><span class="p">,</span>
+            <span class="ss">html_attributes: </span><span class="p">{</span><span class="ss">style: </span><span class="s2">"max-width: 20rem;"</span><span class="p">})</span></code></pre>
+<h4>Résultat</h4>
+<div class="fr-tabs">
+<ul class="fr-tabs__list" role="tablist">
+<li role="presentation">
+<button aria-controls="output-rendered-tuile-classique" aria-selected="true" class="fr-tabs__tab" id="output-rendered-tuile-classique" role="tab" tabindex="0">
+Rendu
+</button>
+</li>
+<li role="presentation">
+<button aria-controls="output-html-tuile-classique" aria-selected="false" class="fr-tabs__tab" id="output-html-tuile-classique" role="tab" tabindex="0">
+HTML
+</button>
+</li>
+</ul>
+<div aria-labelledby="output-rendered-tuile-classique" class="fr-tabs__panel fr-tabs__panel--selected" id="output-rendered-tuile-classique" role="tabpanel">
+<div class="fr-tile fr-enlarge-link" style="max-width: 20rem;">
+  <div class="fr-tile__body">
+    <h4 class="fr-tile__title">
+      <a class="fr-tile__link" href="#">
+        Orgue de Fontainebleau
+      </a>
+    </h4>
+    <p class="fr-tile__desc">
+      Magistral instrument de musique
+    </p>
+  </div>
+  <div class="fr-tile__img">
+    <img src="../../assets/images/orgue.jpg" class="fr-responsive-img" alt="">
+  </div>
+</div>
+</div>
+<div aria-labelledby="output-html-tuile-classique" class="fr-tabs__panel" id="output-html-tuile-classique" role="tabpanel">
+<pre class="highlight"><code class="language-html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-tile fr-enlarge-link"</span> <span class="na">style=</span><span class="s">"max-width: 20rem;"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-tile__body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"fr-tile__title"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"fr-tile__link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+        Orgue de Fontainebleau
+      <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/h4&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"fr-tile__desc"</span><span class="nt">&gt;</span>
+      Magistral instrument de musique
+    <span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-tile__img"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"/assets/images/orgue.jpg"</span> <span class="na">class=</span><span class="s">"fr-responsive-img"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+</div>
+</div>
+</figure>
+<h3 class="fr-mt-8w" id="tuile-sans-description">
+<a class="header-anchor" href="#tuile-sans-description">Tuile sans description</a>
+</h3>
+<div class="fr-text-wrap">
+Tuile verticale sans description
+
+</div>
+<figure class="app-example">
+<h4>Code</h4>
+<pre class="highlight"><code class="language-haml"><span class="p">=</span> <span class="n">dsfr_tile</span><span class="p">(</span><span class="ss">title: </span><span class="s2">"Orgue de Fontainebleau"</span><span class="p">,</span>
+            <span class="ss">url: </span><span class="s2">"#"</span><span class="p">,</span>
+            <span class="ss">image_src: </span><span class="s2">"/assets/images/orgue.jpg"</span><span class="p">,</span>
+            <span class="ss">html_attributes: </span><span class="p">{</span><span class="ss">style: </span><span class="s2">"max-width: 20rem;"</span><span class="p">})</span></code></pre>
+<h4>Résultat</h4>
+<div class="fr-tabs">
+<ul class="fr-tabs__list" role="tablist">
+<li role="presentation">
+<button aria-controls="output-rendered-tuile-sans-description" aria-selected="true" class="fr-tabs__tab" id="output-rendered-tuile-sans-description" role="tab" tabindex="0">
+Rendu
+</button>
+</li>
+<li role="presentation">
+<button aria-controls="output-html-tuile-sans-description" aria-selected="false" class="fr-tabs__tab" id="output-html-tuile-sans-description" role="tab" tabindex="0">
+HTML
+</button>
+</li>
+</ul>
+<div aria-labelledby="output-rendered-tuile-sans-description" class="fr-tabs__panel fr-tabs__panel--selected" id="output-rendered-tuile-sans-description" role="tabpanel">
+<div class="fr-tile fr-enlarge-link" style="max-width: 20rem;">
+  <div class="fr-tile__body">
+    <h4 class="fr-tile__title">
+      <a class="fr-tile__link" href="#">
+        Orgue de Fontainebleau
+      </a>
+    </h4>
+  </div>
+  <div class="fr-tile__img">
+    <img src="../../assets/images/orgue.jpg" class="fr-responsive-img" alt="">
+  </div>
+</div>
+</div>
+<div aria-labelledby="output-html-tuile-sans-description" class="fr-tabs__panel" id="output-html-tuile-sans-description" role="tabpanel">
+<pre class="highlight"><code class="language-html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-tile fr-enlarge-link"</span> <span class="na">style=</span><span class="s">"max-width: 20rem;"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-tile__body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"fr-tile__title"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"fr-tile__link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+        Orgue de Fontainebleau
+      <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/h4&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-tile__img"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"/assets/images/orgue.jpg"</span> <span class="na">class=</span><span class="s">"fr-responsive-img"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+</div>
+</div>
+</figure>
+<h3 class="fr-mt-8w" id="tuile-sans-image">
+<a class="header-anchor" href="#tuile-sans-image">Tuile sans image</a>
+</h3>
+<div class="fr-text-wrap">
+Tuile verticale sans image
+
+</div>
+<figure class="app-example">
+<h4>Code</h4>
+<pre class="highlight"><code class="language-haml"><span class="p">=</span> <span class="n">dsfr_tile</span><span class="p">(</span><span class="ss">title: </span><span class="s2">"Orgue de Fontainebleau"</span><span class="p">,</span>
+            <span class="ss">url: </span><span class="s2">"#"</span><span class="p">,</span>
+            <span class="ss">description: </span><span class="s2">"Magistral instrument de musique"</span><span class="p">,</span>
+            <span class="ss">html_attributes: </span><span class="p">{</span><span class="ss">style: </span><span class="s2">"max-width: 20rem;"</span><span class="p">})</span></code></pre>
+<h4>Résultat</h4>
+<div class="fr-tabs">
+<ul class="fr-tabs__list" role="tablist">
+<li role="presentation">
+<button aria-controls="output-rendered-tuile-sans-image" aria-selected="true" class="fr-tabs__tab" id="output-rendered-tuile-sans-image" role="tab" tabindex="0">
+Rendu
+</button>
+</li>
+<li role="presentation">
+<button aria-controls="output-html-tuile-sans-image" aria-selected="false" class="fr-tabs__tab" id="output-html-tuile-sans-image" role="tab" tabindex="0">
+HTML
+</button>
+</li>
+</ul>
+<div aria-labelledby="output-rendered-tuile-sans-image" class="fr-tabs__panel fr-tabs__panel--selected" id="output-rendered-tuile-sans-image" role="tabpanel">
+<div class="fr-tile fr-enlarge-link" style="max-width: 20rem;">
+  <div class="fr-tile__body">
+    <h4 class="fr-tile__title">
+      <a class="fr-tile__link" href="#">
+        Orgue de Fontainebleau
+      </a>
+    </h4>
+    <p class="fr-tile__desc">
+      Magistral instrument de musique
+    </p>
+  </div>
+</div>
+</div>
+<div aria-labelledby="output-html-tuile-sans-image" class="fr-tabs__panel" id="output-html-tuile-sans-image" role="tabpanel">
+<pre class="highlight"><code class="language-html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-tile fr-enlarge-link"</span> <span class="na">style=</span><span class="s">"max-width: 20rem;"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-tile__body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"fr-tile__title"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"fr-tile__link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+        Orgue de Fontainebleau
+      <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/h4&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"fr-tile__desc"</span><span class="nt">&gt;</span>
+      Magistral instrument de musique
+    <span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+</div>
+</div>
+</figure>
+<h3 class="fr-mt-8w" id="tuile-avec-image-alt">
+<a class="header-anchor" href="#tuile-avec-image-alt">Tuile avec image alt</a>
+</h3>
+<div class="fr-text-wrap">
+Tuile avec text alternatif pour l’image
+
+</div>
+<figure class="app-example">
+<h4>Code</h4>
+<pre class="highlight"><code class="language-haml"><span class="p">=</span> <span class="n">dsfr_tile</span><span class="p">(</span><span class="ss">title: </span><span class="s2">"Orgue de Fontainebleau"</span><span class="p">,</span>
+            <span class="ss">url: </span><span class="s2">"#"</span><span class="p">,</span>
+            <span class="ss">image_src: </span><span class="s2">"/assets/images/orgue.jpg"</span><span class="p">,</span>
+            <span class="ss">image_alt: </span><span class="s2">"Orgue orange et bleu"</span><span class="p">,</span>
+            <span class="ss">description: </span><span class="s2">"Magistral instrument de musique"</span><span class="p">,</span>
+            <span class="ss">html_attributes: </span><span class="p">{</span><span class="ss">style: </span><span class="s2">"max-width: 20rem;"</span><span class="p">})</span></code></pre>
+<h4>Résultat</h4>
+<div class="fr-tabs">
+<ul class="fr-tabs__list" role="tablist">
+<li role="presentation">
+<button aria-controls="output-rendered-tuile-avec-image-alt" aria-selected="true" class="fr-tabs__tab" id="output-rendered-tuile-avec-image-alt" role="tab" tabindex="0">
+Rendu
+</button>
+</li>
+<li role="presentation">
+<button aria-controls="output-html-tuile-avec-image-alt" aria-selected="false" class="fr-tabs__tab" id="output-html-tuile-avec-image-alt" role="tab" tabindex="0">
+HTML
+</button>
+</li>
+</ul>
+<div aria-labelledby="output-rendered-tuile-avec-image-alt" class="fr-tabs__panel fr-tabs__panel--selected" id="output-rendered-tuile-avec-image-alt" role="tabpanel">
+<div class="fr-tile fr-enlarge-link" style="max-width: 20rem;">
+  <div class="fr-tile__body">
+    <h4 class="fr-tile__title">
+      <a class="fr-tile__link" href="#">
+        Orgue de Fontainebleau
+      </a>
+    </h4>
+    <p class="fr-tile__desc">
+      Magistral instrument de musique
+    </p>
+  </div>
+  <div class="fr-tile__img">
+    <img src="../../assets/images/orgue.jpg" class="fr-responsive-img" alt="Orgue orange et bleu">
+  </div>
+</div>
+</div>
+<div aria-labelledby="output-html-tuile-avec-image-alt" class="fr-tabs__panel" id="output-html-tuile-avec-image-alt" role="tabpanel">
+<pre class="highlight"><code class="language-html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-tile fr-enlarge-link"</span> <span class="na">style=</span><span class="s">"max-width: 20rem;"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-tile__body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"fr-tile__title"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"fr-tile__link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+        Orgue de Fontainebleau
+      <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/h4&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"fr-tile__desc"</span><span class="nt">&gt;</span>
+      Magistral instrument de musique
+    <span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-tile__img"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"/assets/images/orgue.jpg"</span> <span class="na">class=</span><span class="s">"fr-responsive-img"</span> <span class="na">alt=</span><span class="s">"Orgue orange et bleu"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+</div>
+</div>
+</figure>
+<h3 class="fr-mt-8w" id="tuile-horizontale">
+<a class="header-anchor" href="#tuile-horizontale">Tuile horizontale</a>
+</h3>
+<div class="fr-text-wrap">
+Tuile horizontale avec image, titre et description
+
+</div>
+<figure class="app-example">
+<h4>Code</h4>
+<pre class="highlight"><code class="language-haml"><span class="p">=</span> <span class="n">dsfr_tile</span><span class="p">(</span><span class="ss">title: </span><span class="s2">"Orgue de Fontainebleau"</span><span class="p">,</span>
+            <span class="ss">url: </span><span class="s2">"#"</span><span class="p">,</span>
+            <span class="ss">image_src: </span><span class="s2">"/assets/images/orgue.jpg"</span><span class="p">,</span>
+            <span class="ss">description: </span><span class="s2">"Magistral instrument de musique"</span><span class="p">,</span>
+            <span class="ss">orientation: :horizontal</span><span class="p">,</span>
+            <span class="ss">html_attributes: </span><span class="p">{</span><span class="ss">style: </span><span class="s2">"max-width: 30rem;"</span><span class="p">})</span></code></pre>
+<h4>Résultat</h4>
+<div class="fr-tabs">
+<ul class="fr-tabs__list" role="tablist">
+<li role="presentation">
+<button aria-controls="output-rendered-tuile-horizontale" aria-selected="true" class="fr-tabs__tab" id="output-rendered-tuile-horizontale" role="tab" tabindex="0">
+Rendu
+</button>
+</li>
+<li role="presentation">
+<button aria-controls="output-html-tuile-horizontale" aria-selected="false" class="fr-tabs__tab" id="output-html-tuile-horizontale" role="tab" tabindex="0">
+HTML
+</button>
+</li>
+</ul>
+<div aria-labelledby="output-rendered-tuile-horizontale" class="fr-tabs__panel fr-tabs__panel--selected" id="output-rendered-tuile-horizontale" role="tabpanel">
+<div class="fr-tile fr-enlarge-link fr-tile--horizontal" style="max-width: 30rem;">
+  <div class="fr-tile__body">
+    <h4 class="fr-tile__title">
+      <a class="fr-tile__link" href="#">
+        Orgue de Fontainebleau
+      </a>
+    </h4>
+    <p class="fr-tile__desc">
+      Magistral instrument de musique
+    </p>
+  </div>
+  <div class="fr-tile__img">
+    <img src="../../assets/images/orgue.jpg" class="fr-responsive-img" alt="">
+  </div>
+</div>
+</div>
+<div aria-labelledby="output-html-tuile-horizontale" class="fr-tabs__panel" id="output-html-tuile-horizontale" role="tabpanel">
+<pre class="highlight"><code class="language-html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-tile fr-enlarge-link fr-tile--horizontal"</span> <span class="na">style=</span><span class="s">"max-width: 30rem;"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-tile__body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"fr-tile__title"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"fr-tile__link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+        Orgue de Fontainebleau
+      <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/h4&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"fr-tile__desc"</span><span class="nt">&gt;</span>
+      Magistral instrument de musique
+    <span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-tile__img"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"/assets/images/orgue.jpg"</span> <span class="na">class=</span><span class="s">"fr-responsive-img"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+</div>
+</div>
+</figure>
+<div class="fr-mt-4w">
+<h2>
+Plus d’informations
+</h2>
+<ul>
+<li>
+<a target="_blank" rel="noopener" href="https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/tuile/">Tuiles sur la documentation du Système de Design de lʼÉtat</a>
+</li>
+</ul>
+
+</div>
+
+</div>
+</main>
+<footer class="fr-footer fr-mt-8w" id="footer" role="contentinfo">
+<div class="fr-container">
+<div class="fr-footer__body">
+<div class="fr-footer__brand fr-enlarge-link">
+<p class="fr-logo">
+République
+<br>
+Française
+</p>
+</div>
+<div class="fr-footer__content">
+<p class="fr-footer__content-desc">
+Composants Rails ViewComponent pour le Système de Design de lʼÉtat
+<br>
+Projet non-officiel porté par beta.gouv
+</p>
+<ul class="fr-footer__content-list">
+<li class="fr-footer__content-item">
+<a class="fr-footer__content-link" href="https://github.com/betagouv/dsfr-view-components" target="_blank">
+GitHub
+</a>
+</li>
+<li class="fr-footer__content-item">
+<a class="fr-footer__content-link" href="https://www.systeme-de-design.gouv.fr/" target="_blank">
+Système de Design de lʼÉtat
+</a>
+</li>
+<!-- li.fr-footer__content-item -->
+<!-- a.fr-footer__content-link target="_blank" href=rubygems_link -->
+<!-- RubyGems -->
+<!-- li.fr-footer__content-item -->
+<!-- a.fr-footer__content-link target="_blank" href=documentation_link -->
+<!-- RubyDoc Documentation -->
+<!-- li.fr-footer__content-item -->
+<!-- a.fr-footer__content-link target="_blank" href=code_climate_report_link -->
+<!-- Code Climate report -->
+</ul>
+</div>
+</div>
+<div class="fr-footer__bottom">
+<ul class="fr-footer__bottom-list">
+<li class="fr-footer__bottom-item">
+<a class="fr-footer__bottom-link">href="/" Accueil</a>
+</li>
+<li class="fr-footer__bottom-item">
+<button aria-controls="fr-theme-modal" class="fr-footer__bottom-link" data-fr-opened="false">
+Paramètres d'affichage
+</button>
+</li>
+</ul>
+<div class="fr-footer__bottom-copy">
+<p>
+Sauf mention contraire, tous les contenus de ce site sont sous
+<a target="_blank" rel="noopener" href="https://github.com/etalab/licence-ouverte/blob/master/LO.md">licence etalab-2.0</a>
+</p>
+</div>
+</div>
+</div>
+</footer>
+<dialog aria-labelledby="fr-theme-modal-title" class="fr-modal" id="fr-theme-modal" role="dialog">
+<div class="fr-container fr-container--fluid fr-container-md">
+<div class="fr-grid-row fr-grid-row--center">
+<div class="fr-col-12 fr-col-md-6 fr-col-lg-4">
+<div class="fr-modal__body">
+<div class="fr-modal__header">
+<button aria-controls="fr-theme-modal" class="fr-link--close fr-link">
+Fermer
+</button>
+</div>
+<div class="fr-modal__content">
+<h1 class="fr-modal__title" id="fr-theme-modal-title">
+Paramètres d’affichage
+</h1>
+<div class="fr-form-group fr-display" id="fr-display">
+<div class="fr-form-group">
+<fieldset class="fr-fieldset">
+<legend class="fr-fieldset__legend fr-text--regular" id="-legend">
+Choisissez un thème pour personnaliser l’apparence du site.
+</legend>
+<div class="fr-fieldset__content">
+<div class="fr-radio-group fr-radio-rich">
+<input id="fr-radios-theme-light" name="fr-radios-theme" type="radio" value="light">
+<label class="fr-label" for="fr-radios-theme-light">
+Thème clair
+</label>
+<div class="fr-radio-rich__img" data-fr-inject-svg="">
+<img alt="" src="../../artwork/light.svg">
+</div>
+</div>
+<div class="fr-radio-group fr-radio-rich">
+<input id="fr-radios-theme-dark" name="fr-radios-theme" type="radio" value="dark">
+<label class="fr-label" for="fr-radios-theme-dark">
+Thème sombre
+</label>
+<div class="fr-radio-rich__img" data-fr-inject-svg="">
+<img alt="" src="../../artwork/dark.svg">
+</div>
+</div>
+<div class="fr-radio-group fr-radio-rich">
+<input id="fr-radios-theme-system" name="fr-radios-theme" type="radio" value="system">
+<label class="fr-label" for="fr-radios-theme-system">
+Système
+<span class="fr-hint-text">Utilise les paramètres système.</span>
+</label>
+<div class="fr-radio-rich__img" data-fr-inject-svg="">
+<img alt="" src="../../artwork/system.svg">
+</div>
+</div>
+</div>
+</fieldset>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</dialog>
+
+<script src="../../javascripts/dsfr.module.min.js" type="module"></script>
+<script nomodule="true" src="../../javascripts/dsfr.nomodule.min.js" type="text/javascript"></script>
+
+
+
+</body></html>
