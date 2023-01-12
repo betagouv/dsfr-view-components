@@ -1,0 +1,27 @@
+---
+title: Tuile (Tile)
+---
+
+.fr-text-wrap
+  :markdown
+    La tuile est un raccourci ou point d’entrée qui redirige les utilisateurs vers des pages de contenu. Elle fait généralement partie d'une collection ou liste de tuiles similaires. La tuile n’est jamais présentée de manière isolée.
+
+    La tuile est un composant modulaire. L'ensemble de la tuile est cliquable.
+
+= render('/partials/example.haml', caption: "Tuile classique", code: tile_default) do
+  Tuile verticale avec image, titre et description
+
+= render('/partials/example.haml', caption: "Tuile sans description", code: tile_without_description) do
+  Tuile verticale sans description
+
+= render('/partials/example.haml', caption: "Tuile sans image", code: tile_without_image) do
+  Tuile verticale sans image
+
+= render('/partials/example.haml', caption: "Tuile avec image alt", code: tile_with_image_alt) do
+  Tuile avec text alternatif pour l'image
+
+= render('/partials/example.haml', caption: "Tuile horizontale", code: tile_horizontal) do
+  Tuile horizontale avec image, titre et description
+
+.fr-mt-4w
+  = render('/partials/related-info.haml', links: tile_info)

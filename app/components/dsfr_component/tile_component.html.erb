@@ -1,0 +1,19 @@
+<%= tag.div(**html_attributes) do %>
+  <div class="fr-tile__body">
+    <h4 class="fr-tile__title">
+      <a class="fr-tile__link" href="<%= url %>">
+      <%= title %>
+      </a>
+    </h4>
+    <% if description.present? %>
+      <p class="fr-tile__desc">
+        <%= description %>
+      </p>
+    <% end %>
+  </div>
+  <% if image_src.present? %>
+    <div class="fr-tile__img">
+      <img src="<%= image_src %>" class="fr-responsive-img" alt="<%= image_alt %>">
+    </div>
+  <% end %>
+<% end %>
