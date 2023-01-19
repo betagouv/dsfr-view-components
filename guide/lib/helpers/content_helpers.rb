@@ -1,6 +1,7 @@
 module Helpers
   module ContentHelpers
-    DSFR_COMPONENT_DOC_HREF = "https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/"
+    DSFR_COMPONENT_DOC_HREF = "https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/".freeze
+
     def repository_name
       "DSFR-View-Components"
     end
@@ -29,9 +30,15 @@ module Helpers
       {
         "DsfrComponent::AlertComponent" => "dsfr_alert",
         "DsfrComponent::AccordionComponent" => "dsfr_accordion",
-        "DsfrComponent::TileComponent" => "dsfr_tile"
+        "DsfrComponent::TileComponent" => "dsfr_tile",
+        "DsfrComponent::Badge" => "dsfr_badge"
       }
     end
+
+    def badge_info
+      dsfr_component_doc_link("Badge")
+    end
+
   private
 
     def dsfr_component_doc_link(name, id = nil)
