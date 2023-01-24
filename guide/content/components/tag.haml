@@ -1,0 +1,42 @@
+---
+title: Tag
+---
+
+.fr-text-wrap
+  :markdown
+    Le Tag catégorise/classe/organise les contenus à l'aide de mots-clés.
+    Il aide les utilisateurs à rechercher et à trouver facilement une information.
+
+= render('/partials/example.haml', caption: "Tag non-cliquable", code: tag_default) do
+  :markdown
+    Un Tag non-cliquable avec un libellé
+
+= render('/partials/example.haml', caption: "Tag non-cliquable avec icône", code: tag_icon) do
+  :markdown
+    Un Tag non-cliquable avec un icône à gauche
+
+= render('/partials/example.haml', caption: "Tag non-cliquable taille sm", code: tag_sm) do
+  :markdown
+    Un Tag non-cliquable en petite taille (`:sm`)
+
+= render('/partials/example.haml', caption: "Tag cliquable", code: tag_clickable) do
+  :markdown
+    Un Tag cliquable
+
+= render('/partials/example.haml', caption: "Tag sélectionné", code: tag_selected) do
+  :markdown
+    Un Tag sélectionné
+
+= render('/partials/example.haml', caption: "Tag désélectionné", code: tag_unselected) do
+  :markdown
+    Un Tag désélectionné
+
+= render('/partials/example.haml', caption: "Tag supprimable", code: tag_dismissable) do
+  :markdown
+    Un Tag supprimable
+
+    Les tags supprimables n’autorisent pas l’utilisation d’icônes (autres que la croix de suppression déjà présente)
+
+    Le handler JS `onclick` donné en exemple est indicatif, à vous de l’implémenter dans votre environnement.
+
+= render('/partials/related-info.haml', links: tag_info)

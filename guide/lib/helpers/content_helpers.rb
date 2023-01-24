@@ -27,16 +27,22 @@ module Helpers
     end
 
     def component_helper_mapping
+      # TODO: replace use by the same transposed hash in DsfrComponentsHelper
       {
         "DsfrComponent::AlertComponent" => "dsfr_alert",
         "DsfrComponent::AccordionComponent" => "dsfr_accordion",
         "DsfrComponent::TileComponent" => "dsfr_tile",
-        "DsfrComponent::Badge" => "dsfr_badge"
+        "DsfrComponent::Badge" => "dsfr_badge",
+        "DsfrComponent::Tag" => "dsfr_tag"
       }
     end
 
     def badge_info
       dsfr_component_doc_link("Badge")
+    end
+
+    def tag_info
+      dsfr_component_doc_link("Tag")
     end
 
   private
