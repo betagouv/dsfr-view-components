@@ -1,7 +1,7 @@
 <!DOCTYPE html><html data-fr-scheme="system" lang="fr"><head>
 <meta charset="utf-8">
 <title>
-Utilisation - Composants Rails ViewComponent pour le Système de Design de lʼÉtat
+Badge - Composants Rails ViewComponent pour le Système de Design de lʼÉtat
 </title>
 <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
 <meta content="#000091" name="theme-color">
@@ -67,82 +67,103 @@ Voir le fil d’Ariane
 <a class="fr-breadcrumb__link" href="../../">Accueil</a>
 </li>
 <li>
-<a class="fr-breadcrumb__link" aria-current="page" href="">Utilisation</a>
+<a class="fr-breadcrumb__link" aria-current="page" href="">Badge</a>
 </li>
 </ol>
 </div>
 </nav>
 
-<h1>Utilisation</h1>
-<p>Vous pouvez utiliser les composants dans vos templates Rails en :</p>
+<h1>Badge</h1>
+<div class="fr-text-wrap">
+<p>Le composant Badge est disponible à travers 5 états prédéfinis :</p>
 
 <ul>
-  <li>appelant <code>render</code> avec un objet ViewComponent ;</li>
-  <li>utilisant les helpers fournis</li>
+  <li><code>success</code></li>
+  <li><code>error</code></li>
+  <li><code>info</code></li>
+  <li><code>warning</code></li>
+  <li>
+<code>new</code>.</li>
 </ul>
 
-<p>Le résultat est le même peu importe la méthode utilisée.</p>
-
-<h2 id="utilisation-directe-des-objets-viewcomponent">Utilisation directe des objets ViewComponent</h2>
-
-<div class="language-erb highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="cp">&lt;%=</span> <span class="n">render</span><span class="p">(</span><span class="no">DsfrComponent</span><span class="o">::</span><span class="no">AlertComponent</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="ss">title: </span><span class="s2">"Message important"</span><span class="p">))</span> <span class="cp">%&gt;</span>
-</code></pre></div></div>
-
-<h2 id="utilisation-des-helpers">Utilisation des helpers</h2>
-
-<p>Les helpers sont plus simples à utiliser et fournissent une expérience harmonisée avec les
-helpers de liens.</p>
-
-<div class="language-erb highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="cp">&lt;%=</span> <span class="n">dsfr_alert</span><span class="p">(</span><span class="ss">title: </span><span class="s2">"Message important"</span><span class="p">,</span> <span class="ss">size: :sm</span><span class="p">)</span> <span class="cp">%&gt;</span>
-</code></pre></div></div>
-
-<h2 id="correspondance-entre-les-noms-de-composants-et-les-helpers">Correspondance entre les noms de composants et les helpers</h2>
+<p>C’est un élément dont le rôle est purement contextuel : il doit
+être associé à une information donnée sur la page et ne peut pas
+être cliquable.</p>
 
 
-<div class="fr-table">
-<table>
-<thead>
-<tr>
-<th>Composant</th>
-<th>Helper</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<code>DsfrComponent::AlertComponent</code>
-</td>
-<td>
-<code>dsfr_alert</code>
-</td>
-</tr>
-<tr>
-<td>
-<code>DsfrComponent::AccordionComponent</code>
-</td>
-<td>
-<code>dsfr_accordion</code>
-</td>
-</tr>
-<tr>
-<td>
-<code>DsfrComponent::TileComponent</code>
-</td>
-<td>
-<code>dsfr_tile</code>
-</td>
-</tr>
-<tr>
-<td>
-<code>DsfrComponent::Badge</code>
-</td>
-<td>
-<code>dsfr_badge</code>
-</td>
-</tr>
-</tbody>
-</table>
 </div>
+<h3 class="fr-mt-8w" id="vue-d-ensemble">
+<a class="header-anchor" href="#vue-d-ensemble">Vue d’ensemble</a>
+</h3>
+<div class="fr-text-wrap">
+</div>
+<figure class="app-example">
+<h4>Code</h4>
+<pre class="highlight"><code class="language-haml"><span class="p">=</span> <span class="n">dsfr_badge</span><span class="p">(</span><span class="ss">status: :new</span><span class="p">)</span>     <span class="p">{</span> <span class="s2">"Dossier créé"</span> <span class="p">}</span>
+<span class="p">=</span> <span class="n">dsfr_badge</span><span class="p">(</span><span class="ss">status: :warning</span><span class="p">)</span> <span class="p">{</span> <span class="s2">"Informations manquantes"</span> <span class="p">}</span>
+<span class="p">=</span> <span class="n">dsfr_badge</span><span class="p">(</span><span class="ss">status: :success</span><span class="p">)</span> <span class="p">{</span> <span class="s2">"Dossier mis à jour"</span> <span class="p">}</span>
+<span class="p">=</span> <span class="n">dsfr_badge</span><span class="p">(</span><span class="ss">status: :error</span><span class="p">)</span>   <span class="p">{</span> <span class="s2">"Erreur de traitement"</span> <span class="p">}</span>
+<span class="p">=</span> <span class="n">dsfr_badge</span><span class="p">(</span><span class="ss">status: :info</span><span class="p">)</span>    <span class="p">{</span> <span class="s2">"Nouvelles informations"</span> <span class="p">}</span></code></pre>
+<h4>Résultat</h4>
+<div class="fr-tabs">
+<ul class="fr-tabs__list" role="tablist">
+<li role="presentation">
+<button aria-controls="output-rendered-vue-d-ensemble" aria-selected="true" class="fr-tabs__tab" id="output-rendered-vue-d-ensemble" role="tab" tabindex="0">
+Rendu
+</button>
+</li>
+<li role="presentation">
+<button aria-controls="output-html-vue-d-ensemble" aria-selected="false" class="fr-tabs__tab" id="output-html-vue-d-ensemble" role="tab" tabindex="0">
+HTML
+</button>
+</li>
+</ul>
+<div aria-labelledby="output-rendered-vue-d-ensemble" class="fr-tabs__panel fr-tabs__panel--selected" id="output-rendered-vue-d-ensemble" role="tabpanel">
+<div class="fr-badge fr-badge--new">
+  Dossier créé
+</div>
+<div class="fr-badge fr-badge--warning">
+  Informations manquantes
+</div>
+<div class="fr-badge fr-badge--success">
+  Dossier mis à jour
+</div>
+<div class="fr-badge fr-badge--error">
+  Erreur de traitement
+</div>
+<div class="fr-badge fr-badge--info">
+  Nouvelles informations
+</div>
+</div>
+<div aria-labelledby="output-html-vue-d-ensemble" class="fr-tabs__panel" id="output-html-vue-d-ensemble" role="tabpanel">
+<pre class="highlight"><code class="language-html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-badge fr-badge--new"</span><span class="nt">&gt;</span>
+  Dossier créé
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-badge fr-badge--warning"</span><span class="nt">&gt;</span>
+  Informations manquantes
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-badge fr-badge--success"</span><span class="nt">&gt;</span>
+  Dossier mis à jour
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-badge fr-badge--error"</span><span class="nt">&gt;</span>
+  Erreur de traitement
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-badge fr-badge--info"</span><span class="nt">&gt;</span>
+  Nouvelles informations
+<span class="nt">&lt;/div&gt;</span></code></pre>
+</div>
+</div>
+</figure>
+
+<h2>
+Plus d’informations
+</h2>
+<ul>
+<li>
+<a target="_blank" rel="noopener" href="https://www.systeme-de-design.gouv.fr/elements-d-interface/composants//badge/">Badge sur la documentation du Système de Design de l’État</a>
+</li>
+</ul>
+
 
 </div>
 </main>
