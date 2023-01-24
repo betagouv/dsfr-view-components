@@ -42,3 +42,4 @@ use_helper Examples::AlertHelpers
 use_helper Examples::AccordionHelpers
 use_helper Examples::LinkHelpers
 use_helper Examples::TileHelpers
+use_helper Examples::BadgeHelpers
