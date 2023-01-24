@@ -40,7 +40,7 @@ Les composants disponibles sont :
 - [x] Accordéon - Accordion
 - [ ] Ajout de fichier - File upload
 - [x] Alertes - Alert
-- [ ] Badge
+- [x] Badge
 - [ ] Bandeau d'information importante
 - [ ] Barre de recherche - Search bar
 - [ ] Boutons - Buttons
@@ -78,7 +78,7 @@ Les composants disponibles sont :
 - [ ] Tableau - Table
 - [ ] Tag
 - [ ] Téléchargement de fichier
-- [ ] Tuile - Tile
+- [x] Tuile - Tile
 
 <!--
 This library also provides helpers for creating [links](https://govuk-components.netlify.app/helpers/link),
