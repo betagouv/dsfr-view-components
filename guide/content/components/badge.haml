@@ -1,0 +1,21 @@
+---
+title: Badge
+---
+
+.fr-text-wrap
+  :markdown
+    Le composant Badge est disponible à travers 5 états prédéfinis :
+
+      - `success`
+      - `error`
+      - `info`
+      - `warning`
+      - `new`.
+
+    C'est un élément dont le rôle est purement contextuel : il doit
+    être associé à une information donnée sur la page et ne peut pas
+    être cliquable.
+
+= render('/partials/example.haml', caption: "Vue d'ensemble", code: badge_default)
+
+= render('/partials/related-info.haml', links: badge_info)
