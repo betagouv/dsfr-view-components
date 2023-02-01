@@ -26,15 +26,6 @@ module Helpers
       dsfr_component_doc_link("Tuile")
     end
 
-    def component_helper_mapping
-      {
-        "DsfrComponent::AlertComponent" => "dsfr_alert",
-        "DsfrComponent::AccordionComponent" => "dsfr_accordion",
-        "DsfrComponent::TileComponent" => "dsfr_tile",
-        "DsfrComponent::Badge" => "dsfr_badge"
-      }
-    end
-
     def badge_info
       dsfr_component_doc_link("Badge")
     end

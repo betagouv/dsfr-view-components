@@ -35,7 +35,7 @@ title: Utilisation
         %th Composant
         %th Helper
     %tbody
-      - component_helper_mapping.each do |class_name, helper_method|
+      - DsfrComponentsHelper::HELPER_NAME_TO_CLASS_NAME.each do |helper_method, class_name|
         %tr
           %td
             %code= class_name
