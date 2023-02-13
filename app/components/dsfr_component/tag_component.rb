@@ -1,5 +1,7 @@
 module DsfrComponent
   class TagComponent < DsfrComponent::Base
+    SIZES = %i[sm md].freeze
+
     # @param title [String] tag title
     # @param icon [String] icon name (optional)
     # @param size [Symbol] tag size : `:md` (default) or `:sm` (optional)
@@ -27,12 +29,11 @@ module DsfrComponent
     attr_reader :title, :icon, :size, :url, :selected, :dismissable
 
     def validate_size
-      raise ArgumentError, "unacceptable size (can only be :sm or :md)" if size.present? && %i[sm md].exclude?(size)
+      raise(ArgumentError, "`size` should be one of #{SIZES}") if size.present? && SIZES.exclude?(size)
     end
 
     def validate_selected
-      raise ArgumentError, "selected must be a boolean value" if !selected.nil? && [true, false].exclude?(selected)
-      raise ArgumentError, "selected cannot be used together with url" if !selected.nil? && url.present?
+      raise ArgumentError, "selected cannot be used together with an URL" if !selected.nil? && url.present?
     end
 
     def validate_dismissable
@@ -41,11 +42,14 @@ module DsfrComponent
     end
 
     def default_attributes
-      att = { class: css_classes }
-      att.merge!(href: url, target: "_self") if url.present?
-      att.merge!("aria-pressed": selected.to_s) unless selected.nil? # meaningful when false
-      att.merge!("aria-label": "Retirer #{title}") if dismissable
-      att
+      attrs = { class: css_classes }
+      attrs.merge!(href: url, target: "_self") if url.present?
+      unless selected.nil? # meaningful when false
+        aria_pressed = selected ? "true" : "false"
+        attrs.merge!("aria-pressed": aria_pressed)
+      end
+      attrs.merge!("aria-label": "Retirer #{title}") if dismissable
+      attrs
     end
 
     def css_classes
