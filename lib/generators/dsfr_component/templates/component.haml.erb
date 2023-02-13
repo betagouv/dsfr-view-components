@@ -9,3 +9,5 @@ title: <%= name %>
 = render('/partials/example.haml', caption: "Vue d'ensemble", code: <%= file_name %>_default) do
   :markdown
     Le rendu de base du <%= name %>Component
+
+= render('/partials/related-info.haml', links: dsfr_component_doc_link("<%= name %>"))
