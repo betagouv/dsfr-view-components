@@ -11,7 +11,8 @@ module Helpers
         "DsfrComponent::AlertComponent" => "dsfr_alert",
         "DsfrComponent::AccordionComponent" => "dsfr_accordion",
         "DsfrComponent::TileComponent" => "dsfr_tile",
-        "DsfrComponent::Badge" => "dsfr_badge"
+        "DsfrComponent::Badge" => "dsfr_badge",
+        "DsfrComponent::Tag" => "dsfr_tag"
       }
     end
 
