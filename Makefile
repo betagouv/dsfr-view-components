@@ -36,4 +36,4 @@ code-climate:
 clean:
 	rm -rf guide/output/**/*
 deploy_gem:
-	bundle exec ruby scripts/deploy_gem.rb $$VERSION
+	bundle exec rails runner scripts/deploy_gem.rb $$VERSION
