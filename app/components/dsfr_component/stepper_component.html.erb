@@ -1,0 +1,18 @@
+<%= tag.div(**html_attributes) do %>
+  <h2 class="fr-stepper__title">
+    <span class="fr-stepper__state">
+      Étape <%= value %> sur <%= max %>
+    </span>
+    <%= title %>
+  </h2>
+  <div
+    class="fr-stepper__steps"
+    data-fr-current-step="<%= value %>"
+    data-fr-steps="<%= max %>"></div>
+  <% if next_title %>
+    <p class="fr-stepper__details">
+      <span class="fr-text--bold">Étape suivante :</span>
+      <%= next_title %>
+    </p>
+  <% end %>
+<% end %>

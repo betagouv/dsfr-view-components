@@ -44,3 +44,4 @@ use_helper Examples::LinkHelpers
 use_helper Examples::TileHelpers
 use_helper Examples::BadgeHelpers
 use_helper Examples::TagHelpers
+use_helper Examples::StepperHelpers

@@ -7,6 +7,7 @@ module DsfrComponentsHelper
     dsfr_tile: 'DsfrComponent::TileComponent',
     dsfr_badge: 'DsfrComponent::BadgeComponent',
     dsfr_tag: 'DsfrComponent::TagComponent',
+    dsfr_stepper: 'DsfrComponent::StepperComponent',
     # DO NOT REMOVE: new component mapping here
   }.each do |name, klass|
     define_method(name) do |*args, **kwargs, &block|
