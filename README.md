@@ -57,7 +57,7 @@ Les composants disponibles sont :
 - [ ] Fil d'Ariane - Breadcrumb
 - [ ] Gestionnaire de consentement - Consent banner
 - [ ] Icônes de favoris - Favicons
-- [ ] Indicateur d'étape
+- [x] Indicateur d'étape - Stepper
 - [ ] Interrupteur - Toggle switch
 - [ ] Lettre d'information et réseaux sociaux - Newsletter &amp; Follow us
 - [x] Liens - Links
