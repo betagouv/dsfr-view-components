@@ -1,0 +1,27 @@
+---
+title: Tag
+---
+
+.fr-text-wrap
+  :markdown
+    Le Tag catégorise/classe/organise les contenus à l'aide de mots-clés.
+    Il aide les utilisateurs à rechercher et à trouver facilement une information.
+
+= render('/partials/example.haml', caption: "Tags non-cliquables", code: tags_not_interactive) do
+  :markdown
+    - Un Tag non-cliquable avec un libellé
+    - Un Tag non-cliquable avec un icône à gauche
+    - Un Tag non-cliquable en petite taille (`:sm`)
+
+= render('/partials/example.haml', caption: "Tags interactifs", code: tags_interactive) do
+  :markdown
+    - Un Tag cliquable
+    - Un Tag désélectionné
+    - Un Tag sélectionné
+    - Un Tag supprimable
+
+    Les tags supprimables n’autorisent pas l’utilisation d’icônes (autres que la croix de suppression déjà présente)
+
+    Le handler JS `onclick` donné en exemple est indicatif, à vous de l’implémenter dans votre environnement.
+
+= render('/partials/related-info.haml', links: dsfr_component_doc_link("Tag"))
