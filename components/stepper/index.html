@@ -1,0 +1,343 @@
+<!DOCTYPE html><html data-fr-scheme="system" lang="fr"><head>
+<meta charset="utf-8">
+<title>
+Indicateur d'étape - Stepper - Composants Rails ViewComponent pour le Système de Design de lʼÉtat
+</title>
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+<meta content="#000091" name="theme-color">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<link href="../../favicon/apple-touch-icon.png" rel="apple-touch-icon">
+<link href="../../favicon/favicon.svg" rel="icon" type="image/svg+xml">
+<link href="../../favicon/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<link crossorigin="use-credentials" href="../../favicon/manifest.webmanifest" rel="manifest">
+<link href="../../stylesheets/application.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="fr-skiplinks">
+<nav aria-label="Accès rapide" class="fr-container" role="navigation">
+<ul class="fr-skiplinks__list">
+<li>
+<a class="fr-link" href="#content">
+Contenu
+</a>
+</li>
+</ul>
+</nav>
+</div>
+<header class="fr-header" role="banner">
+<div class="fr-header__body">
+<div class="fr-container">
+<div class="fr-header__body-row">
+<div class="fr-header__brand fr-enlarge-link">
+<div class="fr-header__brand-top">
+<div class="fr-header__logo">
+<p class="fr-logo">
+République
+<br>
+Française
+</p>
+</div>
+</div>
+<div class="fr-header__service">
+<a href="../../" title="Composants Rails ViewComponent pour le Système de Design de lʼÉtat - Accueil">
+<p class="fr-header__service-title">
+DSFR-View-Components
+</p>
+</a>
+<p class="fr-header__service-tagline">
+Composants Rails ViewComponent pour le Système de Design de lʼÉtat
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+
+<main id="contenu" role="main">
+<div class="fr-container">
+<nav aria-label="Vous êtes ici :" class="fr-breadcrumb" role="navigation">
+<button aria-controls="breadcrumb-1" aria-expanded="false" class="fr-breadcrumb__button">
+Voir le fil d’Ariane
+</button>
+<div class="fr-collapse" id="breadcrumb-1">
+<ol class="fr-breadcrumb__list">
+<li>
+<a class="fr-breadcrumb__link" href="../../">Accueil</a>
+</li>
+<li>
+<a class="fr-breadcrumb__link" aria-current="page" href="">Indicateur d'étape - Stepper</a>
+</li>
+</ol>
+</div>
+</nav>
+
+<h1>Indicateur d'étape - Stepper</h1>
+<div class="fr-text-wrap">
+<p>L’indicateur d’étape permet d’indiquer à l’utilisateur où il se trouve dans un formulaire ou dans une démarche.</p>
+
+<p>Cet indicateur d’étape est utilisable dans le cas d’un processus linéaire, le composant ne permet pas de naviguer d’une étape à une autre (pour cela, il faudra utiliser des boutons).</p>
+
+
+</div>
+<h3 class="fr-mt-8w" id="etape-intermediaire">
+<a class="header-anchor" href="#etape-intermediaire">Étape intermédiaire</a>
+</h3>
+<div class="fr-text-wrap">
+<p>Tous les paramètres sont obligatoires.
+L’API de ce composant s’inspire du tag <code>&lt;progress value="3" max="5" /&gt;</code> HTML.</p>
+
+
+
+</div>
+<figure class="app-example">
+<h4>Code</h4>
+<pre class="highlight"><code class="language-haml"><span class="p">=</span> <span class="n">dsfr_stepper</span><span class="p">(</span><span class="ss">title: </span><span class="s2">"Choisissez votre ville"</span><span class="p">,</span> <span class="ss">value: </span><span class="mi">3</span><span class="p">,</span> <span class="ss">max: </span><span class="mi">5</span><span class="p">,</span> <span class="ss">next_title: </span><span class="s2">"Confirmez votre identité"</span><span class="p">)</span></code></pre>
+<h4>Résultat</h4>
+<div class="fr-tabs">
+<ul class="fr-tabs__list" role="tablist">
+<li role="presentation">
+<button aria-controls="output-rendered-etape-intermediaire" aria-selected="true" class="fr-tabs__tab" id="output-rendered-etape-intermediaire" role="tab" tabindex="0">
+Rendu
+</button>
+</li>
+<li role="presentation">
+<button aria-controls="output-html-etape-intermediaire" aria-selected="false" class="fr-tabs__tab" id="output-html-etape-intermediaire" role="tab" tabindex="0">
+HTML
+</button>
+</li>
+</ul>
+<div aria-labelledby="output-rendered-etape-intermediaire" class="fr-tabs__panel fr-tabs__panel--selected" id="output-rendered-etape-intermediaire" role="tabpanel">
+<div class="fr-stepper">
+  <h2 class="fr-stepper__title">
+    <span class="fr-stepper__state">
+      Étape 3 sur 5
+    </span>
+    Choisissez votre ville
+  </h2>
+  <div class="fr-stepper__steps" data-fr-current-step="3" data-fr-steps="5">
+  </div>
+  <p class="fr-stepper__details">
+    <span class="fr-text--bold">
+      Étape suivante :
+    </span>
+    Confirmez votre identité
+  </p>
+</div>
+</div>
+<div aria-labelledby="output-html-etape-intermediaire" class="fr-tabs__panel" id="output-html-etape-intermediaire" role="tabpanel">
+<pre class="highlight"><code class="language-html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-stepper"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"fr-stepper__title"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"fr-stepper__state"</span><span class="nt">&gt;</span>
+      Étape 3 sur 5
+    <span class="nt">&lt;/span&gt;</span>
+    Choisissez votre ville
+  <span class="nt">&lt;/h2&gt;</span>
+  <span class="nt">&lt;div</span>
+    <span class="na">class=</span><span class="s">"fr-stepper__steps"</span>
+    <span class="na">data-fr-current-step=</span><span class="s">"3"</span>
+    <span class="na">data-fr-steps=</span><span class="s">"5"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"fr-stepper__details"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"fr-text--bold"</span><span class="nt">&gt;</span>
+      Étape suivante :
+    <span class="nt">&lt;/span&gt;</span>
+    Confirmez votre identité
+  <span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+</div>
+</div>
+</figure>
+<h3 class="fr-mt-8w" id="derniere-etape">
+<a class="header-anchor" href="#derniere-etape">Dernière étape</a>
+</h3>
+<div class="fr-text-wrap">
+<p>Le titre de l’étape suivante est obligatoire pour toutes les étapes sauf la dernière.</p>
+
+
+
+</div>
+<figure class="app-example">
+<h4>Code</h4>
+<pre class="highlight"><code class="language-haml"><span class="p">=</span> <span class="n">dsfr_stepper</span><span class="p">(</span><span class="ss">title: </span><span class="s2">"Confirmez votre identité"</span><span class="p">,</span> <span class="ss">value: </span><span class="mi">3</span><span class="p">,</span> <span class="ss">max: </span><span class="mi">3</span><span class="p">)</span></code></pre>
+<h4>Résultat</h4>
+<div class="fr-tabs">
+<ul class="fr-tabs__list" role="tablist">
+<li role="presentation">
+<button aria-controls="output-rendered-derniere-etape" aria-selected="true" class="fr-tabs__tab" id="output-rendered-derniere-etape" role="tab" tabindex="0">
+Rendu
+</button>
+</li>
+<li role="presentation">
+<button aria-controls="output-html-derniere-etape" aria-selected="false" class="fr-tabs__tab" id="output-html-derniere-etape" role="tab" tabindex="0">
+HTML
+</button>
+</li>
+</ul>
+<div aria-labelledby="output-rendered-derniere-etape" class="fr-tabs__panel fr-tabs__panel--selected" id="output-rendered-derniere-etape" role="tabpanel">
+<div class="fr-stepper">
+  <h2 class="fr-stepper__title">
+    <span class="fr-stepper__state">
+      Étape 3 sur 3
+    </span>
+    Confirmez votre identité
+  </h2>
+  <div class="fr-stepper__steps" data-fr-current-step="3" data-fr-steps="3">
+  </div>
+</div>
+</div>
+<div aria-labelledby="output-html-derniere-etape" class="fr-tabs__panel" id="output-html-derniere-etape" role="tabpanel">
+<pre class="highlight"><code class="language-html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-stepper"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"fr-stepper__title"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"fr-stepper__state"</span><span class="nt">&gt;</span>
+      Étape 3 sur 3
+    <span class="nt">&lt;/span&gt;</span>
+    Confirmez votre identité
+  <span class="nt">&lt;/h2&gt;</span>
+  <span class="nt">&lt;div</span>
+    <span class="na">class=</span><span class="s">"fr-stepper__steps"</span>
+    <span class="na">data-fr-current-step=</span><span class="s">"3"</span>
+    <span class="na">data-fr-steps=</span><span class="s">"3"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+</div>
+</div>
+</figure>
+<h2>
+Plus d’informations
+</h2>
+<ul>
+<li>
+<a target="_blank" rel="noopener" href="https://www.systeme-de-design.gouv.fr/elements-d-interface/composants//indicateur-d-etape/">Indicateur d’étape - Stepper sur la documentation du Système de Design de l’État</a>
+</li>
+</ul>
+
+
+</div>
+</main>
+<footer class="fr-footer fr-mt-8w" id="footer" role="contentinfo">
+<div class="fr-container">
+<div class="fr-footer__body">
+<div class="fr-footer__brand fr-enlarge-link">
+<p class="fr-logo">
+République
+<br>
+Française
+</p>
+</div>
+<div class="fr-footer__content">
+<p class="fr-footer__content-desc">
+Composants Rails ViewComponent pour le Système de Design de lʼÉtat
+<br>
+Projet non-officiel porté par beta.gouv
+</p>
+<ul class="fr-footer__content-list">
+<li class="fr-footer__content-item">
+<a class="fr-footer__content-link" href="https://github.com/betagouv/dsfr-view-components" target="_blank">
+GitHub
+</a>
+</li>
+<li class="fr-footer__content-item">
+<a class="fr-footer__content-link" href="https://www.systeme-de-design.gouv.fr/" target="_blank">
+Système de Design de lʼÉtat
+</a>
+</li>
+<!-- li.fr-footer__content-item -->
+<!-- a.fr-footer__content-link target="_blank" href=rubygems_link -->
+<!-- RubyGems -->
+<!-- li.fr-footer__content-item -->
+<!-- a.fr-footer__content-link target="_blank" href=documentation_link -->
+<!-- RubyDoc Documentation -->
+<!-- li.fr-footer__content-item -->
+<!-- a.fr-footer__content-link target="_blank" href=code_climate_report_link -->
+<!-- Code Climate report -->
+</ul>
+</div>
+</div>
+<div class="fr-footer__bottom">
+<ul class="fr-footer__bottom-list">
+<li class="fr-footer__bottom-item">
+<a class="fr-footer__bottom-link" href="../../">Accueil</a>
+</li>
+<li class="fr-footer__bottom-item">
+<button aria-controls="fr-theme-modal" class="fr-footer__bottom-link" data-fr-opened="false">
+Paramètres d'affichage
+</button>
+</li>
+</ul>
+<div class="fr-footer__bottom-copy">
+<p>
+Sauf mention contraire, tous les contenus de ce site sont sous
+<a target="_blank" rel="noopener" href="https://github.com/etalab/licence-ouverte/blob/master/LO.md">licence etalab-2.0</a>
+</p>
+</div>
+</div>
+</div>
+</footer>
+<dialog aria-labelledby="fr-theme-modal-title" class="fr-modal" id="fr-theme-modal" role="dialog">
+<div class="fr-container fr-container--fluid fr-container-md">
+<div class="fr-grid-row fr-grid-row--center">
+<div class="fr-col-12 fr-col-md-6 fr-col-lg-4">
+<div class="fr-modal__body">
+<div class="fr-modal__header">
+<button aria-controls="fr-theme-modal" class="fr-link--close fr-link">
+Fermer
+</button>
+</div>
+<div class="fr-modal__content">
+<h1 class="fr-modal__title" id="fr-theme-modal-title">
+Paramètres d’affichage
+</h1>
+<div class="fr-form-group fr-display" id="fr-display">
+<div class="fr-form-group">
+<fieldset class="fr-fieldset">
+<legend class="fr-fieldset__legend fr-text--regular" id="-legend">
+Choisissez un thème pour personnaliser l’apparence du site.
+</legend>
+<div class="fr-fieldset__content">
+<div class="fr-radio-group fr-radio-rich">
+<input id="fr-radios-theme-light" name="fr-radios-theme" type="radio" value="light">
+<label class="fr-label" for="fr-radios-theme-light">
+Thème clair
+</label>
+<div class="fr-radio-rich__img" data-fr-inject-svg="">
+<img alt="" src="../../artwork/light.svg">
+</div>
+</div>
+<div class="fr-radio-group fr-radio-rich">
+<input id="fr-radios-theme-dark" name="fr-radios-theme" type="radio" value="dark">
+<label class="fr-label" for="fr-radios-theme-dark">
+Thème sombre
+</label>
+<div class="fr-radio-rich__img" data-fr-inject-svg="">
+<img alt="" src="../../artwork/dark.svg">
+</div>
+</div>
+<div class="fr-radio-group fr-radio-rich">
+<input id="fr-radios-theme-system" name="fr-radios-theme" type="radio" value="system">
+<label class="fr-label" for="fr-radios-theme-system">
+Système
+<span class="fr-hint-text">Utilise les paramètres système.</span>
+</label>
+<div class="fr-radio-rich__img" data-fr-inject-svg="">
+<img alt="" src="../../artwork/system.svg">
+</div>
+</div>
+</div>
+</fieldset>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</dialog>
+
+<script src="../../javascripts/dsfr.module.min.js" type="module"></script>
+<script nomodule="true" src="../../javascripts/dsfr.nomodule.min.js" type="text/javascript"></script>
+
+
+
+</body></html>
