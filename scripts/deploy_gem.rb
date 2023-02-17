@@ -14,7 +14,9 @@ version_with_v = "v#{version_without_v}"
 
 `git add lib/dsfr/components/version.rb`
 `git commit -m "release version #{version_with_v}"`
+`gem build dsfr-view-components.gemspec`
 `git tag -a "#{version_with_v}" -m "release version #{version_with_v}"`
 `git push`
-`gem build dsfr-view-components.gemspec`
+`git push origin "#{version_with_v}"`
+`gh release create "#{version_with_v}" --verify-tag`
 `gem push dsfr-view-components-#{version_without_v}.gem`
