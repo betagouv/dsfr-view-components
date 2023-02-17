@@ -56,4 +56,16 @@ RSpec.describe(DsfrComponent::TileComponent, type: :component) do
       expect(rendered_content).to have_tag('div', with: { class: "fr-tile fr-enlarge-link fr-tile--horizontal" })
     end
   end
+
+  context 'with specific title_level' do
+    let(:args) { { url: "/path", title: 'Titre', title_tag: :h2 } }
+
+    specify 'renders correctly' do
+      expect(rendered_content).to have_tag('div', with: { class: "fr-tile fr-enlarge-link" }) do
+        with_tag('div', with: { class: 'fr-tile__body' }) do
+          with_tag("h2", with: { class: "fr-tile__title" })
+        end
+      end
+    end
+  end
 end

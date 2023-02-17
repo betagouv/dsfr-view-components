@@ -5,6 +5,8 @@ class DsfrComponent::Base < ViewComponent::Base
 
   delegate :config, to: Dsfr::Components
 
+  TITLE_TAGS = %i[h1 h2 h3 h4 h5 h6].freeze
+
   def initialize(classes:, html_attributes:)
     if classes.nil?
       Rails.logger.warn("classes is nil, if no custom classes are needed omit the param")

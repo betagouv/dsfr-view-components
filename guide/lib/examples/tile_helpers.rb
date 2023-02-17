@@ -49,5 +49,16 @@ module Examples
                     html_attributes: {style: "max-width: 30rem;"})
       RAW
     end
+
+    def tile_title_tag
+      <<~RAW
+        = dsfr_tile(title: "Orgue de Fontainebleau",
+                    url: "#",
+                    image_src: "/assets/images/orgue.jpg",
+                    image_alt: "Orgue orange et bleu",
+                    title_tag: :h2,
+                    html_attributes: {style: "max-width: 20rem;"})
+      RAW
+    end
   end
 end
