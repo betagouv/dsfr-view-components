@@ -1,6 +1,6 @@
 # rubocop:disable Style/TrailingCommaInHashLiteral
 module DsfrComponentsHelper
-  {
+  HELPER_NAME_TO_CLASS_NAME = {
     dsfr_alert: 'DsfrComponent::AlertComponent',
     dsfr_accordion: 'DsfrComponent::AccordionComponent',
     dsfr_accordion_section: 'DsfrComponent::AccordionComponent::SectionComponent',
@@ -9,7 +9,8 @@ module DsfrComponentsHelper
     dsfr_tag: 'DsfrComponent::TagComponent',
     dsfr_stepper: 'DsfrComponent::StepperComponent',
     # DO NOT REMOVE: new component mapping here
-  }.each do |name, klass|
+  }.freeze
+  HELPER_NAME_TO_CLASS_NAME.each do |name, klass|
     define_method(name) do |*args, **kwargs, &block|
       capture do
         render(klass.constantize.new(*args, **kwargs)) do |com|

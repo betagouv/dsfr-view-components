@@ -6,16 +6,6 @@ module Helpers
       "Composants Rails ViewComponent pour le Système de Design de lʼÉtat"
     end
 
-    def component_helper_mapping
-      {
-        "DsfrComponent::AlertComponent" => "dsfr_alert",
-        "DsfrComponent::AccordionComponent" => "dsfr_accordion",
-        "DsfrComponent::TileComponent" => "dsfr_tile",
-        "DsfrComponent::Badge" => "dsfr_badge",
-        "DsfrComponent::Tag" => "dsfr_tag"
-      }
-    end
-
   private
 
     def dsfr_component_doc_link(name, id = nil)
