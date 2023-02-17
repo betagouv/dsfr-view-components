@@ -30,6 +30,13 @@ bin/rails g dsfr_component FancyButton --params title:String count:Integer
 
 Un [guide complet est disponible](https://betagouv.github.io/dsfr-view-components/). Il contient des instructions pour l'installation et l'usage de cette gem. Les exemples présents éxecutent le code et seront donc toujours à jour.
 
+## Installation
+
+Pour utiliser cette gem dans votre application Rails, il faut ajouter cette ligne dans `config/application.rb`:
+
+```ruby
+require "dsfr/components"
+```
 
 ## Composants disponibles
 
@@ -86,92 +93,9 @@ This library also provides helpers for creating [links](https://govuk-components
 and [back to top links](https://govuk-components.netlify.app/helpers/back-to-top-link).
 -->
 
-<!--
-## Alternative syntax
+## Services utilisant cette gem
 
-All of the components can be rendered in two ways:
-
-* directly using Rails’ `#render` method:
-
-  ```erb
-    <%= render DsfrComponent::WarningTextComponent.new do %>
-      A serious warning
-    <% end %>
-  ```
-
-* via the helper wrapper:
-
-  ```erb
-    <%= dsfr_warning_text do %>
-      A serious warning
-    <% end %>
-  ```
-
-  The naming convention for helpers is `dsfr_` followed by the component’s name in snake case. You can see the full list in [DsfrComponentsHelper](app/helpers/dsfr_components_helper.rb).
-
-## Example use
-
-This library allows components to be rendered with Rails’ `render` method or via the provided helpers. Here we’ll use the `dsfr_tabs` to render three tabbed sections:
-
-```erb
-<%= dsfr_tabs(title: 'Days of the week') do |component| %>
-  <% component.tab(label: 'Monday') do %>
-    <p>Monday’s child is fair of face</p>
-  <% end %>
-
-  <% component.tab(label: 'Tuesday') do %>
-    <p>Tuesday’s child is full of grace</p>
-  <% end %>
-
-  <% component.tab(label: 'Wednesday') do %>
-    <p>Wednesday’s child is full of woe</p>
-  <% end %>
-<% end %>
-```
-
-Here are the rendered tabs:
-
-![Tabs preview](docs/images/tabs.png)
-
-For examples on usage see the [guide page](https://govuk-components.netlify.app/).
-
-## Setup
-
-Add this line to your `config/application.rb`:
-
-```ruby
-require "govuk/components"
-```
-
-## Services using this library
-
-* [Apply for teacher training](https://github.com/DFE-Digital/apply-for-teacher-training)
-* [Find postgraduate teacher training](https://github.com/DFE-Digital/find-teacher-training)
-* [Get help with technology](https://github.com/DFE-Digital/get-help-with-tech)
-* [Publish teacher training courses](https://github.com/DFE-Digital/publish-teacher-training)
-* [Register trainee teachers](https://github.com/DFE-Digital/register-trainee-teachers)
-* [Teaching Vacancies](https://github.com/DFE-Digital/teaching-vacancies)
-
-## Installation
-
-Ajouter cette ligne à votre Gemfile:
-
-```ruby
-gem 'dsfr-components'
-```
-
-And then execute:
-
-```sh
-bundle
-```
-
-Or install it yourself as:
-
-```sh
-gem install govuk-components
-```
--->
+- [Collectif Objets](https://collectif-objets.beta.gouv.fr/) - [code source](https://github.com/betagouv/collectif-objets)
 
 ## Contribuer
 
