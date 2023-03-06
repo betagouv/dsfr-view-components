@@ -13,14 +13,13 @@ module DsfrComponent
       @image_alt = image_alt
       @description = description
       @orientation = orientation
-      @background = background
 
       super(classes: classes, html_attributes: html_attributes)
     end
 
   private
 
-    attr_reader :title, :url, :image_src, :image_alt, :description, :orientation, :background
+    attr_reader :title, :url, :image_src, :image_alt, :description, :orientation
 
     def default_attributes
       k = %w[fr-tile fr-enlarge-link]
