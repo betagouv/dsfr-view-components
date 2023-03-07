@@ -1,10 +1,10 @@
 <%= tag.div(**html_attributes) do %>
   <div class="fr-tile__body">
-    <h4 class="fr-tile__title">
+    <%= title_tag(class: "fr-tile__title") do %>
       <a class="fr-tile__link" href="<%= url %>">
       <%= title %>
       </a>
-    </h4>
+    <% end %>
     <% if description.present? %>
       <p class="fr-tile__desc">
         <%= description %>

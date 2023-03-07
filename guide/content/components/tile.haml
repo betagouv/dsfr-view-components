@@ -23,5 +23,11 @@ title: Tuile (Tile)
 = render('/partials/example.haml', caption: "Tuile horizontale", code: tile_horizontal) do
   Tuile horizontale avec image, titre et description
 
+= render('/partials/example.haml', caption: "Tuile avec un niveau de titre spécifique", code: tile_heading_level) do
+  :markdown
+    L’argument `heading_level` ne change pas l’aspect de la tuile mais permet d’adapter le niveau du heading à votre page pour améliorer l’accessibilité en respectant la cohérence de niveaux de titres.
+
+    Le niveau par défaut est `4`, vous pouvez l’augmenter ou le baisser selon votre contexte.
+
 .fr-mt-4w
   = render('/partials/related-info.haml', links: dsfr_component_doc_link("Tuile"))
