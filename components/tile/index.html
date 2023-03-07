@@ -389,6 +389,69 @@ HTML
 </div>
 </div>
 </figure>
+<h3 class="fr-mt-8w" id="tuile-avec-un-niveau-de-titre-specifique">
+<a class="header-anchor" href="#tuile-avec-un-niveau-de-titre-specifique">Tuile avec un niveau de titre spécifique</a>
+</h3>
+<div class="fr-text-wrap">
+<p>L’argument <code>heading_level</code> ne change pas l’aspect de la tuile mais permet d’adapter le niveau du heading à votre page pour améliorer l’accessibilité en respectant la cohérence de niveaux de titres.</p>
+
+<p>Le niveau par défaut est <code>4</code>, vous pouvez l’augmenter ou le baisser selon votre contexte.</p>
+
+
+
+</div>
+<figure class="app-example">
+<h4>Code</h4>
+<pre class="highlight"><code class="language-haml"><span class="p">=</span> <span class="n">dsfr_tile</span><span class="p">(</span><span class="ss">title: </span><span class="s2">"Orgue de Fontainebleau"</span><span class="p">,</span>
+            <span class="ss">url: </span><span class="s2">"#"</span><span class="p">,</span>
+            <span class="ss">image_src: </span><span class="s2">"/assets/images/orgue.jpg"</span><span class="p">,</span>
+            <span class="ss">image_alt: </span><span class="s2">"Orgue orange et bleu"</span><span class="p">,</span>
+            <span class="ss">heading_level: </span><span class="mi">2</span><span class="p">,</span>
+            <span class="ss">html_attributes: </span><span class="p">{</span><span class="ss">style: </span><span class="s2">"max-width: 20rem;"</span><span class="p">})</span></code></pre>
+<h4>Résultat</h4>
+<div class="fr-tabs">
+<ul class="fr-tabs__list" role="tablist">
+<li role="presentation">
+<button aria-controls="output-rendered-tuile-avec-un-niveau-de-titre-specifique" aria-selected="true" class="fr-tabs__tab" id="output-rendered-tuile-avec-un-niveau-de-titre-specifique" role="tab" tabindex="0">
+Rendu
+</button>
+</li>
+<li role="presentation">
+<button aria-controls="output-html-tuile-avec-un-niveau-de-titre-specifique" aria-selected="false" class="fr-tabs__tab" id="output-html-tuile-avec-un-niveau-de-titre-specifique" role="tab" tabindex="0">
+HTML
+</button>
+</li>
+</ul>
+<div aria-labelledby="output-rendered-tuile-avec-un-niveau-de-titre-specifique" class="fr-tabs__panel fr-tabs__panel--selected" id="output-rendered-tuile-avec-un-niveau-de-titre-specifique" role="tabpanel">
+<div class="fr-tile fr-enlarge-link" style="max-width: 20rem;">
+  <div class="fr-tile__body">
+    <h2 class="fr-tile__title">
+      <a class="fr-tile__link" href="#">
+        Orgue de Fontainebleau
+      </a>
+    </h2>
+  </div>
+  <div class="fr-tile__img">
+    <img src="../../assets/images/orgue.jpg" class="fr-responsive-img" alt="Orgue orange et bleu">
+  </div>
+</div>
+</div>
+<div aria-labelledby="output-html-tuile-avec-un-niveau-de-titre-specifique" class="fr-tabs__panel" id="output-html-tuile-avec-un-niveau-de-titre-specifique" role="tabpanel">
+<pre class="highlight"><code class="language-html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-tile fr-enlarge-link"</span> <span class="na">style=</span><span class="s">"max-width: 20rem;"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-tile__body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"fr-tile__title"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"fr-tile__link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+        Orgue de Fontainebleau
+      <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/h2&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-tile__img"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"/assets/images/orgue.jpg"</span> <span class="na">class=</span><span class="s">"fr-responsive-img"</span> <span class="na">alt=</span><span class="s">"Orgue orange et bleu"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+</div>
+</div>
+</figure>
 <div class="fr-mt-4w">
 <h2>
 Plus d’informations
