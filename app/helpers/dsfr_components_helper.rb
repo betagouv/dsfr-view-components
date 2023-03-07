@@ -8,6 +8,7 @@ module DsfrComponentsHelper
     dsfr_badge: 'DsfrComponent::BadgeComponent',
     dsfr_tag: 'DsfrComponent::TagComponent',
     dsfr_stepper: 'DsfrComponent::StepperComponent',
+    dsfr_button: 'DsfrComponent::ButtonComponent',
     # DO NOT REMOVE: new component mapping here
   }.freeze
   HELPER_NAME_TO_CLASS_NAME.each do |name, klass|
