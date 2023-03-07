@@ -1,10 +1,13 @@
 module DsfrComponent
   class ModalComponent < DsfrComponent::Base
-    renders_many :buttons, ButtonComponent
+    renders_one :header
+    renders_many :buttons
 
     # @param title [String] Titre de la modale
-    def initialize(title:, classes: [], html_attributes: {})
+    # @param opened [Boolean] Ouvre la modale dès le chargement de la page
+    def initialize(title:, opened: false, classes: [], html_attributes: {})
       @title = title
+      @opened = opened
 
       @id = html_attributes[:id]
       super(classes: classes, html_attributes: html_attributes)
@@ -16,7 +19,7 @@ module DsfrComponent
 
     def default_attributes
       {
-        class: "fr-modal",
+        class: "fr-modal #{@opened ? 'fr-modal--opened' : ''}",
         role: "dialog",
         id: @id,
         "aria-labelledby": title_id

@@ -4,7 +4,11 @@
       <div class="fr-col-12 fr-col-md-8 fr-col-lg-6">
         <div class="fr-modal__body">
           <div class="fr-modal__header">
-            <button class="fr-link--close fr-link" aria-controls="<%= id %>" type="button">Fermer</button>
+            <% if header? %>
+              <%= header %>
+            <% else %>
+              <button class="fr-link--close fr-link" aria-controls="<%= id %>" type="button">Fermer</button>
+            <% end %>
           </div>
           <div class="fr-modal__content">
             <%= content_tag(:h1, title, class: "fr-modal__title", id: title_id) %>
