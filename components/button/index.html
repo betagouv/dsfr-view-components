@@ -1,0 +1,442 @@
+<!DOCTYPE html><html data-fr-scheme="system" lang="fr"><head>
+<meta charset="utf-8">
+<title>
+Button - Composants Rails ViewComponent pour le Système de Design de lʼÉtat
+</title>
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+<meta content="#000091" name="theme-color">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<link href="../../favicon/apple-touch-icon.png" rel="apple-touch-icon">
+<link href="../../favicon/favicon.svg" rel="icon" type="image/svg+xml">
+<link href="../../favicon/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<link crossorigin="use-credentials" href="../../favicon/manifest.webmanifest" rel="manifest">
+<link href="../../stylesheets/application.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="fr-skiplinks">
+<nav aria-label="Accès rapide" class="fr-container" role="navigation">
+<ul class="fr-skiplinks__list">
+<li>
+<a class="fr-link" href="#content">
+Contenu
+</a>
+</li>
+</ul>
+</nav>
+</div>
+<header class="fr-header" role="banner">
+<div class="fr-header__body">
+<div class="fr-container">
+<div class="fr-header__body-row">
+<div class="fr-header__brand fr-enlarge-link">
+<div class="fr-header__brand-top">
+<div class="fr-header__logo">
+<p class="fr-logo">
+République
+<br>
+Française
+</p>
+</div>
+</div>
+<div class="fr-header__service">
+<a href="../../" title="Composants Rails ViewComponent pour le Système de Design de lʼÉtat - Accueil">
+<p class="fr-header__service-title">
+DSFR-View-Components
+</p>
+</a>
+<p class="fr-header__service-tagline">
+Composants Rails ViewComponent pour le Système de Design de lʼÉtat
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+
+<main id="contenu" role="main">
+<div class="fr-container">
+<nav aria-label="Vous êtes ici :" class="fr-breadcrumb" role="navigation">
+<button aria-controls="breadcrumb-1" aria-expanded="false" class="fr-breadcrumb__button">
+Voir le fil d’Ariane
+</button>
+<div class="fr-collapse" id="breadcrumb-1">
+<ol class="fr-breadcrumb__list">
+<li>
+<a class="fr-breadcrumb__link" href="../../">Accueil</a>
+</li>
+<li>
+<a class="fr-breadcrumb__link" aria-current="page" href="">Button</a>
+</li>
+</ol>
+</div>
+</nav>
+
+<h1>Button</h1>
+<div class="fr-text-wrap">
+<p>Le bouton est un élément d’interaction avec l’interface permettant à l’utilisateur d’effectuer une action.</p>
+
+
+</div>
+<h3 class="fr-mt-8w" id="boutons-de-niveaux-differents">
+<a class="header-anchor" href="#boutons-de-niveaux-differents">Boutons de niveaux différents</a>
+</h3>
+<div class="fr-text-wrap">
+<p>Le rendu par défaut d’un bouton.
+Le bouton secondaire est utilisé lorsque l’action est moins prioritaire que l’action principale, comme réinitialiser les valeurs d’un formulaire.
+Le bouton tertiaire est réservé pour des actions contextuelles ou alternatives : fermeture de modale, annuler, réinitialiser, partager, suivre sur un réseau social, copier un lien.</p>
+
+
+
+</div>
+<figure class="app-example">
+<h4>Code</h4>
+<pre class="highlight"><code class="language-haml"><span class="p">=</span> <span class="n">dsfr_button</span><span class="p">(</span><span class="ss">label: </span><span class="s2">"Valider"</span><span class="p">)</span>
+<span class="p">=</span> <span class="n">dsfr_button</span><span class="p">(</span><span class="ss">label: </span><span class="s2">"Valider"</span><span class="p">,</span> <span class="ss">level: :secondary</span><span class="p">)</span>
+<span class="p">=</span> <span class="n">dsfr_button</span><span class="p">(</span><span class="ss">label: </span><span class="s2">"Valider"</span><span class="p">,</span> <span class="ss">level: :tertiary</span><span class="p">)</span></code></pre>
+<h4>Résultat</h4>
+<div class="fr-tabs">
+<ul class="fr-tabs__list" role="tablist">
+<li role="presentation">
+<button aria-controls="output-rendered-boutons-de-niveaux-differents" aria-selected="true" class="fr-tabs__tab" id="output-rendered-boutons-de-niveaux-differents" role="tab" tabindex="0">
+Rendu
+</button>
+</li>
+<li role="presentation">
+<button aria-controls="output-html-boutons-de-niveaux-differents" aria-selected="false" class="fr-tabs__tab" id="output-html-boutons-de-niveaux-differents" role="tab" tabindex="0">
+HTML
+</button>
+</li>
+</ul>
+<div aria-labelledby="output-rendered-boutons-de-niveaux-differents" class="fr-tabs__panel fr-tabs__panel--selected" id="output-rendered-boutons-de-niveaux-differents" role="tabpanel">
+<button class="fr-btn">
+  Valider
+</button>
+<button class="fr-btn fr-btn--secondary">
+  Valider
+</button>
+<button class="fr-btn fr-btn--tertiary">
+  Valider
+</button>
+</div>
+<div aria-labelledby="output-html-boutons-de-niveaux-differents" class="fr-tabs__panel" id="output-html-boutons-de-niveaux-differents" role="tabpanel">
+<pre class="highlight"><code class="language-html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"fr-btn"</span><span class="nt">&gt;</span>
+  Valider
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"fr-btn fr-btn--secondary"</span><span class="nt">&gt;</span>
+  Valider
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"fr-btn fr-btn--tertiary"</span><span class="nt">&gt;</span>
+  Valider
+<span class="nt">&lt;/button&gt;</span></code></pre>
+</div>
+</div>
+</figure>
+<h3 class="fr-mt-8w" id="bouton-desactive">
+<a class="header-anchor" href="#bouton-desactive">Bouton désactivé</a>
+</h3>
+<div class="fr-text-wrap">
+<p>L’état désactivé indique que l’utilisateur ne peut pas interagir avec le bouton. Il ne doit être utilisé que très ponctuellement. Par exemple, lorsqu’on veut indiquer à l’utilisateur qu’il doit procéder à une action en amont.</p>
+
+
+
+</div>
+<figure class="app-example">
+<h4>Code</h4>
+<pre class="highlight"><code class="language-haml"><span class="p">=</span> <span class="n">dsfr_button</span><span class="p">(</span><span class="ss">label: </span><span class="s2">"Valider"</span><span class="p">,</span> <span class="ss">html_attributes: </span><span class="p">{</span> <span class="ss">disabled: </span><span class="kp">true</span> <span class="p">})</span></code></pre>
+<h4>Résultat</h4>
+<div class="fr-tabs">
+<ul class="fr-tabs__list" role="tablist">
+<li role="presentation">
+<button aria-controls="output-rendered-bouton-desactive" aria-selected="true" class="fr-tabs__tab" id="output-rendered-bouton-desactive" role="tab" tabindex="0">
+Rendu
+</button>
+</li>
+<li role="presentation">
+<button aria-controls="output-html-bouton-desactive" aria-selected="false" class="fr-tabs__tab" id="output-html-bouton-desactive" role="tab" tabindex="0">
+HTML
+</button>
+</li>
+</ul>
+<div aria-labelledby="output-rendered-bouton-desactive" class="fr-tabs__panel fr-tabs__panel--selected" id="output-rendered-bouton-desactive" role="tabpanel">
+<button class="fr-btn" disabled="">
+  Valider
+</button>
+</div>
+<div aria-labelledby="output-html-bouton-desactive" class="fr-tabs__panel" id="output-html-bouton-desactive" role="tabpanel">
+<pre class="highlight"><code class="language-html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"fr-btn"</span> <span class="na">disabled=</span><span class="s">"disabled"</span><span class="nt">&gt;</span>
+  Valider
+<span class="nt">&lt;/button&gt;</span></code></pre>
+</div>
+</div>
+</figure>
+<h3 class="fr-mt-8w" id="bouton-avec-icone">
+<a class="header-anchor" href="#bouton-avec-icone">Bouton avec icône</a>
+</h3>
+<div class="fr-text-wrap">
+<p>Il est possible d’ajouter une icône à votre bouton permettant une meilleure compréhension de l’action. Pour cela il suffit d’utiliser la classe CSS de l’icône (voir la documentation des icônes)
+La position de l’icône peut être changée en ajoutant la classe <code>fr-btn--icon-right</code> à votre bouton.</p>
+
+
+
+</div>
+<figure class="app-example">
+<h4>Code</h4>
+<pre class="highlight"><code class="language-haml"><span class="p">=</span> <span class="n">dsfr_button</span><span class="p">(</span><span class="ss">label: </span><span class="s2">"Valider"</span><span class="p">,</span> <span class="ss">icon: </span><span class="s2">"checkbox-circle-line"</span><span class="p">)</span>
+<span class="p">=</span> <span class="n">dsfr_button</span><span class="p">(</span><span class="ss">label: </span><span class="s2">"Valider"</span><span class="p">,</span> <span class="ss">icon: </span><span class="s2">"checkbox-circle-line"</span><span class="p">,</span> <span class="ss">icon_position: :right</span><span class="p">)</span></code></pre>
+<h4>Résultat</h4>
+<div class="fr-tabs">
+<ul class="fr-tabs__list" role="tablist">
+<li role="presentation">
+<button aria-controls="output-rendered-bouton-avec-icone" aria-selected="true" class="fr-tabs__tab" id="output-rendered-bouton-avec-icone" role="tab" tabindex="0">
+Rendu
+</button>
+</li>
+<li role="presentation">
+<button aria-controls="output-html-bouton-avec-icone" aria-selected="false" class="fr-tabs__tab" id="output-html-bouton-avec-icone" role="tab" tabindex="0">
+HTML
+</button>
+</li>
+</ul>
+<div aria-labelledby="output-rendered-bouton-avec-icone" class="fr-tabs__panel fr-tabs__panel--selected" id="output-rendered-bouton-avec-icone" role="tabpanel">
+<button class="fr-btn fr-icon-checkbox-circle-line fr-btn--icon-left">
+  Valider
+</button>
+<button class="fr-btn fr-icon-checkbox-circle-line fr-btn--icon-right">
+  Valider
+</button>
+</div>
+<div aria-labelledby="output-html-bouton-avec-icone" class="fr-tabs__panel" id="output-html-bouton-avec-icone" role="tabpanel">
+<pre class="highlight"><code class="language-html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"fr-btn fr-icon-checkbox-circle-line fr-btn--icon-left"</span><span class="nt">&gt;</span>
+  Valider
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"fr-btn fr-icon-checkbox-circle-line fr-btn--icon-right"</span><span class="nt">&gt;</span>
+  Valider
+<span class="nt">&lt;/button&gt;</span></code></pre>
+</div>
+</div>
+</figure>
+<h3 class="fr-mt-8w" id="bouton-uniquement-avec-icone">
+<a class="header-anchor" href="#bouton-uniquement-avec-icone">Bouton uniquement avec icône</a>
+</h3>
+<div class="fr-text-wrap">
+<p>Limitez l’usage des boutons à icône seule.
+Ils peuvent être utilisés uniquement pour les actions récurrentes, et facilement identifiable (ex : engrenage pour les paramètres ou loupe pour la recherche).
+Ce button doit contenir un libellé, qui sera ainsi lu par les assistants.
+L’attribut title reprenant l’intitulé du bouton peut être ajouté pour permettre l’affichage d’une infobulle.</p>
+
+
+
+</div>
+<figure class="app-example">
+<h4>Code</h4>
+<pre class="highlight"><code class="language-haml"><span class="p">=</span> <span class="n">dsfr_button</span><span class="p">(</span><span class="ss">icon: </span><span class="s2">"checkbox-circle-line"</span><span class="p">,</span> <span class="ss">html_attributes: </span><span class="p">{</span> <span class="ss">title: </span><span class="s2">"Valider"</span> <span class="p">})</span></code></pre>
+<h4>Résultat</h4>
+<div class="fr-tabs">
+<ul class="fr-tabs__list" role="tablist">
+<li role="presentation">
+<button aria-controls="output-rendered-bouton-uniquement-avec-icone" aria-selected="true" class="fr-tabs__tab" id="output-rendered-bouton-uniquement-avec-icone" role="tab" tabindex="0">
+Rendu
+</button>
+</li>
+<li role="presentation">
+<button aria-controls="output-html-bouton-uniquement-avec-icone" aria-selected="false" class="fr-tabs__tab" id="output-html-bouton-uniquement-avec-icone" role="tab" tabindex="0">
+HTML
+</button>
+</li>
+</ul>
+<div aria-labelledby="output-rendered-bouton-uniquement-avec-icone" class="fr-tabs__panel fr-tabs__panel--selected" id="output-rendered-bouton-uniquement-avec-icone" role="tabpanel">
+<button class="fr-btn fr-icon-checkbox-circle-line" title="Valider">
+</button>
+</div>
+<div aria-labelledby="output-html-bouton-uniquement-avec-icone" class="fr-tabs__panel" id="output-html-bouton-uniquement-avec-icone" role="tabpanel">
+<pre class="highlight"><code class="language-html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"fr-btn fr-icon-checkbox-circle-line"</span> <span class="na">title=</span><span class="s">"Valider"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/button&gt;</span></code></pre>
+</div>
+</div>
+</figure>
+<h3 class="fr-mt-8w" id="boutons-de-tailles-differentes">
+<a class="header-anchor" href="#boutons-de-tailles-differentes">Boutons de tailles différentes</a>
+</h3>
+<div class="fr-text-wrap">
+<p>La taille medium (<code>:md</code>) est la taille de bouton par défaut.
+Les tailles <code>:md</code> et <code>:lg</code> sont à utiliser en priorité.
+La taille <code>:sm</code> pourra être utilisé pour créer certains composants, évitez de l’utiliser en mobile car la zone de “touch” sur écran tactile n’est pas suffisante.</p>
+
+
+
+</div>
+<figure class="app-example">
+<h4>Code</h4>
+<pre class="highlight"><code class="language-haml"><span class="p">=</span> <span class="n">dsfr_button</span><span class="p">(</span><span class="ss">label: </span><span class="s2">"Valider"</span><span class="p">,</span> <span class="ss">size: :sm</span><span class="p">)</span>
+<span class="p">=</span> <span class="n">dsfr_button</span><span class="p">(</span><span class="ss">label: </span><span class="s2">"Valider"</span><span class="p">,</span> <span class="ss">size: :lg</span><span class="p">)</span></code></pre>
+<h4>Résultat</h4>
+<div class="fr-tabs">
+<ul class="fr-tabs__list" role="tablist">
+<li role="presentation">
+<button aria-controls="output-rendered-boutons-de-tailles-differentes" aria-selected="true" class="fr-tabs__tab" id="output-rendered-boutons-de-tailles-differentes" role="tab" tabindex="0">
+Rendu
+</button>
+</li>
+<li role="presentation">
+<button aria-controls="output-html-boutons-de-tailles-differentes" aria-selected="false" class="fr-tabs__tab" id="output-html-boutons-de-tailles-differentes" role="tab" tabindex="0">
+HTML
+</button>
+</li>
+</ul>
+<div aria-labelledby="output-rendered-boutons-de-tailles-differentes" class="fr-tabs__panel fr-tabs__panel--selected" id="output-rendered-boutons-de-tailles-differentes" role="tabpanel">
+<button class="fr-btn fr-btn--sm">
+  Valider
+</button>
+<button class="fr-btn fr-btn--lg">
+  Valider
+</button>
+</div>
+<div aria-labelledby="output-html-boutons-de-tailles-differentes" class="fr-tabs__panel" id="output-html-boutons-de-tailles-differentes" role="tabpanel">
+<pre class="highlight"><code class="language-html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"fr-btn fr-btn--sm"</span><span class="nt">&gt;</span>
+  Valider
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"fr-btn fr-btn--lg"</span><span class="nt">&gt;</span>
+  Valider
+<span class="nt">&lt;/button&gt;</span></code></pre>
+</div>
+</div>
+</figure>
+<h2>
+Plus d’informations
+</h2>
+<ul>
+<li>
+<a target="_blank" rel="noopener" href="https://www.systeme-de-design.gouv.fr/elements-d-interface/composants//bouton/">Bouton sur la documentation du Système de Design de l’État</a>
+</li>
+</ul>
+
+
+</div>
+</main>
+<footer class="fr-footer fr-mt-8w" id="footer" role="contentinfo">
+<div class="fr-container">
+<div class="fr-footer__body">
+<div class="fr-footer__brand fr-enlarge-link">
+<p class="fr-logo">
+République
+<br>
+Française
+</p>
+</div>
+<div class="fr-footer__content">
+<p class="fr-footer__content-desc">
+Composants Rails ViewComponent pour le Système de Design de lʼÉtat
+<br>
+Projet non-officiel porté par beta.gouv
+</p>
+<ul class="fr-footer__content-list">
+<li class="fr-footer__content-item">
+<a class="fr-footer__content-link" href="https://github.com/betagouv/dsfr-view-components" target="_blank">
+GitHub
+</a>
+</li>
+<li class="fr-footer__content-item">
+<a class="fr-footer__content-link" href="https://www.systeme-de-design.gouv.fr/" target="_blank">
+Système de Design de lʼÉtat
+</a>
+</li>
+<!-- li.fr-footer__content-item -->
+<!-- a.fr-footer__content-link target="_blank" href=rubygems_link -->
+<!-- RubyGems -->
+<!-- li.fr-footer__content-item -->
+<!-- a.fr-footer__content-link target="_blank" href=documentation_link -->
+<!-- RubyDoc Documentation -->
+<!-- li.fr-footer__content-item -->
+<!-- a.fr-footer__content-link target="_blank" href=code_climate_report_link -->
+<!-- Code Climate report -->
+</ul>
+</div>
+</div>
+<div class="fr-footer__bottom">
+<ul class="fr-footer__bottom-list">
+<li class="fr-footer__bottom-item">
+<a class="fr-footer__bottom-link" href="../../">Accueil</a>
+</li>
+<li class="fr-footer__bottom-item">
+<button aria-controls="fr-theme-modal" class="fr-footer__bottom-link" data-fr-opened="false">
+Paramètres d'affichage
+</button>
+</li>
+</ul>
+<div class="fr-footer__bottom-copy">
+<p>
+Sauf mention contraire, tous les contenus de ce site sont sous
+<a target="_blank" rel="noopener" href="https://github.com/etalab/licence-ouverte/blob/master/LO.md">licence etalab-2.0</a>
+</p>
+</div>
+</div>
+</div>
+</footer>
+<dialog aria-labelledby="fr-theme-modal-title" class="fr-modal" id="fr-theme-modal" role="dialog">
+<div class="fr-container fr-container--fluid fr-container-md">
+<div class="fr-grid-row fr-grid-row--center">
+<div class="fr-col-12 fr-col-md-6 fr-col-lg-4">
+<div class="fr-modal__body">
+<div class="fr-modal__header">
+<button aria-controls="fr-theme-modal" class="fr-link--close fr-link">
+Fermer
+</button>
+</div>
+<div class="fr-modal__content">
+<h1 class="fr-modal__title" id="fr-theme-modal-title">
+Paramètres d’affichage
+</h1>
+<div class="fr-form-group fr-display" id="fr-display">
+<div class="fr-form-group">
+<fieldset class="fr-fieldset">
+<legend class="fr-fieldset__legend fr-text--regular" id="-legend">
+Choisissez un thème pour personnaliser l’apparence du site.
+</legend>
+<div class="fr-fieldset__content">
+<div class="fr-radio-group fr-radio-rich">
+<input id="fr-radios-theme-light" name="fr-radios-theme" type="radio" value="light">
+<label class="fr-label" for="fr-radios-theme-light">
+Thème clair
+</label>
+<div class="fr-radio-rich__img" data-fr-inject-svg="">
+<img alt="" src="../../artwork/light.svg">
+</div>
+</div>
+<div class="fr-radio-group fr-radio-rich">
+<input id="fr-radios-theme-dark" name="fr-radios-theme" type="radio" value="dark">
+<label class="fr-label" for="fr-radios-theme-dark">
+Thème sombre
+</label>
+<div class="fr-radio-rich__img" data-fr-inject-svg="">
+<img alt="" src="../../artwork/dark.svg">
+</div>
+</div>
+<div class="fr-radio-group fr-radio-rich">
+<input id="fr-radios-theme-system" name="fr-radios-theme" type="radio" value="system">
+<label class="fr-label" for="fr-radios-theme-system">
+Système
+<span class="fr-hint-text">Utilise les paramètres système.</span>
+</label>
+<div class="fr-radio-rich__img" data-fr-inject-svg="">
+<img alt="" src="../../artwork/system.svg">
+</div>
+</div>
+</div>
+</fieldset>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</dialog>
+
+<script src="../../javascripts/dsfr.module.min.js" type="module"></script>
+<script nomodule="true" src="../../javascripts/dsfr.nomodule.min.js" type="text/javascript"></script>
+
+
+
+</body></html>
