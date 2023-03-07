@@ -50,13 +50,13 @@ module Examples
       RAW
     end
 
-    def tile_title_tag
+    def tile_heading_level
       <<~RAW
         = dsfr_tile(title: "Orgue de Fontainebleau",
                     url: "#",
                     image_src: "/assets/images/orgue.jpg",
                     image_alt: "Orgue orange et bleu",
-                    title_tag: :h2,
+                    heading_level: 2,
                     html_attributes: {style: "max-width: 20rem;"})
       RAW
     end

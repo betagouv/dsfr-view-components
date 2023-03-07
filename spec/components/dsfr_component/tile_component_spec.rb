@@ -58,7 +58,7 @@ RSpec.describe(DsfrComponent::TileComponent, type: :component) do
   end
 
   context 'with specific title_level' do
-    let(:args) { { url: "/path", title: 'Titre', title_tag: :h2 } }
+    let(:args) { { url: "/path", title: 'Titre', heading_level: 2 } }
 
     specify 'renders correctly' do
       expect(rendered_content).to have_tag('div', with: { class: "fr-tile fr-enlarge-link" }) do
