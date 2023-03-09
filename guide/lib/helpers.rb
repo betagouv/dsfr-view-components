@@ -48,3 +48,4 @@ use_helper Examples::StepperHelpers
 use_helper Examples::ButtonHelpers
 use_helper Examples::ModalHelpers
 use_helper Examples::HeaderHelpers
+use_helper Examples::TabsHelpers
