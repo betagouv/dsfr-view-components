@@ -1,16 +1,6 @@
 require 'spec_helper'
 
 RSpec.describe(DsfrComponent::AccordionComponent, type: :component) do
-  let(:sections) do
-    {
-      'section 1' => 'first section content',
-      'section 2' => 'second section content',
-      'section 3' => 'third section content'
-    }
-  end
-
-  let(:kwargs) { { html_attributes: { id: id } } }
-
   context "two sections" do
     subject! do
       render_inline(DsfrComponent::AccordionComponent.new) do |component|
