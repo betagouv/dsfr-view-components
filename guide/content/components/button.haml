@@ -1,0 +1,38 @@
+---
+title: Button
+---
+
+.fr-text-wrap
+  :markdown
+    Le bouton est un élément d’interaction avec l’interface permettant à l’utilisateur d’effectuer une action.
+
+= render('/partials/example.haml', caption: "Boutons de niveaux différents", code: button_levels) do
+  :markdown
+    Le rendu par défaut d’un bouton.
+    Le bouton secondaire est utilisé lorsque l’action est moins prioritaire que l'action principale, comme réinitialiser les valeurs d’un formulaire.
+    Le bouton tertiaire est réservé pour des actions contextuelles ou alternatives : fermeture de modale, annuler, réinitialiser, partager, suivre sur un réseau social, copier un lien.
+
+= render('/partials/example.haml', caption: "Bouton désactivé", code: button_disabled) do
+  :markdown
+    L'état désactivé indique que l'utilisateur ne peut pas interagir avec le bouton. Il ne doit être utilisé que très ponctuellement. Par exemple, lorsqu’on veut indiquer à l’utilisateur qu’il doit procéder à une action en amont.
+
+= render('/partials/example.haml', caption: "Bouton avec icône", code: button_icons) do
+  :markdown
+    Il est possible d'ajouter une icône à votre bouton permettant une meilleure compréhension de l’action. Pour cela il suffit d’utiliser la classe CSS de l’icône (voir la documentation des icônes)
+    La position de l’icône peut être changée en ajoutant la classe `fr-btn--icon-right` à votre bouton.
+
+= render('/partials/example.haml', caption: "Bouton uniquement avec icône", code: button_icon_only) do
+  :markdown
+    Limitez l’usage des boutons à icône seule.
+    Ils peuvent être utilisés uniquement pour les actions récurrentes, et facilement identifiable (ex : engrenage pour les paramètres ou loupe pour la recherche).
+    Ce button doit contenir un libellé, qui sera ainsi lu par les assistants.
+    L'attribut title reprenant l'intitulé du bouton peut être ajouté pour permettre l'affichage d'une infobulle.
+
+= render('/partials/example.haml', caption: "Boutons de tailles différentes", code: button_sizes) do
+  :markdown
+    La taille medium (`:md`) est la taille de bouton par défaut.
+    Les tailles `:md` et `:lg` sont à utiliser en priorité.
+    La taille `:sm` pourra être utilisé pour créer certains composants, évitez de l’utiliser en mobile car la zone de “touch” sur écran tactile n’est pas suffisante.
+
+
+= render('/partials/related-info.haml', links: dsfr_component_doc_link("Bouton"))

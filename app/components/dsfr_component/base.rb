@@ -5,6 +5,8 @@ class DsfrComponent::Base < ViewComponent::Base
 
   delegate :config, to: Dsfr::Components
 
+  HEADING_LEVELS = [1, 2, 3, 4, 5, 6].freeze
+
   def initialize(classes:, html_attributes:)
     if classes.nil?
       Rails.logger.warn("classes is nil, if no custom classes are needed omit the param")

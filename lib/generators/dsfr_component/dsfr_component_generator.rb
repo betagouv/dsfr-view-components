@@ -34,7 +34,7 @@ class DsfrComponentGenerator < Rails::Generators::NamedBase
   def append_guide_helper
     destination = "guide/lib/helpers.rb"
 
-    append_to_file destination, "use_helper Examples::#{name}Helpers"
+    append_to_file destination, "use_helper Examples::#{name}Helpers\n" # trailing new line
   end
 
   def map_component_helper
