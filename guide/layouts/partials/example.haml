@@ -41,7 +41,8 @@
     .fr-tabs__panel.fr-tabs__panel--selected{
       role: "tabpanel",
       "aria-labelledby" => "output-rendered-#{anchor_id(caption)}",
-      id: "output-rendered-#{anchor_id(caption)}"
+      id: "output-rendered-#{anchor_id(caption)}",
+      class: defined?(output_class) ? output_class : ""
     }
       = format_haml(code)
 

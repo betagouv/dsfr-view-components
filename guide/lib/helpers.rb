@@ -47,3 +47,4 @@ use_helper Examples::TagHelpers
 use_helper Examples::StepperHelpers
 use_helper Examples::ButtonHelpers
 use_helper Examples::ModalHelpers
+use_helper Examples::HeaderHelpers
