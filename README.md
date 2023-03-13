@@ -43,7 +43,7 @@ Les composants disponibles sont :
 - [x] Badge
 - [ ] Bandeau d'information importante
 - [ ] Barre de recherche - Search bar
-- [ ] Boutons - Buttons
+- [x] Boutons - Buttons
 - [ ] Groupe de bouton
 - [ ] Bouton FranceConnect
 - [ ] Boutons radio
@@ -66,7 +66,7 @@ Les composants disponibles sont :
 - [ ] Menu latéral - Side menu
 - [ ] Mise en avant - Call out
 - [ ] Mise en exergue - Highlight
-- [ ] Modale - Modal
+- [x] Modale - Modal
 - [ ] Navigation principale - Main navigation
 - [ ] Onglets - Tabs
 - [ ] Pagination
