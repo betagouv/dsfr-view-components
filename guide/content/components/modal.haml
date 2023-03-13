@@ -1,0 +1,40 @@
+---
+title: Modal
+---
+
+.fr-text-wrap
+  :markdown
+    La modale permet de concentrer l’attention de l’utilisateur exclusivement sur une tâche ou un élément d’information, sans perdre le contexte de la page en cours. Ce composant nécessite une action de l’utilisateur afin d'être clôturée ou ouverte.
+
+
+= render('/partials/example.haml', caption: "Modale simple", code: modal_default) do
+  :markdown
+    La modale par défaut permet de mettre en évidence une information qui ne nécessite pas d’action de l’utilisateur.
+
+    Les modales s’affichent suite à un clic sur un bouton qui possède l’attribut `aria-controls` correspondant à l’identifiant de la modale ET l’attribut `data-fr-opened` à `false`.
+
+= render('/partials/example.haml', caption: "Modale avec un bouton", code: modal_button) do
+  :markdown
+    La modale avec une zone d’action permet de guider l’utilisateur vers des actions attendues.
+
+    Dans ce cas, vous pouvez passer les arguments au composant Button directement.
+
+= render('/partials/example.haml', caption: "Modale avec deux boutons", code: modal_two_buttons) do
+  :markdown
+    Il peut aussi y avoir un groupe de boutons hiérarchisé.
+
+= render('/partials/example.haml', caption: "Modale pré-ouverte pour Turbo Drive", code: modal_turbo) do
+  :markdown
+    La modale peut s’afficher ouverte dès le chargement de la page grace à l’option `opened: true`.
+    Cela permet notamment de rendre compatible cette modale avec un système comme Turbo Drive et de développer une application progressive, qui marchera avec ou sans JS.
+
+    Il faut pour cela bien penser que les boutons de fermetures natifs des modales ne fonctionneront pas dans ce cas (sans JS).
+    On peut donc par exemple utiliser des liens de navigation `dsfr_link_to` plutôt que des boutons.
+    De la même manière, il faut aussi bien penser à modifier le bouton du header par un lien en utilisant le slot `header`.
+
+= render('/partials/related-info.haml', links: dsfr_component_doc_link("Modale"))
+
+:css
+  .fr-tabs__panel {
+    min-height: 400px;
+  }
