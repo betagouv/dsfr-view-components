@@ -91,10 +91,16 @@ pour être facilement réutilisables.</p>
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">gem</span> <span class="s1">'dsfr-view-components'</span>
 </code></pre></div></div>
 
+<p>Ajoutez cette ligne dans <code>config/application.rb</code>:</p>
+
+<p><code>ruby
+require "dsfr/components"
+</code></p>
+
 <p>Au redémarrage vous devriez avoir accès à tous les composants du DSFR.
 Vous pouvez le vérifier en testant dans une console avec <code>rails console</code>:</p>
 
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="no">DsfrComponent</span><span class="o">::</span><span class="no">PanelComponent</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="ss">title_text: </span><span class="s2">"Hello"</span><span class="p">,</span> <span class="ss">text: </span><span class="s2">"world!"</span><span class="p">)</span>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="no">DsfrComponent</span><span class="o">::</span><span class="no">TagComponent</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="ss">title: </span><span class="s2">"bleu"</span><span class="p">,</span> <span class="ss">icon: </span><span class="s2">"arrow-right-line"</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p>Si vous ne voyez pas de message d’erreur, tout fonctionne. Vous pouvez passer à
