@@ -23,16 +23,16 @@ title: Installation
 
       Ajoutez cette ligne dans `config/application.rb`:
 
-      ```ruby
+      ~ruby
       require "dsfr/components"
-      ```
+      ~
 
       Au redémarrage vous devriez avoir accès à tous les composants du DSFR.
       Vous pouvez le vérifier en testant dans une console avec `rails console`:
 
-      ~~~ruby
+      ~ruby
         DsfrComponent::TagComponent.new(title: "bleu", icon: "arrow-right-line")
-      ~~~
+      ~
 
       Si vous ne voyez pas de message d'erreur, tout fonctionne. Vous pouvez passer à
       [l'utilisation de composants dans vos templates](/introduction/utilisation)
