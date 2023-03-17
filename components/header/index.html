@@ -1,0 +1,1362 @@
+<!DOCTYPE html><html data-fr-scheme="system" lang="fr"><head>
+<meta charset="utf-8">
+<title>
+En-tête - Header - Composants Rails ViewComponent pour le Système de Design de lʼÉtat
+</title>
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+<meta content="#000091" name="theme-color">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<link href="../../favicon/apple-touch-icon.png" rel="apple-touch-icon">
+<link href="../../favicon/favicon.svg" rel="icon" type="image/svg+xml">
+<link href="../../favicon/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<link crossorigin="use-credentials" href="../../favicon/manifest.webmanifest" rel="manifest">
+<link href="../../stylesheets/application.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="fr-skiplinks">
+<nav aria-label="Accès rapide" class="fr-container" role="navigation">
+<ul class="fr-skiplinks__list">
+<li>
+<a class="fr-link" href="#content">
+Contenu
+</a>
+</li>
+</ul>
+</nav>
+</div>
+<header class="fr-header" role="banner">
+<div class="fr-header__body">
+<div class="fr-container">
+<div class="fr-header__body-row">
+<div class="fr-header__brand fr-enlarge-link">
+<div class="fr-header__brand-top">
+<div class="fr-header__logo">
+<p class="fr-logo">
+République
+<br>
+Française
+</p>
+</div>
+</div>
+<div class="fr-header__service">
+<a href="../../" title="Composants Rails ViewComponent pour le Système de Design de lʼÉtat - Accueil">
+<p class="fr-header__service-title">
+DSFR-View-Components
+</p>
+</a>
+<p class="fr-header__service-tagline">
+Composants Rails ViewComponent pour le Système de Design de lʼÉtat
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+
+<main id="contenu" role="main">
+<div class="fr-container">
+<nav aria-label="Vous êtes ici :" class="fr-breadcrumb" role="navigation">
+<button aria-controls="breadcrumb-1" aria-expanded="false" class="fr-breadcrumb__button">
+Voir le fil d’Ariane
+</button>
+<div class="fr-collapse" id="breadcrumb-1">
+<ol class="fr-breadcrumb__list">
+<li>
+<a class="fr-breadcrumb__link" href="../../">Accueil</a>
+</li>
+<li>
+<a class="fr-breadcrumb__link" aria-current="page" href="">En-tête - Header</a>
+</li>
+</ol>
+</div>
+</nav>
+
+<h1>En-tête - Header</h1>
+<div class="fr-text-wrap">
+<p>L’en-tête permet aux utilisateurs d’identifier sur quel site ils se trouvent. Il peut donner accès à la recherche et à certaines pages ou fonctionnalités clés.</p>
+
+
+</div>
+<h3 class="fr-mt-8w" id="en-tete-minimale">
+<a class="header-anchor" href="#en-tete-minimale">En-tête minimale</a>
+</h3>
+<div class="fr-text-wrap">
+<p>Un header minimal est composé d’un logo textuel et d’un titre.</p>
+
+
+
+</div>
+<figure class="app-example">
+<h4>Code</h4>
+<pre class="highlight"><code class="language-haml"><span class="p">=</span> <span class="n">dsfr_header</span> <span class="ss">logo_text: </span><span class="s2">"Ministère du Travail"</span><span class="p">,</span> <span class="ss">title: </span><span class="s2">"Égapro"</span></code></pre>
+<h4>Résultat</h4>
+<div class="fr-tabs">
+<ul class="fr-tabs__list" role="tablist">
+<li role="presentation">
+<button aria-controls="output-rendered-en-tete-minimale" aria-selected="true" class="fr-tabs__tab" id="output-rendered-en-tete-minimale" role="tab" tabindex="0">
+Rendu
+</button>
+</li>
+<li role="presentation">
+<button aria-controls="output-html-en-tete-minimale" aria-selected="false" class="fr-tabs__tab" id="output-html-en-tete-minimale" role="tab" tabindex="0">
+HTML
+</button>
+</li>
+</ul>
+<div aria-labelledby="output-rendered-en-tete-minimale" class="fr-tabs__panel fr-tabs__panel--selected" id="output-rendered-en-tete-minimale" role="tabpanel">
+<header class="fr-header" role="banner">
+  <div class="fr-header__body">
+    <div class="fr-container">
+      <div class="fr-header__body-row">
+        <div class="fr-header__brand fr-enlarge-link">
+          <div class="fr-header__brand-top">
+            <div class="fr-header__logo">
+              <p class="fr-logo">
+                Ministère du Travail
+              </p>
+            </div>
+          </div>
+          <div class="fr-header__service">
+            <a href="../../" title="Accueil - Égapro">
+              <p class="fr-header__service-title">
+                Égapro
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+</div>
+<div aria-labelledby="output-html-en-tete-minimale" class="fr-tabs__panel" id="output-html-en-tete-minimale" role="tabpanel">
+<pre class="highlight"><code class="language-html"><span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"fr-header"</span> <span class="na">role=</span><span class="s">"banner"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-container"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__body-row"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__brand fr-enlarge-link"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__brand-top"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__logo"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"fr-logo"</span><span class="nt">&gt;</span>
+                Ministère du Travail
+              <span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__service"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span> <span class="na">title=</span><span class="s">"Accueil - Égapro"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"fr-header__service-title"</span><span class="nt">&gt;</span>
+                Égapro
+              <span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/header&gt;</span></code></pre>
+</div>
+</div>
+</figure>
+<h3 class="fr-mt-8w" id="en-tete-avec-un-logo-sur-deux-lignes">
+<a class="header-anchor" href="#en-tete-avec-un-logo-sur-deux-lignes">En-tête avec un logo sur deux lignes</a>
+</h3>
+<div class="fr-text-wrap">
+<p>Le texte du logo peut être sur deux lignes en ajoutant une classe CSS personnalisée</p>
+
+
+
+</div>
+<figure class="app-example">
+<h4>Code</h4>
+<pre class="highlight"><code class="language-haml"><span class="p">=</span> <span class="n">dsfr_header</span> <span class="ss">logo_text: </span><span class="s2">"Ministère </span><span class="se">\n</span><span class="s2">du Travail"</span><span class="p">,</span> <span class="ss">title: </span><span class="s2">"Égapro"</span><span class="p">,</span> <span class="ss">classes: </span><span class="p">[</span><span class="s2">"logo-pre-line"</span><span class="p">]</span>
+
+<span class="nd">:css
+</span>  <span class="nc">.logo-pre-line</span> <span class="nc">.fr-logo</span> <span class="p">{</span>
+    <span class="nl">white-space</span><span class="p">:</span> <span class="n">pre-line</span><span class="p">;</span>
+  <span class="p">}</span></code></pre>
+<h4>Résultat</h4>
+<div class="fr-tabs">
+<ul class="fr-tabs__list" role="tablist">
+<li role="presentation">
+<button aria-controls="output-rendered-en-tete-avec-un-logo-sur-deux-lignes" aria-selected="true" class="fr-tabs__tab" id="output-rendered-en-tete-avec-un-logo-sur-deux-lignes" role="tab" tabindex="0">
+Rendu
+</button>
+</li>
+<li role="presentation">
+<button aria-controls="output-html-en-tete-avec-un-logo-sur-deux-lignes" aria-selected="false" class="fr-tabs__tab" id="output-html-en-tete-avec-un-logo-sur-deux-lignes" role="tab" tabindex="0">
+HTML
+</button>
+</li>
+</ul>
+<div aria-labelledby="output-rendered-en-tete-avec-un-logo-sur-deux-lignes" class="fr-tabs__panel fr-tabs__panel--selected" id="output-rendered-en-tete-avec-un-logo-sur-deux-lignes" role="tabpanel">
+<header class="fr-header logo-pre-line" role="banner">
+  <div class="fr-header__body">
+    <div class="fr-container">
+      <div class="fr-header__body-row">
+        <div class="fr-header__brand fr-enlarge-link">
+          <div class="fr-header__brand-top">
+            <div class="fr-header__logo">
+              <p class="fr-logo">
+                Ministère 
+                du Travail
+              </p>
+            </div>
+          </div>
+          <div class="fr-header__service">
+            <a href="../../" title="Accueil - Égapro">
+              <p class="fr-header__service-title">
+                Égapro
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<style>
+  .logo-pre-line .fr-logo {
+    white-space: pre-line;
+  }
+</style>
+</div>
+<div aria-labelledby="output-html-en-tete-avec-un-logo-sur-deux-lignes" class="fr-tabs__panel" id="output-html-en-tete-avec-un-logo-sur-deux-lignes" role="tabpanel">
+<pre class="highlight"><code class="language-html"><span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"fr-header logo-pre-line"</span> <span class="na">role=</span><span class="s">"banner"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-container"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__body-row"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__brand fr-enlarge-link"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__brand-top"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__logo"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"fr-logo"</span><span class="nt">&gt;</span>
+                Ministère 
+                du Travail
+              <span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__service"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span> <span class="na">title=</span><span class="s">"Accueil - Égapro"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"fr-header__service-title"</span><span class="nt">&gt;</span>
+                Égapro
+              <span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/header&gt;</span>
+<span class="nt">&lt;style&gt;</span>
+  <span class="nc">.logo-pre-line</span> <span class="nc">.fr-logo</span> <span class="p">{</span>
+    <span class="nl">white-space</span><span class="p">:</span> <span class="n">pre-line</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="nt">&lt;/style&gt;</span></code></pre>
+</div>
+</div>
+</figure>
+<h3 class="fr-mt-8w" id="en-tete-avec-des-acces-rapides">
+<a class="header-anchor" href="#en-tete-avec-des-acces-rapides">En-tête avec des accès rapides</a>
+</h3>
+<div class="fr-text-wrap">
+<p>Un header peut présenter des liens d’accès rapide (<em>tool links</em> dans le code).</p>
+
+
+
+</div>
+<figure class="app-example">
+<h4>Code</h4>
+<pre class="highlight"><code class="language-haml"><span class="p">=</span> <span class="n">dsfr_header</span> <span class="ss">logo_text: </span><span class="s2">"Ministère du Travail"</span><span class="p">,</span> <span class="ss">title: </span><span class="s2">"Égapro"</span><span class="p">,</span> <span class="ss">tagline: </span><span class="s2">"Indice de parité professionelle"</span> <span class="k">do</span> <span class="o">|</span><span class="n">header</span><span class="o">|</span>
+  <span class="p">-</span> <span class="n">header</span><span class="p">.</span><span class="nf">with_tool_link</span> <span class="ss">title: </span><span class="s2">"Comment ça marche"</span><span class="p">,</span> <span class="ss">path: </span><span class="s2">"#comment-ca-marche"</span>
+  <span class="p">-</span> <span class="n">header</span><span class="p">.</span><span class="nf">with_tool_link</span> <span class="ss">title: </span><span class="s2">"Contact"</span><span class="p">,</span> <span class="ss">path: </span><span class="s2">"#contact"</span><span class="p">,</span> <span class="ss">classes: </span><span class="p">[</span><span class="s2">"fr-icon-mail-line"</span><span class="p">]</span></code></pre>
+<h4>Résultat</h4>
+<div class="fr-tabs">
+<ul class="fr-tabs__list" role="tablist">
+<li role="presentation">
+<button aria-controls="output-rendered-en-tete-avec-des-acces-rapides" aria-selected="true" class="fr-tabs__tab" id="output-rendered-en-tete-avec-des-acces-rapides" role="tab" tabindex="0">
+Rendu
+</button>
+</li>
+<li role="presentation">
+<button aria-controls="output-html-en-tete-avec-des-acces-rapides" aria-selected="false" class="fr-tabs__tab" id="output-html-en-tete-avec-des-acces-rapides" role="tab" tabindex="0">
+HTML
+</button>
+</li>
+</ul>
+<div aria-labelledby="output-rendered-en-tete-avec-des-acces-rapides" class="fr-tabs__panel fr-tabs__panel--selected" id="output-rendered-en-tete-avec-des-acces-rapides" role="tabpanel">
+<header class="fr-header" role="banner">
+  <div class="fr-header__body">
+    <div class="fr-container">
+      <div class="fr-header__body-row">
+        <div class="fr-header__brand fr-enlarge-link">
+          <div class="fr-header__brand-top">
+            <div class="fr-header__logo">
+              <p class="fr-logo">
+                Ministère du Travail
+              </p>
+            </div>
+            <div class="fr-header__navbar">
+              <button class="fr-btn--menu fr-btn" data-fr-opened="false" aria-controls="modal-header-menu" aria-haspopup="menu" id="button-header-menu" title="Menu">
+                Menu
+              </button>
+            </div>
+          </div>
+          <div class="fr-header__service">
+            <a href="../../" title="Accueil - Égapro">
+              <p class="fr-header__service-title">
+                Égapro
+              </p>
+            </a>
+            <p class="fr-header__service-tagline">
+              Indice de parité professionelle
+            </p>
+          </div>
+        </div>
+        <div class="fr-header__tools">
+          <div class="fr-header__tools-links">
+            <ul class="fr-btns-group">
+              <li>
+                <a href="#comment-ca-marche" class="fr-btn">
+                  Comment ça marche
+                </a>
+              </li>
+              <li>
+                <a href="#contact" class="fr-btn fr-icon-mail-line">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="fr-header__menu fr-modal" id="modal-header-menu" aria-labelledby="button-header-menu">
+    <div class="fr-container">
+      <button class="fr-btn--close fr-btn" aria-controls="modal-header-menu" title="Fermer">
+        Fermer
+      </button>
+      <div class="fr-header__menu-links">
+        <!-- this seems to get autopopulated with the tool links with JS -->
+      </div>
+    </div>
+  </div>
+</header>
+</div>
+<div aria-labelledby="output-html-en-tete-avec-des-acces-rapides" class="fr-tabs__panel" id="output-html-en-tete-avec-des-acces-rapides" role="tabpanel">
+<pre class="highlight"><code class="language-html"><span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"fr-header"</span> <span class="na">role=</span><span class="s">"banner"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-container"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__body-row"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__brand fr-enlarge-link"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__brand-top"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__logo"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"fr-logo"</span><span class="nt">&gt;</span>
+                Ministère du Travail
+              <span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__navbar"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"fr-btn--menu fr-btn"</span> <span class="na">data-fr-opened=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"modal-header-menu"</span> <span class="na">aria-haspopup=</span><span class="s">"menu"</span> <span class="na">id=</span><span class="s">"button-header-menu"</span> <span class="na">title=</span><span class="s">"Menu"</span><span class="nt">&gt;</span>
+                Menu
+              <span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__service"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span> <span class="na">title=</span><span class="s">"Accueil - Égapro"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"fr-header__service-title"</span><span class="nt">&gt;</span>
+                Égapro
+              <span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"fr-header__service-tagline"</span><span class="nt">&gt;</span>
+              Indice de parité professionelle
+            <span class="nt">&lt;/p&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__tools"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__tools-links"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"fr-btns-group"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;li&gt;</span>
+                <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#comment-ca-marche"</span> <span class="na">class=</span><span class="s">"fr-btn"</span><span class="nt">&gt;</span>
+                  Comment ça marche
+                <span class="nt">&lt;/a&gt;</span>
+              <span class="nt">&lt;/li&gt;</span>
+              <span class="nt">&lt;li&gt;</span>
+                <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#contact"</span> <span class="na">class=</span><span class="s">"fr-btn fr-icon-mail-line"</span><span class="nt">&gt;</span>
+                  Contact
+                <span class="nt">&lt;/a&gt;</span>
+              <span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__menu fr-modal"</span> <span class="na">id=</span><span class="s">"modal-header-menu"</span> <span class="na">aria-labelledby=</span><span class="s">"button-header-menu"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-container"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"fr-btn--close fr-btn"</span> <span class="na">aria-controls=</span><span class="s">"modal-header-menu"</span> <span class="na">title=</span><span class="s">"Fermer"</span><span class="nt">&gt;</span>
+        Fermer
+      <span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__menu-links"</span><span class="nt">&gt;</span>
+        <span class="c">&lt;!-- this seems to get autopopulated with the tool links with JS --&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/header&gt;</span></code></pre>
+</div>
+</div>
+</figure>
+<h3 class="fr-mt-8w" id="en-tete-avec-des-liens-directs">
+<a class="header-anchor" href="#en-tete-avec-des-liens-directs">En-tête avec des liens directs</a>
+</h3>
+<div class="fr-text-wrap">
+<p>Un header peut présenter des liens directs (<em>direct links</em> dans le code).</p>
+
+
+
+</div>
+<figure class="app-example">
+<h4>Code</h4>
+<pre class="highlight"><code class="language-haml"><span class="p">=</span> <span class="n">dsfr_header</span> <span class="ss">logo_text: </span><span class="s2">"Ministère du Travail"</span><span class="p">,</span> <span class="ss">title: </span><span class="s2">"Égapro"</span><span class="p">,</span> <span class="ss">tagline: </span><span class="s2">"Indice de parité professionelle"</span> <span class="k">do</span> <span class="o">|</span><span class="n">header</span><span class="o">|</span>
+  <span class="p">-</span> <span class="n">header</span><span class="p">.</span><span class="nf">with_direct_link_simple</span> <span class="ss">title: </span><span class="s2">"Comment ça marche"</span><span class="p">,</span> <span class="ss">path: </span><span class="s2">"#comment-ca-marche"</span>
+  <span class="p">-</span> <span class="n">header</span><span class="p">.</span><span class="nf">with_direct_link_simple</span> <span class="ss">title: </span><span class="s2">"Contact"</span><span class="p">,</span> <span class="ss">path: </span><span class="s2">"#contact"</span></code></pre>
+<h4>Résultat</h4>
+<div class="fr-tabs">
+<ul class="fr-tabs__list" role="tablist">
+<li role="presentation">
+<button aria-controls="output-rendered-en-tete-avec-des-liens-directs" aria-selected="true" class="fr-tabs__tab" id="output-rendered-en-tete-avec-des-liens-directs" role="tab" tabindex="0">
+Rendu
+</button>
+</li>
+<li role="presentation">
+<button aria-controls="output-html-en-tete-avec-des-liens-directs" aria-selected="false" class="fr-tabs__tab" id="output-html-en-tete-avec-des-liens-directs" role="tab" tabindex="0">
+HTML
+</button>
+</li>
+</ul>
+<div aria-labelledby="output-rendered-en-tete-avec-des-liens-directs" class="fr-tabs__panel fr-tabs__panel--selected" id="output-rendered-en-tete-avec-des-liens-directs" role="tabpanel">
+<header class="fr-header" role="banner">
+  <div class="fr-header__body">
+    <div class="fr-container">
+      <div class="fr-header__body-row">
+        <div class="fr-header__brand fr-enlarge-link">
+          <div class="fr-header__brand-top">
+            <div class="fr-header__logo">
+              <p class="fr-logo">
+                Ministère du Travail
+              </p>
+            </div>
+            <div class="fr-header__navbar">
+              <button class="fr-btn--menu fr-btn" data-fr-opened="false" aria-controls="modal-header-menu" aria-haspopup="menu" id="button-header-menu" title="Menu">
+                Menu
+              </button>
+            </div>
+          </div>
+          <div class="fr-header__service">
+            <a href="../../" title="Accueil - Égapro">
+              <p class="fr-header__service-title">
+                Égapro
+              </p>
+            </a>
+            <p class="fr-header__service-tagline">
+              Indice de parité professionelle
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="fr-header__menu fr-modal" id="modal-header-menu" aria-labelledby="button-header-menu">
+    <div class="fr-container">
+      <button class="fr-btn--close fr-btn" aria-controls="modal-header-menu" title="Fermer">
+        Fermer
+      </button>
+      <div class="fr-header__menu-links">
+        <!-- this seems to get autopopulated with the tool links with JS -->
+      </div>
+      <nav class="fr-nav" id="navigation-direct-links" role="navigation" aria-label="Menu principal">
+        <ul class="fr-nav__list">
+          <li class="fr-nav__item">
+            <a href="#comment-ca-marche" class="fr-nav__link" target="_self">
+              Comment ça marche
+            </a>
+          </li>
+          <li class="fr-nav__item">
+            <a href="#contact" class="fr-nav__link" target="_self">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+</div>
+<div aria-labelledby="output-html-en-tete-avec-des-liens-directs" class="fr-tabs__panel" id="output-html-en-tete-avec-des-liens-directs" role="tabpanel">
+<pre class="highlight"><code class="language-html"><span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"fr-header"</span> <span class="na">role=</span><span class="s">"banner"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-container"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__body-row"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__brand fr-enlarge-link"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__brand-top"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__logo"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"fr-logo"</span><span class="nt">&gt;</span>
+                Ministère du Travail
+              <span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__navbar"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"fr-btn--menu fr-btn"</span> <span class="na">data-fr-opened=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"modal-header-menu"</span> <span class="na">aria-haspopup=</span><span class="s">"menu"</span> <span class="na">id=</span><span class="s">"button-header-menu"</span> <span class="na">title=</span><span class="s">"Menu"</span><span class="nt">&gt;</span>
+                Menu
+              <span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__service"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span> <span class="na">title=</span><span class="s">"Accueil - Égapro"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"fr-header__service-title"</span><span class="nt">&gt;</span>
+                Égapro
+              <span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"fr-header__service-tagline"</span><span class="nt">&gt;</span>
+              Indice de parité professionelle
+            <span class="nt">&lt;/p&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__menu fr-modal"</span> <span class="na">id=</span><span class="s">"modal-header-menu"</span> <span class="na">aria-labelledby=</span><span class="s">"button-header-menu"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-container"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"fr-btn--close fr-btn"</span> <span class="na">aria-controls=</span><span class="s">"modal-header-menu"</span> <span class="na">title=</span><span class="s">"Fermer"</span><span class="nt">&gt;</span>
+        Fermer
+      <span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__menu-links"</span><span class="nt">&gt;</span>
+        <span class="c">&lt;!-- this seems to get autopopulated with the tool links with JS --&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"fr-nav"</span> <span class="na">id=</span><span class="s">"navigation-direct-links"</span> <span class="na">role=</span><span class="s">"navigation"</span> <span class="na">aria-label=</span><span class="s">"Menu principal"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"fr-nav__list"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"fr-nav__item"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#comment-ca-marche"</span> <span class="na">class=</span><span class="s">"fr-nav__link"</span> <span class="na">target=</span><span class="s">"_self"</span><span class="nt">&gt;</span>
+              Comment ça marche
+            <span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"fr-nav__item"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#contact"</span> <span class="na">class=</span><span class="s">"fr-nav__link"</span> <span class="na">target=</span><span class="s">"_self"</span><span class="nt">&gt;</span>
+              Contact
+            <span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+      <span class="nt">&lt;/nav&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/header&gt;</span></code></pre>
+</div>
+</div>
+</figure>
+<h3 class="fr-mt-8w" id="en-tete-avec-des-liens-deroulants">
+<a class="header-anchor" href="#en-tete-avec-des-liens-deroulants">En-tête avec des liens déroulants</a>
+</h3>
+<div class="fr-text-wrap">
+<p>Un header peut présenter des liens directs déroulants (<em>dropdown</em> dans le code).</p>
+
+
+
+</div>
+<figure class="app-example">
+<h4>Code</h4>
+<pre class="highlight"><code class="language-haml"><span class="p">=</span> <span class="n">dsfr_header</span> <span class="ss">logo_text: </span><span class="s2">"Ministère du Travail"</span><span class="p">,</span> <span class="ss">title: </span><span class="s2">"Égapro"</span><span class="p">,</span> <span class="ss">tagline: </span><span class="s2">"Indice de parité professionelle"</span> <span class="k">do</span> <span class="o">|</span><span class="n">header</span><span class="o">|</span>
+  <span class="p">=</span> <span class="n">header</span><span class="p">.</span><span class="nf">with_direct_link_dropdown</span> <span class="ss">title: </span><span class="s2">"Aide"</span> <span class="k">do</span> <span class="o">|</span><span class="n">dropdown</span><span class="o">|</span>
+    <span class="p">=</span> <span class="n">dropdown</span><span class="p">.</span><span class="nf">with_link</span> <span class="ss">title: </span><span class="s2">"Comment ça marche"</span><span class="p">,</span> <span class="ss">path: </span><span class="s2">"#comment-ca-marche"</span>
+    <span class="p">=</span> <span class="n">dropdown</span><span class="p">.</span><span class="nf">with_link</span> <span class="ss">title: </span><span class="s2">"Contact"</span><span class="p">,</span> <span class="ss">path: </span><span class="s2">"#contact"</span>
+  <span class="p">=</span> <span class="n">header</span><span class="p">.</span><span class="nf">with_direct_link_dropdown</span> <span class="ss">title: </span><span class="s2">"Environnement"</span> <span class="k">do</span> <span class="o">|</span><span class="n">dropdown</span><span class="o">|</span>
+    <span class="p">=</span> <span class="n">dropdown</span><span class="p">.</span><span class="nf">with_link</span> <span class="ss">title: </span><span class="s2">"Beta Gouv"</span><span class="p">,</span> <span class="ss">path: </span><span class="s2">"#beta-gouv"</span>
+    <span class="p">=</span> <span class="n">dropdown</span><span class="p">.</span><span class="nf">with_link</span> <span class="ss">title: </span><span class="s2">"DSFR"</span><span class="p">,</span> <span class="ss">path: </span><span class="s2">"#dsfr"</span></code></pre>
+<h4>Résultat</h4>
+<div class="fr-tabs">
+<ul class="fr-tabs__list" role="tablist">
+<li role="presentation">
+<button aria-controls="output-rendered-en-tete-avec-des-liens-deroulants" aria-selected="true" class="fr-tabs__tab" id="output-rendered-en-tete-avec-des-liens-deroulants" role="tab" tabindex="0">
+Rendu
+</button>
+</li>
+<li role="presentation">
+<button aria-controls="output-html-en-tete-avec-des-liens-deroulants" aria-selected="false" class="fr-tabs__tab" id="output-html-en-tete-avec-des-liens-deroulants" role="tab" tabindex="0">
+HTML
+</button>
+</li>
+</ul>
+<div aria-labelledby="output-rendered-en-tete-avec-des-liens-deroulants" class="fr-tabs__panel fr-tabs__panel--selected fr-pb-16w" id="output-rendered-en-tete-avec-des-liens-deroulants" role="tabpanel">
+<header class="fr-header" role="banner">
+  <div class="fr-header__body">
+    <div class="fr-container">
+      <div class="fr-header__body-row">
+        <div class="fr-header__brand fr-enlarge-link">
+          <div class="fr-header__brand-top">
+            <div class="fr-header__logo">
+              <p class="fr-logo">
+                Ministère du Travail
+              </p>
+            </div>
+            <div class="fr-header__navbar">
+              <button class="fr-btn--menu fr-btn" data-fr-opened="false" aria-controls="modal-header-menu" aria-haspopup="menu" id="button-header-menu" title="Menu">
+                Menu
+              </button>
+            </div>
+          </div>
+          <div class="fr-header__service">
+            <a href="../../" title="Accueil - Égapro">
+              <p class="fr-header__service-title">
+                Égapro
+              </p>
+            </a>
+            <p class="fr-header__service-tagline">
+              Indice de parité professionelle
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="fr-header__menu fr-modal" id="modal-header-menu" aria-labelledby="button-header-menu">
+    <div class="fr-container">
+      <button class="fr-btn--close fr-btn" aria-controls="modal-header-menu" title="Fermer">
+        Fermer
+      </button>
+      <div class="fr-header__menu-links">
+        <!-- this seems to get autopopulated with the tool links with JS -->
+      </div>
+      <nav class="fr-nav" id="navigation-direct-links" role="navigation" aria-label="Menu principal">
+        <ul class="fr-nav__list">
+          <li class="fr-nav__item">
+            <button class="fr-nav__btn" aria-expanded="false" aria-controls="menu-aide">
+              Aide
+            </button>
+            <div class="fr-collapse fr-menu" id="menu-aide">
+              <ul class="fr-menu__list">
+                <li>
+                  <a href="#comment-ca-marche" class="fr-nav__link" target="_self">
+                    Comment ça marche
+                  </a>
+                </li>
+                <li>
+                  <a href="#contact" class="fr-nav__link" target="_self">
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="fr-nav__item">
+            <button class="fr-nav__btn" aria-expanded="false" aria-controls="menu-environnement">
+              Environnement
+            </button>
+            <div class="fr-collapse fr-menu" id="menu-environnement">
+              <ul class="fr-menu__list">
+                <li>
+                  <a href="#beta-gouv" class="fr-nav__link" target="_self">
+                    Beta Gouv
+                  </a>
+                </li>
+                <li>
+                  <a href="#dsfr" class="fr-nav__link" target="_self">
+                    DSFR
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+</div>
+<div aria-labelledby="output-html-en-tete-avec-des-liens-deroulants" class="fr-tabs__panel" id="output-html-en-tete-avec-des-liens-deroulants" role="tabpanel">
+<pre class="highlight"><code class="language-html"><span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"fr-header"</span> <span class="na">role=</span><span class="s">"banner"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-container"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__body-row"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__brand fr-enlarge-link"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__brand-top"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__logo"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"fr-logo"</span><span class="nt">&gt;</span>
+                Ministère du Travail
+              <span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__navbar"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"fr-btn--menu fr-btn"</span> <span class="na">data-fr-opened=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"modal-header-menu"</span> <span class="na">aria-haspopup=</span><span class="s">"menu"</span> <span class="na">id=</span><span class="s">"button-header-menu"</span> <span class="na">title=</span><span class="s">"Menu"</span><span class="nt">&gt;</span>
+                Menu
+              <span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__service"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span> <span class="na">title=</span><span class="s">"Accueil - Égapro"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"fr-header__service-title"</span><span class="nt">&gt;</span>
+                Égapro
+              <span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"fr-header__service-tagline"</span><span class="nt">&gt;</span>
+              Indice de parité professionelle
+            <span class="nt">&lt;/p&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__menu fr-modal"</span> <span class="na">id=</span><span class="s">"modal-header-menu"</span> <span class="na">aria-labelledby=</span><span class="s">"button-header-menu"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-container"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"fr-btn--close fr-btn"</span> <span class="na">aria-controls=</span><span class="s">"modal-header-menu"</span> <span class="na">title=</span><span class="s">"Fermer"</span><span class="nt">&gt;</span>
+        Fermer
+      <span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__menu-links"</span><span class="nt">&gt;</span>
+        <span class="c">&lt;!-- this seems to get autopopulated with the tool links with JS --&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"fr-nav"</span> <span class="na">id=</span><span class="s">"navigation-direct-links"</span> <span class="na">role=</span><span class="s">"navigation"</span> <span class="na">aria-label=</span><span class="s">"Menu principal"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"fr-nav__list"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"fr-nav__item"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"fr-nav__btn"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"menu-aide"</span><span class="nt">&gt;</span>
+              Aide
+            <span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-collapse fr-menu"</span> <span class="na">id=</span><span class="s">"menu-aide"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"fr-menu__list"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;li&gt;</span>
+                  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#comment-ca-marche"</span> <span class="na">class=</span><span class="s">"fr-nav__link"</span> <span class="na">target=</span><span class="s">"_self"</span><span class="nt">&gt;</span>
+                    Comment ça marche
+                  <span class="nt">&lt;/a&gt;</span>
+                <span class="nt">&lt;/li&gt;</span>
+                <span class="nt">&lt;li&gt;</span>
+                  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#contact"</span> <span class="na">class=</span><span class="s">"fr-nav__link"</span> <span class="na">target=</span><span class="s">"_self"</span><span class="nt">&gt;</span>
+                    Contact
+                  <span class="nt">&lt;/a&gt;</span>
+                <span class="nt">&lt;/li&gt;</span>
+              <span class="nt">&lt;/ul&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"fr-nav__item"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"fr-nav__btn"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"menu-environnement"</span><span class="nt">&gt;</span>
+              Environnement
+            <span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-collapse fr-menu"</span> <span class="na">id=</span><span class="s">"menu-environnement"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"fr-menu__list"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;li&gt;</span>
+                  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#beta-gouv"</span> <span class="na">class=</span><span class="s">"fr-nav__link"</span> <span class="na">target=</span><span class="s">"_self"</span><span class="nt">&gt;</span>
+                    Beta Gouv
+                  <span class="nt">&lt;/a&gt;</span>
+                <span class="nt">&lt;/li&gt;</span>
+                <span class="nt">&lt;li&gt;</span>
+                  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#dsfr"</span> <span class="na">class=</span><span class="s">"fr-nav__link"</span> <span class="na">target=</span><span class="s">"_self"</span><span class="nt">&gt;</span>
+                    DSFR
+                  <span class="nt">&lt;/a&gt;</span>
+                <span class="nt">&lt;/li&gt;</span>
+              <span class="nt">&lt;/ul&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+      <span class="nt">&lt;/nav&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/header&gt;</span></code></pre>
+</div>
+</div>
+</figure>
+<h3 class="fr-mt-8w" id="mega-menu">
+<a class="header-anchor" href="#mega-menu">
+En-tête avec un méga menu
+</a>
+</h3>
+<div class="fr-mb-8w">
+<p>Le <a href="https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/navigation-principale/" target="_blank" rel="noopener">méga menu</a> n’est pas encore développé dans cette gem.</p>
+
+
+</div>
+<h3 class="fr-mt-8w" id="en-tete-avec-un-champ-de-recherche">
+<a class="header-anchor" href="#en-tete-avec-un-champ-de-recherche">En-tête avec un champ de recherche</a>
+</h3>
+<div class="fr-text-wrap">
+<p>Un header peut présenter un champ de recherche.
+Le formulaire de recherche est à implémenter vous-même.
+La classe <code>.fr-search-bar</code> peut être utilisée pour faciliter l’implémentation d’un formulaire en ligne avec le bouton submit sur la droite.</p>
+
+<p>Dans cet exemple nous codons le formulaire en HAML brut, mais vous pouvez utiliser les helpers de Rails comme <code>form_for</code>.</p>
+
+
+
+</div>
+<figure class="app-example">
+<h4>Code</h4>
+<pre class="highlight"><code class="language-haml"><span class="p">=</span> <span class="n">dsfr_header</span> <span class="ss">logo_text: </span><span class="s2">"Ministère du Travail"</span><span class="p">,</span> <span class="ss">title: </span><span class="s2">"Égapro"</span><span class="p">,</span> <span class="ss">tagline: </span><span class="s2">"Indice de parité professionelle"</span> <span class="k">do</span> <span class="o">|</span><span class="n">header</span><span class="o">|</span>
+  <span class="p">-</span> <span class="n">header</span><span class="p">.</span><span class="nf">with_search</span> <span class="k">do</span>
+    <span class="nt">%form</span>
+      <span class="nc">.fr-search-bar</span><span class="p">(</span><span class="na">role=</span><span class="s">"search"</span>)
+        <span class="nt">%label</span><span class="nc">.fr-label</span><span class="p">(</span><span class="na">for=</span><span class="s">"nom"</span>) Rechercher une entreprise
+        <span class="nt">%input</span><span class="nc">.fr-input</span><span class="p">(</span><span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"nom"</span> <span class="na">id=</span><span class="s">"nom"</span> <span class="na">placeholder=</span><span class="s">"Nom de l’entreprise"</span>)
+        <span class="nt">%button</span><span class="nc">.fr-btn</span><span class="p">(</span><span class="na">type=</span><span class="s">"submit"</span>)</code></pre>
+<h4>Résultat</h4>
+<div class="fr-tabs">
+<ul class="fr-tabs__list" role="tablist">
+<li role="presentation">
+<button aria-controls="output-rendered-en-tete-avec-un-champ-de-recherche" aria-selected="true" class="fr-tabs__tab" id="output-rendered-en-tete-avec-un-champ-de-recherche" role="tab" tabindex="0">
+Rendu
+</button>
+</li>
+<li role="presentation">
+<button aria-controls="output-html-en-tete-avec-un-champ-de-recherche" aria-selected="false" class="fr-tabs__tab" id="output-html-en-tete-avec-un-champ-de-recherche" role="tab" tabindex="0">
+HTML
+</button>
+</li>
+</ul>
+<div aria-labelledby="output-rendered-en-tete-avec-un-champ-de-recherche" class="fr-tabs__panel fr-tabs__panel--selected" id="output-rendered-en-tete-avec-un-champ-de-recherche" role="tabpanel">
+<header class="fr-header" role="banner">
+  <div class="fr-header__body">
+    <div class="fr-container">
+      <div class="fr-header__body-row">
+        <div class="fr-header__brand fr-enlarge-link">
+          <div class="fr-header__brand-top">
+            <div class="fr-header__logo">
+              <p class="fr-logo">
+                Ministère du Travail
+              </p>
+            </div>
+            <div class="fr-header__navbar">
+              <button class="fr-btn--search fr-btn" data-fr-opened="false" aria-controls="modal-header-search" id="button-header-search" title="Rechercher">
+                Rechercher
+              </button>
+            </div>
+          </div>
+          <div class="fr-header__service">
+            <a href="../../" title="Accueil - Égapro">
+              <p class="fr-header__service-title">
+                Égapro
+              </p>
+            </a>
+            <p class="fr-header__service-tagline">
+              Indice de parité professionelle
+            </p>
+          </div>
+        </div>
+        <div class="fr-header__tools">
+          <div class="fr-header__search fr-modal" id="modal-header-search">
+            <div class="fr-container fr-container-lg--fluid">
+              <button class="fr-btn--close fr-btn" aria-controls="modal-header-search" title="Fermer">
+                Fermer
+              </button>
+              <div role="search" id="header-search">
+                <form>
+                  <div class="fr-search-bar" role="search">
+                    <label class="fr-label" for="nom">
+                      Rechercher une entreprise
+                    </label>
+                    <input class="fr-input" id="nom" name="nom" placeholder="Nom de l’entreprise" type="text">
+                    <button class="fr-btn" type="submit">
+                    </button>
+                  </div></form>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+</div>
+<div aria-labelledby="output-html-en-tete-avec-un-champ-de-recherche" class="fr-tabs__panel" id="output-html-en-tete-avec-un-champ-de-recherche" role="tabpanel">
+<pre class="highlight"><code class="language-html"><span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"fr-header"</span> <span class="na">role=</span><span class="s">"banner"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-container"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__body-row"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__brand fr-enlarge-link"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__brand-top"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__logo"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"fr-logo"</span><span class="nt">&gt;</span>
+                Ministère du Travail
+              <span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__navbar"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"fr-btn--search fr-btn"</span> <span class="na">data-fr-opened=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"modal-header-search"</span> <span class="na">id=</span><span class="s">"button-header-search"</span> <span class="na">title=</span><span class="s">"Rechercher"</span><span class="nt">&gt;</span>
+                Rechercher
+              <span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__service"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span> <span class="na">title=</span><span class="s">"Accueil - Égapro"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"fr-header__service-title"</span><span class="nt">&gt;</span>
+                Égapro
+              <span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"fr-header__service-tagline"</span><span class="nt">&gt;</span>
+              Indice de parité professionelle
+            <span class="nt">&lt;/p&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__tools"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__search fr-modal"</span> <span class="na">id=</span><span class="s">"modal-header-search"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-container fr-container-lg--fluid"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"fr-btn--close fr-btn"</span> <span class="na">aria-controls=</span><span class="s">"modal-header-search"</span> <span class="na">title=</span><span class="s">"Fermer"</span><span class="nt">&gt;</span>
+                Fermer
+              <span class="nt">&lt;/button&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">role=</span><span class="s">"search"</span> <span class="na">id=</span><span class="s">"header-search"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;form&gt;</span>
+                  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">'fr-search-bar'</span> <span class="na">role=</span><span class="s">'search'</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">'fr-label'</span> <span class="na">for=</span><span class="s">'nom'</span><span class="nt">&gt;</span>
+                      Rechercher une entreprise
+                    <span class="nt">&lt;/label&gt;</span>
+                    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">'fr-input'</span> <span class="na">id=</span><span class="s">'nom'</span> <span class="na">name=</span><span class="s">'nom'</span> <span class="na">placeholder=</span><span class="s">'Nom de l’entreprise'</span> <span class="na">type=</span><span class="s">'text'</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">'fr-btn'</span> <span class="na">type=</span><span class="s">'submit'</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;/button&gt;</span>
+                  <span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;/form&gt;</span>
+              <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/header&gt;</span></code></pre>
+</div>
+</div>
+</figure>
+<h3 class="fr-mt-8w" id="en-tete-avec-toutes-les-fonctionnalites">
+<a class="header-anchor" href="#en-tete-avec-toutes-les-fonctionnalites">En-tête avec toutes les fonctionnalités</a>
+</h3>
+<div class="fr-text-wrap">
+<p>Cet exemple regroupe toutes les fonctionnalités d’un header.</p>
+
+
+
+</div>
+<figure class="app-example">
+<h4>Code</h4>
+<pre class="highlight"><code class="language-haml"><span class="p">=</span> <span class="n">dsfr_header</span> <span class="ss">logo_text: </span><span class="s2">"Ministère du Travail"</span><span class="p">,</span> <span class="ss">title: </span><span class="s2">"Égapro"</span><span class="p">,</span> <span class="ss">tagline: </span><span class="s2">"Indice de parité professionelle"</span> <span class="k">do</span> <span class="o">|</span><span class="n">header</span><span class="o">|</span>
+  <span class="p">-</span> <span class="n">header</span><span class="p">.</span><span class="nf">with_tool_link</span> <span class="ss">title: </span><span class="s2">"Connexion"</span><span class="p">,</span> <span class="ss">path: </span><span class="s2">"#connexion"</span>
+  <span class="p">-</span> <span class="n">header</span><span class="p">.</span><span class="nf">with_tool_link</span> <span class="ss">title: </span><span class="s2">"FAQ"</span><span class="p">,</span> <span class="ss">path: </span><span class="s2">"#FAQ"</span><span class="p">,</span> <span class="ss">classes: </span><span class="p">[</span><span class="s2">"fr-icon-question-line"</span><span class="p">]</span>
+  <span class="p">-</span> <span class="n">header</span><span class="p">.</span><span class="nf">with_direct_link_simple</span> <span class="ss">title: </span><span class="s2">"Comment ça marche"</span><span class="p">,</span> <span class="ss">path: </span><span class="s2">"#comment-ca-marche"</span>
+  <span class="p">=</span> <span class="n">header</span><span class="p">.</span><span class="nf">with_direct_link_dropdown</span> <span class="ss">title: </span><span class="s2">"Environnement"</span> <span class="k">do</span> <span class="o">|</span><span class="n">dropdown</span><span class="o">|</span>
+    <span class="p">=</span> <span class="n">dropdown</span><span class="p">.</span><span class="nf">with_link</span> <span class="ss">title: </span><span class="s2">"Beta Gouv"</span><span class="p">,</span> <span class="ss">path: </span><span class="s2">"#beta-gouv"</span>
+    <span class="p">=</span> <span class="n">dropdown</span><span class="p">.</span><span class="nf">with_link</span> <span class="ss">title: </span><span class="s2">"DSFR"</span><span class="p">,</span> <span class="ss">path: </span><span class="s2">"#dsfr"</span>
+  <span class="p">-</span> <span class="n">header</span><span class="p">.</span><span class="nf">with_direct_link_simple</span> <span class="ss">title: </span><span class="s2">"Contact"</span><span class="p">,</span> <span class="ss">path: </span><span class="s2">"#contact"</span>
+  <span class="p">-</span> <span class="n">header</span><span class="p">.</span><span class="nf">with_search</span> <span class="k">do</span>
+    <span class="nt">%form</span>
+      <span class="nc">.fr-search-bar</span><span class="p">(</span><span class="na">role=</span><span class="s">"search"</span>)
+        <span class="nt">%label</span><span class="nc">.fr-label</span><span class="p">(</span><span class="na">for=</span><span class="s">"nom"</span>) Rechercher une entreprise
+        <span class="nt">%input</span><span class="nc">.fr-input</span><span class="p">(</span><span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"nom"</span> <span class="na">id=</span><span class="s">"nom"</span> <span class="na">placeholder=</span><span class="s">"Nom de l’entreprise"</span>)
+        <span class="nt">%button</span><span class="nc">.fr-btn</span><span class="p">(</span><span class="na">type=</span><span class="s">"submit"</span>)</code></pre>
+<h4>Résultat</h4>
+<div class="fr-tabs">
+<ul class="fr-tabs__list" role="tablist">
+<li role="presentation">
+<button aria-controls="output-rendered-en-tete-avec-toutes-les-fonctionnalites" aria-selected="true" class="fr-tabs__tab" id="output-rendered-en-tete-avec-toutes-les-fonctionnalites" role="tab" tabindex="0">
+Rendu
+</button>
+</li>
+<li role="presentation">
+<button aria-controls="output-html-en-tete-avec-toutes-les-fonctionnalites" aria-selected="false" class="fr-tabs__tab" id="output-html-en-tete-avec-toutes-les-fonctionnalites" role="tab" tabindex="0">
+HTML
+</button>
+</li>
+</ul>
+<div aria-labelledby="output-rendered-en-tete-avec-toutes-les-fonctionnalites" class="fr-tabs__panel fr-tabs__panel--selected fr-pb-16w" id="output-rendered-en-tete-avec-toutes-les-fonctionnalites" role="tabpanel">
+<header class="fr-header" role="banner">
+  <div class="fr-header__body">
+    <div class="fr-container">
+      <div class="fr-header__body-row">
+        <div class="fr-header__brand fr-enlarge-link">
+          <div class="fr-header__brand-top">
+            <div class="fr-header__logo">
+              <p class="fr-logo">
+                Ministère du Travail
+              </p>
+            </div>
+            <div class="fr-header__navbar">
+              <button class="fr-btn--search fr-btn" data-fr-opened="false" aria-controls="modal-header-search" id="button-header-search" title="Rechercher">
+                Rechercher
+              </button>
+              <button class="fr-btn--menu fr-btn" data-fr-opened="false" aria-controls="modal-header-menu" aria-haspopup="menu" id="button-header-menu" title="Menu">
+                Menu
+              </button>
+            </div>
+          </div>
+          <div class="fr-header__service">
+            <a href="../../" title="Accueil - Égapro">
+              <p class="fr-header__service-title">
+                Égapro
+              </p>
+            </a>
+            <p class="fr-header__service-tagline">
+              Indice de parité professionelle
+            </p>
+          </div>
+        </div>
+        <div class="fr-header__tools">
+          <div class="fr-header__tools-links">
+            <ul class="fr-btns-group">
+              <li>
+                <a href="#connexion" class="fr-btn">
+                  Connexion
+                </a>
+              </li>
+              <li>
+                <a href="#FAQ" class="fr-btn fr-icon-question-line">
+                  FAQ
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="fr-header__search fr-modal" id="modal-header-search">
+            <div class="fr-container fr-container-lg--fluid">
+              <button class="fr-btn--close fr-btn" aria-controls="modal-header-search" title="Fermer">
+                Fermer
+              </button>
+              <div role="search" id="header-search">
+                <button class="fr-nav__btn" aria-expanded="false" aria-controls="menu-environnement">
+                  Environnement
+                </button>
+                <div class="fr-collapse fr-menu" id="menu-environnement">
+                  <ul class="fr-menu__list">
+                    <li>
+                      <a href="#beta-gouv" class="fr-nav__link" target="_self">
+                        Beta Gouv
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#dsfr" class="fr-nav__link" target="_self">
+                        DSFR
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <form>
+                  <div class="fr-search-bar" role="search">
+                    <label class="fr-label" for="nom">
+                      Rechercher une entreprise
+                    </label>
+                    <input class="fr-input" id="nom" name="nom" placeholder="Nom de l’entreprise" type="text">
+                    <button class="fr-btn" type="submit">
+                    </button>
+                  </div></form>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="fr-header__menu fr-modal" id="modal-header-menu" aria-labelledby="button-header-menu">
+    <div class="fr-container">
+      <button class="fr-btn--close fr-btn" aria-controls="modal-header-menu" title="Fermer">
+        Fermer
+      </button>
+      <div class="fr-header__menu-links">
+        <!-- this seems to get autopopulated with the tool links with JS -->
+      </div>
+      <nav class="fr-nav" id="navigation-direct-links" role="navigation" aria-label="Menu principal">
+        <ul class="fr-nav__list">
+          <li class="fr-nav__item">
+            <a href="#comment-ca-marche" class="fr-nav__link" target="_self">
+              Comment ça marche
+            </a>
+          </li>
+          <li class="fr-nav__item">
+            <button class="fr-nav__btn" aria-expanded="false" aria-controls="menu-environnement">
+              Environnement
+            </button>
+            <div class="fr-collapse fr-menu" id="menu-environnement">
+              <ul class="fr-menu__list">
+                <li>
+                  <a href="#beta-gouv" class="fr-nav__link" target="_self">
+                    Beta Gouv
+                  </a>
+                </li>
+                <li>
+                  <a href="#dsfr" class="fr-nav__link" target="_self">
+                    DSFR
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="fr-nav__item">
+            <a href="#contact" class="fr-nav__link" target="_self">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+</div>
+<div aria-labelledby="output-html-en-tete-avec-toutes-les-fonctionnalites" class="fr-tabs__panel" id="output-html-en-tete-avec-toutes-les-fonctionnalites" role="tabpanel">
+<pre class="highlight"><code class="language-html"><span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"fr-header"</span> <span class="na">role=</span><span class="s">"banner"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-container"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__body-row"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__brand fr-enlarge-link"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__brand-top"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__logo"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"fr-logo"</span><span class="nt">&gt;</span>
+                Ministère du Travail
+              <span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__navbar"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"fr-btn--search fr-btn"</span> <span class="na">data-fr-opened=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"modal-header-search"</span> <span class="na">id=</span><span class="s">"button-header-search"</span> <span class="na">title=</span><span class="s">"Rechercher"</span><span class="nt">&gt;</span>
+                Rechercher
+              <span class="nt">&lt;/button&gt;</span>
+              <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"fr-btn--menu fr-btn"</span> <span class="na">data-fr-opened=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"modal-header-menu"</span> <span class="na">aria-haspopup=</span><span class="s">"menu"</span> <span class="na">id=</span><span class="s">"button-header-menu"</span> <span class="na">title=</span><span class="s">"Menu"</span><span class="nt">&gt;</span>
+                Menu
+              <span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__service"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span> <span class="na">title=</span><span class="s">"Accueil - Égapro"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"fr-header__service-title"</span><span class="nt">&gt;</span>
+                Égapro
+              <span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"fr-header__service-tagline"</span><span class="nt">&gt;</span>
+              Indice de parité professionelle
+            <span class="nt">&lt;/p&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__tools"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__tools-links"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"fr-btns-group"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;li&gt;</span>
+                <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#connexion"</span> <span class="na">class=</span><span class="s">"fr-btn"</span><span class="nt">&gt;</span>
+                  Connexion
+                <span class="nt">&lt;/a&gt;</span>
+              <span class="nt">&lt;/li&gt;</span>
+              <span class="nt">&lt;li&gt;</span>
+                <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#FAQ"</span> <span class="na">class=</span><span class="s">"fr-btn fr-icon-question-line"</span><span class="nt">&gt;</span>
+                  FAQ
+                <span class="nt">&lt;/a&gt;</span>
+              <span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__search fr-modal"</span> <span class="na">id=</span><span class="s">"modal-header-search"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-container fr-container-lg--fluid"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"fr-btn--close fr-btn"</span> <span class="na">aria-controls=</span><span class="s">"modal-header-search"</span> <span class="na">title=</span><span class="s">"Fermer"</span><span class="nt">&gt;</span>
+                Fermer
+              <span class="nt">&lt;/button&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">role=</span><span class="s">"search"</span> <span class="na">id=</span><span class="s">"header-search"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"fr-nav__btn"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"menu-environnement"</span><span class="nt">&gt;</span>
+                  Environnement
+                <span class="nt">&lt;/button&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-collapse fr-menu"</span> <span class="na">id=</span><span class="s">"menu-environnement"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"fr-menu__list"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;li&gt;</span>
+                      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#beta-gouv"</span> <span class="na">class=</span><span class="s">"fr-nav__link"</span> <span class="na">target=</span><span class="s">"_self"</span><span class="nt">&gt;</span>
+                        Beta Gouv
+                      <span class="nt">&lt;/a&gt;</span>
+                    <span class="nt">&lt;/li&gt;</span>
+                    <span class="nt">&lt;li&gt;</span>
+                      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#dsfr"</span> <span class="na">class=</span><span class="s">"fr-nav__link"</span> <span class="na">target=</span><span class="s">"_self"</span><span class="nt">&gt;</span>
+                        DSFR
+                      <span class="nt">&lt;/a&gt;</span>
+                    <span class="nt">&lt;/li&gt;</span>
+                  <span class="nt">&lt;/ul&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;form&gt;</span>
+                  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">'fr-search-bar'</span> <span class="na">role=</span><span class="s">'search'</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">'fr-label'</span> <span class="na">for=</span><span class="s">'nom'</span><span class="nt">&gt;</span>
+                      Rechercher une entreprise
+                    <span class="nt">&lt;/label&gt;</span>
+                    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">'fr-input'</span> <span class="na">id=</span><span class="s">'nom'</span> <span class="na">name=</span><span class="s">'nom'</span> <span class="na">placeholder=</span><span class="s">'Nom de l’entreprise'</span> <span class="na">type=</span><span class="s">'text'</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">'fr-btn'</span> <span class="na">type=</span><span class="s">'submit'</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;/button&gt;</span>
+                  <span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;/form&gt;</span>
+              <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__menu fr-modal"</span> <span class="na">id=</span><span class="s">"modal-header-menu"</span> <span class="na">aria-labelledby=</span><span class="s">"button-header-menu"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-container"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"fr-btn--close fr-btn"</span> <span class="na">aria-controls=</span><span class="s">"modal-header-menu"</span> <span class="na">title=</span><span class="s">"Fermer"</span><span class="nt">&gt;</span>
+        Fermer
+      <span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__menu-links"</span><span class="nt">&gt;</span>
+        <span class="c">&lt;!-- this seems to get autopopulated with the tool links with JS --&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"fr-nav"</span> <span class="na">id=</span><span class="s">"navigation-direct-links"</span> <span class="na">role=</span><span class="s">"navigation"</span> <span class="na">aria-label=</span><span class="s">"Menu principal"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"fr-nav__list"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"fr-nav__item"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#comment-ca-marche"</span> <span class="na">class=</span><span class="s">"fr-nav__link"</span> <span class="na">target=</span><span class="s">"_self"</span><span class="nt">&gt;</span>
+              Comment ça marche
+            <span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"fr-nav__item"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"fr-nav__btn"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"menu-environnement"</span><span class="nt">&gt;</span>
+              Environnement
+            <span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-collapse fr-menu"</span> <span class="na">id=</span><span class="s">"menu-environnement"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"fr-menu__list"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;li&gt;</span>
+                  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#beta-gouv"</span> <span class="na">class=</span><span class="s">"fr-nav__link"</span> <span class="na">target=</span><span class="s">"_self"</span><span class="nt">&gt;</span>
+                    Beta Gouv
+                  <span class="nt">&lt;/a&gt;</span>
+                <span class="nt">&lt;/li&gt;</span>
+                <span class="nt">&lt;li&gt;</span>
+                  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#dsfr"</span> <span class="na">class=</span><span class="s">"fr-nav__link"</span> <span class="na">target=</span><span class="s">"_self"</span><span class="nt">&gt;</span>
+                    DSFR
+                  <span class="nt">&lt;/a&gt;</span>
+                <span class="nt">&lt;/li&gt;</span>
+              <span class="nt">&lt;/ul&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"fr-nav__item"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#contact"</span> <span class="na">class=</span><span class="s">"fr-nav__link"</span> <span class="na">target=</span><span class="s">"_self"</span><span class="nt">&gt;</span>
+              Contact
+            <span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+      <span class="nt">&lt;/nav&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/header&gt;</span></code></pre>
+</div>
+</div>
+</figure>
+<div class="fr-mt-4w">
+<h2>
+Plus d’informations
+</h2>
+<ul>
+<li>
+<a target="_blank" rel="noopener" href="https://www.systeme-de-design.gouv.fr/elements-d-interface/composants//en-tete/">Header sur la documentation du Système de Design de l’État</a>
+</li>
+</ul>
+
+</div>
+
+</div>
+</main>
+<footer class="fr-footer fr-mt-8w" id="footer" role="contentinfo">
+<div class="fr-container">
+<div class="fr-footer__body">
+<div class="fr-footer__brand fr-enlarge-link">
+<p class="fr-logo">
+République
+<br>
+Française
+</p>
+</div>
+<div class="fr-footer__content">
+<p class="fr-footer__content-desc">
+Composants Rails ViewComponent pour le Système de Design de lʼÉtat
+<br>
+Projet non-officiel porté par beta.gouv
+</p>
+<ul class="fr-footer__content-list">
+<li class="fr-footer__content-item">
+<a class="fr-footer__content-link" href="https://github.com/betagouv/dsfr-view-components" target="_blank">
+GitHub
+</a>
+</li>
+<li class="fr-footer__content-item">
+<a class="fr-footer__content-link" href="https://www.systeme-de-design.gouv.fr/" target="_blank">
+Système de Design de lʼÉtat
+</a>
+</li>
+<!-- li.fr-footer__content-item -->
+<!-- a.fr-footer__content-link target="_blank" href=rubygems_link -->
+<!-- RubyGems -->
+<!-- li.fr-footer__content-item -->
+<!-- a.fr-footer__content-link target="_blank" href=documentation_link -->
+<!-- RubyDoc Documentation -->
+<!-- li.fr-footer__content-item -->
+<!-- a.fr-footer__content-link target="_blank" href=code_climate_report_link -->
+<!-- Code Climate report -->
+</ul>
+</div>
+</div>
+<div class="fr-footer__bottom">
+<ul class="fr-footer__bottom-list">
+<li class="fr-footer__bottom-item">
+<a class="fr-footer__bottom-link" href="../../">Accueil</a>
+</li>
+<li class="fr-footer__bottom-item">
+<button aria-controls="fr-theme-modal" class="fr-footer__bottom-link" data-fr-opened="false">
+Paramètres d'affichage
+</button>
+</li>
+</ul>
+<div class="fr-footer__bottom-copy">
+<p>
+Sauf mention contraire, tous les contenus de ce site sont sous
+<a target="_blank" rel="noopener" href="https://github.com/etalab/licence-ouverte/blob/master/LO.md">licence etalab-2.0</a>
+</p>
+</div>
+</div>
+</div>
+</footer>
+<dialog aria-labelledby="fr-theme-modal-title" class="fr-modal" id="fr-theme-modal" role="dialog">
+<div class="fr-container fr-container--fluid fr-container-md">
+<div class="fr-grid-row fr-grid-row--center">
+<div class="fr-col-12 fr-col-md-6 fr-col-lg-4">
+<div class="fr-modal__body">
+<div class="fr-modal__header">
+<button aria-controls="fr-theme-modal" class="fr-link--close fr-link">
+Fermer
+</button>
+</div>
+<div class="fr-modal__content">
+<h1 class="fr-modal__title" id="fr-theme-modal-title">
+Paramètres d’affichage
+</h1>
+<div class="fr-form-group fr-display" id="fr-display">
+<div class="fr-form-group">
+<fieldset class="fr-fieldset">
+<legend class="fr-fieldset__legend fr-text--regular" id="-legend">
+Choisissez un thème pour personnaliser l’apparence du site.
+</legend>
+<div class="fr-fieldset__content">
+<div class="fr-radio-group fr-radio-rich">
+<input id="fr-radios-theme-light" name="fr-radios-theme" type="radio" value="light">
+<label class="fr-label" for="fr-radios-theme-light">
+Thème clair
+</label>
+<div class="fr-radio-rich__img" data-fr-inject-svg="">
+<img alt="" src="../../artwork/light.svg">
+</div>
+</div>
+<div class="fr-radio-group fr-radio-rich">
+<input id="fr-radios-theme-dark" name="fr-radios-theme" type="radio" value="dark">
+<label class="fr-label" for="fr-radios-theme-dark">
+Thème sombre
+</label>
+<div class="fr-radio-rich__img" data-fr-inject-svg="">
+<img alt="" src="../../artwork/dark.svg">
+</div>
+</div>
+<div class="fr-radio-group fr-radio-rich">
+<input id="fr-radios-theme-system" name="fr-radios-theme" type="radio" value="system">
+<label class="fr-label" for="fr-radios-theme-system">
+Système
+<span class="fr-hint-text">Utilise les paramètres système.</span>
+</label>
+<div class="fr-radio-rich__img" data-fr-inject-svg="">
+<img alt="" src="../../artwork/system.svg">
+</div>
+</div>
+</div>
+</fieldset>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</dialog>
+
+<script src="../../javascripts/dsfr.module.min.js" type="module"></script>
+<script nomodule="true" src="../../javascripts/dsfr.nomodule.min.js" type="text/javascript"></script>
+
+
+
+</body></html>
