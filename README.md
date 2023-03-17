@@ -42,10 +42,9 @@ require "dsfr/components"
 
 Cette gem a pour but de supporter tous les composants proposés par le Design Système de l'État hormis ceux concernant les formulaires. Ceux-ci seront fournis dans une gem indépendante dans le futur.
 
-Les composants disponibles sont :
+10/36 composants sont disponibles :
 
 - [x] Accordéon - Accordion
-- [ ] Ajout de fichier - File upload
 - [x] Alertes - Alert
 - [x] Badge
 - [ ] Bandeau d'information importante
@@ -53,14 +52,10 @@ Les composants disponibles sont :
 - [x] Boutons - Buttons
 - [ ] Groupe de bouton
 - [ ] Bouton FranceConnect
-- [ ] Boutons radio
-- [ ] Boutons radio 'riches'
-- [ ] Case à cocher - Checkbox
 - [ ] Cartes - Cards
-- [ ] Champ de saisie - Input
 - [ ] Citation - Quote
 - [ ] Contenu médias - Responsive médias
-- [ ] En-tête - Header
+- [x] En-tête - Header
 - [ ] Fil d'Ariane - Breadcrumb
 - [ ] Gestionnaire de consentement - Consent banner
 - [ ] Icônes de favoris - Favicons
@@ -69,7 +64,6 @@ Les composants disponibles sont :
 - [ ] Lettre d'information et réseaux sociaux - Newsletter &amp; Follow us
 - [x] Liens - Links
 - [ ] Liens d'évitement - Skiplinks
-- [ ] Liste déroulante - Select
 - [ ] Menu latéral - Side menu
 - [ ] Mise en avant - Call out
 - [ ] Mise en exergue - Highlight
@@ -83,7 +77,7 @@ Les composants disponibles sont :
 - [ ] Sélecteur de langue
 - [ ] Sommaire - Summary
 - [ ] Tableau - Table
-- [ ] Tag
+- [x] Tag
 - [ ] Téléchargement de fichier
 - [x] Tuile - Tile
 
