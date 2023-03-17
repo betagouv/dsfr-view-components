@@ -15,6 +15,12 @@ Style/HashSyntax:
 Metrics/ParameterLists:
   Enabled: False
 
+RSpec/ExampleLength:
+  Enabled: False
+
+RSpec/RepeatedExampleGroupBody:
+  Enabled: False
+
 Naming/FileName:
   Exclude:
     - guide/Rules
