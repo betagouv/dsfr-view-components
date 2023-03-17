@@ -1,0 +1,12 @@
+<%= tag.div(**html_attributes) do %>
+  <ul class="fr-tabs__list" role="tablist" aria-label="<%= label %>">
+    <% tabs.each do |tab| %>
+      <li role="presentation">
+        <%= tab.nav_item %>
+      </li>
+    <% end %>
+  </ul>
+  <% tabs.each do |tab| %>
+    <%= tab %>
+  <% end %>
+<% end %>

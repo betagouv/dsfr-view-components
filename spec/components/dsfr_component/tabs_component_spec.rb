@@ -4,10 +4,10 @@ RSpec.describe(DsfrComponent::TabsComponent, type: :component) do
   context "with basic usage" do
     subject! do
       render_inline(described_class.new) do |tabs|
-        render_inline(tabs.tab(title: "Onglet 1", active: true)) do
+        tabs.tab(title: "Onglet 1", active: true) do
           "contenu premier onglet"
         end
-        render_inline(tabs.tab(title: "Onglet 2")) do
+        tabs.tab(title: "Onglet 2") do
           "contenu deuxième onglet"
         end
       end
@@ -37,14 +37,55 @@ RSpec.describe(DsfrComponent::TabsComponent, type: :component) do
     end
   end
 
+  context "with icons" do
+    subject! do
+      render_inline(described_class.new) do |tabs|
+        tabs.tab(title: "Comment ça marche ?", icon: "info-line") do
+          "Ça marche bien"
+        end
+        tabs.tab(title: "Contact", icon: "mail-line") do
+          "Contactez-nous par email"
+        end
+        tabs.tab(title: "Support", active: true, icon: "settings-5-line") do
+          "Support technique"
+        end
+      end
+    end
+
+    it "renders correctly" do
+      expect(rendered_content).to have_tag(:div, with: { class: "fr-tabs" }) do
+        with_tag(:ul, with: { class: "fr-tabs__list" }) do
+          with_tag \
+            :button,
+            with: { class: "fr-tabs__tab fr-icon-info-line fr-tabs__tab--icon-left", role: "tab",
+                    "aria-selected": "false", "aria-controls": "tab-comment-ca-marche-panel",
+                    id: "tab-comment-ca-marche-nav" },
+            text: /Comment ça marche/
+          with_tag \
+            :button,
+            with: { class: "fr-tabs__tab fr-icon-mail-line fr-tabs__tab--icon-left", role: "tab",
+                    "aria-selected": "false", "aria-controls": "tab-contact-panel",
+                    id: "tab-contact-nav" },
+            text: /Contact/
+          with_tag \
+            :button,
+            with: { class: "fr-tabs__tab fr-icon-settings-5-line fr-tabs__tab--icon-left", role: "tab",
+                    "aria-selected": "true", "aria-controls": "tab-support-panel",
+                    id: "tab-support-nav" },
+            text: /Support/
+        end
+      end
+    end
+  end
+
   context "with links instead of buttons" do
     subject! do
       render_inline(described_class.new) do |tabs|
-        render_inline tabs.tab(title: "Onglet 1", path: "/onglet-1")
-        render_inline tabs.tab(title: "Onglet 2", active: true) do
+        tabs.tab(title: "Onglet 1", path: "/onglet-1")
+        tabs.tab(title: "Onglet 2", active: true) do
           "contenu deuxième onglet chargé"
         end
-        render_inline tabs.tab(title: "Onglet 3", path: "/onglet-3")
+        tabs.tab(title: "Onglet 3", path: "/onglet-3")
       end
     end
 
