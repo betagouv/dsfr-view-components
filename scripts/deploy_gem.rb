@@ -20,7 +20,6 @@ commands = <<~BASH.split("\n")
   git push
   git push origin "#{version_with_v}"
   gh release create "#{version_with_v}" --verify-tag --generate-notes
-  gem push dsfr-view-components-#{version_without_v}.gem
 BASH
 
 commands.each do |command|
@@ -30,3 +29,7 @@ commands.each do |command|
 
   puts
 end
+
+puts "\n🚀 Almost done!"
+puts "last step is to run this command with a valid 2FA OTP token for your rubygems account:"
+puts "gem push dsfr-view-components-#{version_without_v}.gem --otp 123456"
