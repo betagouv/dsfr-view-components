@@ -3,7 +3,7 @@ class DsfrComponent::HeaderComponent::ToolLinkComponent < DsfrComponent::Base
     @title = title
     @path = path
 
-    super classes: classes, html_attributes: html_attributes
+    super(classes: classes, html_attributes: html_attributes)
   end
 
   def call
