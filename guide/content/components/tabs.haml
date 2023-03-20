@@ -1,0 +1,28 @@
+---
+title: Tabs
+---
+
+.fr-text-wrap
+  :markdown
+    Le composant onglet permet aux utilisateurs de naviguer dans différentes sections de contenu au sein d’une même page.
+
+    Le système d'onglet aide à regrouper différents contenus dans un espace limité et permet de diviser un contenu dense en sections accessibles individuellement afin de faciliter la lecture pour l'utilisateur.
+
+
+= render '/partials/example.haml', caption: "Vue d'ensemble", code: tabs_default do
+  :markdown
+    Le rendu de base du TabsComponent
+
+= render "/partials/example.haml", caption: "Onglets avec des icônes", code: tabs_with_icons do
+  :markdown
+    Vous pouvez utiliser des icônes pour illustrer les onglets.
+
+= render "/partials/example.haml", caption: "Onglets avec des liens", code: tabs_with_links do
+  :markdown
+    Les boutons de navigation des onglets peuvent être des transformés en liens vers d'autres pages en utilisant le paramètre `path`.
+
+    Cela permet entre-autres d’utiliser Turbo Drive pour naviguer entre les onglets.
+    Chaque page affiche uniquement un onglet actif avec son contenu et les liens vers les autres onglets.
+    L’onglet actif n’a pas besoin d’avoir de lien, il peut rester un bouton.
+
+= render('/partials/related-info.haml', links: dsfr_component_doc_link("Tabs", "onglets"))

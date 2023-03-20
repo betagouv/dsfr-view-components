@@ -14,6 +14,7 @@ module DsfrComponentsHelper
     dsfr_header_tool_link: 'DsfrComponent::HeaderComponent::ToolLinkComponent',
     dsfr_header_direct_link: 'DsfrComponent::HeaderComponent::DirectLinkComponent',
     dsfr_header_direct_dropdown_link: 'DsfrComponent::HeaderComponent::DirectLinkDropdownComponent',
+    dsfr_tabs: 'DsfrComponent::TabsComponent',
     # DO NOT REMOVE: new component mapping here
   }.freeze
   HELPER_NAME_TO_CLASS_NAME.each do |name, klass|
