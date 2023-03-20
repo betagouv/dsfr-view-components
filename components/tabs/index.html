@@ -1,0 +1,532 @@
+<!DOCTYPE html><html data-fr-scheme="system" lang="fr"><head>
+<meta charset="utf-8">
+<title>
+Tabs - Composants Rails ViewComponent pour le Système de Design de lʼÉtat
+</title>
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+<meta content="#000091" name="theme-color">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<link href="../../favicon/apple-touch-icon.png" rel="apple-touch-icon">
+<link href="../../favicon/favicon.svg" rel="icon" type="image/svg+xml">
+<link href="../../favicon/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<link crossorigin="use-credentials" href="../../favicon/manifest.webmanifest" rel="manifest">
+<link href="../../stylesheets/application.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="fr-skiplinks">
+<nav aria-label="Accès rapide" class="fr-container" role="navigation">
+<ul class="fr-skiplinks__list">
+<li>
+<a class="fr-link" href="#content">
+Contenu
+</a>
+</li>
+</ul>
+</nav>
+</div>
+<header class="fr-header" role="banner">
+<div class="fr-header__body">
+<div class="fr-container">
+<div class="fr-header__body-row">
+<div class="fr-header__brand fr-enlarge-link">
+<div class="fr-header__brand-top">
+<div class="fr-header__logo">
+<p class="fr-logo">
+République
+<br>
+Française
+</p>
+</div>
+</div>
+<div class="fr-header__service">
+<a href="../../" title="Composants Rails ViewComponent pour le Système de Design de lʼÉtat - Accueil">
+<p class="fr-header__service-title">
+DSFR-View-Components
+</p>
+</a>
+<p class="fr-header__service-tagline">
+Composants Rails ViewComponent pour le Système de Design de lʼÉtat
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+
+<main id="contenu" role="main">
+<div class="fr-container">
+<nav aria-label="Vous êtes ici :" class="fr-breadcrumb" role="navigation">
+<button aria-controls="breadcrumb-1" aria-expanded="false" class="fr-breadcrumb__button">
+Voir le fil d’Ariane
+</button>
+<div class="fr-collapse" id="breadcrumb-1">
+<ol class="fr-breadcrumb__list">
+<li>
+<a class="fr-breadcrumb__link" href="../../">Accueil</a>
+</li>
+<li>
+<a class="fr-breadcrumb__link" aria-current="page" href="">Tabs</a>
+</li>
+</ol>
+</div>
+</nav>
+
+<h1>Tabs</h1>
+<div class="fr-text-wrap">
+<p>Le composant onglet permet aux utilisateurs de naviguer dans différentes sections de contenu au sein d’une même page.</p>
+
+<p>Le système d’onglet aide à regrouper différents contenus dans un espace limité et permet de diviser un contenu dense en sections accessibles individuellement afin de faciliter la lecture pour l’utilisateur.</p>
+
+
+</div>
+<h3 class="fr-mt-8w" id="vue-d-ensemble">
+<a class="header-anchor" href="#vue-d-ensemble">Vue d’ensemble</a>
+</h3>
+<div class="fr-text-wrap">
+<p>Le rendu de base du TabsComponent</p>
+
+
+
+</div>
+<figure class="app-example">
+<h4>Code</h4>
+<pre class="highlight"><code class="language-haml"><span class="p">=</span> <span class="n">dsfr_tabs</span> <span class="k">do</span> <span class="o">|</span><span class="n">tabs</span><span class="o">|</span>
+  <span class="p">-</span> <span class="n">tabs</span><span class="p">.</span><span class="nf">tab</span> <span class="ss">title: </span><span class="s2">"Onglet 1"</span><span class="p">,</span> <span class="ss">active: </span><span class="kp">true</span> <span class="k">do</span>
+    <span class="nt">%p</span> Contenu de l’onglet 1
+  <span class="p">-</span> <span class="n">tabs</span><span class="p">.</span><span class="nf">tab</span> <span class="ss">title: </span><span class="s2">"Onglet 2"</span> <span class="k">do</span>
+    <span class="nt">%p</span> Contenu de l’onglet 2</code></pre>
+<h4>Résultat</h4>
+<div class="fr-tabs">
+<ul class="fr-tabs__list" role="tablist">
+<li role="presentation">
+<button aria-controls="output-rendered-vue-d-ensemble" aria-selected="true" class="fr-tabs__tab" id="output-rendered-vue-d-ensemble" role="tab" tabindex="0">
+Rendu
+</button>
+</li>
+<li role="presentation">
+<button aria-controls="output-html-vue-d-ensemble" aria-selected="false" class="fr-tabs__tab" id="output-html-vue-d-ensemble" role="tab" tabindex="0">
+HTML
+</button>
+</li>
+</ul>
+<div aria-labelledby="output-rendered-vue-d-ensemble" class="fr-tabs__panel fr-tabs__panel--selected" id="output-rendered-vue-d-ensemble" role="tabpanel">
+<div class="fr-tabs">
+  <ul class="fr-tabs__list" role="tablist" aria-label="">
+    <li role="presentation">
+      <button id="tab-onglet-1-nav" class="fr-tabs__tab" role="tab" aria-selected="true" aria-controls="tab-onglet-1-panel">
+        Onglet 1
+      </button>
+    </li>
+    <li role="presentation">
+      <button id="tab-onglet-2-nav" class="fr-tabs__tab" role="tab" aria-selected="false" aria-controls="tab-onglet-2-panel">
+        Onglet 2
+      </button>
+    </li>
+  </ul>
+  <div id="tab-onglet-1-panel" class="fr-tabs__panel fr-tabs__panel--selected" role="tabpanel" aria-labelledby="tab-onglet-1-nav">
+    <p>
+      Contenu de l’onglet 1
+    </p>
+  </div>
+  <div id="tab-onglet-2-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tab-onglet-2-nav">
+    <p>
+      Contenu de l’onglet 1
+    </p>
+    <p>
+      Contenu de l’onglet 2
+    </p>
+  </div>
+</div>
+</div>
+<div aria-labelledby="output-html-vue-d-ensemble" class="fr-tabs__panel" id="output-html-vue-d-ensemble" role="tabpanel">
+<pre class="highlight"><code class="language-html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-tabs"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"fr-tabs__list"</span> <span class="na">role=</span><span class="s">"tablist"</span> <span class="na">aria-label=</span><span class="s">""</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"tab-onglet-1-nav"</span> <span class="na">class=</span><span class="s">"fr-tabs__tab"</span> <span class="na">role=</span><span class="s">"tab"</span> <span class="na">aria-selected=</span><span class="s">"true"</span> <span class="na">aria-controls=</span><span class="s">"tab-onglet-1-panel"</span><span class="nt">&gt;</span>
+        Onglet 1
+      <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"tab-onglet-2-nav"</span> <span class="na">class=</span><span class="s">"fr-tabs__tab"</span> <span class="na">role=</span><span class="s">"tab"</span> <span class="na">aria-selected=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"tab-onglet-2-panel"</span><span class="nt">&gt;</span>
+        Onglet 2
+      <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"tab-onglet-1-panel"</span> <span class="na">class=</span><span class="s">"fr-tabs__panel fr-tabs__panel--selected"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"tab-onglet-1-nav"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>
+      Contenu de l’onglet 1
+    <span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"tab-onglet-2-panel"</span> <span class="na">class=</span><span class="s">"fr-tabs__panel"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"tab-onglet-2-nav"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>
+      Contenu de l’onglet 1
+    <span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p&gt;</span>
+      Contenu de l’onglet 2
+    <span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+</div>
+</div>
+</figure>
+<h3 class="fr-mt-8w" id="onglets-avec-des-icones">
+<a class="header-anchor" href="#onglets-avec-des-icones">Onglets avec des icônes</a>
+</h3>
+<div class="fr-text-wrap">
+<p>Vous pouvez utiliser des icônes pour illustrer les onglets.</p>
+
+
+
+</div>
+<figure class="app-example">
+<h4>Code</h4>
+<pre class="highlight"><code class="language-haml"><span class="p">=</span> <span class="n">dsfr_tabs</span> <span class="k">do</span> <span class="o">|</span><span class="n">tabs</span><span class="o">|</span>
+  <span class="p">-</span> <span class="n">tabs</span><span class="p">.</span><span class="nf">tab</span> <span class="ss">title: </span><span class="s2">"Comment ça marche ?"</span><span class="p">,</span> <span class="ss">icon: </span><span class="s2">"info-fill"</span> <span class="k">do</span>
+    <span class="nt">%p</span> Ça marche bien
+  <span class="p">-</span> <span class="n">tabs</span><span class="p">.</span><span class="nf">tab</span> <span class="ss">title: </span><span class="s2">"Contact"</span><span class="p">,</span> <span class="ss">icon: </span><span class="s2">"mail-line"</span> <span class="k">do</span>
+    <span class="nt">%p</span> Contactez-nous par email
+  <span class="p">-</span> <span class="n">tabs</span><span class="p">.</span><span class="nf">tab</span> <span class="ss">title: </span><span class="s2">"Support"</span><span class="p">,</span> <span class="ss">active: </span><span class="kp">true</span><span class="p">,</span> <span class="ss">icon: </span><span class="s2">"settings-5-line"</span> <span class="k">do</span>
+    <span class="nt">%p</span> Support technique</code></pre>
+<h4>Résultat</h4>
+<div class="fr-tabs">
+<ul class="fr-tabs__list" role="tablist">
+<li role="presentation">
+<button aria-controls="output-rendered-onglets-avec-des-icones" aria-selected="true" class="fr-tabs__tab" id="output-rendered-onglets-avec-des-icones" role="tab" tabindex="0">
+Rendu
+</button>
+</li>
+<li role="presentation">
+<button aria-controls="output-html-onglets-avec-des-icones" aria-selected="false" class="fr-tabs__tab" id="output-html-onglets-avec-des-icones" role="tab" tabindex="0">
+HTML
+</button>
+</li>
+</ul>
+<div aria-labelledby="output-rendered-onglets-avec-des-icones" class="fr-tabs__panel fr-tabs__panel--selected" id="output-rendered-onglets-avec-des-icones" role="tabpanel">
+<div class="fr-tabs">
+  <ul class="fr-tabs__list" role="tablist" aria-label="">
+    <li role="presentation">
+      <button id="tab-comment-ca-marche-nav" class="fr-tabs__tab fr-icon-info-fill fr-tabs__tab--icon-left" role="tab" aria-selected="false" aria-controls="tab-comment-ca-marche-panel">
+        Comment ça marche ?
+      </button>
+    </li>
+    <li role="presentation">
+      <button id="tab-contact-nav" class="fr-tabs__tab fr-icon-mail-line fr-tabs__tab--icon-left" role="tab" aria-selected="false" aria-controls="tab-contact-panel">
+        Contact
+      </button>
+    </li>
+    <li role="presentation">
+      <button id="tab-support-nav" class="fr-tabs__tab fr-icon-settings-5-line fr-tabs__tab--icon-left" role="tab" aria-selected="true" aria-controls="tab-support-panel">
+        Support
+      </button>
+    </li>
+  </ul>
+  <div id="tab-comment-ca-marche-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tab-comment-ca-marche-nav">
+    <p>
+      Ça marche bien
+    </p>
+  </div>
+  <div id="tab-contact-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tab-contact-nav">
+    <p>
+      Ça marche bien
+    </p>
+    <p>
+      Contactez-nous par email
+    </p>
+  </div>
+  <div id="tab-support-panel" class="fr-tabs__panel fr-tabs__panel--selected" role="tabpanel" aria-labelledby="tab-support-nav">
+    <p>
+      Ça marche bien
+    </p>
+    <p>
+      Contactez-nous par email
+    </p>
+    <p>
+      Support technique
+    </p>
+  </div>
+</div>
+</div>
+<div aria-labelledby="output-html-onglets-avec-des-icones" class="fr-tabs__panel" id="output-html-onglets-avec-des-icones" role="tabpanel">
+<pre class="highlight"><code class="language-html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-tabs"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"fr-tabs__list"</span> <span class="na">role=</span><span class="s">"tablist"</span> <span class="na">aria-label=</span><span class="s">""</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"tab-comment-ca-marche-nav"</span> <span class="na">class=</span><span class="s">"fr-tabs__tab fr-icon-info-fill fr-tabs__tab--icon-left"</span> <span class="na">role=</span><span class="s">"tab"</span> <span class="na">aria-selected=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"tab-comment-ca-marche-panel"</span><span class="nt">&gt;</span>
+        Comment ça marche ?
+      <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"tab-contact-nav"</span> <span class="na">class=</span><span class="s">"fr-tabs__tab fr-icon-mail-line fr-tabs__tab--icon-left"</span> <span class="na">role=</span><span class="s">"tab"</span> <span class="na">aria-selected=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"tab-contact-panel"</span><span class="nt">&gt;</span>
+        Contact
+      <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"tab-support-nav"</span> <span class="na">class=</span><span class="s">"fr-tabs__tab fr-icon-settings-5-line fr-tabs__tab--icon-left"</span> <span class="na">role=</span><span class="s">"tab"</span> <span class="na">aria-selected=</span><span class="s">"true"</span> <span class="na">aria-controls=</span><span class="s">"tab-support-panel"</span><span class="nt">&gt;</span>
+        Support
+      <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"tab-comment-ca-marche-panel"</span> <span class="na">class=</span><span class="s">"fr-tabs__panel"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"tab-comment-ca-marche-nav"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>
+      Ça marche bien
+    <span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"tab-contact-panel"</span> <span class="na">class=</span><span class="s">"fr-tabs__panel"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"tab-contact-nav"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>
+      Ça marche bien
+    <span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p&gt;</span>
+      Contactez-nous par email
+    <span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"tab-support-panel"</span> <span class="na">class=</span><span class="s">"fr-tabs__panel fr-tabs__panel--selected"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"tab-support-nav"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>
+      Ça marche bien
+    <span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p&gt;</span>
+      Contactez-nous par email
+    <span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p&gt;</span>
+      Support technique
+    <span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+</div>
+</div>
+</figure>
+<h3 class="fr-mt-8w" id="onglets-avec-des-liens">
+<a class="header-anchor" href="#onglets-avec-des-liens">Onglets avec des liens</a>
+</h3>
+<div class="fr-text-wrap">
+<p>Les boutons de navigation des onglets peuvent être des transformés en liens vers d’autres pages en utilisant le paramètre <code>path</code>.</p>
+
+<p>Cela permet entre-autres d’utiliser Turbo Drive pour naviguer entre les onglets.
+Chaque page affiche uniquement un onglet actif avec son contenu et les liens vers les autres onglets.
+L’onglet actif n’a pas besoin d’avoir de lien, il peut rester un bouton.</p>
+
+
+
+</div>
+<figure class="app-example">
+<h4>Code</h4>
+<pre class="highlight"><code class="language-haml"><span class="p">=</span> <span class="n">dsfr_tabs</span> <span class="k">do</span> <span class="o">|</span><span class="n">tabs</span><span class="o">|</span>
+  <span class="p">-</span> <span class="n">tabs</span><span class="p">.</span><span class="nf">tab</span> <span class="ss">title: </span><span class="s2">"Première page"</span><span class="p">,</span> <span class="ss">path: </span><span class="s2">"#onglet-1"</span>
+  <span class="p">-</span> <span class="n">tabs</span><span class="p">.</span><span class="nf">tab</span> <span class="ss">title: </span><span class="s2">"Deuxième page"</span><span class="p">,</span> <span class="ss">active: </span><span class="kp">true</span> <span class="k">do</span>
+    <span class="nt">%p</span> Contenu de l’onglet 2
+  <span class="p">-</span> <span class="n">tabs</span><span class="p">.</span><span class="nf">tab</span> <span class="ss">title: </span><span class="s2">"Troisième page"</span><span class="p">,</span> <span class="ss">path: </span><span class="s2">"#onglet-3"</span></code></pre>
+<h4>Résultat</h4>
+<div class="fr-tabs">
+<ul class="fr-tabs__list" role="tablist">
+<li role="presentation">
+<button aria-controls="output-rendered-onglets-avec-des-liens" aria-selected="true" class="fr-tabs__tab" id="output-rendered-onglets-avec-des-liens" role="tab" tabindex="0">
+Rendu
+</button>
+</li>
+<li role="presentation">
+<button aria-controls="output-html-onglets-avec-des-liens" aria-selected="false" class="fr-tabs__tab" id="output-html-onglets-avec-des-liens" role="tab" tabindex="0">
+HTML
+</button>
+</li>
+</ul>
+<div aria-labelledby="output-rendered-onglets-avec-des-liens" class="fr-tabs__panel fr-tabs__panel--selected" id="output-rendered-onglets-avec-des-liens" role="tabpanel">
+<div class="fr-tabs">
+  <ul class="fr-tabs__list" role="tablist" aria-label="">
+    <li role="presentation">
+      <a href="#onglet-1" data-turbo-action="advance" id="tab-premiere-page-nav" class="fr-tabs__tab" role="tab" aria-selected="false" aria-controls="tab-premiere-page-panel">
+        Première page
+      </a>
+    </li>
+    <li role="presentation">
+      <button id="tab-deuxieme-page-nav" class="fr-tabs__tab" role="tab" aria-selected="true" aria-controls="tab-deuxieme-page-panel">
+        Deuxième page
+      </button>
+    </li>
+    <li role="presentation">
+      <a href="#onglet-3" data-turbo-action="advance" id="tab-troisieme-page-nav" class="fr-tabs__tab" role="tab" aria-selected="false" aria-controls="tab-troisieme-page-panel">
+        Troisième page
+      </a>
+    </li>
+  </ul>
+  <div id="tab-premiere-page-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tab-premiere-page-nav">
+  </div>
+  <div id="tab-deuxieme-page-panel" class="fr-tabs__panel fr-tabs__panel--selected" role="tabpanel" aria-labelledby="tab-deuxieme-page-nav">
+    <p>
+      Contenu de l’onglet 2
+    </p>
+  </div>
+  <div id="tab-troisieme-page-panel" class="fr-tabs__panel" role="tabpanel" aria-labelledby="tab-troisieme-page-nav">
+  </div>
+</div>
+</div>
+<div aria-labelledby="output-html-onglets-avec-des-liens" class="fr-tabs__panel" id="output-html-onglets-avec-des-liens" role="tabpanel">
+<pre class="highlight"><code class="language-html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-tabs"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"fr-tabs__list"</span> <span class="na">role=</span><span class="s">"tablist"</span> <span class="na">aria-label=</span><span class="s">""</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#onglet-1"</span> <span class="na">data-turbo-action=</span><span class="s">"advance"</span> <span class="na">id=</span><span class="s">"tab-premiere-page-nav"</span> <span class="na">class=</span><span class="s">"fr-tabs__tab"</span> <span class="na">role=</span><span class="s">"tab"</span> <span class="na">aria-selected=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"tab-premiere-page-panel"</span><span class="nt">&gt;</span>
+        Première page
+      <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"tab-deuxieme-page-nav"</span> <span class="na">class=</span><span class="s">"fr-tabs__tab"</span> <span class="na">role=</span><span class="s">"tab"</span> <span class="na">aria-selected=</span><span class="s">"true"</span> <span class="na">aria-controls=</span><span class="s">"tab-deuxieme-page-panel"</span><span class="nt">&gt;</span>
+        Deuxième page
+      <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#onglet-3"</span> <span class="na">data-turbo-action=</span><span class="s">"advance"</span> <span class="na">id=</span><span class="s">"tab-troisieme-page-nav"</span> <span class="na">class=</span><span class="s">"fr-tabs__tab"</span> <span class="na">role=</span><span class="s">"tab"</span> <span class="na">aria-selected=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"tab-troisieme-page-panel"</span><span class="nt">&gt;</span>
+        Troisième page
+      <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"tab-premiere-page-panel"</span> <span class="na">class=</span><span class="s">"fr-tabs__panel"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"tab-premiere-page-nav"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"tab-deuxieme-page-panel"</span> <span class="na">class=</span><span class="s">"fr-tabs__panel fr-tabs__panel--selected"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"tab-deuxieme-page-nav"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>
+      Contenu de l’onglet 2
+    <span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"tab-troisieme-page-panel"</span> <span class="na">class=</span><span class="s">"fr-tabs__panel"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"tab-troisieme-page-nav"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+</div>
+</div>
+</figure>
+<div class="fr-mt-4w">
+<h2>
+Plus d’informations
+</h2>
+<ul>
+<li>
+<a target="_blank" rel="noopener" href="https://www.systeme-de-design.gouv.fr/elements-d-interface/composants//onglets/">Tabs sur la documentation du Système de Design de l’État</a>
+</li>
+</ul>
+</div>
+
+
+</div>
+</main>
+<footer class="fr-footer fr-mt-8w" id="footer" role="contentinfo">
+<div class="fr-container">
+<div class="fr-footer__body">
+<div class="fr-footer__brand fr-enlarge-link">
+<p class="fr-logo">
+République
+<br>
+Française
+</p>
+</div>
+<div class="fr-footer__content">
+<p class="fr-footer__content-desc">
+Composants Rails ViewComponent pour le Système de Design de lʼÉtat
+<br>
+Projet non-officiel porté par beta.gouv
+</p>
+<ul class="fr-footer__content-list">
+<li class="fr-footer__content-item">
+<a class="fr-footer__content-link" href="https://github.com/betagouv/dsfr-view-components" target="_blank">
+GitHub
+</a>
+</li>
+<li class="fr-footer__content-item">
+<a class="fr-footer__content-link" href="https://www.systeme-de-design.gouv.fr/" target="_blank">
+Système de Design de lʼÉtat
+</a>
+</li>
+<!-- li.fr-footer__content-item -->
+<!-- a.fr-footer__content-link target="_blank" href=rubygems_link -->
+<!-- RubyGems -->
+<!-- li.fr-footer__content-item -->
+<!-- a.fr-footer__content-link target="_blank" href=documentation_link -->
+<!-- RubyDoc Documentation -->
+<!-- li.fr-footer__content-item -->
+<!-- a.fr-footer__content-link target="_blank" href=code_climate_report_link -->
+<!-- Code Climate report -->
+</ul>
+</div>
+</div>
+<div class="fr-footer__bottom">
+<ul class="fr-footer__bottom-list">
+<li class="fr-footer__bottom-item">
+<a class="fr-footer__bottom-link" href="../../">Accueil</a>
+</li>
+<li class="fr-footer__bottom-item">
+<button aria-controls="fr-theme-modal" class="fr-footer__bottom-link" data-fr-opened="false">
+Paramètres d'affichage
+</button>
+</li>
+</ul>
+<div class="fr-footer__bottom-copy">
+<p>
+Sauf mention contraire, tous les contenus de ce site sont sous
+<a target="_blank" rel="noopener" href="https://github.com/etalab/licence-ouverte/blob/master/LO.md">licence etalab-2.0</a>
+</p>
+</div>
+</div>
+</div>
+</footer>
+<dialog aria-labelledby="fr-theme-modal-title" class="fr-modal" id="fr-theme-modal" role="dialog">
+<div class="fr-container fr-container--fluid fr-container-md">
+<div class="fr-grid-row fr-grid-row--center">
+<div class="fr-col-12 fr-col-md-6 fr-col-lg-4">
+<div class="fr-modal__body">
+<div class="fr-modal__header">
+<button aria-controls="fr-theme-modal" class="fr-link--close fr-link">
+Fermer
+</button>
+</div>
+<div class="fr-modal__content">
+<h1 class="fr-modal__title" id="fr-theme-modal-title">
+Paramètres d’affichage
+</h1>
+<div class="fr-form-group fr-display" id="fr-display">
+<div class="fr-form-group">
+<fieldset class="fr-fieldset">
+<legend class="fr-fieldset__legend fr-text--regular" id="-legend">
+Choisissez un thème pour personnaliser l’apparence du site.
+</legend>
+<div class="fr-fieldset__content">
+<div class="fr-radio-group fr-radio-rich">
+<input id="fr-radios-theme-light" name="fr-radios-theme" type="radio" value="light">
+<label class="fr-label" for="fr-radios-theme-light">
+Thème clair
+</label>
+<div class="fr-radio-rich__img" data-fr-inject-svg="">
+<img alt="" src="../../artwork/light.svg">
+</div>
+</div>
+<div class="fr-radio-group fr-radio-rich">
+<input id="fr-radios-theme-dark" name="fr-radios-theme" type="radio" value="dark">
+<label class="fr-label" for="fr-radios-theme-dark">
+Thème sombre
+</label>
+<div class="fr-radio-rich__img" data-fr-inject-svg="">
+<img alt="" src="../../artwork/dark.svg">
+</div>
+</div>
+<div class="fr-radio-group fr-radio-rich">
+<input id="fr-radios-theme-system" name="fr-radios-theme" type="radio" value="system">
+<label class="fr-label" for="fr-radios-theme-system">
+Système
+<span class="fr-hint-text">Utilise les paramètres système.</span>
+</label>
+<div class="fr-radio-rich__img" data-fr-inject-svg="">
+<img alt="" src="../../artwork/system.svg">
+</div>
+</div>
+</div>
+</fieldset>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</dialog>
+
+<script src="../../javascripts/dsfr.module.min.js" type="module"></script>
+<script nomodule="true" src="../../javascripts/dsfr.nomodule.min.js" type="text/javascript"></script>
+
+
+
+</body></html>
