@@ -42,7 +42,7 @@ require "dsfr/components"
 
 Cette gem a pour but de supporter tous les composants proposés par le Design Système de l'État hormis ceux concernant les formulaires. Ceux-ci seront fournis dans une gem indépendante dans le futur.
 
-10/36 composants sont disponibles :
+11/36 composants sont disponibles :
 
 - [x] Accordéon - Accordion
 - [x] Alertes - Alert
@@ -69,7 +69,7 @@ Cette gem a pour but de supporter tous les composants proposés par le Design Sy
 - [ ] Mise en exergue - Highlight
 - [x] Modale - Modal
 - [ ] Navigation principale - Main navigation
-- [ ] Onglets - Tabs
+- [x] Onglets - Tabs
 - [ ] Pagination
 - [ ] Paramètres d'affichage - Display
 - [ ] Partage - Share
