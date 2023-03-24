@@ -13,19 +13,6 @@ Cette gem fournit des composants pour le Design Système de l'État (DSFR) en s'
 
 C'est un fork de [govuk-components](https://github.com/DFE-Digital/govuk-components) qui propose l'équivalent pour le GOV.UK Design System.
 
-
-## Développement en cours ⚠️
-
-Cette gem est en cours de développement et n'est pas encore
-recommandée pour un usage en production.
-
-N'hésitez pas à contribuer pour nous aider à avancer, un générateur de
-composant est même fourni pour vous faciliter la tâche :
-
-```sh
-bin/rails g dsfr_component FancyButton --params title:String count:Integer
-```
-
 ## Documentation
 
 Un [guide complet est disponible](https://betagouv.github.io/dsfr-view-components/). Il contient des instructions pour l'installation et l'usage de cette gem. Les exemples présents éxecutent le code et seront donc toujours à jour.
@@ -108,6 +95,7 @@ bundle exec rspec spec
 ```
 
 Pour développer avec les tests en continu :
+
 ```sh
 bundle exec guard
 ```
@@ -117,6 +105,13 @@ Lancer le guide de documentation :
 ```sh
 make watch-guide
 ```
+
+Utilisez le générateur pour créer un nouveau composant :
+
+```sh
+bin/rails g dsfr_component FancyButton --params title:String count:Integer
+```
+
 
 Lancer la dummy app pour itérer sur les composants :
 
