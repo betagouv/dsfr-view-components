@@ -1,6 +1,6 @@
 module Helpers
   module ContentHelpers
-    DSFR_COMPONENT_DOC_HREF = "https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/".freeze
+    DSFR_COMPONENT_DOC_HREF = "https://www.systeme-de-design.gouv.fr/elements-d-interface/composants".freeze
 
     def site_title
       "Composants Rails ViewComponent pour le Système de Design de lʼÉtat"

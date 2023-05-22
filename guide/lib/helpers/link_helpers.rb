@@ -45,7 +45,7 @@ module Helpers
     end
 
     def dsfr_icon_list_link
-      'https://www.systeme-de-design.gouv.fr/elements-d-interface/fondamentaux-techniques/icones/'
+      'https://www.systeme-de-design.gouv.fr/elements-d-interface/fondamentaux-techniques/icone/'
     end
 
     def rails_docs_button_to
