@@ -1,0 +1,17 @@
+<%= tag.nav(**html_attributes) do %>
+  <button
+      class="fr-breadcrumb__button"
+      aria-expanded="false"
+      aria-controls="breadcrumbs">
+    Voir le fil d’Ariane
+  </button>
+  <div class="fr-collapse" id="breadcrumbs">
+    <ol class="fr-breadcrumb__list">
+      <% breadcrumbs.each do |crumb| %>
+        <li>
+          <%= crumb %>
+        </li>
+      <% end %>
+    </ol>
+  </div>
+<% end %>

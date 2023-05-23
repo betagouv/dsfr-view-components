@@ -40,6 +40,7 @@ use_helper DsfrComponentsHelper
 use_helper Examples::CommonOptionsHelpers
 use_helper Examples::AlertHelpers
 use_helper Examples::AccordionHelpers
+use_helper Examples::BreadcrumbsHelpers
 use_helper Examples::LinkHelpers
 use_helper Examples::TileHelpers
 use_helper Examples::BadgeHelpers
