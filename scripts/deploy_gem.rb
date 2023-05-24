@@ -5,7 +5,7 @@ raise ArgumentError, "misformed version, should look like '1.0.13' (no v)" unles
 current_git_branch = `git rev-parse --abbrev-ref HEAD`.strip
 raise StandardError, "you need to be on main branch" if current_git_branch != "main"
 
-raise StandardError, "your branch needs to be clean, no changes" if `git status --porcelain`.present?
+raise StandardError, "your branch needs to be clean, no changes" unless `git status --porcelain`.empty?
 
 version_without_v = match_data[1]
 version_with_v = "v#{version_without_v}"
