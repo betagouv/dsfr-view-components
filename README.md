@@ -29,44 +29,7 @@ require "dsfr/components"
 
 Cette gem a pour but de supporter tous les composants proposés par le Design Système de l'État hormis ceux concernant les formulaires. Ceux-ci seront fournis dans une gem indépendante dans le futur.
 
-11/36 composants sont disponibles :
-
-- [x] Accordéon - Accordion
-- [x] Alertes - Alert
-- [x] Badge
-- [ ] Bandeau d'information importante
-- [ ] Barre de recherche - Search bar
-- [x] Boutons - Buttons
-- [ ] Groupe de bouton
-- [ ] Bouton FranceConnect
-- [ ] Cartes - Cards
-- [ ] Citation - Quote
-- [ ] Contenu médias - Responsive médias
-- [x] En-tête - Header
-- [ ] Fil d'Ariane - Breadcrumb
-- [ ] Gestionnaire de consentement - Consent banner
-- [ ] Icônes de favoris - Favicons
-- [x] Indicateur d'étape - Stepper
-- [ ] Interrupteur - Toggle switch
-- [ ] Lettre d'information et réseaux sociaux - Newsletter &amp; Follow us
-- [x] Liens - Links
-- [ ] Liens d'évitement - Skiplinks
-- [ ] Menu latéral - Side menu
-- [ ] Mise en avant - Call out
-- [ ] Mise en exergue - Highlight
-- [x] Modale - Modal
-- [ ] Navigation principale - Main navigation
-- [x] Onglets - Tabs
-- [ ] Pagination
-- [ ] Paramètres d'affichage - Display
-- [ ] Partage - Share
-- [ ] Pied de page - Footer
-- [ ] Sélecteur de langue
-- [ ] Sommaire - Summary
-- [ ] Tableau - Table
-- [x] Tag
-- [ ] Téléchargement de fichier
-- [x] Tuile - Tile
+La [liste des composants implémentés ou restants est consultable grâce au label `composant`](https://github.com/betagouv/dsfr-view-components/issues?page=2&q=is%3Aissue+label%3Acomposant) sur ce même dépôt.
 
 <!--
 This library also provides helpers for creating [links](https://govuk-components.netlify.app/helpers/link),
