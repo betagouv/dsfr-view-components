@@ -14,6 +14,11 @@ title: En-tête - Header
   :markdown
     Le texte du logo peut être sur deux lignes en ajoutant une classe CSS personnalisée
 
+= render '/partials/example.haml', caption: "En-tête avec logo horizontal", code: header_with_horizontal_logo do
+  :markdown
+    Un header peut présenter un logo horizontal.
+    L’alternative textuelle du logo (attribut alt) doit impérativement contenir le texte présent dans l’image.
+
 = render '/partials/example.haml', caption: "En-tête avec des accès rapides", code: header_with_tool_links do
   :markdown
     Un header peut présenter des liens d’accès rapide (*tool links* dans le code).

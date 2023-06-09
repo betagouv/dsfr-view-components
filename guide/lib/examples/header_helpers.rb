@@ -15,6 +15,15 @@ module Examples
       HEADER
     end
 
+    def header_with_horizontal_logo
+      <<~HEADER
+        = dsfr_header logo_text: "Ministère du Travail", title: "Égapro" do |header|
+          - header.with_operator_image title: "beta.gouv.fr", src: "https://beta.gouv.fr/assets/additional/images/logo-betagouvfr.svg", alt: "logo de beta.gouv.fr"
+          - header.with_tool_link title: "Comment ça marche", path: "#comment-ca-marche"
+          - header.with_tool_link title: "Contact", path: "#contact", classes: ["fr-icon-mail-line"]
+      HEADER
+    end
+
     def header_with_tool_links
       <<~HEADER
         = dsfr_header logo_text: "Ministère du Travail", title: "Égapro", tagline: "Indice de parité professionelle" do |header|

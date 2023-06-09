@@ -8,6 +8,10 @@
               <p class="fr-logo"><%= logo_text %></p>
             </div>
 
+            <% if operator_image? %>
+              <%= operator_image %>
+            <% end %>
+
             <% if search? || tool_links? || direct_links? %>
               <div class="fr-header__navbar">
                 <% if search? %>
@@ -25,14 +29,16 @@
             <% end %>
           </div>
 
-          <div class="fr-header__service">
-            <a href="/" title="Accueil - <%= title %>">
-              <p class="fr-header__service-title"><%= title %></p>
-            </a>
-            <% if tagline %>
-              <p class="fr-header__service-tagline"><%= tagline %></p>
-            <% end %>
-          </div>
+          <% if title %>
+            <div class="fr-header__service">
+              <a href="/" title="Accueil - <%= title %>">
+                <p class="fr-header__service-title"><%= title %></p>
+              </a>
+              <% if tagline %>
+                <p class="fr-header__service-tagline"><%= tagline %></p>
+              <% end %>
+            </div>
+          <% end %>
         </div>
 
         <% if tool_links? || search? %>
