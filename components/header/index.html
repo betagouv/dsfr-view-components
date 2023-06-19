@@ -256,6 +256,162 @@ HTML
 </div>
 </div>
 </figure>
+<h3 class="fr-mt-8w" id="en-tete-avec-logo-horizontal">
+<a class="header-anchor" href="#en-tete-avec-logo-horizontal">En-tête avec logo horizontal</a>
+</h3>
+<div class="fr-text-wrap">
+<p>Un header peut présenter un logo horizontal.
+L’alternative textuelle du logo (attribut alt) doit impérativement contenir le texte présent dans l’image.</p>
+
+
+
+</div>
+<figure class="app-example">
+<h4>Code</h4>
+<pre class="highlight"><code class="language-haml"><span class="p">=</span> <span class="n">dsfr_header</span> <span class="ss">logo_text: </span><span class="s2">"Ministère du Travail"</span><span class="p">,</span> <span class="ss">title: </span><span class="s2">"Égapro"</span> <span class="k">do</span> <span class="o">|</span><span class="n">header</span><span class="o">|</span>
+  <span class="p">-</span> <span class="n">header</span><span class="p">.</span><span class="nf">with_operator_image</span> <span class="ss">title: </span><span class="s2">"beta.gouv.fr"</span><span class="p">,</span> <span class="ss">src: </span><span class="s2">"https://beta.gouv.fr/assets/additional/images/logo-betagouvfr.svg"</span><span class="p">,</span> <span class="ss">alt: </span><span class="s2">"logo de beta.gouv.fr"</span>
+  <span class="p">-</span> <span class="n">header</span><span class="p">.</span><span class="nf">with_tool_link</span> <span class="ss">title: </span><span class="s2">"Comment ça marche"</span><span class="p">,</span> <span class="ss">path: </span><span class="s2">"#comment-ca-marche"</span>
+  <span class="p">-</span> <span class="n">header</span><span class="p">.</span><span class="nf">with_tool_link</span> <span class="ss">title: </span><span class="s2">"Contact"</span><span class="p">,</span> <span class="ss">path: </span><span class="s2">"#contact"</span><span class="p">,</span> <span class="ss">classes: </span><span class="p">[</span><span class="s2">"fr-icon-mail-line"</span><span class="p">]</span></code></pre>
+<h4>Résultat</h4>
+<div class="fr-tabs">
+<ul class="fr-tabs__list" role="tablist">
+<li role="presentation">
+<button aria-controls="output-rendered-en-tete-avec-logo-horizontal" aria-selected="true" class="fr-tabs__tab" id="output-rendered-en-tete-avec-logo-horizontal" role="tab" tabindex="0">
+Rendu
+</button>
+</li>
+<li role="presentation">
+<button aria-controls="output-html-en-tete-avec-logo-horizontal" aria-selected="false" class="fr-tabs__tab" id="output-html-en-tete-avec-logo-horizontal" role="tab" tabindex="0">
+HTML
+</button>
+</li>
+</ul>
+<div aria-labelledby="output-rendered-en-tete-avec-logo-horizontal" class="fr-tabs__panel fr-tabs__panel--selected" id="output-rendered-en-tete-avec-logo-horizontal" role="tabpanel">
+<header class="fr-header" role="banner">
+  <div class="fr-header__body">
+    <div class="fr-container">
+      <div class="fr-header__body-row">
+        <div class="fr-header__brand fr-enlarge-link">
+          <div class="fr-header__brand-top">
+            <div class="fr-header__logo">
+              <p class="fr-logo">
+                Ministère du Travail
+              </p>
+            </div>
+            <div class="fr-header__operator">
+              <a href="../../" title="beta.gouv.fr">
+                <img class="fr-responsive-img" src="https://beta.gouv.fr/assets/additional/images/logo-betagouvfr.svg" alt="logo de beta.gouv.fr" style="max-width:9.0625rem;">
+              </a>
+            </div>
+            <div class="fr-header__navbar">
+              <button class="fr-btn--menu fr-btn" data-fr-opened="false" aria-controls="modal-header-menu" aria-haspopup="menu" id="button-header-menu" title="Menu">
+                Menu
+              </button>
+            </div>
+          </div>
+          <div class="fr-header__service">
+            <a href="../../" title="Accueil - Égapro">
+              <p class="fr-header__service-title">
+                Égapro
+              </p>
+            </a>
+          </div>
+        </div>
+        <div class="fr-header__tools">
+          <div class="fr-header__tools-links">
+            <ul class="fr-btns-group">
+              <li>
+                <a href="#comment-ca-marche" class="fr-btn">
+                  Comment ça marche
+                </a>
+              </li>
+              <li>
+                <a href="#contact" class="fr-btn fr-icon-mail-line">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="fr-header__menu fr-modal" id="modal-header-menu" aria-labelledby="button-header-menu">
+    <div class="fr-container">
+      <button class="fr-btn--close fr-btn" aria-controls="modal-header-menu" title="Fermer">
+        Fermer
+      </button>
+      <div class="fr-header__menu-links">
+        <!-- this seems to get autopopulated with the tool links with JS -->
+      </div>
+    </div>
+  </div>
+</header>
+</div>
+<div aria-labelledby="output-html-en-tete-avec-logo-horizontal" class="fr-tabs__panel" id="output-html-en-tete-avec-logo-horizontal" role="tabpanel">
+<pre class="highlight"><code class="language-html"><span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"fr-header"</span> <span class="na">role=</span><span class="s">"banner"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-container"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__body-row"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__brand fr-enlarge-link"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__brand-top"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__logo"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"fr-logo"</span><span class="nt">&gt;</span>
+                Ministère du Travail
+              <span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__operator"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span> <span class="na">title=</span><span class="s">"beta.gouv.fr"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"fr-responsive-img"</span> <span class="na">src=</span><span class="s">"https://beta.gouv.fr/assets/additional/images/logo-betagouvfr.svg"</span> <span class="na">alt=</span><span class="s">"logo de beta.gouv.fr"</span> <span class="na">style=</span><span class="s">"max-width:9.0625rem;"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__navbar"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"fr-btn--menu fr-btn"</span> <span class="na">data-fr-opened=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"modal-header-menu"</span> <span class="na">aria-haspopup=</span><span class="s">"menu"</span> <span class="na">id=</span><span class="s">"button-header-menu"</span> <span class="na">title=</span><span class="s">"Menu"</span><span class="nt">&gt;</span>
+                Menu
+              <span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__service"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span> <span class="na">title=</span><span class="s">"Accueil - Égapro"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"fr-header__service-title"</span><span class="nt">&gt;</span>
+                Égapro
+              <span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__tools"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__tools-links"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"fr-btns-group"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;li&gt;</span>
+                <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#comment-ca-marche"</span> <span class="na">class=</span><span class="s">"fr-btn"</span><span class="nt">&gt;</span>
+                  Comment ça marche
+                <span class="nt">&lt;/a&gt;</span>
+              <span class="nt">&lt;/li&gt;</span>
+              <span class="nt">&lt;li&gt;</span>
+                <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#contact"</span> <span class="na">class=</span><span class="s">"fr-btn fr-icon-mail-line"</span><span class="nt">&gt;</span>
+                  Contact
+                <span class="nt">&lt;/a&gt;</span>
+              <span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__menu fr-modal"</span> <span class="na">id=</span><span class="s">"modal-header-menu"</span> <span class="na">aria-labelledby=</span><span class="s">"button-header-menu"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-container"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"fr-btn--close fr-btn"</span> <span class="na">aria-controls=</span><span class="s">"modal-header-menu"</span> <span class="na">title=</span><span class="s">"Fermer"</span><span class="nt">&gt;</span>
+        Fermer
+      <span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fr-header__menu-links"</span><span class="nt">&gt;</span>
+        <span class="c">&lt;!-- this seems to get autopopulated with the tool links with JS --&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/header&gt;</span></code></pre>
+</div>
+</div>
+</figure>
 <h3 class="fr-mt-8w" id="en-tete-avec-des-acces-rapides">
 <a class="header-anchor" href="#en-tete-avec-des-acces-rapides">En-tête avec des accès rapides</a>
 </h3>
