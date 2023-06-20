@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 version = ARGV[0]
 match_data = version&.match(/v?([0-9]+\.[0-9]+\.[0-9]+)/)
 raise ArgumentError, "misformed version, should look like '1.0.13' (no v)" unless match_data
