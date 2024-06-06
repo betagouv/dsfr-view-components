@@ -30,7 +30,7 @@ Gem::Specification.new do |spec|
   rails_version = ENV.fetch("RAILS_VERSION") { "6.1.5" }
 
   spec.add_dependency "html-attributes-utils", "~> 1"
-  spec.add_dependency "pagy", "~> 6"
+  spec.add_dependency "pagy", ">= 6", "< 9"
   spec.add_dependency "view_component", "~> 2"
 
   spec.add_development_dependency "deep_merge"
