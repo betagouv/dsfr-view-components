@@ -148,11 +148,11 @@ GEM
       nanoc-cli (~> 4.11, >= 4.11.14)
       nanoc-core (~> 4.11, >= 4.11.14)
     nenv (0.3.0)
-    nokogiri (1.13.10-arm64-darwin)
+    nokogiri (1.15.6-arm64-darwin)
       racc (~> 1.4)
-    nokogiri (1.13.10-x86_64-darwin)
+    nokogiri (1.15.6-x86_64-darwin)
       racc (~> 1.4)
-    nokogiri (1.13.10-x86_64-linux)
+    nokogiri (1.15.6-x86_64-linux)
       racc (~> 1.4)
     notiffany (0.1.3)
       nenv (~> 0.1)
@@ -172,7 +172,7 @@ GEM
     psych (4.0.6)
       stringio
     public_suffix (5.0.1)
-    racc (1.6.2)
+    racc (1.7.3)
     rack (2.2.5)
     rack-livereload (0.3.17)
       rack
