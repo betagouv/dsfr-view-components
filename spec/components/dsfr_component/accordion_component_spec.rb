@@ -4,8 +4,8 @@ RSpec.describe(DsfrComponent::AccordionComponent, type: :component) do
   context "two sections" do
     subject! do
       render_inline(DsfrComponent::AccordionComponent.new) do |component|
-        component.section(title: "Un") { "Premier contenu" }
-        component.section(title: "Deux") { "Deuxième contenu" }
+        component.with_section(title: "Un") { "Premier contenu" }
+        component.with_section(title: "Deux") { "Deuxième contenu" }
       end
     end
 
@@ -30,7 +30,7 @@ RSpec.describe(DsfrComponent::AccordionComponent, type: :component) do
   context "with a specific section id" do
     subject! do
       render_inline(DsfrComponent::AccordionComponent.new) do |component|
-        component.section(title: "Un", id: "test-un") { "Premier contenu" }
+        component.with_section(title: "Un", id: "test-un") { "Premier contenu" }
       end
     end
 
@@ -49,7 +49,7 @@ RSpec.describe(DsfrComponent::AccordionComponent, type: :component) do
   context "with an expanded section" do
     subject! do
       render_inline(DsfrComponent::AccordionComponent.new) do |component|
-        component.section(title: "Un", expanded: true) { "Premier contenu" }
+        component.with_section(title: "Un", expanded: true) { "Premier contenu" }
       end
     end
 

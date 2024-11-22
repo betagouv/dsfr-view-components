@@ -4,10 +4,10 @@ RSpec.describe(DsfrComponent::TabsComponent, type: :component) do
   context "with basic usage" do
     subject! do
       render_inline(described_class.new) do |tabs|
-        tabs.tab(title: "Onglet 1", active: true) do
+        tabs.with_tab(title: "Onglet 1", active: true) do
           "contenu premier onglet"
         end
-        tabs.tab(title: "Onglet 2") do
+        tabs.with_tab(title: "Onglet 2") do
           "contenu deuxième onglet"
         end
       end
@@ -40,13 +40,13 @@ RSpec.describe(DsfrComponent::TabsComponent, type: :component) do
   context "with icons" do
     subject! do
       render_inline(described_class.new) do |tabs|
-        tabs.tab(title: "Comment ça marche ?", icon: "info-line") do
+        tabs.with_tab(title: "Comment ça marche ?", icon: "info-line") do
           "Ça marche bien"
         end
-        tabs.tab(title: "Contact", icon: "mail-line") do
+        tabs.with_tab(title: "Contact", icon: "mail-line") do
           "Contactez-nous par email"
         end
-        tabs.tab(title: "Support", active: true, icon: "settings-5-line") do
+        tabs.with_tab(title: "Support", active: true, icon: "settings-5-line") do
           "Support technique"
         end
       end
@@ -81,11 +81,11 @@ RSpec.describe(DsfrComponent::TabsComponent, type: :component) do
   context "with links instead of buttons" do
     subject! do
       render_inline(described_class.new) do |tabs|
-        tabs.tab(title: "Onglet 1", path: "/onglet-1")
-        tabs.tab(title: "Onglet 2", active: true) do
+        tabs.with_tab(title: "Onglet 1", path: "/onglet-1")
+        tabs.with_tab(title: "Onglet 2", active: true) do
           "contenu deuxième onglet chargé"
         end
-        tabs.tab(title: "Onglet 3", path: "/onglet-3")
+        tabs.with_tab(title: "Onglet 3", path: "/onglet-3")
       end
     end
 
