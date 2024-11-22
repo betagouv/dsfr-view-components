@@ -26,9 +26,6 @@ Gem::Specification.new do |spec|
 
   spec.required_ruby_version = '>= 3.0'
 
-  exact_rails_version = ENV.key?("RAILS_VERSION")
-  rails_version = ENV.fetch("RAILS_VERSION") { "7.1" }
-
   spec.add_dependency "html-attributes-utils", "~> 1"
   spec.add_dependency "pagy", "~> 6"
   spec.add_dependency "view_component", "~> 2"
