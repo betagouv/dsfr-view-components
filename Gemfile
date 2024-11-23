@@ -15,7 +15,7 @@ gemspec
 # gem 'byebug', group: [:development, :test]
 
 # until https://github.com/nanoc/nanoc/issues/1639 is fixed
-gem "nanoc", github: 'betagouv/nanoc', branch: 'fix/haml-filter'
+gem 'nanoc'
 
 group 'nanoc' do
   gem 'nanoc-live'
