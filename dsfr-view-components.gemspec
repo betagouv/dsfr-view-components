@@ -24,24 +24,18 @@ Gem::Specification.new do |spec|
 
   spec.files = Dir["{app,config,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
-  spec.required_ruby_version = '>= 2.7.6'
-
-  exact_rails_version = ENV.key?("RAILS_VERSION")
-  rails_version = ENV.fetch("RAILS_VERSION") { "6.1.5" }
+  spec.required_ruby_version = '>= 3.0'
 
   spec.add_dependency "html-attributes-utils", "~> 1"
   spec.add_dependency "pagy", "~> 6"
-  spec.add_dependency "view_component", "~> 2"
+  spec.add_dependency "view_component", "~> 3"
 
   spec.add_development_dependency "deep_merge"
   spec.add_development_dependency "guard"
   spec.add_development_dependency "guard-rspec"
   spec.add_development_dependency "pry-byebug"
   spec.add_development_dependency "rspec-html-matchers", "~> 0.9"
-  spec.add_development_dependency "rspec-rails"
   spec.add_development_dependency "rubocop"
-  spec.add_development_dependency "rubocop-rails"
-  spec.add_development_dependency "sassc-rails"
   spec.add_development_dependency("simplecov", "~> 0.20")
   spec.add_development_dependency "sqlite3"
   spec.add_development_dependency "yard"
