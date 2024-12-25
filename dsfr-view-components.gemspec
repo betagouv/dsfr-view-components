@@ -24,7 +24,7 @@ Gem::Specification.new do |spec|
 
   spec.files = Dir["{app,config,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
-  spec.required_ruby_version = '>= 3.1'
+  spec.required_ruby_version = '>= 3.2'
 
   exact_rails_version = ENV.key?("RAILS_VERSION")
   rails_version = ENV.fetch("RAILS_VERSION") { "6.1.5" }
