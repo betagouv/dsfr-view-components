@@ -9,7 +9,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        ruby: ['2.7.6', '3.0.4', '3.1.2']
+        ruby: ['3.0.4', '3.1.2']
         rails: ['6.1.5', '7.0.3']
     runs-on: ubuntu-20.04
     name: Testing with Ruby ${{ matrix.ruby }} and Rails ${{ matrix.rails }}
@@ -25,7 +25,7 @@ jobs:
         env:
           RAILS_VERSION: ${{ matrix.rails }}
         run: |
-          gem install bundler ${{ startsWith(matrix.ruby, '2') && '-v 2' }}
+          gem install bundler
           bundle install --jobs 4 --retry 3
 
       - name: Run RSpec
