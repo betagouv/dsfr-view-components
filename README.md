@@ -46,7 +46,7 @@ and [back to top links](https://govuk-components.netlify.app/helpers/back-to-top
 Nous conseillons d'utiliser [rbenv](https://github.com/rbenv/rbenv) pour gérer vos versions de ruby :
 
 ```sh
-rbenv local 3.1.2
+rbenv local 3.3.6
 rbenv install
 ```
 
