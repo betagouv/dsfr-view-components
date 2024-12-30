@@ -5,7 +5,7 @@
 [![Gem](https://img.shields.io/gem/dt/dsfr-view-components?logo=rubygems)](https://rubygems.org/gems/dsfr-view-components)
 [![GitHub license](https://img.shields.io/github/license/betagouv/dsfr-view-components)](https://github.com/betagouv/dsfr-view-components/blob/main/LICENSE)
 [![Rails](https://img.shields.io/badge/Rails-6.1.5%20%E2%95%B1%207.0.3-E16D6D)](https://weblog.rubyonrails.org/releases/)
-[![Ruby](https://img.shields.io/badge/Ruby-2.7.6%20%20%E2%95%B1%203.0.3%20%20%E2%95%B1%203.1.2-E16D6D)](https://www.ruby-lang.org/en/downloads/)
+[![Ruby](https://img.shields.io/badge/Ruby-3.2.6%20%20%E2%95%B1%203.3.6-E16D6D)](https://www.ruby-lang.org/en/downloads/)
 
 [![Design Système de lʼÉtat](https://img.shields.io/badge/Design%20Système%20de%20lʼÉtat-1.8.4-brightgreen)](https://www.systeme-de-design.gouv.fr/)
 
@@ -46,7 +46,7 @@ and [back to top links](https://govuk-components.netlify.app/helpers/back-to-top
 Nous conseillons d'utiliser [rbenv](https://github.com/rbenv/rbenv) pour gérer vos versions de ruby :
 
 ```sh
-rbenv local 3.1.2
+rbenv local 3.3.6
 rbenv install
 ```
 
