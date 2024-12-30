@@ -7,7 +7,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: Deploy Guide
+    name: Build & Upload static site
     steps:
       - uses: actions/checkout@v4
       - name: Install Ruby & gems
@@ -20,12 +20,12 @@ jobs:
           node-version: 18
       - run: make build-guide
   deploy:
+    name: Deploy to GitHub Pages
+    runs-on: ubuntu-latest
+    needs: build
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
+      - id: deployment
         uses: actions/deploy-pages@v4
