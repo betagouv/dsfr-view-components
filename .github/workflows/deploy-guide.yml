@@ -19,6 +19,12 @@ jobs:
         with:
           node-version: 18
       - run: make build-guide
+      - name: Upload static files as artifact
+        id: deployment
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./guide/output
+
   deploy:
     name: Deploy to GitHub Pages
     runs-on: ubuntu-latest
