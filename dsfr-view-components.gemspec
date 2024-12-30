@@ -2,7 +2,7 @@ $LOAD_PATH.push File.expand_path("lib", __dir__)
 
 require "dsfr/components/version"
 
-DEFAULT_RAILS_VERSION = "~> 7"
+DEFAULT_RAILS_VERSION = "~> 8"
 
 METADATA = {
   "bug_tracker_uri" => "https://github.com/betagouv/dsfr-view-components/issues",
@@ -43,6 +43,7 @@ Gem::Specification.new do |spec|
 
   # Required for the guide
   spec.add_development_dependency("rails", ENV.fetch("RAILS_VERSION", DEFAULT_RAILS_VERSION))
+  spec.add_development_dependency("propshaft")
   spec.add_development_dependency("haml", "~> 6.1.1")
   spec.add_development_dependency("haml_lint")
   spec.add_development_dependency("htmlbeautifier", "~> 1.4.1")
@@ -50,8 +51,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency("nanoc", "~> 4.11")
   spec.add_development_dependency("rouge", "~> 4.0.0")
   spec.add_development_dependency("rubypants", "~> 0.7.0")
-  spec.add_development_dependency("sass")
-  spec.add_development_dependency("sassc", "~> 2.4.0")
   spec.add_development_dependency("slim", "~> 4.1.0")
   spec.add_development_dependency("slim_lint", "~> 0.22.0")
   spec.add_development_dependency("webrick", "~> 1.7.0")

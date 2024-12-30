@@ -7,7 +7,7 @@
     <%= csp_meta_tag %>
 
     <%# <meta name="theme-color" content="#000091"> %>
-    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
@@ -84,16 +84,10 @@
       </div>
     </header>
 
-    <%# dsfr_skip_link %>
-    <%# dsfr_header(crown: false, logotype: "GOV.UK Components") %>
-
     <main role="main">
       <div class="fr-container fr-py-4w">
         <%= yield %>
       </div>
     </main>
-
-    <%# dsfr_footer(meta_items: { "GitHub" => "https://github.com/DFE-Digital/govuk-components", "RubyGems" => "https://rubygems.org/gems/govuk-components", "DfE Digital" => "https://dfedigital.blog.gov.uk/" }) %>
-
   </body>
 </html>
