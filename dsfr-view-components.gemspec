@@ -14,12 +14,10 @@ Gem::Specification.new do |spec|
   spec.name        = "dsfr-view-components"
   spec.version     = Dsfr::Components::VERSION
   spec.authors     = ["BetaGouv developers"]
-  spec.email       = ["stephane.maniaci@beta.gouv.fr", "adrien.di_pasquale@beta.gouv.fr"]
+  spec.email       = ["antoine.girard@beta.gouv.fr", "stephane.maniaci@beta.gouv.fr", "adrien.di_pasquale@beta.gouv.fr"]
   spec.homepage    = "https://github.com/betagouv/dsfr-view-components"
-  spec.summary     = "View Components for the Système de Design de l'État (DSFR)"
-  spec.description = "A collection of components based on ViewComponent intended to ease the
-  building of web applications with the Système de Design de l'État
-  (DSFR)"
+  spec.summary     = "Composants ViewComponent pour le Système de Design de l'État (DSFR)"
+  spec.description = "Cette librairie de composants vise à simplifier l’usage du DSFR (Système de Design de l'État) dans les applications web utilisant Ruby On Rails"
   spec.license = "MIT"
 
   spec.files = Dir["{app,config,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
