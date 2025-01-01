@@ -21,4 +21,4 @@ group 'nanoc' do
   gem 'nanoc-live'
 end
 
-gem "rubocop-rspec", "~> 2.14"
+gem "rubocop-rspec", "~> 3.3"
