@@ -29,7 +29,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "html-attributes-utils", "~> 1"
   spec.add_dependency "pagy", "~> 6"
-  spec.add_dependency "view_component", "~> 2"
+  spec.add_dependency "view_component", ">= 2", "< 4"
 
   spec.add_development_dependency "deep_merge"
   spec.add_development_dependency "guard"
