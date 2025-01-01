@@ -188,7 +188,7 @@ GEM
     rbtree (0.4.6)
     regexp_parser (2.6.1)
     rexml (3.2.5)
-    rouge (4.0.1)
+    rouge (4.5.1)
     rspec (3.12.0)
       rspec-core (~> 3.12.0)
       rspec-expectations (~> 3.12.0)
@@ -314,7 +314,7 @@ DEPENDENCIES
   nanoc
   nanoc-live
   pry-byebug
-  rouge (~> 4.0.0)
+  rouge (~> 4.5.1)
   rspec-html-matchers (~> 0.9)
   rspec-rails
   rubocop
