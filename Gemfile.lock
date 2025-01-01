@@ -4,7 +4,7 @@ PATH
     dsfr-view-components (1.5.3)
       html-attributes-utils (~> 1)
       pagy (~> 6)
-      view_component (~> 2)
+      view_component (>= 2, < 4)
 
 GEM
   remote: https://rubygems.org/
@@ -285,8 +285,8 @@ GEM
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.4.2)
-    view_component (2.83.0)
-      activesupport (>= 5.2.0, < 8.0)
+    view_component (3.21.0)
+      activesupport (>= 5.2.0, < 8.1)
       concurrent-ruby (~> 1.0)
       method_source (~> 1.0)
     webrick (1.7.0)
