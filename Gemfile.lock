@@ -92,8 +92,8 @@ GEM
       sorted_set (~> 1.0)
     json (2.6.3)
     json_schema (0.21.0)
-    kramdown (2.4.0)
-      rexml
+    kramdown (2.5.1)
+      rexml (>= 3.3.9)
     listen (3.8.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -187,7 +187,7 @@ GEM
       ffi (~> 1.0)
     rbtree (0.4.6)
     regexp_parser (2.6.1)
-    rexml (3.2.5)
+    rexml (3.4.0)
     rouge (4.0.1)
     rspec (3.12.0)
       rspec-core (~> 3.12.0)
@@ -310,7 +310,7 @@ DEPENDENCIES
   haml (~> 6.1.1)
   haml_lint
   htmlbeautifier (~> 1.4.1)
-  kramdown (~> 2.4.0)
+  kramdown (~> 2.5.1)
   nanoc
   nanoc-live
   pry-byebug
