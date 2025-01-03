@@ -21,6 +21,6 @@ group 'nanoc' do
   gem 'nanoc-live'
 end
 
-gem "rubocop-rspec", "~> 2.14"
-
-gem "cssbundling-rails", "~> 1.4"
+gem "cssbundling-rails"
+gem "rubocop-rails"
+gem "rubocop-rspec"
