@@ -7,15 +7,15 @@ title: Accordéon
   présentés dans une page.
 
 = render('/partials/example.haml',
-  caption: "Accordéon section unique",
-  code: accordion_single) do
+         caption: "Accordéon section unique",
+         code: accordion_single) do
   :markdown
     Vous pouvez aussi utiliser le helper `dsfr_accordion` avec une unique section.
     La section sera alors wrappée par une div `fr-accordions-group` invisible.
 
 = render('/partials/example.haml',
-  caption: "Accordéon avec trois sections",
-  code: accordion_normal) do
+         caption: "Accordéon avec trois sections",
+         code: accordion_normal) do
   :markdown
     Les titres `title` et les contenus sont obligatoires pour les sections.
     L'attribut `id` est optionnel et permet de définir une ancre HTML réutilisable.

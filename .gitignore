@@ -12,6 +12,7 @@ spec/dummy/tmp/
 spec/dummy/node_modules/
 spec/dummy/public/assets/
 spec/dummy/config/master.key
+spec/dummy/app/assets/builds
 coverage
 *.gem
 .tool-versions
