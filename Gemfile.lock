@@ -104,9 +104,6 @@ GEM
     cri (2.15.12)
     cssbundling-rails (1.4.1)
       railties (>= 6.0.0)
-    dartsass-rails (0.5.1)
-      railties (>= 6.0.0)
-      sass-embedded (~> 1.63)
     date (3.4.1)
     ddmetrics (1.1.0)
     ddplugin (1.0.3)
@@ -125,15 +122,6 @@ GEM
     formatador (1.1.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
-    google-protobuf (4.29.2-arm64-darwin)
-      bigdecimal
-      rake (>= 13)
-    google-protobuf (4.29.2-x86_64-darwin)
-      bigdecimal
-      rake (>= 13)
-    google-protobuf (4.29.2-x86_64-linux)
-      bigdecimal
-      rake (>= 13)
     guard (2.19.1)
       formatador (>= 0.2.4)
       listen (>= 2.7, < 4.0)
@@ -369,12 +357,6 @@ GEM
       rubocop (~> 1.61)
     ruby-progressbar (1.13.0)
     rubypants (0.7.1)
-    sass-embedded (1.83.0-arm64-darwin)
-      google-protobuf (~> 4.28)
-    sass-embedded (1.83.0-x86_64-darwin)
-      google-protobuf (~> 4.28)
-    sass-embedded (1.83.0-x86_64-linux-gnu)
-      google-protobuf (~> 4.28)
     securerandom (0.4.1)
     set (1.1.1)
     shellany (0.0.1)
@@ -436,7 +418,6 @@ PLATFORMS
 
 DEPENDENCIES
   cssbundling-rails (~> 1.4)
-  dartsass-rails (~> 0.5.1)
   deep_merge
   dsfr-view-components!
   guard

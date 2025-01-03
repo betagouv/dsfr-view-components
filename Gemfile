@@ -23,6 +23,4 @@ end
 
 gem "rubocop-rspec", "~> 2.14"
 
-gem "dartsass-rails", "~> 0.5.1"
-
 gem "cssbundling-rails", "~> 1.4"
