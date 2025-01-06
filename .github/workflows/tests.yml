@@ -6,24 +6,16 @@ on:
   pull_request:
 jobs:
   rspec:
-    strategy:
-      fail-fast: false
-      matrix:
-        ruby: ['3.2.6', '3.3.6']
-        rails: ['8.0.1']
     runs-on: ubuntu-latest
-    name: Testing with Ruby ${{ matrix.ruby }} and Rails ${{ matrix.rails }}
+    name: RSpec tests
     steps:
       - uses: actions/checkout@v4
-
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: ${{ matrix.ruby }}
+          ruby-version: 3.2
 
       - name: Install gems
-        env:
-          RAILS_VERSION: ${{ matrix.rails }}
         run: |
           gem install bundler
           bundle install --jobs 4 --retry 3
@@ -42,7 +34,7 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.2.6
+          ruby-version: 3.2
 
       - name: Install gems
         run: |
