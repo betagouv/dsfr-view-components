@@ -3,8 +3,8 @@ require 'spec_helper'
 RSpec.describe(DsfrComponent::BreadcrumbsComponent, type: :component) do
   subject! do
     render_inline(described_class.new) do |b|
-      b.breadcrumb(label: "Accueil", href: "/")
-      b.breadcrumb(label: "Cette page")
+      b.with_breadcrumb(label: "Accueil", href: "/")
+      b.with_breadcrumb(label: "Cette page")
     end
   end
 

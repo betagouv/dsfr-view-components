@@ -111,5 +111,5 @@ Rails.application.configure do
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
   config.public_file_server.enabled = true
   config.assets.paths << Rails.root.join('node_modules')
-  config.assets.paths << Rails.root.join('node_modules', 'govuk-frontend', 'govuk', 'assets', 'fonts')
+  config.assets.paths << Rails.root.join("node_modules/govuk-frontend/govuk/assets/fonts")
 end

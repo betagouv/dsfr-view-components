@@ -1,6 +1,10 @@
 {
   "dependencies": {
     "@gouvfr/dsfr": "^1.7.2",
-    "prismjs": "^1.27.0"
+    "prismjs": "^1.27.0",
+    "sass": "^1.83.0"
+  },
+  "scripts": {
+    "build:css": "sass ./app/assets/stylesheets/application.sass.scss:./app/assets/builds/application.css --no-source-map --load-path=node_modules"
   }
 }
