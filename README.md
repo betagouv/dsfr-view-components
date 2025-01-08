@@ -25,6 +25,15 @@ Pour utiliser cette gem dans votre application Rails, il faut ajouter cette lign
 require "dsfr/components"
 ```
 
+Depuis la version 3, les assets du DSFR sont inclus dans la gem. Dans votre `app/views/layouts/application.html.erb` (ou similaire), vous devez inclure les assets JS/CSS du DSFR :
+
+```erb
+<%= stylesheet_link_tag "dsfr.min", "application-turbo-track": "reload" %>
+
+<%= javascript_include_tag "dsfr.module.min.js", type: 'module' %>
+<%= javascript_include_tag "dsfr.nomodule.min.js", nomodule: true %>
+```
+
 ## Composants disponibles
 
 Cette gem a pour but de supporter tous les composants proposés par le Design Système de l'État hormis ceux concernant les formulaires. Ceux-ci seront fournis dans une gem indépendante dans le futur.
@@ -40,13 +49,13 @@ and [back to top links](https://govuk-components.netlify.app/helpers/back-to-top
 ## Services utilisant cette gem
 
 - [Collectif Objets](https://collectif-objets.beta.gouv.fr/) - [code source](https://github.com/betagouv/collectif-objets)
+- [APLyPro](https://aplypro.beta.gouv.fr) - [code source](https://github.com/betagouv/aplypro)
 
 ## Contribuer
 
 Nous conseillons d'utiliser [rbenv](https://github.com/rbenv/rbenv) pour gérer vos versions de ruby :
 
 ```sh
-rbenv local 3.3.6
 rbenv install
 ```
 
