@@ -25,6 +25,8 @@ Pour utiliser cette gem dans votre application Rails, il faut ajouter cette lign
 require "dsfr/components"
 ```
 
+**NOTE:** depuis la version 2.1, la gem dépend de [`dsfr-assets`](https://github.com/betagouv/dsfr-assets) qui embarque les assets du DSFR pour vous. Pour laisser au temps aux équipes de vérifier cette intégration, l'inclusion des assets est optionnelle mais peut se faire en suivant [les instructions dans le README de dsfr-assets](https://github.com/betagouv/dsfr-assets?tab=readme-ov-file#installation).
+
 ## Composants disponibles
 
 Cette gem a pour but de supporter tous les composants proposés par le Design Système de l'État hormis ceux concernant les formulaires. Ceux-ci seront fournis dans une gem indépendante dans le futur.
@@ -75,12 +77,11 @@ Utilisez le générateur pour créer un nouveau composant :
 bin/rails g dsfr_component FancyButton --params title:String count:Integer
 ```
 
-
 Lancer la dummy app pour itérer sur les composants :
 
 ```sh
 cd spec/dummy
-bundle install && npm install
+bundle install
 bundle exec rails server
 ```
 
@@ -89,7 +90,6 @@ Déployer une nouvelle version de la gem :
 ```sh
 VERSION=1.3.2 make deploy_gem
 ```
-
 
 ## Licence
 

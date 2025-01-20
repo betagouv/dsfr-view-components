@@ -8,6 +8,11 @@
 
     <%# <meta name="theme-color" content="#000091"> %>
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "dsfr.min", "application-turbo-track": "reload" %>
+
+    <%= javascript_include_tag "dsfr.module.min.js", type: 'module' %>
+    <%= javascript_include_tag "dsfr.nomodule.min.js", nomodule: true %>
+
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 

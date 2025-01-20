@@ -5,6 +5,8 @@ require "action_controller/railtie"
 require "action_view/railtie"
 
 Bundler.require(*Rails.groups)
+
+require "dsfr/assets"
 require "dsfr/components"
 
 module Dummy

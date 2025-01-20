@@ -16,7 +16,11 @@ Gem::Specification.new do |spec|
   spec.name        = "dsfr-view-components"
   spec.version     = Dsfr::Components::VERSION
   spec.authors     = ["BetaGouv developers"]
-  spec.email       = ["antoine.girard@beta.gouv.fr", "stephane.maniaci@beta.gouv.fr", "adrien.di_pasquale@beta.gouv.fr"]
+  spec.email       = [
+    "antoine.girard@beta.gouv.fr",
+    "stephane.maniaci@beta.gouv.fr",
+    "adrien.di_pasquale@beta.gouv.fr"
+  ]
   spec.homepage    = "https://github.com/betagouv/dsfr-view-components"
   spec.summary     = "Composants ViewComponent pour le Système de Design de l'État (DSFR)"
   spec.description = "Cette librairie de composants vise à simplifier l’usage du DSFR (Système de Design de l'État) dans les applications web utilisant Ruby On Rails"
@@ -29,6 +33,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "html-attributes-utils", "~> 1"
   spec.add_dependency "pagy", "~> 6"
   spec.add_dependency "view_component", "~> 3"
+  spec.add_dependency "dsfr-assets", "~> 1.13"
 
   spec.add_development_dependency "deep_merge"
   spec.add_development_dependency "guard"
@@ -36,7 +41,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "pry-byebug"
   spec.add_development_dependency "rspec-html-matchers", "~> 0.9"
   spec.add_development_dependency "rubocop"
-  spec.add_development_dependency("simplecov", "~> 0.20")
+  spec.add_development_dependency "simplecov", "~> 0.20"
   spec.add_development_dependency "sqlite3"
   spec.add_development_dependency "yard"
 
