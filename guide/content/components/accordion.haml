@@ -2,16 +2,16 @@
 title: Accordéon
 ---
 
-%p
-  Les accordéons permettent aux utilisateurs d'afficher et de masquer des sections de contenu
-  présentés dans une page.
-
-= render('/partials/example.haml',
-         caption: "Accordéon section unique",
-         code: accordion_single) do
+.fr-text-wrap
   :markdown
-    Vous pouvez aussi utiliser le helper `dsfr_accordion` avec une unique section.
-    La section sera alors wrappée par une div `fr-accordions-group` invisible.
+    Les accordéons permettent aux utilisateurs d'afficher et de masquer des sections de contenu
+    présentés dans une page.
+
+    En conformité avec la documentation officielle en bas de page, ce composant :
+
+    * introduit des niveaux de titre : assurez-vous de **respecter la hiérarchie de la page** ;
+    * ne doit pas être utilisé pour du contenu que vos utilisateurs devraient lire ;
+    * ne doit pas être utilisé pour un contenu très court : utilisez des listes ou paragraphes.
 
 = render('/partials/example.haml',
          caption: "Accordéon avec trois sections",
@@ -20,5 +20,12 @@ title: Accordéon
     Les titres `title` et les contenus sont obligatoires pour les sections.
     L'attribut `id` est optionnel et permet de définir une ancre HTML réutilisable.
     S'il n'est pas passé un `id` aléatoire sera généré.
+
+= render('/partials/example.haml',
+         caption: "Accordéon avec niveau de titre personnalisé",
+         code: accordion_custom_header_level) do
+  :markdown
+    Si le niveau de titre par défaut (`H3`) ne vous convient pas, vous pouvez le surcharger en passant l'option `starting_header_level`.
+
 
 = render('/partials/related-info.haml', links: dsfr_component_doc_link("Accordéons", "accordeon"))

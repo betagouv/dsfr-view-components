@@ -23,13 +23,6 @@ RSpec.describe(DsfrComponentsHelper, type: 'helper') do
       args: [],
       kwargs: {},
       css_matcher: %(.fr-accordions-group)
-    },
-    {
-      helper_method: :dsfr_accordion_section,
-      klass: DsfrComponent::AccordionComponent::SectionComponent,
-      args: [],
-      kwargs: { title: "Section Un" },
-      css_matcher: %(.fr-accordion)
     }
   ]
     .map { |h| HelperComponentMapping.new(**h) }

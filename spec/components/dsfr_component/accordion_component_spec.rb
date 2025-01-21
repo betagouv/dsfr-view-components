@@ -46,6 +46,16 @@ RSpec.describe(DsfrComponent::AccordionComponent, type: :component) do
     end
   end
 
+  context "when the default header level is overriden" do
+    it "renders matching sections" do
+      render_inline(DsfrComponent::AccordionComponent.new(starting_header_level: 2)) do |component|
+        component.with_section(title: "Un", id: "test-un") { "Premier contenu" }
+      end
+
+      expect(rendered_content).to have_tag('h2')
+    end
+  end
+
   context "with an expanded section" do
     subject! do
       render_inline(DsfrComponent::AccordionComponent.new) do |component|
