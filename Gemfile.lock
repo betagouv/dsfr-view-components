@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    dsfr-view-components (2.0.1)
+    dsfr-view-components (2.1.0)
       dsfr-assets (~> 1.13)
       html-attributes-utils (~> 1)
       pagy (~> 6)
