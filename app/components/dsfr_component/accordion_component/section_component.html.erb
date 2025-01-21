@@ -1,13 +1,13 @@
 <%= tag.section(**html_attributes) do %>
-  <h3 class="fr-accordion__title">
+  <%= tag.send("h#{starting_header_level}", class: "fr-accordion__title") do %>
     <button
-      class="fr-accordion__btn"
-      aria-expanded="<%= expanded? ? "true" : "false" %>"
-      aria-controls="<%= id %>"
+        class="fr-accordion__btn"
+        aria-expanded="<%= expanded? ? "true" : "false" %>"
+        aria-controls="<%= id %>"
     >
       <%= title %>
     </button>
-  </h3>
+  <% end %>
   <div
     id="<%= id %>"
     class="fr-collapse <%= "fr-collapse--expanded" if expanded? %>"
