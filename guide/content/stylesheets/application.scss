@@ -1,7 +1,7 @@
-@import "dsfr/dsfr.min";
+@use "dsfr.min";
 
 // code CSS
-@import "highlight";
+@use "highlight";
 
 figure {
   padding: 0;
