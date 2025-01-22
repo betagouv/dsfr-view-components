@@ -15,8 +15,9 @@ gem 'nanoc'
 gem 'ostruct'
 
 group 'nanoc' do
-  gem 'nanoc-dart-sass'
+  gem 'dsfr-assets'
   gem 'nanoc-live'
+  gem 'sass-embedded'
 end
 
 gem "rubocop-rails"

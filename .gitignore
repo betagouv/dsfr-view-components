@@ -21,8 +21,9 @@ guide/tmp
 guide/output
 guide/*.log
 guide/node_modules
+guide/content/artwork/*
+guide/content/fonts/*
 guide/content/icons/*
 guide/content/javascripts/*
-guide/content/fonts/*
 .yardoc
 vendor/

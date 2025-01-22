@@ -1,6 +1,4 @@
-// Import the DSFR
-@use "pkg:@gouvfr/dsfr/dist/dsfr.min.css";
-@use "pkg:@gouvfr/dsfr/dist/utility/utility.min.css";
+@use "dsfr.min";
 
 // code CSS
 @use "highlight";
