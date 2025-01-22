@@ -18,6 +18,7 @@ gemspec
 gem 'nanoc'
 
 group 'nanoc' do
+  gem 'dsfr-assets'
   gem 'nanoc-live'
 end
 

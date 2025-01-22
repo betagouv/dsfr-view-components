@@ -21,6 +21,6 @@ guide/output
 guide/*.log
 guide/node_modules
 guide/content/javascripts/*
-guide/content/stylesheets/fonts/*
-guide/content/stylesheets/icons/*
+guide/content/stylesheets/*
+!guide/content/javascripts/*.scss
 .yardoc

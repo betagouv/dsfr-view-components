@@ -14,8 +14,6 @@ haml-lint:
 
 rspec:
 	${prefix} rspec --format progress
-npm-install:
-	${guide_dir} npm ci --silent
 nanoc-check-internal:
 	( ${guide_dir} ${prefix} nanoc check ${nanoc_internal_checks} )
 nanoc-check-external:
@@ -24,11 +22,11 @@ nanoc-check-all: build-guide
 	( ${guide_dir} ${prefix} nanoc check ${nanoc_internal_checks} ${nanoc_external_checks} )
 build:
 	${prefix} gem build dsfr-view-components.gemspec
-build-guide: npm-install
+build-guide:
 	( ${guide_dir} ${prefix} nanoc )
 view-guide: build-guide
 	( ${guide_dir} ${prefix} nanoc view --port ${nanoc_default_port} )
-watch-guide: npm-install
+watch-guide:
 	( ${guide_dir} ${prefix} nanoc live --port ${nanoc_default_port} )
 docs-server:
 	bundle exec yard server --reload

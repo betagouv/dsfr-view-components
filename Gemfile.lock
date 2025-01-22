@@ -112,7 +112,7 @@ GEM
     diff-lcs (1.5.1)
     docile (1.4.1)
     drb (2.2.1)
-    dsfr-assets (1.13.0)
+    dsfr-assets (1.13.0.1)
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0)
@@ -426,6 +426,7 @@ PLATFORMS
 DEPENDENCIES
   cssbundling-rails
   deep_merge
+  dsfr-assets
   dsfr-view-components!
   guard
   guard-rspec
