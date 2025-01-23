@@ -4,6 +4,7 @@ require 'action_controller'
 require 'htmlbeautifier'
 require 'active_support/core_ext/hash/deep_merge'
 require 'active_support/core_ext/string/starts_ends_with'
+require 'pagy'
 
 Dir.glob(File.join('./lib', '**', '*.rb')).sort.each { |f| require f }
 
@@ -50,3 +51,4 @@ use_helper Examples::ModalHelpers
 use_helper Examples::HeaderHelpers
 use_helper Examples::TabsHelpers
 use_helper Examples::HighlightHelpers
+use_helper Examples::SkiplinkHelpers
