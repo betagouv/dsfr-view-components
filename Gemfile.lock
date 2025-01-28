@@ -4,7 +4,6 @@ PATH
     dsfr-view-components (2.1.0)
       dsfr-assets (~> 1.13)
       html-attributes-utils (~> 1)
-      pagy (~> 6)
       view_component (~> 3)
 
 GEM
@@ -246,7 +245,6 @@ GEM
       nenv (~> 0.1)
       shellany (~> 0.0)
     ostruct (0.6.1)
-    pagy (6.5.0)
     parallel (1.26.3)
     parser (3.3.6.0)
       ast (~> 2.4.1)
