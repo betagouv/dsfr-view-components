@@ -7,6 +7,8 @@ class DsfrComponent::Base < ViewComponent::Base
 
   HEADING_LEVELS = [1, 2, 3, 4, 5, 6].freeze
 
+  SIZES = %i[sm md lg].freeze
+
   def initialize(classes:, html_attributes:)
     if classes.nil?
       Rails.logger.warn("classes is nil, if no custom classes are needed omit the param")

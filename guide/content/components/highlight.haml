@@ -1,0 +1,22 @@
+---
+title: Mise en exergue - Highlight
+---
+
+.fr-text-wrap
+  :markdown
+
+    La mise en exergue permet à l'utilisateur de distinguer et repérer une information facilement. Elle met en évidence **une information déjà présente** dans le reste du contenu : soit une reformulation, soit une reprise du texte.
+
+    Pour mettre en évidence une information complémentaire, utilisez le composant "Mise en avant".
+
+    La taille du texte peut être adaptée avec le paramètre `size: :sm[/md/lg]`.
+
+= render('/partials/example.haml', caption: "Vue d'ensemble", code: highlight_default) do
+  :markdown
+    Le rendu de base de la mise en exergue
+
+= render('/partials/example.haml', caption: "Avec du texte élargi", code: highlight_larger) do
+  :markdown
+    Rendu avec une taille de texte élargie
+
+= render('/partials/related-info.haml', links: dsfr_component_doc_link("Le composant Mise en exergue/Highlight", "mise-en-exergue"))
