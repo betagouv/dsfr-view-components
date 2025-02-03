@@ -50,3 +50,4 @@ use_helper Examples::ModalHelpers
 use_helper Examples::HeaderHelpers
 use_helper Examples::TabsHelpers
 use_helper Examples::HighlightHelpers
+use_helper Examples::SkiplinkHelpers

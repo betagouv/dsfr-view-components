@@ -1,0 +1,11 @@
+<%= tag.div(**html_attributes) do %>
+  <nav class="fr-container" role="navigation" aria-label="<%= label %>">
+    <ul class="fr-skiplinks__list">
+      <% links.each do |link| %>
+        <li>
+          <%= link %>
+        </li>
+      <% end %>
+    </ul>
+  </nav>
+<% end %>

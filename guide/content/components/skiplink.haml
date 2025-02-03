@@ -1,0 +1,13 @@
+---
+title: Lien d’évitement - Skiplink
+---
+
+.fr-text-wrap
+  :markdown
+    Les liens d’évitement permettent aux utilisateurs naviguant au clavier, ou équipés de lecteurs d'écran, d’accéder plus rapidement à des zones précises de la page.
+
+= render('/partials/example.haml', caption: "Vue d'ensemble", code: skiplink_default) do
+  :markdown
+    Le rendu de base du SkiplinkComponent. Pour voir le rendu appuyez sur la touche `Tab` de votre clavier.
+
+= render('/partials/related-info.haml', links: dsfr_component_doc_link("lien-d-evitement"))
