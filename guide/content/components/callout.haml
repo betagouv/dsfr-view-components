@@ -1,0 +1,11 @@
+---
+title: Mise en avant - Callout
+---
+
+.fr-text-wrap
+  :markdown
+    Le composant Callout peut prendre en argument un titre ou le contenu
+
+= render('/partials/example.haml', caption: "Vue d'ensemble", code: callout_default)
+
+= render('/partials/related-info.haml', links: dsfr_component_doc_link("Callout"))

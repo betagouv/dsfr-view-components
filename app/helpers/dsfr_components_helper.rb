@@ -5,6 +5,7 @@ module DsfrComponentsHelper
     dsfr_accordion: 'DsfrComponent::AccordionComponent',
     dsfr_accordion_section: 'DsfrComponent::AccordionComponent::SectionComponent',
     dsfr_breadcrumbs: 'DsfrComponent::BreadcrumbsComponent',
+    dsfr_callout: 'DsfrComponent::CalloutComponent',
     dsfr_tile: 'DsfrComponent::TileComponent',
     dsfr_badge: 'DsfrComponent::BadgeComponent',
     dsfr_tag: 'DsfrComponent::TagComponent',

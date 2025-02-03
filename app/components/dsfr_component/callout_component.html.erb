@@ -1,0 +1,6 @@
+<%= tag.div(**html_attributes) do %>
+  <% if title %>
+    <h3 class="fr-callout__title"><%= title %></h3>
+  <% end %>
+  <p class="fr-callout__text"><%= content %></p>
+<% end %>
