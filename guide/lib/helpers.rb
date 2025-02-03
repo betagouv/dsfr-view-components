@@ -28,6 +28,7 @@ ViewComponent::Base.config.view_component_path = "app/components"
 require 'components/dsfr_component'
 require 'components/dsfr_component/traits'
 require 'components/dsfr_component/traits/custom_html_attributes'
+require 'components/dsfr_component/traits/header_sizeable'
 require 'components/dsfr_component/base'
 
 Dir.glob('../app/components/dsfr_component/**/*.rb').sort.each { |f| require f }
@@ -51,3 +52,4 @@ use_helper Examples::HeaderHelpers
 use_helper Examples::TabsHelpers
 use_helper Examples::HighlightHelpers
 use_helper Examples::SkiplinkHelpers
+use_helper Examples::CalloutHelpers
