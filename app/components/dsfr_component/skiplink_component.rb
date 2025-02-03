@@ -1,7 +1,7 @@
 module DsfrComponent
   class SkiplinkComponent < DsfrComponent::Base
-    # @param label [String] FIXME: document
-    # @param links [Array] FIXME: document
+    # @param label [String] le texte utilisé pour le aria-label de la nav qui affiche les liens d’évitement (par exemple « Accès rapide »)
+    # @param links [Array] liste de liens HTML
     def initialize(label:, links:, classes: [], html_attributes: {})
       @label = label
       @links = links
