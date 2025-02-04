@@ -11,9 +11,6 @@ gemspec
 # Git. Remember to move these dependencies to your gemspec before releasing
 # your gem to rubygems.org.
 
-# To use a debugger
-# gem 'byebug', group: [:development, :test]
-
 # until https://github.com/nanoc/nanoc/issues/1639 is fixed
 gem 'nanoc'
 

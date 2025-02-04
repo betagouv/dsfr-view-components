@@ -1,3 +1,5 @@
+require 'ostruct'
+
 module Helpers
   # This class exists purely to pass to render in format_slim, it doesn't appear
   # to matter what's passed in so long as the first arg responds to #variants
