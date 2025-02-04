@@ -18,6 +18,7 @@ module DsfrComponentsHelper
     dsfr_tabs: 'DsfrComponent::TabsComponent',
     dsfr_highlight: 'DsfrComponent::HighlightComponent',
     dsfr_skiplink: 'DsfrComponent::SkiplinkComponent',
+    dsfr_callout: 'DsfrComponent::CalloutComponent',
     # DO NOT REMOVE: new component mapping here
   }.freeze
   HELPER_NAME_TO_CLASS_NAME.each do |name, klass|

@@ -1,4 +1,6 @@
 class DsfrComponent::AccordionComponent::SectionComponent < DsfrComponent::Base
+  include DsfrComponent::Traits::HeaderSizeable
+
   attr_reader :title, :expanded, :starting_header_level
 
   alias_method :expanded?, :expanded

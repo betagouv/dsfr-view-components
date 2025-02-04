@@ -1,0 +1,24 @@
+---
+title: Mise en avant - Callout
+---
+
+.fr-text-wrap
+  :markdown
+    La mise en avant ou callout est une proposition de mise en page du contenu éditorial pour mettre en évidence une information **complémentaire**. Elle permet à l’utilisateur de distinguer rapidement une information qui vient compléter le contenu consulté.
+
+= render('/partials/example.haml', caption: "Rendu de base", code: callout_default) do
+  :markdown
+    Le rendu de base du CalloutComponent
+
+= render('/partials/example.haml', caption: "Rendu avec un bouton", code: callout_with_button) do
+  :markdown
+    Il est possible de rajouter un zone d'action avec le slot
+    `action_zone`. **Attention** : seul un bouton ou un lien doivent
+    figurer dans cette zone.
+
+= render('/partials/example.haml', caption: "Rendu avec un autre niveau de titre", code: callout_with_different_header) do
+  :markdown
+    Si votre hiérarchie de titre requiert un autre niveau de titre que
+    H3 vous pouvez le spécifier en passant `starting_header_level` au composant.
+
+= render('/partials/related-info.haml', links: dsfr_component_doc_link("Mise en avant", "mise-en-avant"))
