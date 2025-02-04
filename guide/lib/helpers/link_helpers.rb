@@ -25,15 +25,11 @@ module Helpers
     end
 
     def rubygems_link
-      # 'https://rubygems.org/gems/govuk-components'
+      'https://rubygems.org/gems/dsfr-view-components'
     end
 
     def documentation_link
-      # 'https://www.rubydoc.info/gems/govuk-components/'
-    end
-
-    def code_climate_report_link
-      # 'https://codeclimate.com/github/DFE-Digital/govuk-components'
+      'https://www.rubydoc.info/gems/dsfr-view-components'
     end
 
     def viewcomponent_link

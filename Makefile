@@ -32,8 +32,6 @@ watch-guide: npm-install
 	( ${guide_dir} ${prefix} nanoc live --port ${nanoc_default_port} )
 docs-server:
 	bundle exec yard server --reload
-code-climate:
-	codeclimate analyze {lib,spec,guide/lib}
 clean:
 	rm -rf guide/output/**/*
 deploy_gem:
