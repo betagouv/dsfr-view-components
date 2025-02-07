@@ -11,7 +11,6 @@ end
 
 include DsfrLinkHelper
 include DsfrBackToTopLinkHelper
-include DsfrSkipLinkHelper
 
 Dir[File.join('./spec', 'components', 'shared', '*.rb')].sort.each { |file| require file }
 
