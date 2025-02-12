@@ -15,7 +15,9 @@ gemspec
 gem 'nanoc'
 
 group 'nanoc' do
+  gem 'dsfr-assets'
   gem 'nanoc-live'
+  gem 'sass-embedded'
 end
 
 gem "cssbundling-rails"

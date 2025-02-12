@@ -125,6 +125,15 @@ GEM
     formatador (1.1.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
+    google-protobuf (4.29.3-arm64-darwin)
+      bigdecimal
+      rake (>= 13)
+    google-protobuf (4.29.3-x86_64-darwin)
+      bigdecimal
+      rake (>= 13)
+    google-protobuf (4.29.3-x86_64-linux)
+      bigdecimal
+      rake (>= 13)
     guard (2.19.1)
       formatador (>= 0.2.4)
       listen (>= 2.7, < 4.0)
@@ -361,6 +370,12 @@ GEM
       rubocop (~> 1.61)
     ruby-progressbar (1.13.0)
     rubypants (0.7.1)
+    sass-embedded (1.83.4-arm64-darwin)
+      google-protobuf (~> 4.29)
+    sass-embedded (1.83.4-x86_64-darwin)
+      google-protobuf (~> 4.29)
+    sass-embedded (1.83.4-x86_64-linux-gnu)
+      google-protobuf (~> 4.29)
     securerandom (0.4.1)
     set (1.1.1)
     shellany (0.0.1)
@@ -424,6 +439,7 @@ DEPENDENCIES
   cssbundling-rails
   debug
   deep_merge
+  dsfr-assets
   dsfr-view-components!
   guard
   guard-rspec
@@ -441,6 +457,7 @@ DEPENDENCIES
   rubocop-rails
   rubocop-rspec
   rubypants (~> 0.7.0)
+  sass-embedded
   simplecov (~> 0.20)
   slim (~> 4.1.0)
   slim_lint (~> 0.22.0)

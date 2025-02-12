@@ -1,3 +1,19 @@
+require 'sass-embedded'
+
+preprocess do
+  dsfr_dir = Gem::Specification.find_by_name('dsfr-assets').gem_dir
+  Dir.entries("#{dsfr_dir}/vendor/assets/stylesheets").each do |entry|
+    next if %w[. ..].include?(entry)
+
+    FileUtils.cp_r "#{dsfr_dir}/vendor/assets/stylesheets/#{entry}", 'content/stylesheets'
+  end
+  Dir.entries("#{dsfr_dir}/vendor/assets/javascripts").each do |entry|
+    next if %w[. ..].include?(entry)
+
+    FileUtils.cp_r "#{dsfr_dir}/vendor/assets/javascripts/#{entry}", 'content/javascripts'
+  end
+end
+
 compile '/index.haml' do
   filter :haml, escape_html: false
   layout '/default.haml'
@@ -18,8 +34,7 @@ ignore '/**/_*.scss'
 compile '/**/*.scss' do
   filter(
     :dart_sass,
-    targets: %w[content/stylesheets/application.scss],
-    load_paths: "node_modules/@gouvfr/"
+    target: "content/#{item.identifier}",
   )
   write "#{item.identifier.without_ext}.css"
 end
@@ -34,3 +49,4 @@ compile '/**/*' do
 end
 
 layout '/**/*.haml', :haml, escape_html: false
+
