@@ -28,5 +28,5 @@ priority: 1
       %h2 Composants
 
       %ul
-        - component_links.each do |name, path|
+        - component_links.sort.each do |name, path|
           %li= dsfr_link_to(name, path)
