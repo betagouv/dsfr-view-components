@@ -1,6 +1,7 @@
 module Helpers
   module ContentHelpers
     DSFR_COMPONENT_DOC_HREF = "https://www.systeme-de-design.gouv.fr/composants-et-modeles/composants".freeze
+    DSFR_COMPONENT_STORYBOOK_HREF = "https://storybook.systeme-de-design.gouv.fr".freeze
 
     def site_title
       "Composants Rails ViewComponent pour le Système de Design de lʼÉtat"
@@ -8,12 +9,11 @@ module Helpers
 
   private
 
-    def dsfr_component_doc_link(name, id = nil)
-      label = "#{name} sur la documentation du Système de Design de l'État"
-
-      id ||= name.downcase
-
-      { label => "#{DSFR_COMPONENT_DOC_HREF}/#{id}/" }
+    def dsfr_component_doc_links(doc_id = nil, storybook_id = nil)
+      {
+        "Voir dans la documentation officielle" => "#{DSFR_COMPONENT_DOC_HREF}/#{doc_id}/",
+        "Voir sur le Storybook officiel" => "#{DSFR_COMPONENT_STORYBOOK_HREF}/?path=/docs/#{storybook_id}--docs"
+      }
     end
   end
 end
