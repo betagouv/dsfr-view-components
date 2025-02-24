@@ -13,7 +13,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@gouvfr/dsfr": "^1.7.2",
-    "sass": "^1.52.1"
+    "@gouvfr/dsfr": "^1.7.2"
   }
 }

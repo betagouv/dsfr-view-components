@@ -1,9 +1,9 @@
 // Import the DSFR
-@import "dsfr/dist/dsfr.min";
-@import "dsfr/dist/utility/utility.min";
+@use "pkg:@gouvfr/dsfr/dist/dsfr.min.css";
+@use "pkg:@gouvfr/dsfr/dist/utility/utility.min.css";
 
 // code CSS
-@import "highlight";
+@use "highlight";
 
 figure {
   padding: 0;
