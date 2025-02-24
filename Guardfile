@@ -38,21 +38,5 @@ guard :rspec, cmd: "bundle exec rspec", notification: false do
   ruby = dsl.ruby
   dsl.watch_spec_files_for(ruby.lib_files)
 
-  # Rails files
-  rails = dsl.rails(view_extensions: %w[erb haml slim])
-  dsl.watch_spec_files_for(rails.app_files)
-  dsl.watch_spec_files_for(rails.views)
-
-  watch(rails.controllers) do |m|
-    [
-      rspec.spec.call("routing/#{m[1]}_routing"),
-      rspec.spec.call("controllers/#{m[1]}_controller"),
-      rspec.spec.call("acceptance/#{m[1]}")
-    ]
-  end
-
-  # Rails config changes
-  watch(rails.spec_helper)     { rspec.spec_dir }
-  watch(rails.routes)          { "#{rspec.spec_dir}/routing" }
-  watch(rails.app_controller)  { "#{rspec.spec_dir}/controllers" }
+  watch(%r{^app/components/dsfr_component/(.+)\.html.erb$}) { |m| "spec/components/dsfr_component/#{m[1]}_spec.rb" }
 end
