@@ -18,8 +18,7 @@ ignore '/**/_*.scss'
 compile '/**/*.scss' do
   filter(
     :dart_sass,
-    targets: %w[content/stylesheets/application.scss],
-    load_paths: "node_modules/@gouvfr/"
+    importers: [Sass::NodePackageImporter.new(File.join(Dir.pwd, "node_modules"))]
   )
   write "#{item.identifier.without_ext}.css"
 end

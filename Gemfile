@@ -15,6 +15,7 @@ gemspec
 gem 'nanoc'
 
 group 'nanoc' do
+  gem 'nanoc-dart-sass'
   gem 'nanoc-live'
 end
 

@@ -55,8 +55,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency("nanoc", "~> 4.11")
   spec.add_development_dependency("rouge", "~> 4.0.0")
   spec.add_development_dependency("rubypants", "~> 0.7.0")
-  spec.add_development_dependency("slim", "~> 4.1.0")
-  spec.add_development_dependency("slim_lint", "~> 0.22.0")
   spec.add_development_dependency("webrick", "~> 1.7.0")
   spec.metadata['rubygems_mfa_required'] = 'true'
 end

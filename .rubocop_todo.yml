@@ -278,7 +278,6 @@ Style/RegexpLiteral:
 Style/SignalException:
   Exclude:
     - 'app/components/dsfr_component/alert_component.rb'
-    - 'guide/lib/filters/dart_sass.rb'
     - 'guide/lib/suppress_listen_symlink_errors.rb'
     - 'lib/dsfr/components/helpers/css_utilities.rb'
 

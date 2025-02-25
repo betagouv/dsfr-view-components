@@ -1,4 +1,5 @@
 require 'ostruct'
+require 'tilt'
 
 module Helpers
   # This class exists purely to pass to render in format_slim, it doesn't appear
@@ -24,11 +25,7 @@ module Helpers
       block.call
     end
 
-    # NOTE: this is copied over from the format_slim method below
     def format_haml(raw, data = nil)
-      # FIXME: not sure why when we're several
-      #        blocks deep we need to unescape more
-      #        than once
       locals = if data
                  eval(data)
                else
@@ -38,44 +35,6 @@ module Helpers
       template = Tilt::HamlTemplate.new { raw }.render(FakeView.new, **locals)
 
       beautify(CGI.unescapeHTML(CGI.unescapeHTML(template)))
-    end
-
-    def format_slim(raw, data = nil)
-      # FIXME: not sure why when we're several
-      #        blocks deep we need to unescape more
-      #        than once
-      locals = if data
-                 eval(data)
-               else
-                 {}
-               end
-
-      template = Slim::Template.new(format: :html) { raw }.render(FakeView.new, **locals)
-
-      beautify(CGI.unescapeHTML(CGI.unescapeHTML(template)))
-    end
-
-    def load_data(ruby)
-      eval(ruby)
-    end
-
-    def format_erb(raw)
-      # NOTE: this is many different kinds of bad. Thankfully we're
-      #       only using it for documentation purposes and it won't be
-      #       displayed by default
-      HtmlBeautifier.beautify(
-        Slim::ERBConverter.new(
-          disable_escape: true,
-          disable_capture: true,
-          generator: Temple::Generators::RailsOutputBuffer
-        )
-          .call(raw)
-          .gsub(/ _slim_controls\d =/, "=")    # remove _slim_controlsX assignment (where X is an integer)
-          .gsub(/do\n\s+%>/, "do %>")          # close blocks on the same line
-          .gsub(/%><%/, "%>\n<%")              # ensure ERB tags are on separate lines
-          .gsub(/<%= _slim_controls\d %>/, '') # remove _slim_controlsX var display, we've handled it above
-          .gsub(/,\n/, ', ')                   # don't leave newlines between args, it breaks indentation
-      )
     end
 
   private
