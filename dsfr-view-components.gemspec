@@ -10,7 +10,7 @@ METADATA = {
   "documentation_uri" => "https://www.rubydoc.info/gems/dsfr-view-components/",
   "homepage_uri" => "https://github.com/betagouv/dsfr-view-components",
   "source_code_uri" => "https://github.com/betagouv/dsfr-view-components"
-}.freeze
+}
 
 Gem::Specification.new do |spec|
   spec.name        = "dsfr-view-components"
@@ -25,6 +25,7 @@ Gem::Specification.new do |spec|
   spec.summary     = "Composants ViewComponent pour le Système de Design de l'État (DSFR)"
   spec.description = "Cette librairie de composants vise à simplifier l’usage du DSFR (Système de Design de l'État) dans les applications web utilisant Ruby On Rails"
   spec.license = "MIT"
+  spec.metadata = METADATA
 
   spec.files = Dir["{app,config,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
