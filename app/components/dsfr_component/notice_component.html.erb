@@ -1,0 +1,14 @@
+<%= tag.div(**html_attributes) do %>
+  <div class="fr-container">
+    <div class="fr-notice__body">
+      <%= tag.send(markup_tag) do %>
+        <span class="fr-notice__title"><%= title %></span>
+        <span class="fr-notice__desc"><%= description %></span>
+        <%= link_tag %>
+      <% end %>
+      <% if dismissible %>
+        <button onclick="const notice = this.parentNode.parentNode.parentNode; notice.parentNode.removeChild(notice)" title="Masquer le message" type="button" class="fr-btn--close fr-btn">Masquer le message</button>
+      <% end %>
+    </div>
+  </div>
+<% end %>

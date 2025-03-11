@@ -1,0 +1,24 @@
+---
+title: Bandeau d'information importante - Notice
+---
+
+.fr-text-wrap
+  :markdown
+    Le bandeau d’information importante permet aux utilisateurs de voir ou d’accéder à une information importante et temporaire.
+
+= render('/partials/example.haml', caption: "Bandeau d'information importante", code: notice_default) do
+  :markdown
+    Ce bandeau répond à la plupart des cas d’usages.
+
+= render('/partials/example.haml', caption: "Bandeau d'information importante avec un bouton pour masquer", code: notice_dismissible) do
+  :markdown
+    Il est possible d’ajouter un bouton pour proposer à l’utilisateur de masquer le bandeau.
+
+= render('/partials/example.haml', caption: "Bandeau d'information importante avec un lien externe", code: notice_with_external_link) do
+  :markdown
+    Il est possible d’ajouter un lien pour rediriger l’utilisateur vers une page lui apportant des informations complémentaires.
+
+= render('/partials/example.haml', caption: "Bandeau d'information importante avec un lien interne", code: notice_with_internal_link)
+
+
+= render('/partials/related-info.haml', links: dsfr_component_doc_links("bandeau-d-information-importante", "notice"))
