@@ -1,12 +1,10 @@
 require 'spec_helper'
 
 RSpec.describe(DsfrComponent::NoticeComponent, type: :component) do
-  subject { render_inline(described_class.new(**args)) }
-
   let(:args) { { title: "Information", description: "Ceci est un message d'information" } }
 
   it "renders correctly" do
-    subject
+    render_inline(described_class.new(**args))
 
     expect(rendered_content).to have_tag(:div, with: { class: "fr-notice fr-notice--info" }) do
       with_tag(:div, with: { class: "fr-container" }) do
@@ -25,7 +23,7 @@ RSpec.describe(DsfrComponent::NoticeComponent, type: :component) do
     let(:args) { { title: "Alerte", description: "Ceci est un message d'alerte", type: "alert" } }
 
     it "renders correctly" do
-      subject
+      render_inline(described_class.new(**args))
 
       expect(rendered_content).to have_tag(:div, with: { class: "fr-notice fr-notice--alert" }) do
         with_tag(:div, with: { class: "fr-container" }) do
@@ -44,7 +42,7 @@ RSpec.describe(DsfrComponent::NoticeComponent, type: :component) do
     let(:args) { { title: "Information", description: "Ceci est un message d'information", dismissible: true, dismiss_label: "Fermer" } }
 
     it "renders correctly" do
-      subject
+      render_inline(described_class.new(**args))
 
       expect(rendered_content).to have_tag(:div, with: { class: "fr-notice fr-notice--info" }) do
         with_tag(:div, with: { class: "fr-container" }) do
@@ -60,7 +58,7 @@ RSpec.describe(DsfrComponent::NoticeComponent, type: :component) do
     let(:args) { { title: "Information", description: "Ceci est un message d'information", link_label: "En savoir plus", link_href: "https://example.com", link_title: "En savoir plus - Nouvel onglet" } }
 
     it "renders correctly" do
-      subject
+      render_inline(described_class.new(**args))
 
       expect(rendered_content).to have_tag(:div, with: { class: "fr-notice fr-notice--info" }) do
         with_tag(:div, with: { class: "fr-container" }) do
@@ -77,7 +75,7 @@ RSpec.describe(DsfrComponent::NoticeComponent, type: :component) do
       let(:args) { { title: "Information", description: "Ceci est un message d'information", link_label: "En savoir plus", link_href: "#", link_title: "En savoir plus", link_blank: false } }
 
       it "renders correctly" do
-        subject
+        render_inline(described_class.new(**args))
 
         expect(rendered_content).to have_tag(:div, with: { class: "fr-notice fr-notice--info" }) do
           with_tag(:div, with: { class: "fr-container" }) do
@@ -95,7 +93,7 @@ RSpec.describe(DsfrComponent::NoticeComponent, type: :component) do
       let(:args) { { title: "Information", description: "Ceci est un message d'information", icon: false } }
 
       it "renders correctly" do
-        subject
+        render_inline(described_class.new(**args))
 
         expect(rendered_content).to have_tag(:div, with: { class: "fr-notice fr-notice--info fr-notice--no-icon" })
       end
@@ -105,7 +103,7 @@ RSpec.describe(DsfrComponent::NoticeComponent, type: :component) do
       let(:args) { { title: "Information", description: "Ceci est un message d'information", type: "weather-red", icon: false } }
 
       it "renders correctly" do
-        subject
+        render_inline(described_class.new(**args))
 
         expect(rendered_content).to have_tag(:div, with: { class: "fr-notice fr-notice--weather-red" })
       end
@@ -115,7 +113,7 @@ RSpec.describe(DsfrComponent::NoticeComponent, type: :component) do
       let(:args) { { title: "Information", description: "Ceci est un message d'information", type: "attack", icon: false } }
 
       it "renders correctly" do
-        subject
+        render_inline(described_class.new(**args))
 
         expect(rendered_content).to have_tag(:div, with: { class: "fr-notice fr-notice--attack" })
       end
@@ -125,7 +123,7 @@ RSpec.describe(DsfrComponent::NoticeComponent, type: :component) do
       let(:args) { { title: "Information", description: "Ceci est un message d'information", icon_name: "alarm-warning-fill" } }
 
       it "renders correctly" do
-        subject
+        render_inline(described_class.new(**args))
 
         expect(rendered_content).to have_tag(:div, with: { class: "fr-notice fr-notice--info" }) do
           with_tag(:div, with: { class: "fr-container" }) do
@@ -144,8 +142,11 @@ RSpec.describe(DsfrComponent::NoticeComponent, type: :component) do
 
       it "raise" do
         expect do
-          subject
-        end.to raise_error(ArgumentError, "L’icône d’un bandeau de type météo doit être une icône météo (windy-fill, thunderstorms-fill, heavy-showers-fill, flood-fill, temp-cold-fill, sun-fill, avalanches-fill, snowy-fill)")
+          render_inline(described_class.new(**args))
+        end.to raise_error(
+          ArgumentError,
+          "L’icône d’un bandeau de type météo doit être une icône météo (windy-fill, thunderstorms-fill, heavy-showers-fill, flood-fill, temp-cold-fill, sun-fill, avalanches-fill, snowy-fill)"
+        )
       end
     end
 
@@ -153,7 +154,7 @@ RSpec.describe(DsfrComponent::NoticeComponent, type: :component) do
       let(:args) { { title: "Information", description: "Ceci est un message d'information", type: "weather-red", icon_name: "windy-fill" } }
 
       it "renders correctly" do
-        subject
+        render_inline(described_class.new(**args))
 
         expect(rendered_content).to have_tag(:div, with: { class: "fr-notice fr-notice--weather-red" }) do
           with_tag(:div, with: { class: "fr-container" }) do
@@ -172,7 +173,7 @@ RSpec.describe(DsfrComponent::NoticeComponent, type: :component) do
 
       it "raise" do
         expect do
-          subject
+          render_inline(described_class.new(**args))
         end.to raise_error(ArgumentError, "L’icône n’est pas personnalisable sur les bandeaux d’alertes")
       end
     end
@@ -181,7 +182,7 @@ RSpec.describe(DsfrComponent::NoticeComponent, type: :component) do
       let(:args) { { title: "Information", description: "Ceci est un message d'information", notice: true } }
 
       it "renders correctly" do
-        subject
+        render_inline(described_class.new(**args))
 
         expect(rendered_content).to have_tag(:div, with: { class: "fr-notice fr-notice--info", role: "notice" })
       end

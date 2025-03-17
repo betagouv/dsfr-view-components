@@ -43,5 +43,3 @@ module Examples
     end
   end
 end
-
-
