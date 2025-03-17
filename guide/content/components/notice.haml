@@ -14,9 +14,9 @@ title: Bandeau d'information importante - Notice
   :markdown
     Il est possible de changer le type de bandeau. Il existe 3 catégories de bandeaux :
 
-     - Les bandeaux génériques : #{DsfrComponent::NoticeComponent::GENERIC_TYPES.join(", ")}.
-     - Les bandeaux d’alertes : #{DsfrComponent::NoticeComponent::ALERT_TYPES.join(", ")}.
-     - Les banedeaux d’information météorologique : #{DsfrComponent::NoticeComponent::WEATHER_TYPES.join(", ")}.
+     - Les bandeaux génériques : #{DsfrComponent::NoticeComponent::GENERIC_TYPES.join(', ')}.
+     - Les bandeaux d’alertes : #{DsfrComponent::NoticeComponent::ALERT_TYPES.join(', ')}.
+     - Les banedeaux d’information météorologique : #{DsfrComponent::NoticeComponent::WEATHER_TYPES.join(', ')}.
 
 = render('/partials/example.haml', caption: "Bandeau d'information importante avec un bouton pour masquer", code: notice_dismissible) do
   :markdown
@@ -38,7 +38,7 @@ title: Bandeau d'information importante - Notice
     Il est possible de personnaliser l’icône du bandeau uniquement pour les bandeaux génériques.
 
     Pour les bandeaux d’information météorologique, l’icône doit être sélectionnée parmi les icônes météorologiques suivantes :
-    #{DsfrComponent::NoticeComponent::WEATHER_ICONS.join(", ")}.
+    #{DsfrComponent::NoticeComponent::WEATHER_ICONS.join(', ')}.
 
     Les icônes d’alertes ne sont pas personnalisables.
 
