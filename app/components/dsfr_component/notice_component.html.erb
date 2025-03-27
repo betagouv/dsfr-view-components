@@ -1,7 +1,7 @@
 <%= tag.div(**html_attributes) do %>
   <div class="fr-container">
     <div class="fr-notice__body">
-      <%= tag.send(markup_tag) do %>
+      <%= tag.send(description_tag) do %>
         <span class="fr-notice__title <%= icon_class %>"><%= title %></span>
         <span class="fr-notice__desc"><%= description %></span>
         <%= link_tag %>

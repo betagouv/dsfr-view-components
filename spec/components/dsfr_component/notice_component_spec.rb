@@ -188,4 +188,30 @@ RSpec.describe(DsfrComponent::NoticeComponent, type: :component) do
       end
     end
   end
+
+  context "when description tag is set" do
+    let(:args) { { title: "Information", description: "Ceci est un message d'information", description_tag: :h1 } }
+
+    it "renders correctly" do
+      render_inline(described_class.new(**args))
+
+      expect(rendered_content).to have_tag(:div, with: { class: "fr-notice fr-notice--info" }) do
+        with_tag(:div, with: { class: "fr-container" }) do
+          with_tag(:div, with: { class: "fr-notice__body" }) do
+            with_tag(:h1)
+          end
+        end
+      end
+    end
+  end
+
+  context "when description tag is invalid" do
+    let(:args) { { title: "Information", description: "Ceci est un message d'information", description_tag: :div } }
+
+    it "raise" do
+      expect do
+        render_inline(described_class.new(**args))
+      end.to raise_error(ArgumentError, "Invalid description tag: div")
+    end
+  end
 end
