@@ -14,7 +14,8 @@ title: Alerte - Alert
          caption: "Alerte MD de succès avec du contenu",
          code: alert_md_success_with_content) do
   :markdown
-    Une alerte a un `type` obligatoire parmi `:error`, `:success`, `:info` ou `:warning`.
+    Une alerte a un `type` facultatif parmi `:error`, `:success`, `:info` ou `:warning`.
+    Si le type n'est pas précisé, l'alerte par défaut a une couleur grise.
 
 = render('/partials/example.haml',
          caption: "Alerte MD de succès sans contenu",
@@ -33,5 +34,11 @@ title: Alerte - Alert
 = render('/partials/example.haml',
          caption: "Alerte avec un bouton pour fermer",
          code: alert_md_with_close_button)
+
+= render('/partials/example.haml',
+         caption: "Alerte avec une icône personnalisée",
+         code: alert_with_icon) do
+  :markdown
+    L'alerte peut avoir une icône personnalisée quand le type n’est pas défini.
 
 = render('/partials/related-info.haml', links: dsfr_component_doc_links("alerte", "alert"))

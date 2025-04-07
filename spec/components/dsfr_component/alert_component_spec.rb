@@ -90,6 +90,26 @@ RSpec.describe(DsfrComponent::AlertComponent, type: :component) do
     end
   end
 
+  context "when set icon name on non default alert" do
+    it "raise ArgumentError" do
+      expect do
+        render_inline(described_class.new(type: :success, title: "Erreur numéro 123", size: :lg, icon_name: "eye-fill"))
+      end.to raise_error(ArgumentError, /invalid alert size/)
+    end
+  end
+
+  context "when icon name present" do
+    subject! do
+      render_inline(described_class.new(title: "Regarde ma super icône", icon_name: "eye-fill"))
+    end
+
+    it "renders both title and content" do
+      expect(rendered_content).to have_tag('div', with: { class: "fr-alert fr-icon-eye-fill" }) do
+        with_tag("h3", text: "Regarde ma super icône")
+      end
+    end
+  end
+
   # it_behaves_like 'a component that accepts custom classes'
   # it_behaves_like 'a component that accepts custom HTML attributes'
 end
