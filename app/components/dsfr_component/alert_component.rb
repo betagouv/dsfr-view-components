@@ -20,6 +20,7 @@ class DsfrComponent::AlertComponent < DsfrComponent::Base
   def call
     raise ArgumentError, "SM alerts cannot have titles but must have a content" if @size == :sm && (@title.present? || content.blank?)
     raise ArgumentError, "MD Alerts must have a title" if @size == :md && @title.blank?
+    raise ArgumentError, "icon_name should be set only on default alert" if @type && @icon_name
 
     tag.div(**html_attributes) do
       safe_join([title_tag, content_tag, close_button_tag])
