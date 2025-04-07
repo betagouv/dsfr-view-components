@@ -20,7 +20,6 @@ guide/tmp
 guide/output
 guide/*.log
 guide/node_modules
-guide/content/dsfr.*.js
 guide/content/icons/*
 guide/content/javascripts/*
 guide/content/fonts/*
