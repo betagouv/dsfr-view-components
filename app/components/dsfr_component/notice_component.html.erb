@@ -1,0 +1,14 @@
+<%= tag.div(**html_attributes) do %>
+  <div class="fr-container">
+    <div class="fr-notice__body">
+      <%= tag.send(description_tag) do %>
+        <span class="fr-notice__title <%= icon_class %>"><%= title %></span>
+        <span class="fr-notice__desc"><%= description %></span>
+        <%= link_tag %>
+      <% end %>
+      <% if dismissible %>
+        <button onclick="const notice = this.parentNode.parentNode.parentNode; notice.parentNode.removeChild(notice)" title="<%= @dismiss_label %>" type="button" class="fr-btn--close fr-btn"><%= @dismiss_label %></button>
+      <% end %>
+    </div>
+  </div>
+<% end %>
