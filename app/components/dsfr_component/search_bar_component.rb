@@ -18,7 +18,7 @@ module DsfrComponent
 
       validate_size!
 
-      super(classes: [], html_attributes: html_attributes)
+      super(classes: nil, html_attributes: html_attributes)
     end
 
   private
