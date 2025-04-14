@@ -21,14 +21,6 @@ module DsfrComponent
       super(classes: [], html_attributes: html_attributes)
     end
 
-    def call
-      form_with(url: url, method: :get, **html_attributes) do
-        concat tag.label(label, name: name, for: id, class: 'fr-label')
-        concat tag.input(type: :search, name: name, id: id, placeholder: button_text, class: 'fr-input')
-        concat tag.button(type: :submit, name: nil, class: 'fr-btn') { button_text }
-      end
-    end
-
   private
 
     attr_reader :url, :size, :name, :label_text, :button_text, :html_attributes
