@@ -11,7 +11,7 @@ module DsfrComponent
       @size = size
       @html_attributes = html_attributes
 
-      validate_size
+      validate_size!
 
       super(classes: classes, html_attributes: html_attributes)
     end
@@ -35,7 +35,7 @@ module DsfrComponent
       { class: classes }
     end
 
-    def validate_size
+    def validate_size!
       raise(ArgumentError, "`size` should be one of #{SIZES}") if size.present? && SIZES.exclude?(size)
     end
   end
