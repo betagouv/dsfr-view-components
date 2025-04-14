@@ -18,8 +18,8 @@ module DsfrComponent
 
     def call
       form_with(url: url, method: :get, **html_attributes) do
-        concat tag.label(label, name: name, class: 'fr-label')
-        concat tag.input(type: :search, name: name, placeholder: button_text, class: 'fr-input')
+        concat tag.label(label, name: name, for: id, class: 'fr-label')
+        concat tag.input(type: :search, name: name, id: id, placeholder: button_text, class: 'fr-input')
         concat tag.button(type: :submit, name: nil, class: 'fr-btn') { button_text }
       end
     end
@@ -28,9 +28,13 @@ module DsfrComponent
 
     attr_reader :url, :size, :name, :label, :button_text, :html_attributes
 
+    def id
+      "#{name}_#{object_id}"
+    end
+
     def default_attributes
       classes = ['fr-search-bar']
-      classes << "fr-search-bar--#{size}" if size.present? && size != :md
+      classes << "fr-search-bar--#{size}" unless size == :md
       classes << html_attributes.delete(:class) if html_attributes.key?(:class)
       { class: classes }
     end
