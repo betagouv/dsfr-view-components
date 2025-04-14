@@ -1,0 +1,46 @@
+---
+title: Bandeau d'information importante - Notice
+---
+
+.fr-text-wrap
+  :markdown
+    Le bandeau d’information importante permet aux utilisateurs de voir ou d’accéder à une information importante et temporaire.
+
+= render('/partials/example.haml', caption: "Bandeau d'information importante", code: notice_default) do
+  :markdown
+    Ce bandeau répond à la plupart des cas d’usages.
+
+= render('/partials/example.haml', caption: "Bandeau d’un autre type", code: notice_alert) do
+  :markdown
+    Il est possible de changer le type de bandeau. Il existe 3 catégories de bandeaux :
+
+     - Les bandeaux génériques : #{DsfrComponent::NoticeComponent::GENERIC_TYPES.join(', ')}.
+     - Les bandeaux d’alertes : #{DsfrComponent::NoticeComponent::ALERT_TYPES.join(', ')}.
+     - Les bandeaux d’information météorologique : #{DsfrComponent::NoticeComponent::WEATHER_TYPES.join(', ')}.
+
+= render('/partials/example.haml', caption: "Bandeau d'information importante avec un bouton pour masquer", code: notice_dismissible) do
+  :markdown
+    Il est possible d’ajouter un bouton pour proposer à l’utilisateur de masquer le bandeau.
+    L’attribut `dismiss_label` est facultatif, par défaut « Masquer le message ».
+
+= render('/partials/example.haml', caption: "Bandeau d'information importante avec un lien externe", code: notice_with_external_link) do
+  :markdown
+    Il est possible d’ajouter un lien pour rediriger l’utilisateur vers une page lui apportant des informations complémentaires.
+
+= render('/partials/example.haml', caption: "Bandeau d'information importante avec un lien interne", code: notice_with_internal_link)
+
+= render('/partials/example.haml', caption: "Bandeau d'information importante sans icône", code: notice_without_icon) do
+  :markdown
+    Il est possible de masquer l’icône du bandeau (uniquement pour les bandeaux génériques).
+
+= render('/partials/example.haml', caption: "Bandeau d'information importante avec une icône personnalisée", code: notice_with_icon_name) do
+  :markdown
+    Il est possible de personnaliser l’icône du bandeau uniquement pour les bandeaux génériques.
+
+    Pour les bandeaux d’information météorologique, l’icône doit être sélectionnée parmi les icônes météorologiques suivantes :
+    #{DsfrComponent::NoticeComponent::WEATHER_ICONS.join(', ')}.
+
+    Les icônes d’alertes ne sont pas personnalisables.
+
+
+= render('/partials/related-info.haml', links: dsfr_component_doc_links("bandeau-d-information-importante", "notice"))
