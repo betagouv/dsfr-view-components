@@ -8,7 +8,7 @@ module DsfrComponent
     # @param size [Symbol] component size : `:md` (default) or `:sm`/`:lg`
     # @param label [String] Label text, default: "Recherche"
     # @param button_text [String] Button and placeholder text, default: "Rechercher"
-    def initialize(url:, name: :search, size: :md, label: DEFAULT_LABEL_TEXT, button_text: DEFAULT_BUTTON_TEXT, classes: [], **html_attributes)
+    def initialize(url:, name: :search, size: :md, label: DEFAULT_LABEL_TEXT, button_text: DEFAULT_BUTTON_TEXT, **html_attributes)
       @url = url
       @name = name
       @label = label
@@ -18,7 +18,7 @@ module DsfrComponent
 
       validate_size!
 
-      super(classes: classes, html_attributes: html_attributes)
+      super(classes: [], html_attributes: html_attributes)
     end
 
     def call
@@ -40,7 +40,6 @@ module DsfrComponent
     def default_attributes
       classes = ['fr-search-bar']
       classes << "fr-search-bar--#{size}" unless size == :md
-      classes << html_attributes.delete(:class) if html_attributes.key?(:class)
       { class: classes }
     end
 
