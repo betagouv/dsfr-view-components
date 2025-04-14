@@ -7,7 +7,7 @@ RSpec.describe(DsfrComponent::SearchBarComponent, type: :component) do
   let(:args) { { url: url } }
 
   context "without optional arguments" do
-    it "renders the DSFR table structure" do
+    it "renders the expected DSFR component HTML" do
       expect(rendered_content).to have_tag(:form, with: { class: "fr-search-bar" }) do
         with_tag(:label, with: { class: "fr-label" }, text: described_class::DEFAULT_LABEL_TEXT)
         with_tag(:input, with: { class: "fr-input", placeholder: described_class::DEFAULT_BUTTON_TEXT })
