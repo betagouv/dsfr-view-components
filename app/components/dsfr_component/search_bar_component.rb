@@ -3,7 +3,12 @@ module DsfrComponent
     DEFAULT_LABEL_TEXT = 'Recherche'.freeze
     DEFAULT_BUTTON_TEXT = 'Rechercher'.freeze
 
-    def initialize(url:, size: :md, name: :search, label: DEFAULT_LABEL_TEXT, button_text: DEFAULT_BUTTON_TEXT, classes: [], **html_attributes)
+    # @param url [String] form destination
+    # @param name [String|Symbol] input name
+    # @param size [Symbol] component size : `:md` (default) or `:sm`/`:lg`
+    # @param label [String] Label text, default: "Recherche"
+    # @param button_text [String] Button and placeholder text, default: "Rechercher"
+    def initialize(url:, name: :search, size: :md, label: DEFAULT_LABEL_TEXT, button_text: DEFAULT_BUTTON_TEXT, classes: [], **html_attributes)
       @url = url
       @name = name
       @label = label
