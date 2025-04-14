@@ -20,6 +20,7 @@ module DsfrComponentsHelper
     dsfr_skiplink: 'DsfrComponent::SkiplinkComponent',
     dsfr_callout: 'DsfrComponent::CalloutComponent',
     dsfr_notice: 'DsfrComponent::NoticeComponent',
+    dsfr_search_bar: 'DsfrComponent::SearchBarComponent',
     # DO NOT REMOVE: new component mapping here
   }.freeze
   HELPER_NAME_TO_CLASS_NAME.each do |name, klass|

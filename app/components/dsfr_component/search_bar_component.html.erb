@@ -1,0 +1,5 @@
+<%= form_with(url: url, method: :get, **html_attributes) do |form| %>
+  <%= form.label(name, label_text, for: id, class: 'fr-label') %>
+  <%= form.search_field(name, id: id, placeholder: button_text, class: 'fr-input') %>
+  <%= form.button(type: :submit, name: nil, class: 'fr-btn') { button_text } %>
+<% end %>
