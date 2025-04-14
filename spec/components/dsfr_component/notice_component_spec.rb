@@ -90,7 +90,7 @@ RSpec.describe(DsfrComponent::NoticeComponent, type: :component) do
     end
 
     context "when icon is false" do
-      let(:args) { { title: "Information", description: "Ceci est un message d'information", icon: false } }
+      let(:args) { { title: "Information", description: "Ceci est un message d'information", use_icon: false } }
 
       it "renders correctly" do
         render_inline(described_class.new(**args))
@@ -100,7 +100,7 @@ RSpec.describe(DsfrComponent::NoticeComponent, type: :component) do
     end
 
     context "when icon is false and notice has weather type" do
-      let(:args) { { title: "Information", description: "Ceci est un message d'information", type: "weather-red", icon: false } }
+      let(:args) { { title: "Information", description: "Ceci est un message d'information", type: "weather-red", use_icon: false } }
 
       it "renders correctly" do
         render_inline(described_class.new(**args))
@@ -110,7 +110,7 @@ RSpec.describe(DsfrComponent::NoticeComponent, type: :component) do
     end
 
     context "when icon is false and notice has alert type" do
-      let(:args) { { title: "Information", description: "Ceci est un message d'information", type: "attack", icon: false } }
+      let(:args) { { title: "Information", description: "Ceci est un message d'information", type: "attack", use_icon: false } }
 
       it "renders correctly" do
         render_inline(described_class.new(**args))
@@ -179,7 +179,7 @@ RSpec.describe(DsfrComponent::NoticeComponent, type: :component) do
     end
 
     context "when notice has notice role" do
-      let(:args) { { title: "Information", description: "Ceci est un message d'information", notice: true } }
+      let(:args) { { title: "Information", description: "Ceci est un message d'information", use_notice: true } }
 
       it "renders correctly" do
         render_inline(described_class.new(**args))

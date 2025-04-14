@@ -13,23 +13,23 @@ module DsfrComponent
     # @param description [String] Description du bandeau pour apporter du contexte (optionnel)
     # @param type [String] Type de bandeau (info, waring, alert, weather-orange, weather-red, weather-purple, kidnapping, cyberattack, attack, witness)
     # @param description_tag [Symbol] Balise HTML à utiliser pour la description (p, h1, h2, h3, h4, h5, h6)
-    # @param icon [Boolean] Afficher ou non une icône, uniquement pour les bandeaux génériques
+    # @param use_icon [Boolean] Afficher ou non une icône, uniquement pour les bandeaux génériques
     # @param icon_name [String] Nom de l'icône à afficher
-    # @param notice [Boolean] Ajout l’attribut role="notice" (si insertion du bandeau à la volée)
+    # @param use_notice [Boolean] Ajout l’attribut role="notice" (si insertion du bandeau à la volée)
     # @param dismissible [Boolean] Ajouter un bouton de fermeture
     # @param dismiss_label [String] Libellé du bouton de fermeture (optionnel)
     # @param link_label [String] Libellé du lien (optionnel)
     # @param link_href [String] URL du lien (optionnel)
     # @param link_title [String] Titre du lien (optionnel)
-    # @param link_blank [Boolean] Ouvrir le lien dans un nouvel onglet
-    def initialize(title:, description:, type: "info", description_tag: :p, icon: true, icon_name: nil, notice: false, dismissible: false, dismiss_label: "Masquer le message", link_label: nil, link_href: nil, link_title: nil, link_blank: true,
+    # @param link_blank [Boolean] Ouvrir le lien dans un nouvel onglet (optionnel)
+    def initialize(title:, description:, type: "info", description_tag: :p, use_icon: true, icon_name: nil, use_notice: false, dismissible: false, dismiss_label: "Masquer le message", link_label: nil, link_href: nil, link_title: nil, link_blank: true,
                    classes: [], html_attributes: {})
       @title = title
       @description = description
       @type = type
       @description_tag = description_tag
       @icon_name = icon_name
-      @notice = notice
+      @use_notice = use_notice
       @dismissible = dismissible
       @dismiss_label = dismiss_label
       @link_label = link_label
@@ -38,8 +38,8 @@ module DsfrComponent
       @link_blank = link_blank
 
       # D’après les règles du DSFR les types non génériques ont forcément une icône
-      @icon = if GENERIC_TYPES.include?(type)
-                icon
+      @use_icon = if GENERIC_TYPES.include?(type)
+                use_icon
               else
                 true
               end
@@ -58,7 +58,7 @@ module DsfrComponent
 
   private
 
-    attr_reader :type, :title, :description, :description_tag, :icon, :icon_name, :notice, :dismissible, :link_label, :link_href, :link_title, :link_blank
+    attr_reader :type, :title, :description, :description_tag, :use_icon, :icon_name, :use_notice, :dismissible, :link_label, :link_href, :link_title, :link_blank
 
     def notice_class
       "fr-notice--#{type}"
@@ -88,10 +88,10 @@ module DsfrComponent
 
     def default_attributes
       class_attr = "fr-notice #{notice_class}"
-      class_attr += " fr-notice--no-icon" unless icon
+      class_attr += " fr-notice--no-icon" unless use_icon
 
       attr = { class: class_attr }
-      attr[:role] = "notice" if notice
+      attr[:role] = "notice" if use_notice
 
       attr
     end

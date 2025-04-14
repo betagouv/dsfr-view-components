@@ -32,7 +32,7 @@ module Examples
 
     def notice_without_icon
       <<~RAW
-        = dsfr_notice(title: "Information", description: "Ceci est une info importante", icon: false)
+        = dsfr_notice(title: "Information", description: "Ceci est une info importante", use_icon: false)
       RAW
     end
 
