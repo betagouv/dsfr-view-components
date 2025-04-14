@@ -8,7 +8,7 @@ module DsfrComponent
       @name = name
       @label = label
       @button_text = button_text
-      @size = size&.to_sym || :md
+      @size = size
       @html_attributes = html_attributes
 
       validate_size
