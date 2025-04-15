@@ -9,6 +9,7 @@ module DsfrComponent
     # @param label_text [String] Label text, default: "Recherche"
     # @param button_text [String] Button and placeholder text, default: "Rechercher"
     # @param value [String] Current input value (optional, defaults to request.params[name])
+    # @param params [Hash] Extra params, to include as hidden fields (optional)
     def initialize(url:, name: :search, size: :md, label_text: DEFAULT_LABEL_TEXT, button_text: DEFAULT_BUTTON_TEXT, **html_attributes)
       @url = url
       @name = name
@@ -16,6 +17,7 @@ module DsfrComponent
       @button_text = button_text
       @size = size
       @value = html_attributes.delete(:value)
+      @params = html_attributes.delete(:params) || {}
       @html_attributes = html_attributes
 
       validate_size!
@@ -25,7 +27,7 @@ module DsfrComponent
 
   private
 
-    attr_reader :url, :size, :name, :label_text, :button_text, :html_attributes
+    attr_reader :url, :size, :name, :label_text, :button_text, :params, :html_attributes
 
     def id
       "#{name}_#{object_id}"
