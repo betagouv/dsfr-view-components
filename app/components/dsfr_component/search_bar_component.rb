@@ -34,7 +34,7 @@ module DsfrComponent
     end
 
     def value
-      @value || request.params[name]
+      @value || (request && request.params[name])
     end
 
     def default_attributes
