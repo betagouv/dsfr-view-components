@@ -6,7 +6,7 @@ title: Barre de recherche - Search
   :markdown
     La barre de recherche est un système de navigation qui permet à l'utilisateur d’accéder rapidement à un contenu en lançant une recherche sur un mot clé ou une expression.
 
-= render('/partials/example.haml', caption: "Barre de recherche de base", code: search_bar_default) do
+= render('/partials/example.haml', caption: "Barre de recherche de base", code: search_default) do
   :markdown
     Le paramètre `:url` est obligatoire. Les options suivantes sont disponibles :
 
@@ -19,7 +19,7 @@ title: Barre de recherche - Search
     - `:html_attributes`, des attributs supplémentaires à ajouter au formulaire.
 
 
-= render('/partials/example.haml', caption: "Version large", code: search_bar_custom) do
+= render('/partials/example.haml', caption: "Version large", code: search_custom) do
   :markdown
     Quand un site propose une recherche globale :
 
@@ -28,4 +28,4 @@ title: Barre de recherche - Search
 
     Note : la largeur du composant s’adapte à son contenant.
 
-= render('/partials/related-info.haml', links: dsfr_component_doc_links("barre-de-recherche", "searchbar"))
+= render('/partials/related-info.haml', links: dsfr_component_doc_links("barre-de-recherche", "Search"))

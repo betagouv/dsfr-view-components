@@ -53,4 +53,4 @@ use_helper Examples::HighlightHelpers
 use_helper Examples::SkiplinkHelpers
 use_helper Examples::CalloutHelpers
 use_helper Examples::NoticeHelpers
-use_helper Examples::SearchBarHelpers
+use_helper Examples::SearchHelpers

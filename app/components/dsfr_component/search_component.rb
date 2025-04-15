@@ -1,5 +1,5 @@
 module DsfrComponent
-  class SearchBarComponent < DsfrComponent::Base
+  class SearchComponent < DsfrComponent::Base
     DEFAULT_LABEL_TEXT = 'Recherche'.freeze
     DEFAULT_BUTTON_TEXT = 'Rechercher'.freeze
 

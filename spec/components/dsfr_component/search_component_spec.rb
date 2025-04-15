@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.describe(DsfrComponent::SearchBarComponent, type: :component) do
+RSpec.describe(DsfrComponent::SearchComponent, type: :component) do
   subject! { render_inline(described_class.new(**args)) }
 
   let(:url) { "/search" }
