@@ -37,12 +37,12 @@ RSpec.describe(DsfrComponent::SearchBarComponent, type: :component) do
   end
 
   describe "other options" do
-    let(:args) { { url: url, name: "FOO", label_text: "BAR", button_text: "BAZ", class: "BUZ", data: { controller: :search } } }
+    let(:args) { { url: url, name: "FOO", label_text: "BAR", button_text: "BAZ", value: "QUX", class: "BUZ", data: { controller: :search } } }
 
     it "are applied" do
       expect(rendered_content).to have_tag(:form, with: { class: "fr-search-bar BUZ", "data-controller": :search }) do
         with_tag(:label, text: "BAR")
-        with_tag(:input, with: { name: "FOO", placeholder: "BAZ" })
+        with_tag(:input, with: { name: "FOO", placeholder: "BAZ", value: "QUX" })
         with_tag(:button, with: { type: :submit }, text: "BAZ")
       end
     end

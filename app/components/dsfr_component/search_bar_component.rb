@@ -8,12 +8,14 @@ module DsfrComponent
     # @param size [Symbol] component size : `:md` (default) or `:sm`/`:lg`
     # @param label_text [String] Label text, default: "Recherche"
     # @param button_text [String] Button and placeholder text, default: "Rechercher"
+    # @param value [String] Current input value (optional, defaults to request.params[name])
     def initialize(url:, name: :search, size: :md, label_text: DEFAULT_LABEL_TEXT, button_text: DEFAULT_BUTTON_TEXT, **html_attributes)
       @url = url
       @name = name
       @label_text = label_text
       @button_text = button_text
       @size = size
+      @value = html_attributes.delete(:value)
       @html_attributes = html_attributes
 
       validate_size!
@@ -27,6 +29,10 @@ module DsfrComponent
 
     def id
       "#{name}_#{object_id}"
+    end
+
+    def value
+      @value || request.params[name]
     end
 
     def default_attributes
