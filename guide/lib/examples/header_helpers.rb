@@ -6,7 +6,7 @@ module Examples
 
     def header_logo_lines
       <<~HEADER
-        = dsfr_header logo_text: "Ministère \\ndu Travail", title: "Égapro", classes: ["logo-pre-line"]
+        = dsfr_header logo_text: "Ministère \\ndu Travail", title: "Égapro", html_attributes: { class: ["logo-pre-line"] }
 
         :css
           .logo-pre-line .fr-logo {
@@ -20,7 +20,7 @@ module Examples
         = dsfr_header logo_text: "Ministère du Travail", title: "Égapro" do |header|
           - header.with_operator_image title: "beta.gouv.fr", src: "https://beta.gouv.fr/assets/additional/images/logo-betagouvfr.svg", alt: "logo de beta.gouv.fr"
           - header.with_tool_link title: "Comment ça marche", path: "#comment-ca-marche"
-          - header.with_tool_link title: "Contact", path: "#contact", classes: ["fr-icon-mail-line"]
+          - header.with_tool_link title: "Contact", path: "#contact", html_attributes: { class: ["fr-btn", "fr-icon-mail-line"] }
       HEADER
     end
 
@@ -28,7 +28,7 @@ module Examples
       <<~HEADER
         = dsfr_header logo_text: "Ministère du Travail", title: "Égapro", tagline: "Indice de parité professionelle" do |header|
           - header.with_tool_link title: "Comment ça marche", path: "#comment-ca-marche"
-          - header.with_tool_link title: "Contact", path: "#contact", classes: ["fr-icon-mail-line"]
+          - header.with_tool_link title: "Contact", path: "#contact", html_attributes: { class: ["fr-btn", "fr-icon-mail-line"] }
       HEADER
     end
 
@@ -68,7 +68,7 @@ module Examples
       <<~HEADER
         = dsfr_header logo_text: "Ministère du Travail", title: "Égapro", tagline: "Indice de parité professionelle" do |header|
           - header.with_tool_link title: "Connexion", path: "#connexion"
-          - header.with_tool_link title: "FAQ", path: "#FAQ", classes: ["fr-icon-question-line"]
+          - header.with_tool_link title: "FAQ", path: "#FAQ", html_attributes: { class: ["fr-btn", "fr-icon-question-line"] }
           - header.with_direct_link_simple title: "Comment ça marche", path: "#comment-ca-marche"
           = header.with_direct_link_dropdown title: "Environnement" do |dropdown|
             = dropdown.with_link title: "Beta Gouv", path: "#beta-gouv"

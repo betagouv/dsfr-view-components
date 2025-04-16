@@ -23,7 +23,7 @@ module DsfrComponent
     # @param link_title [String] Titre du lien (optionnel)
     # @param link_blank [Boolean] Ouvrir le lien dans un nouvel onglet (optionnel)
     def initialize(title:, description:, type: "info", description_tag: :p, use_icon: true, icon_name: nil, use_notice: false, dismissible: false, dismiss_label: "Masquer le message", link_label: nil, link_href: nil, link_title: nil, link_blank: true,
-                   classes: [], html_attributes: {})
+                   html_attributes: {})
       @title = title
       @description = description
       @type = type
@@ -53,7 +53,7 @@ module DsfrComponent
         raise ArgumentError, "L’icône d’un bandeau de type météo doit être une icône météo (#{WEATHER_ICONS.join(', ')})" if WEATHER_TYPES.include?(type) && WEATHER_ICONS.exclude?(icon_name)
       end
 
-      super(classes: classes, html_attributes: html_attributes)
+      super(html_attributes: html_attributes)
     end
 
   private

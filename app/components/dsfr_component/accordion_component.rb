@@ -1,9 +1,8 @@
 class DsfrComponent::AccordionComponent < DsfrComponent::Base
   include DsfrComponent::Traits::HeaderSizeable
 
-  renders_many :sections, ->(title: nil, expanded: false, id: nil, classes: [], html_attributes: {}, &block) do
+  renders_many :sections, ->(title: nil, expanded: false, id: nil, html_attributes: {}, &block) do
     DsfrComponent::AccordionComponent::SectionComponent.new(
-      classes: classes,
       expanded: expanded,
       html_attributes: html_attributes,
       title: title,
@@ -13,10 +12,10 @@ class DsfrComponent::AccordionComponent < DsfrComponent::Base
     )
   end
 
-  def initialize(classes: [], html_attributes: {}, starting_header_level: nil)
+  def initialize(html_attributes: {}, starting_header_level: nil)
     @starting_header_level = starting_header_level
 
-    super(classes: classes, html_attributes: html_attributes)
+    super(html_attributes: html_attributes)
   end
 
 private
