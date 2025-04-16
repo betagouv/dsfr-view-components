@@ -32,7 +32,7 @@ RSpec.describe(DsfrComponent::HeaderComponent, type: :component) do
         )
       ) do |component|
         component.with_tool_link title: "Comment ça marche", path: "#comment-ca-marche"
-        component.with_tool_link title: "Contact", path: "#contact", classes: ["fr-icon-mail-line"]
+        component.with_tool_link title: "Contact", path: "#contact", html_attributes: { class: %w[fr-btn fr-icon-mail-line] }
       end
     end
 
@@ -53,7 +53,7 @@ RSpec.describe(DsfrComponent::HeaderComponent, type: :component) do
           with_tag "div", with: { class: "fr-header__tools" } do
             with_tag "div", with: { class: "fr-header__tools-links" } do
               with_tag "a", with: { class: "fr-btn", href: "#comment-ca-marche" }, text: "Comment ça marche"
-              with_tag "a", with: { class: "fr-btn fr-icon-mail-line", href: "#contact" }, text: "Contact"
+              with_tag "a", with: { href: "#contact" }, text: "Contact"
             end
             without_tag "div", with: { class: "fr-header__search" }
           end

@@ -1,11 +1,11 @@
 class DsfrComponent::HeaderComponent::DirectLinkDropdownComponent < DsfrComponent::Base
   renders_many :links, DsfrComponent::HeaderComponent::DirectLinkComponent
 
-  def initialize(title:, active: false, classes: [], html_attributes: {})
+  def initialize(title:, active: false, html_attributes: {})
     @title = title
     @active = active
 
-    super(classes: classes, html_attributes: html_attributes)
+    super(html_attributes: html_attributes)
   end
 
   def call

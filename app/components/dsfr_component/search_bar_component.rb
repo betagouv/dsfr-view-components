@@ -14,11 +14,10 @@ module DsfrComponent
       @label_text = label_text
       @button_text = button_text
       @size = size
-      @html_attributes = html_attributes
 
       validate_size!
 
-      super(classes: nil, html_attributes: html_attributes)
+      super(html_attributes: html_attributes)
     end
 
   private

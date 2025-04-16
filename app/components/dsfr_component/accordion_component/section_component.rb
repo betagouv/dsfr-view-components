@@ -13,7 +13,6 @@ class DsfrComponent::AccordionComponent::SectionComponent < DsfrComponent::Base
     starting_header_level:,
     expanded: false,
     id: nil,
-    classes: [],
     html_attributes: {}
   )
     @title = title
@@ -21,7 +20,7 @@ class DsfrComponent::AccordionComponent::SectionComponent < DsfrComponent::Base
     @id = id
     @starting_header_level = starting_header_level
 
-    super(classes: classes, html_attributes: html_attributes)
+    super(html_attributes: html_attributes)
   end
 
   def id

@@ -10,7 +10,7 @@ module DsfrComponent
     # @param title [String] Le titre du bouton permettant d’afficher une infobulle (optionnel)
     # @param level [String] Le niveau du bouton : :primary (défaut), :secondary ou :tertiary (optionnel)
     # @param size [String] La taille du bouton : :sm, :md (défaut), :lg (optionnel)
-    def initialize(label: nil, title: nil, icon: nil, icon_position: :left, level: nil, size: nil, classes: [], html_attributes: {})
+    def initialize(label: nil, title: nil, icon: nil, icon_position: :left, level: nil, size: nil, html_attributes: {})
       @label = label
       @title = title
       @icon = icon
@@ -24,7 +24,7 @@ module DsfrComponent
       validate_level
       validate_label
 
-      super(classes: classes, html_attributes: html_attributes)
+      super(html_attributes: html_attributes)
     end
 
     def call

@@ -8,7 +8,7 @@ module DsfrComponent
     # @param url [String] for clickable tags only (optional)
     # @param selected [Boolean] adds a check, useful for filters list, cannot be used with `url` (optional)
     # @param dismissable [Boolean] adds a close icon on the right, cannot be used with `url` or `icon` (optional)
-    def initialize(title:, icon: nil, size: nil, url: nil, selected: nil, dismissable: nil, classes: [], html_attributes: {})
+    def initialize(title:, icon: nil, size: nil, url: nil, selected: nil, dismissable: nil, html_attributes: {})
       @title = title
       @icon = icon
       @size = size
@@ -16,7 +16,7 @@ module DsfrComponent
       @selected = selected
       @dismissable = dismissable
 
-      super(classes: classes, html_attributes: html_attributes)
+      super(html_attributes: html_attributes)
     end
 
     def call
