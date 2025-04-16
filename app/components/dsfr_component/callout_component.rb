@@ -13,14 +13,13 @@ module DsfrComponent
       title:,
       icon_name: "information-line",
       starting_header_level: nil,
-      classes: [],
       html_attributes: {}
     )
       @title = title
       @icon_name = icon_name
       @starting_header_level = starting_header_level
 
-      super(classes: classes, html_attributes: html_attributes)
+      super(html_attributes: html_attributes)
     end
 
     def call

@@ -1,10 +1,10 @@
 class DsfrComponent::HeaderComponent::DirectLinkComponent < DsfrComponent::Base
-  def initialize(title:, path:, active: false, classes: [], html_attributes: {})
+  def initialize(title:, path:, active: false, html_attributes: {})
     @title = title
     @path = path
     @active = active
 
-    super(classes: classes, html_attributes: html_attributes)
+    super(html_attributes: html_attributes)
   end
 
   def call

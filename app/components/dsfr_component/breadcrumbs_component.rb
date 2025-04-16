@@ -9,10 +9,6 @@ class DsfrComponent::BreadcrumbsComponent < DsfrComponent::Base
     content_tag(:a, class: 'fr-breadcrumb__link', **attributes) { label }
   end
 
-  def initialize(classes: [], html_attributes: {})
-    super(classes: classes, html_attributes: html_attributes)
-  end
-
 private
 
   def default_attributes

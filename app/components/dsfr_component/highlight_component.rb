@@ -2,13 +2,13 @@ module DsfrComponent
   class HighlightComponent < DsfrComponent::Base
     # @param text [String] Le contenu textuel du composant
     # @param size [Symbol] La taille de la mise en exergue
-    def initialize(text:, size: :md, classes: [], html_attributes: {})
+    def initialize(text:, size: :md, html_attributes: {})
       @text = text
       @size = size
 
       raise ArgumentError if not SIZES.include?(size)
 
-      super(classes: classes, html_attributes: html_attributes)
+      super(html_attributes: html_attributes)
     end
 
     def call

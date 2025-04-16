@@ -7,14 +7,14 @@ class DsfrComponent::AlertComponent < DsfrComponent::Base
   # @param size [Symbol] alert size : `:md` (default) or `:sm`
   # @param close_button [Boolean] display a close button to remove the alert
   # @note in size MD the title is required but the content is optional. In size SM there should be not title but the content is required
-  def initialize(type: nil, title: nil, size: :md, close_button: false, icon_name: nil, classes: [], html_attributes: {})
+  def initialize(type: nil, title: nil, size: :md, close_button: false, icon_name: nil, html_attributes: {})
     @title = title
     @type = type
     @size = size
     @close_button = close_button
     @icon_name = icon_name
 
-    super(classes: classes, html_attributes: html_attributes)
+    super(html_attributes: html_attributes)
   end
 
   def call
