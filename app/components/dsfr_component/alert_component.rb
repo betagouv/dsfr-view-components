@@ -18,9 +18,8 @@ class DsfrComponent::AlertComponent < DsfrComponent::Base
   end
 
   def call
-    raise ArgumentError, "SM alerts cannot have titles but must have a content" if @size == :sm && (@title.present? || content.blank?)
-    raise ArgumentError, "MD Alerts must have a title" if @size == :md && @title.blank?
-    raise ArgumentError, "icon_name should be set only on default alert" if @type && @icon_name
+    check_main_content!
+    check_icon_allowed!
 
     tag.div(**html_attributes) do
       safe_join([title_tag, content_tag, close_button_tag])
@@ -33,6 +32,32 @@ private
 
   def default_attributes
     { class: %w(fr-alert) + [icon_class, type_class, size_class].compact }
+  end
+
+  def default_type?
+    type.nil?
+  end
+
+  def check_icon_allowed!
+    raise ArgumentError, "a custom icon can only be used on default alert types" if icon_name && !default_type?
+  end
+
+  def main_content?
+    case size
+    when :sm
+      content.present? && title.blank?
+    when :md
+      content.present? || title.present?
+    else
+      raise ArgumentError, "invalid alert size: '#{size}', supported sizes are #{SIZES.to_sentence}"
+    end
+  end
+
+  def check_main_content!
+    raise(
+      ArgumentError,
+      "You must provide a title for medium alerts, but you can't use it for small alerts (use content instead)"
+    ) if not main_content?
   end
 
   def title_tag
@@ -65,34 +90,25 @@ private
     "fr-icon-#{icon_name}"
   end
 
-  def type_class
-    return nil if type.blank?
-    fail(ArgumentError, type_error_message) unless valid_type?
-
-    "fr-alert--#{type}"
-  end
-
   def valid_type?
     type.in?(TYPES)
   end
 
-  def type_error_message
-    "invalid alert type #{type}, supported types are #{TYPES.to_sentence}"
-  end
+  def type_class
+    return nil if type.blank?
 
-  def size_class
-    return nil if size == :md
+    raise ArgumentError, "invalid alert type #{type}, supported types are #{TYPES.to_sentence}" unless valid_type?
 
-    fail(ArgumentError, size_error_message) unless valid_size?
-
-    "fr-alert--#{size}"
+    "fr-alert--#{type}"
   end
 
   def valid_size?
     size.in?(SIZES)
   end
 
-  def size_error_message
-    "invalid alert size #{size}, supported sizes are #{SIZES.to_sentence}"
+  def size_class
+    return nil if size == :md
+
+    "fr-alert--#{size}"
   end
 end

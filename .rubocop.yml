@@ -18,9 +18,14 @@ Metrics/ParameterLists:
 RSpec/ExampleLength:
   Enabled: False
 
-RSpec/RepeatedExampleGroupBody:
-  Enabled: False
+RSpec/MultipleMemoizedHelpers:
+   Max: 10
 
 Naming/FileName:
   Exclude:
     - guide/Rules
+
+# see https://github.com/rubocop/ruby-style-guide/issues/329
+# I am team "if not" (when it makes sense)
+Style/NegatedIf:
+  Enabled: false
