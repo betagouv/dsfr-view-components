@@ -1,0 +1,31 @@
+---
+title: Barre de recherche - Search
+---
+
+.fr-text-wrap
+  :markdown
+    La barre de recherche est un système de navigation qui permet à l'utilisateur d’accéder rapidement à un contenu en lançant une recherche sur un mot clé ou une expression.
+
+= render('/partials/example.haml', caption: "Barre de recherche de base", code: search_default) do
+  :markdown
+    Le paramètre `:url` est obligatoire. Les options suivantes sont disponibles :
+
+    - `:name`, appliqué au champ `input`. Par défaut : `:search`
+    - `:size`, la taille du composant. Par défaut : `:md`. Valeurs possibles : `:sm|:md|:lg`.
+    - `:label_text`, l'intitulé du libellé. Par défaut : `Recherche`.
+    - `:button_text`, l'intitulé du bouton, également utilisé en placeholder. Par défaut : `Rechercher`.
+    - `:value`, la valeur du champ de recherche. Par défaut, récupère le paramètre `:name` de la requête courante.
+    - `:params` (`Hash`), des paramètres supplémentaires à ajouter au formulaire sous forme de champs cachés. Vide par défaut.
+    - `:html_attributes`, des attributs supplémentaires à ajouter au formulaire.
+
+
+= render('/partials/example.haml', caption: "Version large", code: search_custom) do
+  :markdown
+    Quand un site propose une recherche globale :
+
+    - celle-ci doit être intégrée dans l’en-tête et accessible depuis l’ensemble des pages du site.
+    - si elle constitue le point de départ de la navigation pour l’utilisateur, la barre de recherche LG doit être présentée comme l'élément le plus important sur la page d’accueil.
+
+    Note : la largeur du composant s’adapte à son contenant.
+
+= render('/partials/related-info.haml', links: dsfr_component_doc_links("barre-de-recherche", "Search"))

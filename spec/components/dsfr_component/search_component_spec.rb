@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.describe(DsfrComponent::SearchBarComponent, type: :component) do
+RSpec.describe(DsfrComponent::SearchComponent, type: :component) do
   subject! { render_inline(described_class.new(**args)) }
 
   let(:url) { "/search" }
@@ -10,7 +10,7 @@ RSpec.describe(DsfrComponent::SearchBarComponent, type: :component) do
     it "renders the expected DSFR component HTML" do
       expect(rendered_content).to have_tag(:form, with: { class: "fr-search-bar" }) do
         with_tag(:label, with: { class: "fr-label" }, text: described_class::DEFAULT_LABEL_TEXT)
-        with_tag(:input, with: { class: "fr-input", placeholder: described_class::DEFAULT_BUTTON_TEXT })
+        with_tag(:input, with: { class: "fr-input", type: "search", placeholder: described_class::DEFAULT_BUTTON_TEXT })
         with_tag(:button, with: { class: "fr-btn", type: "submit" }, text: described_class::DEFAULT_BUTTON_TEXT)
       end
     end
@@ -37,12 +37,14 @@ RSpec.describe(DsfrComponent::SearchBarComponent, type: :component) do
   end
 
   describe "other options" do
-    let(:args) { { url: url, name: "FOO", label_text: "BAR", button_text: "BAZ", class: "BUZ", data: { controller: :search } } }
+    let(:args) { { url: url, name: "FOO", label_text: "BAR", button_text: "BAZ", value: "QUX", class: "BUZ", hidden_fields: { foo: :bar, baz: :qux }, method: :post, data: { controller: :search } } }
 
     it "are applied" do
-      expect(rendered_content).to have_tag(:form, with: { class: "fr-search-bar BUZ", "data-controller": :search }) do
+      expect(rendered_content).to have_tag(:form, with: { method: "post", class: "fr-search-bar BUZ", "data-controller": :search }) do
+        with_tag(:input, with: { type: :hidden, name: "foo", value: "bar" })
+        with_tag(:input, with: { type: :hidden, name: "baz", value: "qux" })
         with_tag(:label, text: "BAR")
-        with_tag(:input, with: { name: "FOO", placeholder: "BAZ" })
+        with_tag(:input, with: { name: "FOO", placeholder: "BAZ", value: "QUX" })
         with_tag(:button, with: { type: :submit }, text: "BAZ")
       end
     end
