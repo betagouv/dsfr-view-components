@@ -1,5 +1,5 @@
 <%= form_with(url: url, method: :get, **html_attributes) do |form| %>
-  <% params.each do |name, value| %>
+  <% hidden_fields.each do |name, value| %>
   <%= form.hidden_field(name, value: value) %>
   <% end %>
   <%= form.label(name, label_text, for: id, class: 'fr-label') %>

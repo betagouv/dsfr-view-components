@@ -37,7 +37,7 @@ RSpec.describe(DsfrComponent::SearchComponent, type: :component) do
   end
 
   describe "other options" do
-    let(:args) { { url: url, name: "FOO", label_text: "BAR", button_text: "BAZ", value: "QUX", class: "BUZ", params: { foo: :bar, baz: :qux }, method: :post, data: { controller: :search } } }
+    let(:args) { { url: url, name: "FOO", label_text: "BAR", button_text: "BAZ", value: "QUX", class: "BUZ", hidden_fields: { foo: :bar, baz: :qux }, method: :post, data: { controller: :search } } }
 
     it "are applied" do
       expect(rendered_content).to have_tag(:form, with: { method: "post", class: "fr-search-bar BUZ", "data-controller": :search }) do
