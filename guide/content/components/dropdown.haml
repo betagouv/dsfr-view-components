@@ -1,0 +1,25 @@
+---
+title: Menu déroulant - Dropdown
+---
+
+.fr-text-wrap
+  :markdown
+    Le composant de menu déroulant (dropdown) permet d'afficher du contenu qui apparaît et disparaît lorsque l'utilisateur clique sur un bouton.
+
+= render "/partials/example.haml", caption: "Menu déroulant simple", code: dropdown_simple do
+  :markdown
+    Un menu déroulant simple est composé d'un bouton et d'un contenu qui apparaît lorsque l'utilisateur clique sur le bouton.
+
+= render "/partials/example.haml", caption: "Menu déroulant avec une liste", code: dropdown_with_list do
+  :markdown
+    Un menu déroulant peut contenir une liste d'éléments.
+
+= render "/partials/example.haml", caption: "Menu déroulant avec un formulaire", code: dropdown_with_form do
+  :markdown
+    Un menu déroulant peut également contenir un formulaire ou tout autre contenu HTML.
+
+= render "/partials/example.haml", caption: "Menu déroulant avec des attributs personnalisés", code: dropdown_with_custom_attributes do
+  :markdown
+    Vous pouvez personnaliser les attributs HTML du bouton et du conteneur du menu déroulant.
+
+= render "/partials/related-info.haml", links: dsfr_component_doc_links("menu-deroulant", "dropdown")
