@@ -141,15 +141,27 @@ RSpec.describe(DsfrComponent::HeaderComponent, type: :component) do
         end
         with_tag "div", with: { class: "fr-header__menu" } do
           with_tag "nav", with: { class: "fr-nav" } do
-            with_tag "button", with: { class: "fr-nav__btn", "aria-controls": "menu-aide" }, text: "Aide"
-            with_tag :div, with: { class: "fr-menu", id: "menu-aide" } do
-              with_tag :a, with: { class: "fr-nav__link", href: "#comment-ca-marche" }, text: "Comment ça marche"
-              with_tag :a, with: { class: "fr-nav__link", href: "#contact" }, text: "Contact"
+            with_tag "button", with: { class: "fr-btn fr-nav__btn", "aria-controls": "menu-aide" }, text: "Aide"
+            with_tag :div, with: { class: ["fr-collapse", "fr-menu"], id: "menu-aide" } do
+              with_tag :ul, with: { class: "fr-menu__list" } do
+                with_tag :li do
+                  with_tag :a, with: { class: "fr-nav__link", href: "#comment-ca-marche" }, text: "Comment ça marche"
+                end
+                with_tag :li do
+                  with_tag :a, with: { class: "fr-nav__link", href: "#contact" }, text: "Contact"
+                end
+              end
             end
-            with_tag "button", with: { class: "fr-nav__btn", "aria-controls": "menu-environnement" }, text: "Environnement"
-            with_tag :div, with: { class: "fr-menu", id: "menu-environnement" } do
-              with_tag :a, with: { class: "fr-nav__link", href: "#beta-gouv" }, text: "Beta Gouv"
-              with_tag :a, with: { class: "fr-nav__link", href: "#dsfr" }, text: "DSFR"
+            with_tag "button", with: { class: "fr-btn fr-nav__btn", "aria-controls": "menu-environnement" }, text: "Environnement"
+            with_tag :div, with: { class: ["fr-collapse", "fr-menu"], id: "menu-environnement" } do
+              with_tag :ul, with: { class: "fr-menu__list" } do
+                with_tag :li do
+                  with_tag :a, with: { class: "fr-nav__link", href: "#beta-gouv" }, text: "Beta Gouv"
+                end
+                with_tag :li do
+                  with_tag :a, with: { class: "fr-nav__link", href: "#dsfr" }, text: "DSFR"
+                end
+              end
             end
           end
           without_tag "div", with: { class: "fr-header__search" }

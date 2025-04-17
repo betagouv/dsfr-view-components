@@ -9,14 +9,17 @@ class DsfrComponent::HeaderComponent::DirectLinkDropdownComponent < DsfrComponen
   end
 
   def call
-    tag.button(title, **html_attributes) +
-      tag.div(class: 'fr-collapse fr-menu', id: menu_id) do
-        tag.ul(class: 'fr-menu__list') do
-          links.map do |link|
-            tag.li link.call
-          end.join.html_safe
-        end
+    render(DsfrComponent::DropdownComponent.new(
+             title: title,
+             html_attributes: button_attributes,
+             collapse_html_attributes: collapse_attributes
+           )) do
+      tag.ul(class: 'fr-menu__list') do
+        links.map do |link|
+          tag.li link.call
+        end.join.html_safe
       end
+    end
   end
 
 private
@@ -24,11 +27,14 @@ private
   attr_reader :title, :active
 
   def default_attributes
-    { class: 'fr-nav__btn', "aria-expanded": "false", "aria-controls": menu_id } \
-      .merge(active ? { "aria-current": 'true' } : {})
+    {}
   end
 
-  def menu_id
-    @menu_id ||= "menu-#{title.parameterize}"
+  def button_attributes
+    { class: 'fr-nav__btn' }.merge(active ? { "aria-current": 'true' } : {})
+  end
+
+  def collapse_attributes
+    { class: 'fr-menu', id: "menu-#{title.parameterize}" }
   end
 end
