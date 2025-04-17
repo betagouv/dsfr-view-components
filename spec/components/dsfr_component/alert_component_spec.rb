@@ -1,115 +1,116 @@
 require 'spec_helper'
 
 RSpec.describe(DsfrComponent::AlertComponent, type: :component) do
-  context "when type error with content" do
-    subject! do
-      render_inline(described_class.new(type: :error, title: "Erreur numéro 123")) do
-        "La base de données est en carafe"
-      end
-    end
-
-    it "renders both title and content" do
-      expect(rendered_content).to have_tag('div', with: { class: "fr-alert fr-alert--error" }) do
-        with_tag("h3", with: { class: "fr-alert__title" }, text: "Erreur numéro 123")
-        with_tag("p", text: "La base de données est en carafe")
-      end
+  subject(:rendered_content) do
+    if content.present?
+      render_inline(component.with_content(content)).to_s
+    else
+      render_inline(component).to_s
     end
   end
 
-  context "when type error without content" do
-    subject! do
-      render_inline(described_class.new(type: :error, title: "Erreur numéro 123"))
-    end
+  let(:type) { :error }
+  let(:title) { "Titre de l'alerte" }
+  let(:content) { "Contenu de l'alerte" }
+  let(:size) { :md }
+  let(:icon_name) { nil }
+  let(:kwargs) { { type: type, title: title, size: size, icon_name: icon_name } }
+  let(:component) { described_class.new(**kwargs) }
+  let(:component_css_class) { "fr-alert" }
 
-    it "renders both title and content" do
-      expect(rendered_content).to have_tag('div', with: { class: "fr-alert fr-alert--error" }) do
-        with_tag("h3", with: { class: "fr-alert__title" }, text: "Erreur numéro 123")
-        without_tag("p")
-      end
-    end
-  end
+  context "with the error type" do
+    let(:type) { :error }
 
-  context "when size SM" do
-    subject! do
-      render_inline(described_class.new(type: :success, size: :sm).with_content("Inscription réussie !"))
-    end
+    context "with content" do
+      let(:content) { "Contenu de l'alerte" }
 
-    it "renders only the content" do
-      expect(rendered_content).to have_tag('div', with: { class: "fr-alert fr-alert--success fr-alert--sm" }) do
-        without_tag("h3")
-        with_tag("p", text: "Inscription réussie !")
-      end
-    end
-  end
-
-  context "when size sm with a title but no content" do
-    it "raises ArgumentError" do
-      expect do
-        render_inline(described_class.new(type: :success, title: "Erreur numéro 123", size: :sm))
-      end.to raise_error(ArgumentError)
-    end
-  end
-
-  context "when size md with content but no title" do
-    it "raises ArgumentError" do
-      expect do
-        render_inline(described_class.new(type: :success, size: :md)) { "L'heure est grave" }
-      end.to raise_error(ArgumentError)
-    end
-  end
-
-  context "when type warning with content and close button" do
-    subject! do
-      render_inline(described_class.new(type: :warning, title: "Erreur numéro 123", close_button: true)) do
-        "fermez moi"
+      it "renders both title and content" do
+        expect(rendered_content).to have_tag('div', with: { class: "fr-alert fr-alert--error" }) do
+          with_tag("h3", with: { class: "fr-alert__title" }, text: title)
+          with_tag("p", text: content)
+        end
       end
     end
 
-    it "renders both title and content" do
-      expect(rendered_content).to have_tag('div', with: { class: "fr-alert fr-alert--warning" }) do
-        with_tag("h3", with: { class: "fr-alert__title" }, text: "Erreur numéro 123")
-        with_tag("p", text: "fermez moi")
-        with_tag("button", with: { class: "fr-btn--close fr-btn" })
+    context "without content" do
+      let(:content) { nil }
+
+      it "renders only the title" do
+        expect(rendered_content).to have_tag('div', with: { class: "fr-alert fr-alert--error" }) do
+          with_tag("h3", with: { class: "fr-alert__title" }, text: title)
+          without_tag("p")
+        end
       end
     end
   end
 
-  context "when erroneous type blague" do
-    it "raises ArgumentError" do
-      expect do
-        render_inline(described_class.new(type: :blague, title: "Erreur numéro 123"))
-      end.to raise_error(ArgumentError, /invalid alert type/)
+  context "with a small size" do
+    let(:size) { :sm }
+    let(:title) { nil }
+
+    it "adds the correct class" do
+      expect(rendered_content).to have_tag('div', with: { class: "fr-alert fr-alert--sm" })
+    end
+
+    context "when a title is provided" do
+      let(:title) { "some title" }
+
+      it_behaves_like 'a component that fails to render', /can't use it for small/
+    end
+
+    context "when no content is provided" do
+      let(:content) { nil }
+
+      it_behaves_like 'a component that fails to render', /small alerts \(use content/
     end
   end
 
-  context "when erroneous size lg" do
-    it "raises ArgumentError" do
-      expect do
-        render_inline(described_class.new(type: :success, title: "Erreur numéro 123", size: :lg))
-      end.to raise_error(ArgumentError, /invalid alert size/)
+  context "with a medium size" do
+    let(:size) { :md }
+
+    context "without a title" do
+      let(:title) { nil }
+
+      it_behaves_like 'a component that fails to render', /must provide a title for medium/
     end
   end
 
-  context "when set icon name on non default alert" do
-    it "raise ArgumentError" do
-      expect do
-        render_inline(described_class.new(type: :success, title: "Erreur numéro 123", size: :lg, icon_name: "eye-fill"))
-      end.to raise_error(ArgumentError, /invalid alert size/)
+  context "with type warning" do
+    let(:type) { :warning }
+
+    it "renders the appropriate class" do
+      expect(rendered_content).to have_tag('div', with: { class: "fr-alert fr-alert--warning" })
     end
+  end
+
+  context "with an unknown type" do
+    let(:type) { :unknown }
+
+    it_behaves_like 'a component that fails to render', /invalid alert type/
+  end
+
+  context "with an invalid size" do
+    let(:size) { :lg }
+
+    it_behaves_like 'a component that fails to render', /invalid alert size/
   end
 
   context "when icon name present" do
-    subject! do
-      render_inline(described_class.new(title: "Regarde ma super icône", icon_name: "eye-fill"))
+    let(:icon_name) { "eye-fill" }
+    let(:type) { nil }
+
+    it "renders the icon" do
+      expect(rendered_content).to have_tag('div', with: { class: "fr-alert fr-icon-eye-fill" })
     end
 
-    it "renders both title and content" do
-      expect(rendered_content).to have_tag('div', with: { class: "fr-alert fr-icon-eye-fill" }) do
-        with_tag("h3", text: "Regarde ma super icône")
-      end
+    context "with a defined alert type" do
+      subject { nil }
+
+      let(:type) { :success }
+
+      it_behaves_like 'a component that fails to render', /can only be used on default/
     end
   end
 
-  # it_behaves_like 'a component that accepts custom classes'
-  # it_behaves_like 'a component that accepts custom HTML attributes'
+  it_behaves_like 'a component that accepts custom HTML attributes'
 end
