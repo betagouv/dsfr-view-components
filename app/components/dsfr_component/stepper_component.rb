@@ -4,7 +4,7 @@ module DsfrComponent
     # @param value [Integer] Numéro de l’étape en cours (commence à 1)
     # @param max [Integer] Nombre d’étapes total
     # @param next_title [String] Titre de l’étape suivante (sauf pour la dernière étape)
-    def initialize(title:, value:, max:, next_title: nil, classes: [], html_attributes: {})
+    def initialize(title:, value:, max:, next_title: nil, html_attributes: {})
       @title = title
       @value = value
       @max = max
@@ -12,7 +12,7 @@ module DsfrComponent
 
       raise ArgumentError, "Les étapes doivent aller de 1 jusqu´à 8 au maximum" if @value < 1 || @value > @max || @max > 8
 
-      super(classes: classes, html_attributes: html_attributes)
+      super(html_attributes: html_attributes)
     end
 
   private

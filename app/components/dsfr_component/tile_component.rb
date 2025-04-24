@@ -7,7 +7,7 @@ module DsfrComponent
     # @param description [String] description (optional)
     # @param orientation [String] :horizontal or :vertical
     # @param heading_level [Integer] 1, 2, 3, 4 (default), 5, 6
-    def initialize(title:, url:, image_src: nil, image_alt: "", description: nil, orientation: :vertical, heading_level: 4, classes: [], html_attributes: {})
+    def initialize(title:, url:, image_src: nil, image_alt: "", description: nil, orientation: :vertical, heading_level: 4, html_attributes: {})
       @title = title
       @url = url
       @image_src = image_src
@@ -18,7 +18,7 @@ module DsfrComponent
 
       raise ArgumentError if HEADING_LEVELS.exclude?(heading_level)
 
-      super(classes: classes, html_attributes: html_attributes)
+      super(html_attributes: html_attributes)
     end
 
   private

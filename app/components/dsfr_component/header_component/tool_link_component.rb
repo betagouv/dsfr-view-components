@@ -1,9 +1,9 @@
 class DsfrComponent::HeaderComponent::ToolLinkComponent < DsfrComponent::Base
-  def initialize(title:, path:, classes: [], html_attributes: {})
+  def initialize(title:, path:, html_attributes: {})
     @title = title
     @path = path
 
-    super(classes: classes, html_attributes: html_attributes)
+    super(html_attributes: html_attributes)
   end
 
   def call

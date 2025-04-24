@@ -3,12 +3,11 @@ title: Options communes
 ---
 
 :markdown
-  Les composants partagent deux options communes :
+  Les composants partagent une option commune :
 
-  - `classes`
-  - et `html_attributes`
+  - `html_attributes`
 
-  Ces paramètres fonctionnent de la même manière pour tous les composants et slots.
+  Ce paramètre fonctionne de la même manière pour tous les composants et slots.
 
 = render('/partials/example.haml',
          caption: "Alerte avec des classes CSS spécifiques",
@@ -16,8 +15,8 @@ title: Options communes
   :markdown
     Tous les composants, slots et helpers ont des classes CSS par défaut permettant de les faire
     fonctionner avec le DSFR.
-    Il est possible d'ajouter des classes CSS supplémentaires en utilisant le keyword
-    argument `classes`.
+    Il est possible d'ajouter des classes CSS supplémentaires en utilisant la clé `class` dans le
+    hash `html_attributes`.
     Les classes CSS par défaut seront combinées aux classes passées en paramètre.
 
     Les classes CSS peuvent être passées sous forme de tableau ou en chaîne de caractères séparée

@@ -2,12 +2,12 @@ class DsfrComponent::HeaderComponent::OperatorImageComponent < DsfrComponent::Ba
   # @param title [String] Le title du lien vers la page d'accueil du site
   # @param src [String] L'attribut src qui sera passé au tag img
   # @param alt [String] Le texte alternatif qui sera passé au tag img. Il doit impérativement contenir le texte présent dans l’image.
-  def initialize(title:, src:, alt:, classes: [], html_attributes: {})
+  def initialize(title:, src:, alt:, html_attributes: {})
     @title = title
     @src = src
     @alt = alt
 
-    super(classes: classes, html_attributes: html_attributes)
+    super(html_attributes: html_attributes)
   end
 
   def call
