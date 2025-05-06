@@ -7,6 +7,13 @@ module Examples
       RAW
     end
 
+    def callout_no_icon
+      <<~RAW
+        = dsfr_callout(title: "Mise en avant sans icône", icon_name: :none) do |component|
+          Tout ne s'illustre pas
+      RAW
+    end
+
     def callout_with_button
       <<~RAW
         = dsfr_callout(title: "Exemple de mise en avant") do |component|
