@@ -7,7 +7,7 @@ module DsfrComponent
     renders_one :action_zone
 
     # @param title [String] Le titre de la mise en avant
-    # @param icon_name [String] Le nom de l’icône à afficher (exemple `arrow-right-line`) (optionnel)
+    # @param icon_name [String] Le nom de l’icône à afficher (exemple `arrow-right-line`), ou `:none` pour la désactiver (optionnel)
     # @param starting_header_level [Integer] Le niveau de titre (optionnel)
     def initialize(
       title:,
@@ -32,10 +32,14 @@ module DsfrComponent
       end
     end
 
-    private
+  private
 
     def default_attributes
-      { class: "fr-callout fr-icon-#{@icon_name}" }
+      classes = ["fr-callout"]
+
+      classes.push("fr-icon-#{@icon_name}") unless @icon_name == :none
+
+      { class: classes.join(" ") }
     end
   end
 end

@@ -31,6 +31,12 @@ RSpec.describe DsfrComponent::CalloutComponent, type: :component do
     expect(rendered_content).to have_tag('.fr-icon-foobar')
   end
 
+  it "can disable the icon" do
+    render_inline(described_class.new(title: title, icon_name: :none))
+
+    expect(rendered_content).not_to include 'fr-icon'
+  end
+
   context "when an action zone is provided" do
     it "renders it" do
       render_inline(
