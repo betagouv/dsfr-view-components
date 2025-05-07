@@ -19,4 +19,8 @@ title: Mise en exergue - Highlight
   :markdown
     Rendu avec une taille de texte élargie
 
+= render('/partials/example.haml', caption: "Avec un bloc de contenu", code: highlight_with_block) do
+  :markdown
+    Vous pouvez passer un bloc pour afficher du contenu avec un lien par exemple.
+
 = render('/partials/related-info.haml', links: dsfr_component_doc_links("mise-en-exergue", "highlight"))
