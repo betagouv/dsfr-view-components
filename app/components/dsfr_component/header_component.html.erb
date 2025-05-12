@@ -12,7 +12,7 @@
               <%= operator_image %>
             <% end %>
 
-            <% if search? || tool_links? || direct_links? %>
+            <% if with_navbar? %>
               <div class="fr-header__navbar">
                 <% if search? %>
                   <button class="fr-btn--search fr-btn" data-fr-opened="false" aria-controls="modal-header-search" id="button-header-search" title="Rechercher">
@@ -20,7 +20,7 @@
                   </button>
                 <% end %>
 
-                <% if tool_links? || direct_links? %>
+                <% if with_menu? %>
                   <button class="fr-btn--menu fr-btn" data-fr-opened="false" aria-controls="modal-header-menu" aria-haspopup="menu" id="button-header-menu" title="Menu">
                     Menu
                   </button>
@@ -41,7 +41,7 @@
           <% end %>
         </div>
 
-        <% if tool_links? || search? %>
+        <% if with_tools? %>
           <div class="fr-header__tools">
             <% if tool_links? %>
               <div class="fr-header__tools-links">
@@ -73,7 +73,7 @@
     </div>
   </div>
 
-  <% if tool_links? || direct_links? %>
+  <% if with_menu? %>
     <div class="fr-header__menu fr-modal" id="modal-header-menu" aria-labelledby="button-header-menu" role="navigation">
       <div class="fr-container">
         <button class="fr-btn--close fr-btn" aria-controls="modal-header-menu" title="Fermer">

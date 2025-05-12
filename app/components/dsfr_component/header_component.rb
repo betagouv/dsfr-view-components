@@ -25,4 +25,16 @@ private
   def default_attributes
     { class: 'fr-header', role: 'banner' }
   end
+
+  def with_tools?
+    tool_links? || search?
+  end
+
+  def with_navbar?
+    with_tools? || direct_links?
+  end
+
+  def with_menu?
+    tool_links? || direct_links?
+  end
 end
