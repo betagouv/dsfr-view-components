@@ -33,5 +33,12 @@ module Examples
           Votre inscription est en cours de traitement
       ALERT
     end
+
+    def alert_md_with_h6
+      <<~ALERT
+        = dsfr_alert(size: :md, title: "Ceci est un H6", starting_header_level: 6) do
+          Et le contenu de l'alerte.
+      ALERT
+    end
   end
 end

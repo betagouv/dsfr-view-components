@@ -1,18 +1,32 @@
 class DsfrComponent::AlertComponent < DsfrComponent::Base
+  include DsfrComponent::Traits::HeaderSizeable
+
   TYPES = %i[error success info warning].freeze
   SIZES = %i[sm md].freeze
 
-  # @param type [Symbol] alert type (and matching color) `:success`, `:info`, `:warning` ou `:error`
-  # @param title [String] alert title. cannot be set in size `:sm`
-  # @param size [Symbol] alert size : `:md` (default) or `:sm`
-  # @param close_button [Boolean] display a close button to remove the alert
-  # @note in size MD the title is required but the content is optional. In size SM there should be not title but the content is required
-  def initialize(type: nil, title: nil, size: :md, close_button: false, icon_name: nil, html_attributes: {})
+  # @param type [AlertComponent::TYPES]
+  # @param title [String] le titre de l'alerte, sauf pour la taille `:sm`
+  # @param size [AlertComponent::SIZES]
+  # @param close_button [Boolean] contrôle l'affichage d'un bouton de fermeture
+  # @param icon_name [String] un nom d'icône à afficher, seulement disponible pour le type par défaut
+  # @param starting_header_level [Integer] Le niveau de titre
+  # @note La taille `:md` requiert un titre mais le contenu est
+  # optionel ; la taille `sm` requiert un contenu, mais pas de titre.
+  def initialize(
+    type: nil,
+    title: nil,
+    size: :md,
+    close_button: false,
+    icon_name: nil,
+    starting_header_level: nil,
+    html_attributes: {}
+  )
     @title = title
     @type = type
     @size = size
     @close_button = close_button
     @icon_name = icon_name
+    @starting_header_level = starting_header_level
 
     super(html_attributes: html_attributes)
   end
@@ -63,7 +77,7 @@ private
   def title_tag
     return nil if title.blank?
 
-    tag.h3(class: "fr-alert__title") { title }
+    tag.send(starting_header_tag, class: "fr-alert__title") { title }
   end
 
   def content_tag
