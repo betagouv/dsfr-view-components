@@ -2,13 +2,16 @@
 title: Alerte - Alert
 ---
 
-%p
+:markdown
   Les alertes permettent d’attirer l’attention de l’utilisateur sur une information sans
   interrompre sa tâche en cours.
-%p
-  Il existe deux tailles d'alertes : MD (par défaut) et SM. En taille MD l'alerte doit avoir un
-  titre et peut avoir un contenu.
-  En taille SM l'alerte ne peut pas avoir de titre et doit avoir un contenu.
+
+  Il existe deux tailles d'alertes : MD (par défaut) et SM. En taille
+  MD l'alerte doit avoir un titre et peut avoir un contenu. En taille
+  SM l'alerte ne peut pas avoir de titre et doit avoir un contenu.
+
+  Le niveau de titre (3 par défaut) peut être configuré en passant
+  `starting_header_level` au composant.
 
 = render('/partials/example.haml',
          caption: "Alerte MD de succès avec du contenu",
@@ -22,6 +25,10 @@ title: Alerte - Alert
          code: alert_md_success_without_content) do
   :markdown
     En taille MD, le titre `title` est obligatoire pour les alertes mais le contenu est optionnel.
+
+= render('/partials/example.haml',
+         caption: "Alerte MD avec un niveau de titre paramétré",
+         code: alert_md_with_h6)
 
 = render('/partials/example.haml',
          caption: "Alerte d'erreur taille SM sans contenu",

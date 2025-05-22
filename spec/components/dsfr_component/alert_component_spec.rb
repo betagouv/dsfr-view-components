@@ -14,7 +14,18 @@ RSpec.describe(DsfrComponent::AlertComponent, type: :component) do
   let(:content) { "Contenu de l'alerte" }
   let(:size) { :md }
   let(:icon_name) { nil }
-  let(:kwargs) { { type: type, title: title, size: size, icon_name: icon_name } }
+  let(:starting_header_level) { nil }
+
+  let(:kwargs) do
+    {
+      type: type,
+      title: title,
+      size: size,
+      icon_name: icon_name,
+      starting_header_level: starting_header_level
+    }
+  end
+
   let(:component) { described_class.new(**kwargs) }
   let(:component_css_class) { "fr-alert" }
 
@@ -109,6 +120,14 @@ RSpec.describe(DsfrComponent::AlertComponent, type: :component) do
       let(:type) { :success }
 
       it_behaves_like 'a component that fails to render', /can only be used on default/
+    end
+  end
+
+  context "when a custom header level is passed" do
+    let(:starting_header_level) { 6 }
+
+    it "adjusts the markup" do
+      expect(rendered_content).to have_tag('h6', with: { class: "fr-alert__title" })
     end
   end
 
