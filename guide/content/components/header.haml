@@ -4,54 +4,26 @@ title: En-tête - Header
 
 .fr-text-wrap
   :markdown
-    L’en-tête permet aux utilisateurs d’identifier sur quel site ils se trouvent. Il peut donner accès à la recherche et à certaines pages ou fonctionnalités clés.
+    L’en-tête permet aux utilisateurs d’identifier sur quel site ils
+    se trouvent. Il peut donner accès à la recherche et à certaines
+    pages ou fonctionnalités clés.
 
-= render '/partials/example.haml', caption: "En-tête minimale", code: header_simple do
+= render '/partials/example.haml', caption: "En-tête complet", code: header_full, output_class: "fr-pb-16w" do
   :markdown
-    Un header minimal est composé d’un logo textuel et d’un titre.
+    L'intégralité des options est exposée dans cet exemple mais
+    composez selon vos besoins en privilégiant toujours
+    l'accessibilité et la simplicité de votre page. Vous pouvez voir :
 
-= render '/partials/example.haml', caption: "En-tête avec un logo sur deux lignes", code: header_logo_lines do
-  :markdown
-    Le texte du logo peut être sur deux lignes en ajoutant une classe CSS personnalisée
-
-= render '/partials/example.haml', caption: "En-tête avec logo horizontal", code: header_with_horizontal_logo do
-  :markdown
-    Un header peut présenter un logo horizontal.
-    L’alternative textuelle du logo (attribut alt) doit impérativement contenir le texte présent dans l’image.
-
-= render '/partials/example.haml', caption: "En-tête avec des accès rapides", code: header_with_tool_links do
-  :markdown
-    Un header peut présenter des liens d’accès rapide (*tool links* dans le code).
-
-= render '/partials/example.haml', caption: "En-tête avec des liens directs", code: header_with_simple_direct_links do
-  :markdown
-    Un header peut présenter des liens directs (*direct links* dans le code).
+      * le nom du sponsor (requis)
+      * le nom du service (requis)
+      * le logo du service
+      * un champ de recherche
+      * des liens d'accès rapide
+      * des liens directs
+      * des liens direct déroulants.
 
 = render '/partials/example.haml', caption: "En-tête avec liens personnalisés", code: header_with_custom_tool_links do
   :markdown
     Il n'est pas rare que l'action de déconnexion d'un utilisateur passe par un `DELETE` sur `/sessions` ou autre. Comme les liens (`<a>`) sont limités à `GET` il est possible d'outrepasser ça avec `custom_tool_links` qui permet par exemple d'insérer le combo formulaire/bouton dans ce cas :
-
-= render '/partials/example.haml', caption: "En-tête avec des liens déroulants", code: header_with_dropdown_direct_links, output_class: "fr-pb-16w" do
-  :markdown
-    Un header peut présenter des liens directs déroulants (*dropdown* dans le code).
-
-%h3.fr-mt-8w#mega-menu
-  %a.header-anchor{href: "#mega-menu"}
-    En-tête avec un méga menu
-.fr-mb-8w
-  :markdown
-    Le [méga menu](https://www.systeme-de-design.gouv.fr/composants-et-modeles/composants/navigation-principale/){:target="_blank" rel="noopener"} n’est pas encore développé dans cette gem.
-
-= render '/partials/example.haml', caption: "En-tête avec un champ de recherche", code: header_with_search do
-  :markdown
-    Un header peut présenter un champ de recherche.
-    Le formulaire de recherche est à implémenter vous-même.
-    La classe `.fr-search-bar` peut être utilisée pour faciliter l’implémentation d’un formulaire en ligne avec le bouton submit sur la droite.
-
-    Dans cet exemple nous codons le formulaire en HAML brut, mais vous pouvez utiliser les helpers de Rails comme `form_for`.
-
-= render '/partials/example.haml', caption: "En-tête avec toutes les fonctionnalités", code: header_full, output_class: "fr-pb-16w" do
-  :markdown
-    Cet exemple regroupe toutes les fonctionnalités d’un header.
 
 = render '/partials/related-info.haml', links: dsfr_component_doc_links("en-tete", "header")
