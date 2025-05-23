@@ -43,12 +43,17 @@
 
         <% if with_tools? %>
           <div class="fr-header__tools">
-            <% if tool_links? %>
+            <% if tool_links? || custom_tool_links? %>
               <div class="fr-header__tools-links">
                 <ul class="fr-btns-group">
                   <% tool_links.each do |tool_link| %>
                     <li>
                       <%= tool_link %>
+                    </li>
+                  <% end %>
+                  <% custom_tool_links.each do |custom_tool_link| %>
+                    <li>
+                      <%= custom_tool_link %>
                     </li>
                   <% end %>
                 </ul>

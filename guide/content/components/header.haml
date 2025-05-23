@@ -27,6 +27,10 @@ title: En-tête - Header
   :markdown
     Un header peut présenter des liens directs (*direct links* dans le code).
 
+= render '/partials/example.haml', caption: "En-tête avec liens personnalisés", code: header_with_custom_tool_links do
+  :markdown
+    Il n'est pas rare que l'action de déconnexion d'un utilisateur passe par un `DELETE` sur `/sessions` ou autre. Comme les liens (`<a>`) sont limités à `GET` il est possible d'outrepasser ça avec `custom_tool_links` qui permet par exemple d'insérer le combo formulaire/bouton dans ce cas :
+
 = render '/partials/example.haml', caption: "En-tête avec des liens déroulants", code: header_with_dropdown_direct_links, output_class: "fr-pb-16w" do
   :markdown
     Un header peut présenter des liens directs déroulants (*dropdown* dans le code).

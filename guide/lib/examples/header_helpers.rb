@@ -32,6 +32,16 @@ module Examples
       HEADER
     end
 
+    def header_with_custom_tool_links
+      <<~HEADER
+        = dsfr_header logo_text: "Ministère du travail", title: "Égapro" do |header|
+          - if "l'utilisateur est connecté"
+            = header.with_tool_link title: "Vos services (Marie Curie)", path: '#', html_attributes: { class: "fr-icon-account-line" }
+            = header.with_custom_tool_link do
+              = button_to "Déconnexion", '/logout', { method: :delete, class: "fr-btn fr-icon-logout-box-r-line", data: { turbo: "false" } }
+      HEADER
+    end
+
     def header_with_simple_direct_links
       <<~HEADER
         = dsfr_header logo_text: "Ministère du Travail", title: "Égapro", tagline: "Indice de parité professionelle" do |header|

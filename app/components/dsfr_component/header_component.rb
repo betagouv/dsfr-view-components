@@ -2,6 +2,7 @@ class DsfrComponent::HeaderComponent < DsfrComponent::Base
   renders_one :search
   renders_one :operator_image, "DsfrComponent::HeaderComponent::OperatorImageComponent"
   renders_many :tool_links, "DsfrComponent::HeaderComponent::ToolLinkComponent"
+  renders_many :custom_tool_links
   renders_many :direct_links, types: {
     simple: "DsfrComponent::HeaderComponent::DirectLinkComponent",
     dropdown: "DsfrComponent::HeaderComponent::DirectLinkDropdownComponent"
@@ -27,7 +28,7 @@ private
   end
 
   def with_tools?
-    tool_links? || search?
+    tool_links? || search? || custom_tool_links?
   end
 
   def with_navbar?
