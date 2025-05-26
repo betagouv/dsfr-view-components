@@ -1,6 +1,6 @@
 module DsfrComponent
   class NoticeComponent < DsfrComponent::Base
-    GENERIC_TYPES = %w[info waring alert].freeze
+    GENERIC_TYPES = %w[info warning alert].freeze
     WEATHER_TYPES = %w[weather-orange weather-red weather-purple].freeze
     ALERT_TYPES = %w[kidnapping cyberattack attack witness].freeze
     TYPES = GENERIC_TYPES + WEATHER_TYPES + ALERT_TYPES
@@ -11,7 +11,7 @@ module DsfrComponent
 
     # @param title [String] Titre du bandeau
     # @param description [String] Description du bandeau pour apporter du contexte (optionnel)
-    # @param type [String] Type de bandeau (info, waring, alert, weather-orange, weather-red, weather-purple, kidnapping, cyberattack, attack, witness)
+    # @param type [String] Type de bandeau (info, warning, alert, weather-orange, weather-red, weather-purple, kidnapping, cyberattack, attack, witness)
     # @param description_tag [Symbol] Balise HTML à utiliser pour la description (p, h1, h2, h3, h4, h5, h6)
     # @param use_icon [Boolean] Afficher ou non une icône, uniquement pour les bandeaux génériques
     # @param icon_name [String] Nom de l'icône à afficher
