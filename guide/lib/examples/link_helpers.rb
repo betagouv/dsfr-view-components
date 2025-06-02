@@ -36,5 +36,11 @@ module Examples
         %p= dsfr_link_to "Ceci est un lien externe, hors-texte.", "#", target: "_blank", rel: "noopener"
       LINK
     end
+
+    def proconnect_button
+      <<~LINK
+        = dsfr_proconnect_button(target: '#', class: "foobar")
+      LINK
+    end
   end
 end

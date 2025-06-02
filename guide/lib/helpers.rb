@@ -35,6 +35,7 @@ Dir.glob('../app/components/dsfr_component/**/*.rb').sort.each { |f| require f }
 require 'helpers/dsfr_link_helper'
 
 use_helper DsfrLinkHelper
+use_helper DsfrProconnectHelper
 use_helper DsfrComponentsHelper
 use_helper Examples::CommonOptionsHelpers
 use_helper Examples::AlertHelpers
