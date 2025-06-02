@@ -1,4 +1,3 @@
-require 'debug'
 require 'view_component/test_helpers'
 require 'simplecov'
 

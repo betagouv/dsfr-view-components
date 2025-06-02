@@ -9,6 +9,7 @@ module Helpers
     COMPONENTS_RE = %r{(?<url>/components/.*)\..*}.freeze
 
     def component_links
+      # NOTE: @items is a global nanoc variable
       @items.map do |item|
         data = item.attributes[:filename].match(COMPONENTS_RE)
 
