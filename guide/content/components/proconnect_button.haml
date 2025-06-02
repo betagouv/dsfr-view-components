@@ -4,13 +4,16 @@ title: Bouton ProConnect
 
 .fr-text-wrap
   :markdown
-    Le bouton ProConnect n'est pas régi par le DSFR mais se base sur
-    celui de FranceConnect qui l'est. Vous devez respecter son visuel
-    et les mentions pour aider les utilisateurs.
+    Le bouton ProConnect n'est pas directement régi par le DSFR mais
+    il est inclu ici car il se base sur le bouton FranceConnect qui
+    lui en fait partie. Comme ce dernier, son aspect visuel est à
+    respecter pour permettre aux usagers de l'identifier plus
+    facilement.
 
-    Le bouton `POST` sur l'attribut `target:`.
+= render('/partials/example.haml', caption: "Par défaut", code: proconnect_button_default) do
+  :markdown
+    Dans son implémentation la plus simple, le bouton `POST` sur l'attribut `target:`.
 
-= render('/partials/example.haml', caption: "Par défaut", code: proconnect_button_default)
 
 = render('/partials/example.haml', caption: "Surcharge du bouton", code: proconnect_button_override) do
   :markdown
