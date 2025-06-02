@@ -33,7 +33,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "html-attributes-utils", "~> 1"
   spec.add_dependency "view_component", "~> 3"
-  spec.add_dependency "dsfr-assets", "~> 1.13"
+  spec.add_dependency "dsfr-assets", "~> 1.13.2"
 
   spec.add_development_dependency "deep_merge"
   spec.add_development_dependency "debug"

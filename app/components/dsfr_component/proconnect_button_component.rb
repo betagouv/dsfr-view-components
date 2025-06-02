@@ -24,7 +24,7 @@ module DsfrComponent
       {
         method: :post,
         remote: false,
-        class: "fr-connect",
+        class: "fr-connect fr-proconnect",
         data: { turbo: false }
       }
     end
