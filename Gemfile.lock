@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    dsfr-view-components (3.0.2)
+    dsfr-view-components (3.1)
       dsfr-assets (~> 1.13.2)
       html-attributes-utils (~> 1)
       view_component (~> 3)
@@ -413,9 +413,9 @@ GEM
     unicode-emoji (4.0.4)
     uri (1.0.3)
     useragent (0.16.11)
-    view_component (3.21.0)
+    view_component (3.23.2)
       activesupport (>= 5.2.0, < 8.1)
-      concurrent-ruby (~> 1.0)
+      concurrent-ruby (~> 1)
       method_source (~> 1.0)
     webrick (1.7.0)
     websocket-driver (0.7.7)
