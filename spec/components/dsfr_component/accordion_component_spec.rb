@@ -13,13 +13,13 @@ RSpec.describe(DsfrComponent::AccordionComponent, type: :component) do
       expect(rendered_content).to have_tag('div', with: { class: "fr-accordions-group" }) do
         with_tag('section', with: { class: 'fr-accordion' }) do
           with_tag("h3", with: { class: "fr-accordion__title" }) do
-            with_tag("button", with: { class: "fr-accordion__btn", "aria-expanded": "false" }, text: /Un/)
+            with_tag("button", with: { type: "button", class: "fr-accordion__btn", "aria-expanded": "false" }, text: /Un/)
           end
           with_tag("div", with: { class: "fr-collapse" }, text: /Premier contenu/)
         end
         with_tag('section', with: { class: 'fr-accordion' }) do
           with_tag("h3", with: { class: "fr-accordion__title" }) do
-            with_tag("button", with: { class: "fr-accordion__btn", "aria-expanded": "false" }, text: /Deux/)
+            with_tag("button", with: { type: "button", class: "fr-accordion__btn", "aria-expanded": "false" }, text: /Deux/)
           end
           with_tag("div", with: { class: "fr-collapse" }, text: /Deuxième contenu/)
         end
