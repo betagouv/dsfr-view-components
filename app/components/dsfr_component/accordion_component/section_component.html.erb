@@ -1,6 +1,7 @@
 <%= tag.section(**html_attributes) do %>
   <%= tag.send(starting_header_tag, class: "fr-accordion__title") do %>
     <button
+        type="button"
         class="fr-accordion__btn"
         aria-expanded="<%= expanded? ? "true" : "false" %>"
         aria-controls="<%= id %>"
