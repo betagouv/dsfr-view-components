@@ -141,7 +141,7 @@ RSpec.describe(DsfrComponent::HeaderComponent, type: :component) do
         end
         with_tag "div", with: { class: "fr-header__menu" } do
           with_tag "nav", with: { class: "fr-nav" } do
-            with_tag "button", with: { class: "fr-btn fr-nav__btn", "aria-controls": "menu-aide" }, text: "Aide"
+            with_tag "button", with: { class: "fr-nav__btn", "aria-controls": "menu-aide" }, text: "Aide"
             with_tag :div, with: { class: "fr-collapse fr-menu", id: "menu-aide" } do
               with_tag :ul, with: { class: "fr-menu__list" } do
                 with_tag :li do
@@ -152,7 +152,7 @@ RSpec.describe(DsfrComponent::HeaderComponent, type: :component) do
                 end
               end
             end
-            with_tag "button", with: { class: "fr-btn fr-nav__btn", "aria-controls": "menu-environnement" }, text: "Environnement"
+            with_tag "button", with: { class: "fr-nav__btn", "aria-controls": "menu-environnement" }, text: "Environnement"
             with_tag :div, with: { class: "fr-collapse fr-menu", id: "menu-environnement" } do
               with_tag :ul, with: { class: "fr-menu__list" } do
                 with_tag :li do
