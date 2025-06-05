@@ -1,10 +1,8 @@
 module DsfrComponent
   class DropdownComponent < DsfrComponent::Base
-    # A dropdown component that displays content when a button is clicked.
-    #
-    # @param title [String] The title of the dropdown button
-    # @param collapse_html_attributes [Hash] Additional HTML attributes for the collapse div
-    # @param html_attributes [Hash] Additional HTML attributes for the button
+    # @param title [String] Intitulé du bouton d'ouverture
+    # @param collapse_html_attributes [Hash] Attributs HTML additionnels pour le bloc masqué (optionnels)
+    # @param html_attributes [Hash] Attributs HTML additionnels pour le bouton (optionnels)
     def initialize(title:, collapse_html_attributes: {}, html_attributes: {})
       @title = title
       @collapse_html_attributes = collapse_html_attributes
