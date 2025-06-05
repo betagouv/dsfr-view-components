@@ -34,8 +34,8 @@ module Examples
     def dropdown_with_custom_attributes
       <<~DROPDOWN
         = dsfr_dropdown title: "Menu personnalisé",
-          html_attributes: { class: "fr-btn--secondary", "data-custom": "value" },
-          collapse_html_attributes: { class: "fr-menu", "data-collapse-custom": "value" } do
+          html_attributes: { class: "fr-btn--secondary fr-icon-filter-line", "data-custom": "value" },
+          collapse_html_attributes: { "data-controller": "foo" } do
           %ul.fr-menu__list
             %li
               %a.fr-nav__link{href: "#"} Option A
