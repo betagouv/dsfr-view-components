@@ -9,12 +9,12 @@ class DsfrComponent::HeaderComponent::DirectLinkDropdownComponent < DsfrComponen
   end
 
   def call
-    render(DsfrComponent::DropdownComponent.new(
-             title: title,
-             html_attributes: button_attributes,
-             collapse_html_attributes: collapse_attributes
-           )) do
-      tag.ul(class: 'fr-menu__list') do
+    render DsfrComponent::DropdownComponent.new(
+      title: title,
+      html_attributes: button_attributes,
+      collapse_html_attributes: collapse_attributes
+    ) do
+      tag.ul(class: "fr-menu__list") do
         links.map do |link|
           tag.li link.call
         end.join.html_safe
