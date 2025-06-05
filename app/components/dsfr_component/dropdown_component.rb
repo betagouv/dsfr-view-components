@@ -6,7 +6,6 @@ module DsfrComponent
     def initialize(title:, collapse_html_attributes: {}, html_attributes: {})
       @title = title
       @collapse_html_attributes = collapse_html_attributes
-      @collapse_html_attributes[:id] ||= "dropdown-#{object_id}"
 
       super(html_attributes: html_attributes)
     end
@@ -30,7 +29,7 @@ module DsfrComponent
     end
 
     def dropdown_id
-      collapse_html_attributes[:id]
+      collapse_html_attributes[:id] ||= "dropdown-#{object_id}"
     end
   end
 end
