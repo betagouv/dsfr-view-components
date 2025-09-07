@@ -16,5 +16,7 @@ checks:
       # ruby doc sometimes fails because the docs are built when the request is
       # made which nano reports as failure (202)
       - '^https?://www.rubydoc.info/'
+      # DSFR documentation returns 403 errors due to access restrictions
+      - '^https?://www.systeme-de-design.gouv.fr/'
 
 base_url: https://betagouv.github.io/dsfr-view-components
