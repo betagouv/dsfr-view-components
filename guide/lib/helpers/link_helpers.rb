@@ -18,7 +18,7 @@ module Helpers
     end
 
     def design_system_link
-      'https://www.systeme-de-design.gouv.fr/'
+      'https://www.systeme-de-design.gouv.fr/version-courante/fr'
     end
 
     def github_link
@@ -42,7 +42,7 @@ module Helpers
     end
 
     def dsfr_icon_list_link
-      'https://www.systeme-de-design.gouv.fr/fondamentaux/icone/'
+      'https://www.systeme-de-design.gouv.fr/version-courante/fr/fondamentaux/icone/'
     end
 
     def rails_docs_button_to
