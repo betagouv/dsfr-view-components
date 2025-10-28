@@ -1,10 +1,10 @@
 <%= tag.div(**html_attributes) do %>
-  <h2 class="fr-stepper__title">
+  <%= title_tag(class: "fr-stepper__title") do %>
     <%= title %>
     <span class="fr-stepper__state">
       Étape <%= value %> sur <%= max %>
     </span>
-  </h2>
+  <% end %>
   <div
     class="fr-stepper__steps"
     data-fr-current-step="<%= value %>"
