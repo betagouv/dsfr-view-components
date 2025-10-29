@@ -1,5 +1,5 @@
 <%= tag.div(**html_attributes) do %>
-  <%= title_tag(class: "fr-stepper__title") do %>
+  <%= tag.send(starting_header_tag, class: "fr-stepper__title") do %>
     <%= title %>
     <span class="fr-stepper__state">
       Étape <%= value %> sur <%= max %>

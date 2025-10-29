@@ -32,7 +32,7 @@ RSpec.describe(DsfrComponent::StepperComponent, type: :component) do
   end
 
   context "with a heading level" do
-    let(:args) { { title: "Choisissez votre ville", value: 3, max: 3, heading_level: 4 } }
+    let(:args) { { title: "Choisissez votre ville", value: 3, max: 3, starting_header_level: 4 } }
 
     it "renders correctly" do
       expect(rendered_content).to have_tag(:div, with: { class: "fr-stepper" }) do
