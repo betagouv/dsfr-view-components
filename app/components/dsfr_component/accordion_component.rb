@@ -7,13 +7,13 @@ class DsfrComponent::AccordionComponent < DsfrComponent::Base
       html_attributes: html_attributes,
       title: title,
       id: id,
-      starting_header_level: starting_header_level,
+      header_level: header_level,
       &block
     )
   end
 
-  def initialize(html_attributes: {}, starting_header_level: nil)
-    @starting_header_level = starting_header_level
+  def initialize(html_attributes: {}, header_level: nil)
+    self.header_level = header_level
 
     super(html_attributes: html_attributes)
   end

@@ -1,7 +1,7 @@
 class DsfrComponent::AccordionComponent::SectionComponent < DsfrComponent::Base
   include DsfrComponent::Traits::HeaderSizeable
 
-  attr_reader :title, :expanded, :starting_header_level
+  attr_reader :title, :expanded
 
   alias_method :expanded?, :expanded
 
@@ -10,7 +10,7 @@ class DsfrComponent::AccordionComponent::SectionComponent < DsfrComponent::Base
   # @param id [String] the HTML id, optional if you want to reuse the anchor
   def initialize(
     title:,
-    starting_header_level:,
+    header_level:,
     expanded: false,
     id: nil,
     html_attributes: {}
@@ -18,7 +18,7 @@ class DsfrComponent::AccordionComponent::SectionComponent < DsfrComponent::Base
     @title = title
     @expanded = expanded
     @id = id
-    @starting_header_level = starting_header_level
+    self.header_level = header_level
 
     super(html_attributes: html_attributes)
   end

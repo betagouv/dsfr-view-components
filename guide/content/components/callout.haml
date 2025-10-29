@@ -17,7 +17,7 @@ title: Mise en avant - Callout
 = render('/partials/example.haml', caption: "Rendu avec un autre niveau de titre", code: callout_with_different_header) do
   :markdown
     Si votre hiérarchie de titre requiert un autre niveau de titre que
-    H3 vous pouvez le spécifier en passant `starting_header_level` au composant.
+    H3 vous pouvez le spécifier en passant `header_level` au composant.
 
 = render('/partials/example.haml', caption: "Rendu avec un bouton", code: callout_with_button) do
   :markdown
@@ -28,6 +28,6 @@ title: Mise en avant - Callout
 = render('/partials/example.haml', caption: "Rendu avec un autre niveau de titre", code: callout_with_different_header) do
   :markdown
     Si votre hiérarchie de titre requiert un autre niveau de titre que
-    H3 vous pouvez le spécifier en passant `starting_header_level` au composant.
+    H3 vous pouvez le spécifier en passant `header_level` au composant.
 
 = render('/partials/related-info.haml', links: dsfr_component_doc_links("mise-en-avant"))
