@@ -30,4 +30,18 @@ RSpec.describe(DsfrComponent::StepperComponent, type: :component) do
       end
     end
   end
+
+  context "with a heading level" do
+    let(:args) { { title: "Choisissez votre ville", value: 3, max: 3, starting_header_level: 4 } }
+
+    it "renders correctly" do
+      expect(rendered_content).to have_tag(:div, with: { class: "fr-stepper" }) do
+        with_tag(:h4, with: { class: "fr-stepper__title" }, text: /Choisissez votre ville/) do
+          with_tag(:span, with: { class: "fr-stepper__state" }, text: /Étape 3 sur 3/)
+        end
+        with_tag(:div, with: { class: "fr-stepper__steps", "data-fr-current-step": "3", "data-fr-steps": "3" })
+        without_tag(:p, with: { class: "fr-stepper__details" })
+      end
+    end
+  end
 end

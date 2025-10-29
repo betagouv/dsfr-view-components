@@ -7,5 +7,9 @@ module Examples
     def stepper_last_step
       '= dsfr_stepper(title: "Confirmez votre identité", value: 3, max: 3)'
     end
+
+    def stepper_with_heading_level
+      '= dsfr_stepper(title: "Confirmez votre identité", value: 3, max: 3, starting_header_level: 3)'
+    end
   end
 end

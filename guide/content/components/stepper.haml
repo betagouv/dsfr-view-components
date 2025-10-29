@@ -18,5 +18,9 @@ title: Indicateur d'étape - Stepper
   :markdown
     Le titre de l’étape suivante est obligatoire pour toutes les étapes sauf la dernière.
 
+= render('/partials/example.haml', caption: "Avec choix du niveau de titre", code: stepper_with_heading_level) do
+  :markdown
+    Le niveau de titre de l’étape courante peut être personnalisé.
+
 
 = render('/partials/related-info.haml', links: dsfr_component_doc_links("indicateur-d-etapes"))
