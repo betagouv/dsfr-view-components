@@ -11,7 +11,7 @@ module Examples
 
     def accordion_custom_header_level
       <<~ACCORDION
-        = dsfr_accordion(starting_header_level: 2) do |accordion|
+        = dsfr_accordion(header_level: 2) do |accordion|
           - accordion.with_section(title: "Un") { tag.p("Premier contenu") }
           - accordion.with_section(title: "Deux", id: "section-deux") { tag.p("Deuxième contenu") }
           - accordion.with_section(title: "Trois", expanded: true) { tag.p("Troisième contenu déplié") }

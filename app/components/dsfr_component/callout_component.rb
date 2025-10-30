@@ -8,23 +8,23 @@ module DsfrComponent
 
     # @param title [String] Le titre de la mise en avant
     # @param icon_name [String] Le nom de l’icône à afficher (exemple `arrow-right-line`), ou `:none` pour la désactiver (optionnel)
-    # @param starting_header_level [Integer] Le niveau de titre (optionnel)
+    # @param header_level [Integer] Le niveau de titre (optionnel)
     def initialize(
       title:,
       icon_name: "information-line",
-      starting_header_level: nil,
+      header_level: nil,
       html_attributes: {}
     )
       @title = title
       @icon_name = icon_name
-      @starting_header_level = starting_header_level
+      self.header_level = header_level
 
       super(html_attributes: html_attributes)
     end
 
     def call
       tag.div(**html_attributes) do
-        concat content_tag(starting_header_tag, @title, class: 'fr-callout__title')
+        concat content_tag(header_tag, @title, class: 'fr-callout__title')
 
         concat content_tag(:p, content, class: 'fr-callout__text')
 

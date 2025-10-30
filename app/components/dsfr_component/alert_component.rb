@@ -9,7 +9,7 @@ class DsfrComponent::AlertComponent < DsfrComponent::Base
   # @param size [AlertComponent::SIZES]
   # @param close_button [Boolean] contrôle l'affichage d'un bouton de fermeture
   # @param icon_name [String] un nom d'icône à afficher, seulement disponible pour le type par défaut
-  # @param starting_header_level [Integer] Le niveau de titre
+  # @param header_level [Integer] Le niveau de titre
   # @note La taille `:md` requiert un titre mais le contenu est
   # optionel ; la taille `sm` requiert un contenu, mais pas de titre.
   def initialize(
@@ -18,7 +18,7 @@ class DsfrComponent::AlertComponent < DsfrComponent::Base
     size: :md,
     close_button: false,
     icon_name: nil,
-    starting_header_level: nil,
+    header_level: nil,
     html_attributes: {}
   )
     @title = title
@@ -26,7 +26,7 @@ class DsfrComponent::AlertComponent < DsfrComponent::Base
     @size = size
     @close_button = close_button
     @icon_name = icon_name
-    @starting_header_level = starting_header_level
+    self.header_level = header_level
 
     super(html_attributes: html_attributes)
   end
@@ -77,7 +77,7 @@ private
   def title_tag
     return nil if title.blank?
 
-    tag.send(starting_header_tag, class: "fr-alert__title") { title }
+    tag.send(header_tag, class: "fr-alert__title") { title }
   end
 
   def content_tag

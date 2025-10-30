@@ -3,22 +3,35 @@
 module DsfrComponent
   module Traits
     # HeaderSizeable is meant for every component that exhibits a
-    # header, which level can be overriden via the
-    # `default_header_level` method. Make sure you store the attribute
-    # `@starting_header_level` in your component's constructor.
+    # header which level can be overriden. Make sure you use the
+    # setter (self.header_level) in your component's constructor.
     module HeaderSizeable
       DEFAULT_HEADER_LEVEL = 3
 
-      def starting_header_level
-        @starting_header_level || default_header_level
+      def header_level
+        @header_level || default_header_level
+      end
+
+      def header_level=(level)
+        return if level.nil?
+
+        raise ArgumentError, "Le niveau du titre doit être compris entre 1 et 6" if !correct?(level)
+
+        @header_level = level
       end
 
       def default_header_level
         DEFAULT_HEADER_LEVEL
       end
 
-      def starting_header_tag
-        ["h", starting_header_level].join
+      def header_tag
+        ["h", header_level].join
+      end
+
+    private
+
+      def correct?(level)
+        level.in?(DsfrComponent::Base::HEADING_LEVELS)
       end
     end
   end

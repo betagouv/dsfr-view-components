@@ -9,7 +9,7 @@ module Examples
     end
 
     def stepper_with_heading_level
-      '= dsfr_stepper(title: "Confirmez votre identité", value: 3, max: 3, starting_header_level: 3)'
+      '= dsfr_stepper(title: "Confirmez votre identité", value: 3, max: 3, header_level: 3)'
     end
   end
 end

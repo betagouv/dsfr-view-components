@@ -1,5 +1,5 @@
 module Dsfr
   module Components
-    VERSION = '3.1'.freeze
+    VERSION = '4.0'.freeze
   end
 end

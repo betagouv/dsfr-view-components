@@ -14,7 +14,7 @@ RSpec.describe DsfrComponent::CalloutComponent, type: :component do
   end
 
   it "has a header level that can be customised" do
-    render_inline(described_class.new(title: title, starting_header_level: 2).with_content(content))
+    render_inline(described_class.new(title: title, header_level: 2).with_content(content))
 
     expect(rendered_content).to have_tag('h2')
   end

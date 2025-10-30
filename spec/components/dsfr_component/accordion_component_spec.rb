@@ -48,7 +48,7 @@ RSpec.describe(DsfrComponent::AccordionComponent, type: :component) do
 
   context "when the default header level is overriden" do
     it "renders matching sections" do
-      render_inline(DsfrComponent::AccordionComponent.new(starting_header_level: 2)) do |component|
+      render_inline(DsfrComponent::AccordionComponent.new(header_level: 2)) do |component|
         component.with_section(title: "Un", id: "test-un") { "Premier contenu" }
       end
 

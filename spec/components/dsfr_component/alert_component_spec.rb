@@ -14,7 +14,7 @@ RSpec.describe(DsfrComponent::AlertComponent, type: :component) do
   let(:content) { "Contenu de l'alerte" }
   let(:size) { :md }
   let(:icon_name) { nil }
-  let(:starting_header_level) { nil }
+  let(:header_level) { nil }
 
   let(:kwargs) do
     {
@@ -22,7 +22,7 @@ RSpec.describe(DsfrComponent::AlertComponent, type: :component) do
       title: title,
       size: size,
       icon_name: icon_name,
-      starting_header_level: starting_header_level
+      header_level: header_level
     }
   end
 
@@ -124,7 +124,7 @@ RSpec.describe(DsfrComponent::AlertComponent, type: :component) do
   end
 
   context "when a custom header level is passed" do
-    let(:starting_header_level) { 6 }
+    let(:header_level) { 6 }
 
     it "adjusts the markup" do
       expect(rendered_content).to have_tag('h6', with: { class: "fr-alert__title" })
