@@ -1,18 +1,18 @@
 class DsfrComponent::<%= @name %>Component < DsfrComponent::Base
 <% if options[:params].empty? %>
-  def initialize(classes: [], html_attributes: {})
-    super(classes: classes, html_attributes: html_attributes)
+  def initialize(html_attributes: {})
+    super(html_attributes: html_attributes)
   end
 <% else %>
 <%- options[:params].each do |param, type| -%>
   # @param <%= param %> [<%= type %>] FIXME: document
 <%- end -%>
-  def initialize(<%= options[:params].keys.map { |p| "#{p}:" }.join(", ") %>, classes: [], html_attributes: {})
+  def initialize(<%= options[:params].keys.map { |p| "#{p}:" }.join(", ") %>, html_attributes: {})
   <%- options[:params].keys.each do |param| -%>
     <%= "@#{param} = #{param}" %>
   <%- end -%>
 
-    super(classes: classes, html_attributes: html_attributes)
+    super(html_attributes: html_attributes)
    end
 <% end  %>
 
