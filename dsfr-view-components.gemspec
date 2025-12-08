@@ -32,7 +32,7 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = '>= 3.2'
 
   spec.add_dependency "html-attributes-utils", "~> 1"
-  spec.add_dependency "view_component", "~> 3"
+  spec.add_dependency "view_component", "~> 4"
   spec.add_dependency "dsfr-assets", "~> 1.13.2"
 
   spec.add_development_dependency "deep_merge"
@@ -46,9 +46,14 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "yard"
 
 
-  # Required for the guide
-  spec.add_development_dependency("rails", ENV.fetch("RAILS_VERSION", DEFAULT_RAILS_VERSION))
-  spec.add_development_dependency("propshaft")
+  # # the rails gem suite need to be versioned together
+  # ENV.fetch("RAILS_VERSION", DEFAULT_RAILS_VERSION).tap do |version|
+  #   spec.add_development_dependency("rails", version)
+  #   spec.add_development_dependency("actionpack", version)
+  #   spec.add_development_dependency("activesupport", version)
+  #   spec.add_development_dependency("railties", version)
+  # end
+
   spec.add_development_dependency("haml", "~> 6.1.1")
   spec.add_development_dependency("haml_lint")
   spec.add_development_dependency("htmlbeautifier", "~> 1.4.1")
