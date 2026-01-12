@@ -1,0 +1,20 @@
+<%= tag.li(class: "fr-sidemenu__item", **html_attributes) do %>
+  <% if sub_items.empty? %>
+    <% if @current_page %>
+      <a href="<%= path %>" class="fr-sidemenu__link" aria-current="page"><%= title %></a>
+    <% else %>
+      <a href="<%= path %>" class="fr-sidemenu__link"><%= title %></a>
+    <% end %>
+  <% else %>
+    <button type="button" class="fr-sidemenu__btn" aria-expanded="false" aria-controls="sidemenu-<%= object_id %>">
+      <%= title %>
+    </button>
+    <div class="fr-collapse" id="sidemenu-<%= object_id %>">
+      <ul class="fr-sidemenu__list">
+        <% sub_items.each do |sub_item| %>
+          <%= sub_item %>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+<% end %>
