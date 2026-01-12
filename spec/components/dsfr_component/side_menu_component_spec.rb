@@ -99,6 +99,24 @@ RSpec.describe(DsfrComponent::SideMenuComponent, type: :component) do
     end
   end
 
+  context "with expanded sub_items" do
+    subject! do
+      render_inline(described_class.new(title: "Menu")) do |component|
+        component.with_item(title: "Section", path: "#", expanded: true) do |item|
+          item.with_sub_item(title: "Page 1", path: "/page1")
+        end
+      end
+    end
+
+    it "renders the button with aria-expanded true" do
+      expect(rendered_content).to have_tag("button", with: { "aria-expanded": "true", class: "fr-sidemenu__btn" }, text: /Section/)
+    end
+
+    it "renders the collapse div with expanded class" do
+      expect(rendered_content).to have_tag("div", with: { class: "fr-collapse fr-collapse--expanded" })
+    end
+  end
+
   context "with more than 3 levels" do
     it "raises an ArgumentError" do
       expect {
