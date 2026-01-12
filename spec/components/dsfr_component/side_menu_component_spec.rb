@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 RSpec.describe(DsfrComponent::SideMenuComponent, type: :component) do
-  context "basic rendering" do
+  context "with basic rendering" do
     subject! do
       render_inline(described_class.new(title: "Menu")) do |component|
         component.with_item(title: "Accueil", path: "/")
@@ -119,7 +119,7 @@ RSpec.describe(DsfrComponent::SideMenuComponent, type: :component) do
 
   context "with more than 3 levels" do
     it "raises an ArgumentError" do
-      expect {
+      expect do
         render_inline(described_class.new(title: "Menu")) do |component|
           component.with_item(title: "Niveau 1", path: "#") do |item|
             item.with_sub_item(title: "Niveau 2", path: "#") do |sub_item|
@@ -129,11 +129,11 @@ RSpec.describe(DsfrComponent::SideMenuComponent, type: :component) do
             end
           end
         end
-      }.to raise_error(ArgumentError, /ne supporte pas plus de 3 niveaux/)
+      end.to raise_error(ArgumentError, /ne supporte pas plus de 3 niveaux/)
     end
   end
 
-  context "accessibility attributes" do
+  context "with accessibility attributes" do
     subject! do
       render_inline(described_class.new(title: "Navigation"))
     end
