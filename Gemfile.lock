@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     dsfr-view-components (4.0)
-      dsfr-assets (~> 1.13.2)
+      dsfr-assets (>= 1.13.2, < 1.15)
       html-attributes-utils (~> 1)
       view_component (~> 3)
 
@@ -113,7 +113,7 @@ GEM
     diff-lcs (1.6.0)
     docile (1.4.1)
     drb (2.2.1)
-    dsfr-assets (1.13.2)
+    dsfr-assets (1.14.2)
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0)
