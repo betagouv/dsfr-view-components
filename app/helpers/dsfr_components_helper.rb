@@ -22,6 +22,8 @@ module DsfrComponentsHelper
     dsfr_notice: 'DsfrComponent::NoticeComponent',
     dsfr_search: 'DsfrComponent::SearchComponent',
     dsfr_proconnect_button: 'DsfrComponent::ProconnectButtonComponent',
+    dsfr_side_menu: 'DsfrComponent::SideMenuComponent',
+    dsfr_side_menu_item: 'DsfrComponent::SideMenuComponent::ItemComponent',
     # DO NOT REMOVE: new component mapping here
   }.freeze
   HELPER_NAME_TO_CLASS_NAME.each do |name, klass|

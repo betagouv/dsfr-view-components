@@ -1,0 +1,17 @@
+---
+title: Menu latéral - Sidemenu
+---
+
+.fr-text-wrap
+  :markdown
+    Le menu latéral est un système de navigation secondaire présentant une liste verticale de liens placée à côté du contenu.
+
+= render('/partials/example.haml', caption: "Vue d'ensemble", code: side_menu_default) do
+  :markdown
+    Le rendu de base du SideMenuComponent
+
+= render('/partials/example.haml', caption: "Avec des sous items", code: side_menu_with_sub_items) do
+  :markdown
+    Le rendu avec des items de niveau 2 et 3
+
+= render('/partials/related-info.haml', links: dsfr_component_doc_links("menu-lateral"))

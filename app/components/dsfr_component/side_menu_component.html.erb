@@ -1,0 +1,15 @@
+<%= tag.nav(**html_attributes) do %>
+  <div class="fr-sidemenu__inner">
+    <button type="button" class="fr-sidemenu__btn" aria-expanded="false" aria-controls="sidemenu-collapse-<%= object_id %>"><%= title %></button>
+    <div class="fr-collapse" id="sidemenu-collapse-<%= object_id %>">
+      <% if title %>
+        <p class="fr-sidemenu__title" id="sidemenu-title-<%= object_id %>"><%= title %></p>
+      <% end %>
+      <ul class="fr-sidemenu__list">
+        <% items.each do |item| %>
+          <%= item %>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+<% end %>
