@@ -14,6 +14,13 @@ module Examples
       RAW
     end
 
+    def callout_no_title
+      <<~RAW
+        = dsfr_callout do |component|
+          Cette information vient compléter le contenu principal sans titre
+      RAW
+    end
+
     def callout_with_button
       <<~RAW
         = dsfr_callout(title: "Exemple de mise en avant") do |component|
@@ -27,6 +34,13 @@ module Examples
       <<~RAW
         = dsfr_callout(title: "Exemple de mise en avant avec un titre en H2", header_level: 2) do |component|
           Cette information vient compléter le contenu principal
+      RAW
+    end
+
+    def callout_with_accent
+      <<~RAW
+        = dsfr_callout(title: "Mise en avant avec accent", accent: "green-tilleul-verveine") do |component|
+          Cette mise en avant utilise l'accent tilleul-verveine
       RAW
     end
   end

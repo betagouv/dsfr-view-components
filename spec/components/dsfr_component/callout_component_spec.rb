@@ -37,6 +37,27 @@ RSpec.describe DsfrComponent::CalloutComponent, type: :component do
     expect(rendered_content).not_to include 'fr-icon'
   end
 
+  it "renders without a title" do
+    render_inline(described_class.new.with_content(content))
+
+    expect(rendered_content).to have_tag(:div, with: { class: "fr-callout" }) do
+      without_tag('.fr-callout__title')
+      with_tag('p.fr-callout__text', text: content)
+    end
+  end
+
+  it "has no accent by default" do
+    render_inline(described_class.new(title: title))
+
+    expect(rendered_content).not_to include 'fr-callout--'
+  end
+
+  it "can have an accent color" do
+    render_inline(described_class.new(title: title, accent: "green-tilleul-verveine"))
+
+    expect(rendered_content).to have_tag('.fr-callout--green-tilleul-verveine')
+  end
+
   context "when an action zone is provided" do
     it "renders it" do
       render_inline(

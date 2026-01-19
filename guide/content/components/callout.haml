@@ -14,6 +14,10 @@ title: Mise en avant - Callout
   :markdown
     Le rendu sans icône.
 
+= render('/partials/example.haml', caption: "Rendu sans titre", code: callout_no_title) do
+  :markdown
+    Le rendu sans titre.
+
 = render('/partials/example.haml', caption: "Rendu avec un autre niveau de titre", code: callout_with_different_header) do
   :markdown
     Si votre hiérarchie de titre requiert un autre niveau de titre que
@@ -25,9 +29,10 @@ title: Mise en avant - Callout
     `action_zone`. **Attention** : seul un bouton ou un lien doivent
     figurer dans cette zone.
 
-= render('/partials/example.haml', caption: "Rendu avec un autre niveau de titre", code: callout_with_different_header) do
+= render('/partials/example.haml', caption: "Rendu avec accent", code: callout_with_accent) do
   :markdown
-    Si votre hiérarchie de titre requiert un autre niveau de titre que
-    H3 vous pouvez le spécifier en passant `header_level` au composant.
+    Il est possible d'ajouter une couleur d'accent avec le paramètre
+    `accent`. Les couleurs disponibles sont celles du DSFR (exemple :
+    `green-tilleul-verveine`, `blue-ecume`, `purple-glycine`, etc.).
 
 = render('/partials/related-info.haml', links: dsfr_component_doc_links("mise-en-avant"))
