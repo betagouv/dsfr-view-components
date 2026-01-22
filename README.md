@@ -95,6 +95,8 @@ Déployer une nouvelle version de la gem :
 bundle exec rake release
 ```
 
+puis allez sur https://github.com/betagouv/dsfr-view-components/releases pour créer une release manuellement basée sur le tag tout juste créé.
+
 ## Licence
 
 Le code source et la gem sont ouverts sous la licence [MIT](https://opensource.org/licenses/MIT).
