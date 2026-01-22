@@ -87,9 +87,15 @@ bundle exec rails server
 
 Déployer une nouvelle version de la gem :
 
+1. Mettre à jour la version dans `lib/dsfr/components/version.rb`
+2. Commiter ce changement
+3. Lancer la commande :
+
 ```sh
-VERSION=1.3.2 make deploy_gem
+bundle exec rake release
 ```
+
+puis allez sur https://github.com/betagouv/dsfr-view-components/releases pour créer une release manuellement basée sur le tag tout juste créé.
 
 ## Licence
 
