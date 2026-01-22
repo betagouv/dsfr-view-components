@@ -47,5 +47,3 @@ docs-server:
 	bundle exec yard server --reload
 clean:
 	rm -rf guide/output/**/*
-deploy_gem:
-	bundle exec rails runner scripts/deploy_gem.rb $$VERSION
