@@ -49,4 +49,29 @@ RSpec.describe(DsfrComponent::SearchComponent, type: :component) do
       end
     end
   end
+
+  describe "nested hidden fields" do
+    let(:args) { { url: url, hidden_fields: { filter: { category: "books", status: "available" }, simple: "value" } } }
+
+    it "renders nested hash values as nested field names" do
+      expect(rendered_content).to have_tag(:form) do
+        with_tag(:input, with: { type: :hidden, name: "filter[category]", value: "books" })
+        with_tag(:input, with: { type: :hidden, name: "filter[status]", value: "available" })
+        with_tag(:input, with: { type: :hidden, name: "simple", value: "value" })
+      end
+    end
+  end
+
+  describe "deeply nested hidden fields" do
+    let(:args) { { url: url, hidden_fields: { filter: { options: { category: "books", subcategory: "fiction" }, active: true }, user: { preferences: { theme: "dark" } } } } }
+
+    it "renders deeply nested hash values with correct field names" do
+      expect(rendered_content).to have_tag(:form) do
+        with_tag(:input, with: { type: :hidden, name: "filter[options][category]", value: "books" })
+        with_tag(:input, with: { type: :hidden, name: "filter[options][subcategory]", value: "fiction" })
+        with_tag(:input, with: { type: :hidden, name: "filter[active]", value: "true" })
+        with_tag(:input, with: { type: :hidden, name: "user[preferences][theme]", value: "dark" })
+      end
+    end
+  end
 end
