@@ -22,6 +22,14 @@ title: En-tête - Header
       * des liens directs
       * des liens direct déroulants.
 
+= render '/partials/example.haml', caption: "En-tête avec logo opérateur sans lien", code: header_with_operator_image_without_link do
+  :markdown
+    Le logo de l'opérateur peut être affiché sans lien en passant `href: nil`. Par défaut le lien est "/".
+
+= render '/partials/example.haml', caption: "En-tête avec logo opérateur et lien personnalisé", code: header_with_operator_image_custom_link do
+  :markdown
+    Le logo de l'opérateur peut pointer vers un lien personnalisé en passant un `href` :
+
 = render '/partials/example.haml', caption: "En-tête avec liens personnalisés", code: header_with_custom_tool_links do
   :markdown
     Il n'est pas rare que l'action de déconnexion d'un utilisateur passe par un `DELETE` sur `/sessions` ou autre. Comme les liens (`<a>`) sont limités à `GET` il est possible d'outrepasser ça avec `custom_tool_links` qui permet par exemple d'insérer le combo formulaire/bouton dans ce cas :

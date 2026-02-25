@@ -21,9 +21,23 @@ module Examples
       HEADER
     end
 
+    def header_with_operator_image_without_link
+      <<~HEADER
+        = dsfr_header logo_text: "Ministère du Travail" do |header|
+          = header.with_operator_image href: nil, src: "/assets/images/logo-betagouvfr.svg", alt: "logo de beta.gouv.fr"
+      HEADER
+    end
+
+    def header_with_operator_image_custom_link
+      <<~HEADER
+        = dsfr_header logo_text: "Ministère du Travail" do |header|
+          = header.with_operator_image href: "https://beta.gouv.fr", title: "beta.gouv.fr - Accueil", src: "/assets/images/logo-betagouvfr.svg", alt: "logo de beta.gouv.fr"
+      HEADER
+    end
+
     def header_with_custom_tool_links
       <<~HEADER
-        = dsfr_header logo_text: "Ministère du travail", title: "Égapro" do |header|
+        = dsfr_header logo_text: "Ministère du travail", href: "https://beta.gouv.fr", title: "Égapro" do |header|
           - if "l'utilisateur est connecté"
             = header.with_tool_link title: "Vos services (Marie Curie)", path: '#', html_attributes: { class: "fr-icon-account-line" }
             = header.with_custom_tool_link do
