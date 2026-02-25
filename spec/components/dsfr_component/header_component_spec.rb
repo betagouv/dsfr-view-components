@@ -12,12 +12,37 @@ RSpec.describe(DsfrComponent::HeaderComponent, type: :component) do
           end
           without_tag "div", with: { class: "fr-header__navbar" }
           with_tag "div", with: { class: "fr-header__service" } do
-            with_tag "p", with: { class: "fr-header__service-title" }, text: "Égapro"
+            with_tag "a", with: { href: "/", title: "Accueil - Égapro" } do
+              with_tag "p", with: { class: "fr-header__service-title" }, text: "Égapro"
+            end
             without_tag "p", with: { class: "fr-header__service-tagline" }, text: "Indice de parité professionelle"
           end
           without_tag "div", with: { class: "fr-header__tools" }
         end
         without_tag "div", with: { class: "fr-header__menu" }
+      end
+    end
+  end
+
+  context "with a title and a custom href" do
+    subject! { render_inline described_class.new(logo_text: "Ministère du Travail", title: "Égapro", href: "https://beta.gouv.fr") }
+
+    it "renders the title link with the custom href" do
+      expect(rendered_content).to have_tag("div", with: { class: "fr-header__service" }) do
+        with_tag "a", with: { href: "https://beta.gouv.fr", title: "Accueil - Égapro" } do
+          with_tag "p", with: { class: "fr-header__service-title" }, text: "Égapro"
+        end
+      end
+    end
+  end
+
+  context "with a title and href nil" do
+    subject! { render_inline described_class.new(logo_text: "Ministère du Travail", title: "Égapro", href: nil) }
+
+    it "renders the title without a link" do
+      expect(rendered_content).to have_tag("div", with: { class: "fr-header__service" }) do
+        without_tag "a"
+        with_tag "p", with: { class: "fr-header__service-title" }, text: "Égapro"
       end
     end
   end
@@ -154,6 +179,53 @@ RSpec.describe(DsfrComponent::HeaderComponent, type: :component) do
           end
           without_tag "div", with: { class: "fr-header__search" }
         end
+      end
+    end
+  end
+
+  context "with an operator image" do
+    subject! do
+      render_inline(described_class.new(logo_text: "Ministère du Travail")) do |component|
+        component.with_operator_image src: "/logo.svg", alt: "logo de beta.gouv.fr", title: "beta.gouv.fr - Accueil"
+      end
+    end
+
+    it "renders the operator image with a default link" do
+      expect(rendered_content).to have_tag("div", with: { class: "fr-header__operator" }) do
+        with_tag "a", with: { href: "/", title: "beta.gouv.fr - Accueil" } do
+          with_tag "img", with: { class: "fr-responsive-img", src: "/logo.svg", alt: "logo de beta.gouv.fr" }
+        end
+      end
+    end
+  end
+
+  context "with an operator image with custom href" do
+    subject! do
+      render_inline(described_class.new(logo_text: "Ministère du Travail")) do |component|
+        component.with_operator_image href: "https://beta.gouv.fr", title: "beta.gouv.fr - Accueil", src: "/logo.svg", alt: "logo de beta.gouv.fr"
+      end
+    end
+
+    it "renders the operator image with the custom link" do
+      expect(rendered_content).to have_tag("div", with: { class: "fr-header__operator" }) do
+        with_tag "a", with: { href: "https://beta.gouv.fr", title: "beta.gouv.fr - Accueil" } do
+          with_tag "img", with: { class: "fr-responsive-img", src: "/logo.svg", alt: "logo de beta.gouv.fr" }
+        end
+      end
+    end
+  end
+
+  context "with an operator image without link" do
+    subject! do
+      render_inline(described_class.new(logo_text: "Ministère du Travail")) do |component|
+        component.with_operator_image href: nil, src: "/logo.svg", alt: "logo de beta.gouv.fr"
+      end
+    end
+
+    it "renders the operator image without a link" do
+      expect(rendered_content).to have_tag("div", with: { class: "fr-header__operator" }) do
+        without_tag "a"
+        with_tag "img", with: { class: "fr-responsive-img", src: "/logo.svg", alt: "logo de beta.gouv.fr" }
       end
     end
   end

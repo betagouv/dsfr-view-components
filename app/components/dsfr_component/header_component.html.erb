@@ -31,9 +31,13 @@
 
           <% if title %>
             <div class="fr-header__service">
-              <a href="/" title="Accueil - <%= title %>">
+              <% if href %>
+                <a href="<%= href %>" title="Accueil - <%= title %>">
+                  <p class="fr-header__service-title"><%= title %></p>
+                </a>
+              <% else %>
                 <p class="fr-header__service-title"><%= title %></p>
-              </a>
+              <% end %>
               <% if tagline %>
                 <p class="fr-header__service-tagline"><%= tagline %></p>
               <% end %>

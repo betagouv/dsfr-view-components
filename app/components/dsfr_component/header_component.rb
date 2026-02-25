@@ -9,11 +9,13 @@ class DsfrComponent::HeaderComponent < DsfrComponent::Base
   }
 
   # @param logo_text [String] Ce texte obligatoire sera affiché en dessous de la Marianne et au dessus de la devise française. C’est généralement un nom de ministère ou d’administration.
-  # @param title [String] Le nom du service numérique, titre principal du site.
+  # @param title [String] Le nom du service numérique, titre principal du site (optionnel).
+  # @param href [String] L'URL de la page d'accueil du site. Par défaut "/". Passer nil pour ne pas rendre de lien.
   # @param tagline [String] La description du service numérique, sous-titre du site (optionnelle).
-  def initialize(logo_text:, title: nil, tagline: nil, html_attributes: {})
+  def initialize(logo_text:, title: nil, href: "/", tagline: nil, html_attributes: {})
     @logo_text = logo_text
     @title = title
+    @href = href
     @tagline = tagline
 
     super(html_attributes: html_attributes)
@@ -21,7 +23,7 @@ class DsfrComponent::HeaderComponent < DsfrComponent::Base
 
 private
 
-  attr_reader :logo_text, :title, :tagline
+  attr_reader :logo_text, :title, :href, :tagline
 
   def default_attributes
     { class: 'fr-header', role: 'banner' }
