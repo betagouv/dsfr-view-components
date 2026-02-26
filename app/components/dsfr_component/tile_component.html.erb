@@ -1,15 +1,17 @@
 <%= tag.div(**html_attributes) do %>
   <div class="fr-tile__body">
-    <%= title_tag(class: "fr-tile__title") do %>
-      <a class="fr-tile__link" href="<%= url %>">
-      <%= title %>
-      </a>
-    <% end %>
-    <% if description.present? %>
-      <p class="fr-tile__desc">
-        <%= description %>
-      </p>
-    <% end %>
+    <div class="fr-tile__content">
+      <%= title_tag(class: "fr-tile__title") do %>
+        <a class="fr-tile__link" href="<%= url %>">
+          <%= title %>
+        </a>
+      <% end %>
+      <% if description.present? %>
+        <p class="fr-tile__desc">
+          <%= description %>
+        </p>
+      <% end %>
+    </div>
   </div>
   <% if image_src.present? %>
     <div class="fr-tile__img">
