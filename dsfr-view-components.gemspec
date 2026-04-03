@@ -29,7 +29,7 @@ Gem::Specification.new do |spec|
 
   spec.files = Dir["{app,config,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
-  spec.required_ruby_version = '>= 3.2'
+  spec.required_ruby_version = '>= 3.4'
 
   spec.add_dependency "html-attributes-utils", "~> 1"
   spec.add_dependency "view_component", "~> 4"
