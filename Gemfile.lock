@@ -150,7 +150,7 @@ GEM
       guard (~> 2.1)
       guard-compat (~> 1.1)
       rspec (>= 2.99.0, < 4.0)
-    haml (6.1.4)
+    haml (7.2.0)
       temple (>= 0.8.2)
       thor
       tilt
@@ -177,8 +177,8 @@ GEM
       reline (>= 0.4.2)
     json (2.19.3)
     json_schema (0.21.0)
-    kramdown (2.4.0)
-      rexml
+    kramdown (2.5.2)
+      rexml (>= 3.4.4)
     language_server-protocol (3.17.0.5)
     lint_roller (1.1.0)
     listen (3.10.0)
@@ -340,7 +340,7 @@ GEM
     reline (0.6.3)
       io-console (~> 0.5)
     rexml (3.4.4)
-    rouge (4.0.1)
+    rouge (4.7.0)
     rspec (3.13.2)
       rspec-core (~> 3.13.0)
       rspec-expectations (~> 3.13.0)
@@ -425,7 +425,7 @@ GEM
       actionview (>= 7.1.0)
       activesupport (>= 7.1.0)
       concurrent-ruby (~> 1)
-    webrick (1.7.0)
+    webrick (1.9.2)
     websocket-driver (0.8.0)
       base64
       websocket-extensions (>= 0.1.0)
@@ -447,16 +447,16 @@ DEPENDENCIES
   dsfr-view-components!
   guard
   guard-rspec
-  haml (~> 6.1.1)
+  haml
   haml_lint
   htmlbeautifier (~> 1.4.1)
-  kramdown (~> 2.4.0)
+  kramdown
   nanoc
   nanoc-dart-sass
   nanoc-live
   propshaft
   rails (~> 8)
-  rouge (~> 4.0.0)
+  rouge
   rspec-html-matchers (~> 0.9)
   rubocop
   rubocop-rails
@@ -464,7 +464,7 @@ DEPENDENCIES
   rubypants (~> 0.7.0)
   simplecov (~> 0.20)
   sqlite3
-  webrick (~> 1.7.0)
+  webrick
   yard
 
 BUNDLED WITH
