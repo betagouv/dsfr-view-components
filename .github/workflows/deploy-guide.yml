@@ -8,15 +8,15 @@ jobs:
     runs-on: ubuntu-latest
     name: Build & Upload static site
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Install Ruby & gems
         uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
-          ruby-version: 3.3.6
-      - uses: actions/setup-node@v4
+          ruby-version: 4.0
+      - uses: actions/setup-node@v6
         with:
-          node-version: 18
+          node-version: lts/*
       - run: make build-guide
       - name: Upload static files as artifact
         id: deployment
