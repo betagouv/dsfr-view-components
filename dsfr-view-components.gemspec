@@ -29,10 +29,10 @@ Gem::Specification.new do |spec|
 
   spec.files = Dir["{app,config,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
-  spec.required_ruby_version = '>= 3.2'
+  spec.required_ruby_version = '>= 3.4'
 
   spec.add_dependency "html-attributes-utils", "~> 1"
-  spec.add_dependency "view_component", "~> 3"
+  spec.add_dependency "view_component", "~> 4"
   spec.add_dependency "dsfr-assets", ">= 1.13.2", "< 1.15"
 
   spec.add_development_dependency "deep_merge"
@@ -49,13 +49,13 @@ Gem::Specification.new do |spec|
   # Required for the guide
   spec.add_development_dependency("rails", ENV.fetch("RAILS_VERSION", DEFAULT_RAILS_VERSION))
   spec.add_development_dependency("propshaft")
-  spec.add_development_dependency("haml", "~> 6.1.1")
+  spec.add_development_dependency("haml")
   spec.add_development_dependency("haml_lint")
   spec.add_development_dependency("htmlbeautifier", "~> 1.4.1")
-  spec.add_development_dependency("kramdown", "~> 2.4.0")
-  spec.add_development_dependency("nanoc", "~> 4.11")
-  spec.add_development_dependency("rouge", "~> 4.0.0")
+  spec.add_development_dependency("kramdown")
+  spec.add_development_dependency("nanoc")
+  spec.add_development_dependency("rouge")
   spec.add_development_dependency("rubypants", "~> 0.7.0")
-  spec.add_development_dependency("webrick", "~> 1.7.0")
+  spec.add_development_dependency("webrick")
   spec.metadata['rubygems_mfa_required'] = 'true'
 end

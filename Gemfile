@@ -11,7 +11,7 @@ gemspec
 # Git. Remember to move these dependencies to your gemspec before releasing
 # your gem to rubygems.org.
 
-# until https://github.com/nanoc/nanoc/issues/1639 is fixed
+gem 'ostruct'
 gem 'nanoc'
 
 group 'nanoc' do
@@ -19,6 +19,5 @@ group 'nanoc' do
   gem 'nanoc-live'
 end
 
-gem "cssbundling-rails"
 gem "rubocop-rails"
 gem "rubocop-rspec"

@@ -4,14 +4,13 @@
 [![Gem Version](https://badge.fury.io/rb/dsfr-view-components.svg)](https://badge.fury.io/rb/dsfr-view-components)
 [![Gem](https://img.shields.io/gem/dt/dsfr-view-components?logo=rubygems)](https://rubygems.org/gems/dsfr-view-components)
 [![GitHub license](https://img.shields.io/github/license/betagouv/dsfr-view-components)](https://github.com/betagouv/dsfr-view-components/blob/main/LICENSE)
-[![Rails](https://img.shields.io/badge/Rails-6.1.5%20%E2%95%B1%207.0.3-E16D6D)](https://weblog.rubyonrails.org/releases/)
-[![Ruby](https://img.shields.io/badge/Ruby-3.2.6%20%20%E2%95%B1%203.3.6-E16D6D)](https://www.ruby-lang.org/en/downloads/)
-
 [![Design Système de lʼÉtat](https://img.shields.io/badge/Design%20Système%20de%20lʼÉtat-1.8.4-brightgreen)](https://www.systeme-de-design.gouv.fr/)
 
 Cette gem fournit des composants pour le Design Système de l'État (DSFR) en s'appuyant sur le [framework ViewComponent](https://github.com/ViewComponent/view_component).
 
 C'est un fork de [govuk-components](https://github.com/DFE-Digital/govuk-components) qui propose l'équivalent pour le GOV.UK Design System.
+
+Elle fonctionne avec Ruby 3.4+ et Rails 8+.
 
 ## Documentation
 
@@ -33,24 +32,11 @@ Cette gem a pour but de supporter tous les composants proposés par le Design Sy
 
 La [liste des composants implémentés ou restants est consultable grâce au label `composant`](https://github.com/betagouv/dsfr-view-components/issues?page=2&q=is%3Aissue+label%3Acomposant) sur ce même dépôt.
 
-<!--
-This library also provides helpers for creating [links](https://govuk-components.netlify.app/helpers/link),
-[buttons](https://govuk-components.netlify.app/helpers/button), [skip links](https://govuk-components.netlify.app/helpers/skip-link)
-and [back to top links](https://govuk-components.netlify.app/helpers/back-to-top-link).
--->
-
 ## Services utilisant cette gem
 
-- [Collectif Objets](https://collectif-objets.beta.gouv.fr/) - [code source](https://github.com/betagouv/collectif-objets)
+https://github.com/betagouv/dsfr-view-components/network/dependents
 
 ## Contribuer
-
-Nous conseillons d'utiliser [rbenv](https://github.com/rbenv/rbenv) pour gérer vos versions de ruby :
-
-```sh
-rbenv local 3.3.6
-rbenv install
-```
 
 Lancer les tests :
 

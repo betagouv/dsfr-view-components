@@ -230,7 +230,6 @@ RSpec.describe(DsfrComponent::HeaderComponent, type: :component) do
     end
   end
 
-  # rubocop:disable Rails/OutputSafety
   context "with search form" do
     subject! do
       render_inline(
@@ -277,5 +276,4 @@ RSpec.describe(DsfrComponent::HeaderComponent, type: :component) do
       end
     end
   end
-  # rubocop:enable Rails/OutputSafety
 end
