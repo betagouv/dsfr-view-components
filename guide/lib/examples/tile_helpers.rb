@@ -60,5 +60,17 @@ module Examples
                     html_attributes: {style: "max-width: 20rem;"})
       RAW
     end
+
+    def tile_with_badges
+      <<~RAW
+        = dsfr_tile(title: "Orgue de Fontainebleau",
+                    url: "#",
+                    image_src: "/assets/images/orgue.jpg",
+                    description: "Magistral instrument de musique",
+                    html_attributes: {style: "max-width: 20rem;"}) do |tile|
+          - tile.with_badge(status: :new) { "Nouveau" }
+          - tile.with_badge(status: :info) { "Patrimoine" }
+      RAW
+    end
   end
 end

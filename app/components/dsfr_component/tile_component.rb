@@ -1,5 +1,7 @@
 module DsfrComponent
   class TileComponent < DsfrComponent::Base
+    renders_many :badges, "DsfrComponent::BadgeComponent"
+
     # @param title [String] title (required)
     # @param url [String] url (required)
     # @param image_src [String] chemin vers l'image (optional)
@@ -19,6 +21,10 @@ module DsfrComponent
       raise ArgumentError if HEADING_LEVELS.exclude?(heading_level)
 
       super(html_attributes: html_attributes)
+    end
+
+    def before_render
+      raise ArgumentError, "TileComponent accepte au maximum 4 badges (#{badges.size} fournis)" if badges.size > 4
     end
 
   private
