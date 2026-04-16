@@ -1,0 +1,34 @@
+<%= tag.div(**html_attributes) do %>
+  <div class="fr-card__body">
+    <div class="fr-card__content">
+      <%= title_tag(class: "fr-card__title") do %>
+        <a class="fr-card__link" href="<%= url %>"><%= title %></a>
+      <% end %>
+      <% if description.present? %>
+        <p class="fr-card__desc"><%= description %></p>
+      <% end %>
+      <% if badge_group? %>
+        <div class="fr-card__start">
+          <%= badge_group %>
+        </div>
+      <% end %>
+      <% if detail.present? %>
+        <div class="fr-card__end">
+          <p class="<%= detail_classes %>"><%= detail %></p>
+        </div>
+      <% end %>
+    </div>
+    <% if footer? %>
+      <div class="fr-card__footer">
+        <%= footer %>
+      </div>
+    <% end %>
+  </div>
+  <% if image_src.present? %>
+    <div class="fr-card__header">
+      <div class="fr-card__img">
+        <img class="fr-responsive-img" src="<%= image_src %>" alt="<%= image_alt %>">
+      </div>
+    </div>
+  <% end %>
+<% end %>
