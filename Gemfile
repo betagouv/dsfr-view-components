@@ -11,8 +11,8 @@ gemspec
 # Git. Remember to move these dependencies to your gemspec before releasing
 # your gem to rubygems.org.
 
-gem 'ostruct'
 gem 'nanoc'
+gem 'ostruct'
 
 group 'nanoc' do
   gem 'nanoc-dart-sass'

@@ -1,0 +1,44 @@
+---
+title: Carte - Card
+---
+
+.fr-text-wrap
+  :markdown
+    La carte est un conteneur d'information qui redirige l'utilisateur vers une page de contenu. Elle regroupe un titre (lien), une description optionnelle, et peut accueillir une image, des détails, des badges ou une zone d'action.
+
+    Par défaut, l'ensemble de la carte est cliquable grâce à `fr-enlarge-link`.
+
+= render('/partials/example.haml', caption: "Carte de base", code: card_default) do
+  Carte verticale avec image, titre et description
+
+= render('/partials/example.haml', caption: "Carte sans image", code: card_without_image) do
+  Carte sans image
+
+= render('/partials/example.haml', caption: "Détail en début de contenu", code: card_with_start_detail) do
+  :markdown
+    `start_detail` affiche un texte dans la zone `fr-card__start`, sous la description. `start_detail_icon` ajoute une icône optionnelle.
+
+= render('/partials/example.haml', caption: "Détail en fin de contenu", code: card_with_end_detail) do
+  :markdown
+    `end_detail` affiche un texte dans la zone `fr-card__end`, juste avant la zone d'action. `end_detail_icon` ajoute une icône optionnelle.
+
+= render('/partials/example.haml', caption: "Détails en début et en fin", code: card_with_both_details) do
+  Les deux zones peuvent coexister sur la même carte.
+
+= render('/partials/example.haml', caption: "Carte horizontale", code: card_horizontal) do
+  :markdown
+    `horizontal: true` bascule la carte en mode paysage. Les variantes `:half` et `:tier` ajustent la répartition image/contenu.
+
+= render('/partials/example.haml', caption: "Taille petite", code: card_sizes) do
+  :markdown
+    Le paramètre `size` accepte `:sm` ou `:lg`.
+
+= render('/partials/example.haml', caption: "Carte avec zone d'action", code: card_with_footer) do
+  :markdown
+    Le slot `footer` permet d'ajouter des boutons ou liens d'action. Dans ce cas, désactivez `enlarge_link` pour éviter les zones cliquables imbriquées.
+
+= render('/partials/example.haml', caption: "Carte avec badges", code: card_with_badges) do
+  :markdown
+    Le slot `badges` permet d'afficher des badges dans le header de la carte, superposés à l'image.
+
+= render('/partials/related-info.haml', links: dsfr_component_doc_links("carte"))
