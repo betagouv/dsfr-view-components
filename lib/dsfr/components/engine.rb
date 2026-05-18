@@ -107,8 +107,10 @@ module Dsfr
     }.freeze
 
     DEFAULTS.each do |key, value|
-      reader, reader_line = "def #{key}; config.#{key}; end", __LINE__
-      writer, writer_line = "def #{key}=(value); config.#{key} = value; end", __LINE__
+      reader = "def #{key}; config.#{key}; end"
+      reader_line = __LINE__ - 1
+      writer = "def #{key}=(value); config.#{key} = value; end"
+      writer_line = __LINE__ - 1
 
       singleton_class.class_eval reader, __FILE__, reader_line
       singleton_class.class_eval writer, __FILE__, writer_line
