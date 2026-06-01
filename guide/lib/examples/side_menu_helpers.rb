@@ -18,7 +18,6 @@ module Examples
           = component.with_item(title: "Documentation", path: "#", expanded: true) do |item|
             = item.with_sub_item(title: "Guide d'utilisation", path: "#", expanded: true) do |sub_item|
               = sub_item.with_sub_item(title: "Installation", path: "#")
-              = sub_item.with_sub_item(title: "Configuration", path: "#", current_page: true)
             = item.with_sub_item(title: "API", path: "#")
       RAW
     end
