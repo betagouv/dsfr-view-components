@@ -3,8 +3,8 @@ module DsfrComponent
     STATUSES = %i[success error info warning new].freeze
 
     # @param status [BadgeComponent::STATUSES]
-    def initialize(status:, html_attributes: {})
-      raise(ArgumentError, "`status` should be one of #{STATUSES}") unless STATUSES.include?(status)
+    def initialize(status: nil, html_attributes: {})
+      validate_status!(status)
 
       @status = status
 
@@ -22,7 +22,16 @@ module DsfrComponent
     attr_reader :status
 
     def default_attributes
-      { class: ['fr-badge', "fr-badge--#{status}"] }
+      {
+        class: class_names(
+          'fr-badge',
+          "fr-badge--#{status}" => status.present?
+        )
+      }
+    end
+
+    def validate_status!(status)
+      raise(ArgumentError, "`status` should be one of #{STATUSES}") if status.present? && !STATUSES.include?(status)
     end
   end
 end

@@ -19,6 +19,14 @@ RSpec.describe(DsfrComponent::BadgeComponent, type: :component) do
         end.to raise_error(/`status` should be one of/)
       end
     end
+
+    context "without a status" do
+      let(:args) { {} }
+
+      it "renders the plain badge" do
+        expect(rendered_content).to have_tag 'div', with: { class: 'fr-badge' }
+      end
+    end
   end
 
   described_class.const_get(:STATUSES).each do |s|

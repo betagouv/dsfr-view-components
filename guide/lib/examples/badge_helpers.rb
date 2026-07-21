@@ -7,6 +7,7 @@ module Examples
         = dsfr_badge(status: :success) { "Dossier mis à jour" }
         = dsfr_badge(status: :error)   { "Erreur de traitement" }
         = dsfr_badge(status: :info)    { "Nouvelles informations" }
+        = dsfr_badge { "Pas d'état" }
       RAW
     end
   end
