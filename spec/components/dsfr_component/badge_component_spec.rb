@@ -5,7 +5,8 @@ RSpec.describe(DsfrComponent::BadgeComponent, type: :component) do
 
   let(:content) { "Foobar" }
   let(:status) { :warning }
-  let(:args) { { status: status } }
+  let(:size) { :md }
+  let(:args) { { status: status, size: size } }
 
   describe "validation" do
     it "renders correctly" do
@@ -25,6 +26,22 @@ RSpec.describe(DsfrComponent::BadgeComponent, type: :component) do
 
       it "renders the plain badge" do
         expect(rendered_content).to have_tag 'div', with: { class: 'fr-badge' }
+      end
+    end
+
+    context "with an unknown size" do
+      it "fails to render" do
+        expect do
+          render_inline(described_class.new(size: :foobar))
+        end.to raise_error(/`size` should be one of/)
+      end
+    end
+
+    context "with a smaller size" do
+      let(:size) { :sm }
+
+      it "renders the correct class" do
+        expect(rendered_content).to have_tag 'div', with: { class: 'fr-badge--sm' }
       end
     end
   end

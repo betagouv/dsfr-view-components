@@ -20,4 +20,8 @@ title: Badge - Badge
 
 = render('/partials/example.haml', caption: "Vue d'ensemble", code: badge_default)
 
+= render('/partials/example.haml', caption: "Tailles", code: badge_sizes) do
+  :markdown
+    Les badges sont disponibles dans une taille plus petite grâce au paramètre `size: :sm`.
+
 = render('/partials/related-info.haml', links: dsfr_component_doc_links("badge"))

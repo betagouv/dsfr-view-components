@@ -10,5 +10,12 @@ module Examples
         = dsfr_badge { "Pas d'état" }
       RAW
     end
+
+    def badge_sizes
+      <<~RAW
+        = dsfr_badge(status: :new, size: :sm)     { "Petit badge" }
+        = dsfr_badge(status: :new) { "Badge normal" }
+      RAW
+    end
   end
 end
