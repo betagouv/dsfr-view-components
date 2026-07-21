@@ -4,7 +4,9 @@ title: Badge - Badge
 
 .fr-text-wrap
   :markdown
-    Le composant Badge est disponible à travers 5 états prédéfinis :
+
+    Le composant Badge est disponible en 5 états prédéfinis, ou sinon
+    l'état neutre :
 
       - `success`
       - `error`
@@ -17,5 +19,9 @@ title: Badge - Badge
     être cliquable.
 
 = render('/partials/example.haml', caption: "Vue d'ensemble", code: badge_default)
+
+= render('/partials/example.haml', caption: "Tailles", code: badge_sizes) do
+  :markdown
+    Les badges sont disponibles dans une taille plus petite grâce au paramètre `size: :sm`.
 
 = render('/partials/related-info.haml', links: dsfr_component_doc_links("badge"))
