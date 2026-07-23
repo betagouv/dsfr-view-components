@@ -31,6 +31,7 @@ jobs:
       - name: Run RSpec
         env:
           SIMPLECOV: '0'
+          DSFR_ACCEPT_LICENSE: '1'
         run: make rspec
 
   quality_checks:
@@ -56,6 +57,7 @@ jobs:
         env:
           CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
           SIMPLECOV: '1'
+          DSFR_ACCEPT_LICENSE: '1'
         run: make rspec
 
       - name: Run Guide Nanoc Check
