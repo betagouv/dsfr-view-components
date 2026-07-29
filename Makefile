@@ -22,13 +22,15 @@ nanoc-check-all: build-guide
 	( ${guide_dir} ${prefix} nanoc check ${nanoc_internal_checks} ${nanoc_external_checks} )
 build:
 	${prefix} gem build dsfr-view-components.gemspec
-build-guide:
+copy-dsfr-assets:
+	${prefix} ruby guide/bin/copy_dsfr_assets.rb
+build-guide: copy-dsfr-assets
 	( ${guide_dir} ${prefix} nanoc )
 view-guide: build-guide
 	( ${guide_dir} ${prefix} nanoc view --port ${nanoc_default_port} )
-watch-guide:
+watch-guide: copy-dsfr-assets
 	( ${guide_dir} ${prefix} nanoc live --port ${nanoc_default_port} )
-watch-guide-reload:
+watch-guide-reload: copy-dsfr-assets
 	@echo "Watching components... (Ctrl+C to stop)"
 	@while true; do \
 		( cd guide && ${prefix} nanoc live --port ${nanoc_default_port} ) & \
