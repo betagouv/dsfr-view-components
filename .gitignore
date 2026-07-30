@@ -26,5 +26,6 @@ guide/content/favicon/*
 guide/content/fonts/*
 guide/content/icons/*
 guide/content/javascripts/*
+guide/content/utility/*
 .yardoc
 vendor/

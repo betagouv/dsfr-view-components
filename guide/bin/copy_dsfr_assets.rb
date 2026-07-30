@@ -2,7 +2,7 @@ require 'fileutils'
 
 gem_dir = Gem::Specification.find_by_name('dsfr-assets').gem_dir
 
-%w[fonts icons artwork].each do |d|
+%w[fonts icons artwork utility].each do |d|
   FileUtils.cp_r("#{gem_dir}/vendor/assets/stylesheets/#{d}", 'guide/content')
 end
 
