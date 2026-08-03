@@ -14,9 +14,6 @@ jobs:
         with:
           bundler-cache: true
           ruby-version: 4.0
-      - uses: actions/setup-node@v6
-        with:
-          node-version: lts/*
       - run: make build-guide
       - name: Upload static files as artifact
         id: deployment
