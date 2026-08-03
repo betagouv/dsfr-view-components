@@ -15,7 +15,6 @@ gem 'nanoc'
 gem 'ostruct'
 
 group 'nanoc' do
-  gem 'dsfr-assets', github: 'betagouv/dsfr-assets'
   gem 'nanoc-live'
   gem 'sass-embedded'
 end
