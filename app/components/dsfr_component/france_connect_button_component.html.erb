@@ -1,0 +1,10 @@
+<%= content_tag(:div, class: "fr-connect-group", **html_attributes) do %>
+  <%= button_to(target, button_attributes) do %>
+    <span class="fr-connect__login">S’identifier avec</span>
+    <span class="fr-connect__brand">FranceConnect</span>
+  <% end %>
+
+  <p>
+    <%= link_to info_link_label, info_link_href, target: "_blank", rel: "noopener", title: "#{info_link_label} - nouvelle fenêtre" %>
+  </p>
+<% end %>
