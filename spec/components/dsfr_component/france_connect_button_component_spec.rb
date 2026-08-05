@@ -21,7 +21,7 @@ RSpec.describe(DsfrComponent::FranceConnectButtonComponent, type: :component) do
     it { expect(rendered_content).not_to have_tag("button", with: { class: "fr-connect--plus" }) }
 
     it "links to the FranceConnect info page" do
-      expect(rendered_content).to have_tag("a", with: { href: "https://franceconnect.gouv.fr/" }, text: "Qu’est-ce que FranceConnect ?")
+      expect(rendered_content).to have_tag("a", with: { href: "https://www.franceconnect.gouv.fr/" }, text: "Qu’est-ce que FranceConnect ?")
     end
   end
 
@@ -31,7 +31,7 @@ RSpec.describe(DsfrComponent::FranceConnectButtonComponent, type: :component) do
     it { expect(rendered_content).to have_tag("button", with: { class: "fr-connect fr-connect--plus" }) }
 
     it "links to the FranceConnect+ info page" do
-      expect(rendered_content).to have_tag("a", with: { href: "https://franceconnect.gouv.fr/france-connect-plus" }, text: "Qu’est-ce que FranceConnect+ ?")
+      expect(rendered_content).to have_tag("a", with: { href: "https://www.franceconnect.gouv.fr/franceconnect-plus/" }, text: "Qu’est-ce que FranceConnect+ ?")
     end
   end
 end

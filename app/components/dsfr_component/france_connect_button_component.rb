@@ -22,7 +22,7 @@ module DsfrComponent
     end
 
     def info_link_href
-      plus? ? "https://franceconnect.gouv.fr/france-connect-plus" : "https://franceconnect.gouv.fr/"
+      plus? ? "https://www.franceconnect.gouv.fr/franceconnect-plus/" : "https://www.franceconnect.gouv.fr/"
     end
 
     def info_link_label
