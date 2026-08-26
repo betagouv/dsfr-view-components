@@ -29,6 +29,19 @@ module DsfrComponent
 
     attr_reader :url, :size, :name, :label_text, :button_text, :hidden_fields, :html_attributes
 
+    def flatten_hidden_fields(fields, prefix = nil)
+      flattened = []
+      fields.each do |key, value|
+        field_name = prefix ? "#{prefix}[#{key}]" : key.to_s
+        if value.is_a?(Hash)
+          flattened.concat(flatten_hidden_fields(value, field_name))
+        else
+          flattened << [field_name, value]
+        end
+      end
+      flattened
+    end
+
     def id
       "#{name}_#{object_id}"
     end
