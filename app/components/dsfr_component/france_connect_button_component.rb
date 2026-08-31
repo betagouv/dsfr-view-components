@@ -3,42 +3,42 @@ module DsfrComponent
     using HTMLAttributesUtils
 
     # @param target [String] la cible où POST le formulaire/bouton
-    # @param plus [Boolean] utiliser la variante FranceConnect+
-    # @param button_overrides [Hash] attributs pour surcharger le bouton
-    def initialize(target:, plus: false, button_overrides: {}, html_attributes: {})
+    # @param use_plus_version [Boolean] utiliser la variante FranceConnect+
+    # @param button_html_attributes [Hash] attributs pour surcharger le bouton
+    def initialize(target:, use_plus_version: false, button_html_attributes: {}, html_attributes: {})
       @target = target
-      @plus = plus
-      @button_overrides = button_overrides
+      @use_plus_version = use_plus_version
+      @button_html_attributes = button_html_attributes
 
       super(html_attributes: html_attributes)
     end
 
   private
 
-    attr_reader :target, :plus, :button_overrides
+    attr_reader :target, :use_plus_version, :button_html_attributes
 
-    def plus?
-      plus
+    def use_plus_version?
+      use_plus_version
     end
 
     def info_link_href
-      plus? ? "https://www.franceconnect.gouv.fr/franceconnect-plus/" : "https://www.franceconnect.gouv.fr/"
+      use_plus_version? ? "https://www.franceconnect.gouv.fr/franceconnect-plus/" : "https://www.franceconnect.gouv.fr/"
     end
 
     def info_link_label
-      plus? ? "Qu’est-ce que FranceConnect+ ?" : "Qu’est-ce que FranceConnect ?"
+      use_plus_version? ? "Qu’est-ce que FranceConnect+ ?" : "Qu’est-ce que FranceConnect ?"
     end
 
     def button_attributes
       default_button_attributes
-        .deep_merge_html_attributes(button_overrides)
+        .deep_merge_html_attributes(button_html_attributes)
     end
 
     def default_button_attributes
       {
         method: :post,
         remote: false,
-        class: plus? ? "fr-connect fr-connect--plus" : "fr-connect",
+        class: use_plus_version? ? "fr-connect fr-connect--plus" : "fr-connect",
         data: { turbo: false }
       }
     end
