@@ -25,8 +25,8 @@ RSpec.describe(DsfrComponent::FranceConnectButtonComponent, type: :component) do
     end
   end
 
-  context "with plus: true" do
-    subject! { render_inline(described_class.new(target: target, plus: true)) }
+  context "with use_plus_version: true" do
+    subject! { render_inline(described_class.new(target: target, use_plus_version: true)) }
 
     it { expect(rendered_content).to have_tag("button", with: { class: "fr-connect fr-connect--plus" }) }
 

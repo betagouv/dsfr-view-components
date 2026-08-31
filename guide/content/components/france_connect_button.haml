@@ -8,7 +8,7 @@ title: Bouton FranceConnect
     nativement (classes `fr-connect`, `fr-connect__login` et
     `fr-connect__brand`).
 
-    La variante FranceConnect+ s'obtient avec l'option `plus: true`, qui
+    La variante FranceConnect+ s'obtient avec l'option `use_plus_version: true`, qui
     ajoute la classe `fr-connect--plus` et adapte le lien d'information
     vers la page dédiée à FranceConnect+.
 
@@ -18,10 +18,10 @@ title: Bouton FranceConnect
 
 = render('/partials/example.haml', caption: "FranceConnect+", code: france_connect_button_plus) do
   :markdown
-    Avec `plus: true`, le bouton devient un bouton FranceConnect+.
+    Avec `use_plus_version: true`, le bouton devient un bouton FranceConnect+.
 
 = render('/partials/example.haml', caption: "Surcharge du bouton", code: france_connect_button_override) do
   :markdown
-    Si vous devez configurer le bouton au delà de l'implémentation par défaut, vous pouvez utiliser `button_attributes:`
+    Si vous devez configurer le bouton au delà de l'implémentation par défaut, vous pouvez utiliser `button_html_attributes:`
 
 = render('/partials/related-info.haml', links: [["Boutons FranceConnect et ProConnect sur la documentation du DSFR", "https://www.systeme-de-design.gouv.fr/composants-et-modeles/composants/bouton-franceconnect-et-proconnect"]])
