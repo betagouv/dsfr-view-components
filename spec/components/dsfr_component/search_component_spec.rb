@@ -17,7 +17,7 @@ RSpec.describe(DsfrComponent::SearchComponent, type: :component) do
   end
 
   describe "size option" do
-    # rubocop:disable RSpec/MultipleExpectations
+    # rubocop:disable-next RSpec/MultipleExpectations
     %i[sm md lg].each do |size|
       context "when size is :#{size}" do
         let(:args) { { url: url, size: size } }
@@ -33,7 +33,6 @@ RSpec.describe(DsfrComponent::SearchComponent, type: :component) do
         end
       end
     end
-    # rubocop:enable RSpec/MultipleExpectations
   end
 
   describe "other options" do

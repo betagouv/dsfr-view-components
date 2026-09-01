@@ -40,7 +40,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "guard"
   spec.add_development_dependency "guard-rspec"
   spec.add_development_dependency "rspec-html-matchers", "~> 0.9"
-  spec.add_development_dependency "rubocop"
+  spec.add_development_dependency "rubocop", "~> 1.90"
   spec.add_development_dependency "simplecov", "~> 0.20"
   spec.add_development_dependency "sqlite3"
   spec.add_development_dependency "yard"
