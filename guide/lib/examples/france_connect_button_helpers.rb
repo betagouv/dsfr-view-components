@@ -14,7 +14,7 @@ module Examples
 
     def france_connect_button_override
       <<~RAW
-        = dsfr_france_connect_button(target: "#", button_html_attributes: { class: "fr-foobar", method: :get })
+        = dsfr_france_connect_button(target: "#", button_overrides: { class: "fr-foobar", method: :get })
       RAW
     end
   end

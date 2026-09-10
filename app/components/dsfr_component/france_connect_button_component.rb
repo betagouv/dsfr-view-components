@@ -4,18 +4,18 @@ module DsfrComponent
 
     # @param target [String] la cible où POST le formulaire/bouton
     # @param use_plus_version [Boolean] utiliser la variante FranceConnect+
-    # @param button_html_attributes [Hash] attributs pour surcharger le bouton
-    def initialize(target:, use_plus_version: false, button_html_attributes: {}, html_attributes: {})
+    # @param button_overrides [Hash] attributs pour surcharger le bouton
+    def initialize(target:, use_plus_version: false, button_overrides: {}, html_attributes: {})
       @target = target
       @use_plus_version = use_plus_version
-      @button_html_attributes = button_html_attributes
+      @button_overrides = button_overrides
 
       super(html_attributes: html_attributes)
     end
 
   private
 
-    attr_reader :target, :use_plus_version, :button_html_attributes
+    attr_reader :target, :use_plus_version, :button_overrides
 
     def use_plus_version?
       use_plus_version
@@ -31,7 +31,7 @@ module DsfrComponent
 
     def button_attributes
       default_button_attributes
-        .deep_merge_html_attributes(button_html_attributes)
+        .deep_merge_html_attributes(button_overrides)
     end
 
     def default_button_attributes
