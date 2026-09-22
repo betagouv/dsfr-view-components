@@ -60,6 +60,12 @@ RSpec.describe(DsfrLinkHelper, type: 'helper') do
 
         expect(link).not_to have_tag :a, with: { size: 'sm' }
       end
+
+      it "understands symbol values" do
+        link = dsfr_link_to(text, url, size: :sm)
+
+        expect(link).to have_tag :a, with: { class: "fr-link--sm" }
+      end
     end
   end
 end
