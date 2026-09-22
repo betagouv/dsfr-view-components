@@ -55,5 +55,6 @@ use_helper Examples::CalloutHelpers
 use_helper Examples::NoticeHelpers
 use_helper Examples::SearchHelpers
 use_helper Examples::ProconnectButtonHelpers
+use_helper Examples::FranceConnectButtonHelpers
 use_helper Examples::SideMenuHelpers
 use_helper Examples::CardHelpers

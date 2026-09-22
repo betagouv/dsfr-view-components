@@ -22,6 +22,7 @@ module DsfrComponentsHelper
     dsfr_notice: 'DsfrComponent::NoticeComponent',
     dsfr_search: 'DsfrComponent::SearchComponent',
     dsfr_proconnect_button: 'DsfrComponent::ProconnectButtonComponent',
+    dsfr_france_connect_button: 'DsfrComponent::FranceConnectButtonComponent',
     dsfr_side_menu: 'DsfrComponent::SideMenuComponent',
     dsfr_side_menu_item: 'DsfrComponent::SideMenuComponent::ItemComponent',
     dsfr_card: 'DsfrComponent::CardComponent',
