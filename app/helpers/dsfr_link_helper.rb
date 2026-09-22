@@ -52,12 +52,9 @@ private
   end
 
   def add_size(opts)
-    size = opts['size']
+    size = opts.delete(:size)
 
-    if size.present? && size.in?(SIZES)
-      opts = inject_class(opts, class_name: "fr-link--#{size}")
-      opts.delete(:size)
-    end
+    opts = inject_class(opts, class_name: "fr-link--#{size}") if size.present? && size.to_s.in?(SIZES)
 
     opts
   end
