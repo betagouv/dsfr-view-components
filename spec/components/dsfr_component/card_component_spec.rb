@@ -211,8 +211,8 @@ RSpec.describe(DsfrComponent::CardComponent, type: :component) do
 
       expect(rendered_content).to have_tag('div', with: { class: 'fr-card__header' }) do
         with_tag('ul', with: { class: 'fr-badges-group' }) do
-          with_tag('li') { with_tag('div', with: { class: 'fr-badge fr-badge--info' }, text: 'Patrimoine') }
-          with_tag('li') { with_tag('div', with: { class: 'fr-badge fr-badge--success' }, text: 'Culture') }
+          with_tag('li') { with_tag('p', with: { class: 'fr-badge fr-badge--info' }, text: 'Patrimoine') }
+          with_tag('li') { with_tag('p', with: { class: 'fr-badge fr-badge--success' }, text: 'Culture') }
         end
       end
     end

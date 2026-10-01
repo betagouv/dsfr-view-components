@@ -10,7 +10,7 @@ RSpec.describe(DsfrComponent::BadgeComponent, type: :component) do
 
   describe "validation" do
     it "renders correctly" do
-      expect(rendered_content).to have_tag('div', with: { class: 'fr-badge' }, text: content)
+      expect(rendered_content).to have_tag('p', with: { class: 'fr-badge' }, text: content)
     end
 
     context "with an unknown status" do
@@ -25,7 +25,7 @@ RSpec.describe(DsfrComponent::BadgeComponent, type: :component) do
       let(:args) { {} }
 
       it "renders the plain badge" do
-        expect(rendered_content).to have_tag 'div', with: { class: 'fr-badge' }
+        expect(rendered_content).to have_tag 'p', with: { class: 'fr-badge' }
       end
     end
 
@@ -33,7 +33,7 @@ RSpec.describe(DsfrComponent::BadgeComponent, type: :component) do
       it "fails to render" do
         expect do
           render_inline(described_class.new(size: :foobar))
-        end.to raise_error(/`size` should be one of/)
+        end.to raise_error(/`size` should be one of \[:md, :sm\] \(received: `foobar`\)/)
       end
     end
 
@@ -41,7 +41,31 @@ RSpec.describe(DsfrComponent::BadgeComponent, type: :component) do
       let(:size) { :sm }
 
       it "renders the correct class" do
-        expect(rendered_content).to have_tag 'div', with: { class: 'fr-badge--sm' }
+        expect(rendered_content).to have_tag 'p', with: { class: 'fr-badge--sm' }
+      end
+    end
+
+    context "without an icon" do
+      let(:args) { { status: status, has_icon: false } }
+
+      it "renders the correct class" do
+        expect(rendered_content).to have_tag 'p', with: { class: 'fr-badge--no-icon' }
+      end
+    end
+
+    context "without an icon and without a status" do
+      it "fails to render" do
+        expect do
+          render_inline(described_class.new(has_icon: false))
+        end.to raise_error(/`has_icon: false` can only be used with a `status`/)
+      end
+    end
+
+    context "with ellipsis" do
+      let(:args) { { status: status, ellipsis: true } }
+
+      it "wraps the content" do
+        expect(rendered_content).to have_tag 'span', with: { class: 'fr-ellipsis' }, text: content
       end
     end
   end
@@ -49,7 +73,7 @@ RSpec.describe(DsfrComponent::BadgeComponent, type: :component) do
   described_class.const_get(:STATUSES).each do |s|
     let(:status) { s }
     it "maps the '#{s}' status correctly" do
-      expect(rendered_content).to have_tag 'div', with: { class: "fr-badge--#{status}" }
+      expect(rendered_content).to have_tag 'p', with: { class: "fr-badge--#{status}" }
     end
   end
 end

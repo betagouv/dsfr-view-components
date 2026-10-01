@@ -20,8 +20,17 @@ title: Badge - Badge
 
 = render('/partials/example.haml', caption: "Vue d'ensemble", code: badge_default)
 
+= render('/partials/example.haml', caption: "Sans icône", code: badge_no_icon) do
+  :markdown
+    L'icône des badges système peut être retirée grâce au paramètre `has_icon: false`.
+    Ce paramètre n'est disponible qu'avec un `status`.
+
 = render('/partials/example.haml', caption: "Tailles", code: badge_sizes) do
   :markdown
     Les badges sont disponibles dans une taille plus petite grâce au paramètre `size: :sm`.
+
+= render('/partials/example.haml', caption: "Libellé tronqué", code: badge_ellipsis) do
+  :markdown
+    Un libellé trop long peut être tronqué avec une ellipse grâce au paramètre `ellipsis: true`.
 
 = render('/partials/related-info.haml', links: dsfr_component_doc_links("badge"))

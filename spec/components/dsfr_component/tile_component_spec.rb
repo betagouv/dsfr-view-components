@@ -73,8 +73,8 @@ RSpec.describe(DsfrComponent::TileComponent, type: :component) do
       expect(rendered_content).to have_tag('div', with: { class: "fr-tile fr-enlarge-link" }) do
         with_tag('div', with: { class: 'fr-tile__content' }) do
           with_tag('div', with: { class: 'fr-tile__start' }) do
-            with_tag('div', with: { class: 'fr-badge fr-badge--new' }, text: /Nouveau/)
-            with_tag('div', with: { class: 'fr-badge fr-badge--info' }, text: /Info/)
+            with_tag('p', with: { class: 'fr-badge fr-badge--new' }, text: /Nouveau/)
+            with_tag('p', with: { class: 'fr-badge fr-badge--info' }, text: /Info/)
           end
         end
       end

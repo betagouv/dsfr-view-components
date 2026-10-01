@@ -11,10 +11,23 @@ module Examples
       RAW
     end
 
+    def badge_no_icon
+      <<~RAW
+        = dsfr_badge(status: :success, has_icon: false) { "Dossier mis à jour" }
+        = dsfr_badge(status: :error, has_icon: false)   { "Erreur de traitement" }
+      RAW
+    end
+
     def badge_sizes
       <<~RAW
         = dsfr_badge(status: :new, size: :sm)     { "Petit badge" }
         = dsfr_badge(status: :new) { "Badge normal" }
+      RAW
+    end
+
+    def badge_ellipsis
+      <<~RAW
+        = dsfr_badge(ellipsis: true) { "Libellé très long qui sera tronqué lorem ipsum dolor sit amet consectetur adipiscing elit ut aliquam purus sit amet luctus" }
       RAW
     end
   end
