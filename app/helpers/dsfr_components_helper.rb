@@ -26,6 +26,7 @@ module DsfrComponentsHelper
     dsfr_side_menu: 'DsfrComponent::SideMenuComponent',
     dsfr_side_menu_item: 'DsfrComponent::SideMenuComponent::ItemComponent',
     dsfr_card: 'DsfrComponent::CardComponent',
+    dsfr_tooltip: 'DsfrComponent::TooltipComponent',
     # DO NOT REMOVE: new component mapping here
   }.freeze
   HELPER_NAME_TO_CLASS_NAME.each do |name, klass|

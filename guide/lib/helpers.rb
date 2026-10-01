@@ -58,3 +58,4 @@ use_helper Examples::ProconnectButtonHelpers
 use_helper Examples::FranceConnectButtonHelpers
 use_helper Examples::SideMenuHelpers
 use_helper Examples::CardHelpers
+use_helper Examples::TooltipHelpers

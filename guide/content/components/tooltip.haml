@@ -1,0 +1,21 @@
+---
+title: Infobulle - Tooltip
+---
+
+.fr-text-wrap
+  :markdown
+    L’infobulle affiche un texte contextuel lié à un élément de la page.
+
+= render('/partials/example.haml', caption: "Au clic", code: tooltip_default) do
+  :markdown
+    L’infobulle s’affiche au clic sur le bouton.
+
+= render('/partials/example.haml', caption: "Au survol", code: tooltip_hover) do
+  :markdown
+    L’infobulle s’affiche au survol ou au focus du lien. Sans `href:`, le lien pointe vers l’infobulle elle-même.
+
+= render('/partials/example.haml', caption: "Au survol d’un autre élément", code: tooltip_custom_trigger) do
+  :markdown
+    La zone de déclenchement peut être fournie par un bloc. Elle doit être focusable et référencer l’infobulle avec `aria-describedby: tooltip.id`.
+
+= render('/partials/related-info.haml', links: dsfr_component_doc_links("infobulle"))
