@@ -1,3 +1,5 @@
+Cette PR factice pour vérifier le numéro de run de l'action GitHub
+
 # Composants du DSFR
 
 [![Tests](https://github.com/betagouv/dsfr-view-components/workflows/Tests/badge.svg)](https://github.com/betagouv/dsfr-view-components/actions?query=workflow%3ATests)
